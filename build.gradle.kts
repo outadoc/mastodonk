@@ -1,5 +1,6 @@
 plugins {
     kotlin("multiplatform") version "1.4.32"
+    kotlin("plugin.serialization") version "1.4.32"
 }
 
 group = "fr.outadoc"
@@ -10,6 +11,8 @@ repositories {
 }
 
 kotlin {
+    explicitApi()
+
     jvm {
         compilations.all {
             kotlinOptions.jvmTarget = "1.8"
@@ -34,9 +37,14 @@ kotlin {
         else -> throw GradleException("Host OS is not supported in Kotlin/Native.")
     }
 
-    
+
     sourceSets {
-        val commonMain by getting
+        val commonMain by getting {
+            dependencies {
+                implementation(libs.datetime)
+                implementation(libs.serialization)
+            }
+        }
         val commonTest by getting {
             dependencies {
                 implementation(kotlin("test-common"))
