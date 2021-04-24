@@ -11,10 +11,6 @@ public data class Poll(
     @SerialName("id")
     val id: String,
 
-    @SerialName("expires_at")
-    @Serializable(with = InstantSerializer::class)
-    val expiresAt: Instant,
-
     @SerialName("expired")
     val isExpired: Boolean,
 
@@ -24,18 +20,22 @@ public data class Poll(
     @SerialName("votes_count")
     val votesCount: Long,
 
+    @SerialName("options")
+    val options: List<PollOption>,
+
+    @SerialName("emojis")
+    val emojis: List<Emoji>,
+
+    @SerialName("expires_at")
+    @Serializable(with = InstantSerializer::class)
+    val expiresAt: Instant?,
+
     @SerialName("voters_count")
-    val votersCount: Long,
+    val votersCount: Long?,
 
     @SerialName("voted")
     val hasVoted: Boolean?,
 
     @SerialName("own_votes")
-    val ownVotes: List<Int>?,
-
-    @SerialName("options")
-    val options: List<PollOption>,
-
-    @SerialName("emojis")
-    val emojis: List<Emoji>
+    val ownVotes: List<Int>?
 )
