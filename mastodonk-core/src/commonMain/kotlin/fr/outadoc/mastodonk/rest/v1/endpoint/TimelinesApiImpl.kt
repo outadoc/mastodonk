@@ -15,7 +15,7 @@ internal class TimelinesApiImpl(private val client: MastodonHttpClient) : Timeli
         minId: String?,
         limit: Int?
     ): List<Status> {
-        TODO("Not yet implemented")
+        return client.get("/api/v1/timelines/public")
     }
 
     override suspend fun getHashtagTimeline(
