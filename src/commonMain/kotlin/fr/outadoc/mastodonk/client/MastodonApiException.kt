@@ -1,4 +1,4 @@
-package fr.outadoc.mastodonk
+package fr.outadoc.mastodonk.client
 
 import fr.outadoc.mastodonk.api.v1.entity.Error
 

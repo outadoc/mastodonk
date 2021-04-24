@@ -1,8 +1,9 @@
 package fr.outadoc.mastodonk.api.v1.endpoint
 
+import fr.outadoc.mastodonk.client.MastodonEndpoint
 import fr.outadoc.mastodonk.api.v1.entity.Status
 
-public interface TimelinesApi {
+public interface TimelinesApi : MastodonEndpoint {
 
     public suspend fun getPublicTimeline(
         onlyLocal: Boolean?,

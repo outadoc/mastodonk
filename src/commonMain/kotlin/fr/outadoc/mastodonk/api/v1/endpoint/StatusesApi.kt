@@ -1,10 +1,11 @@
 package fr.outadoc.mastodonk.api.v1.endpoint
 
+import fr.outadoc.mastodonk.client.MastodonEndpoint
 import fr.outadoc.mastodonk.api.v1.entity.*
 import fr.outadoc.mastodonk.api.v1.request.PartialPoll
 import kotlinx.datetime.Instant
 
-public interface StatusesApi {
+public interface StatusesApi : MastodonEndpoint {
 
     public suspend fun postStatus(
         status: String?,
