@@ -1,8 +1,6 @@
 package fr.outadoc.mastodonk.client
 
 import fr.outadoc.mastodonk.api.v1.endpoint.TimelinesApi
-import fr.outadoc.mastodonk.rest.v1.HttpClientProvider
-import fr.outadoc.mastodonk.rest.v1.MastodonHttpClient
 
 public interface MastodonClient {
 

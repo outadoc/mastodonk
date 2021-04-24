@@ -1,7 +1,6 @@
-package fr.outadoc.mastodonk.rest.v1
+package fr.outadoc.mastodonk.client
 
 import fr.outadoc.mastodonk.api.v1.entity.Error
-import fr.outadoc.mastodonk.client.MastodonApiException
 import io.ktor.client.*
 import io.ktor.client.features.*
 import io.ktor.client.features.json.*

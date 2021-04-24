@@ -2,7 +2,7 @@ package fr.outadoc.mastodonk.rest.v1.endpoint
 
 import fr.outadoc.mastodonk.api.v1.endpoint.TimelinesApi
 import fr.outadoc.mastodonk.api.v1.entity.Status
-import fr.outadoc.mastodonk.rest.v1.MastodonHttpClient
+import fr.outadoc.mastodonk.client.MastodonHttpClient
 import io.ktor.client.request.*
 import io.ktor.http.*
 

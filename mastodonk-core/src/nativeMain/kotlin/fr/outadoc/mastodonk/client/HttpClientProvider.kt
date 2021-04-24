@@ -1,12 +1,12 @@
-package fr.outadoc.mastodonk.rest.v1
+package fr.outadoc.mastodonk.client
 
 import io.ktor.client.*
-import io.ktor.client.engine.js.*
+import io.ktor.client.engine.curl.*
 
 internal actual class HttpClientProvider {
 
     actual fun getHttpClient(configBlock: HttpClientConfig<*>.() -> Unit): HttpClient {
-        return HttpClient(Js) {
+        return HttpClient(Curl) {
             configBlock()
         }
     }
