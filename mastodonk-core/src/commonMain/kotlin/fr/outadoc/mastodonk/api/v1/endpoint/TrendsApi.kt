@@ -5,5 +5,5 @@ import fr.outadoc.mastodonk.api.v1.entity.Tag
 
 public interface TrendsApi : MastodonEndpoint {
 
-    public suspend fun getTrends(limit: Int?): List<Tag>
+    public suspend fun getTrends(limit: Int? = null): List<Tag>
 }

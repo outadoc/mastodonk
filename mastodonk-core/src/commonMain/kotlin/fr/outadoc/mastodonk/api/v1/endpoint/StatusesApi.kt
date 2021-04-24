@@ -8,26 +8,26 @@ import kotlinx.datetime.Instant
 public interface StatusesApi : MastodonEndpoint {
 
     public suspend fun postStatus(
-        status: String?,
-        mediaIds: List<String>?,
-        poll: PartialPoll?,
-        inReplyToId: String?,
-        isSensitive: Boolean?,
-        spoilerText: String?,
-        visibility: Visibility?,
-        language: String?
+        status: String? = null,
+        mediaIds: List<String>? = null,
+        poll: PartialPoll? = null,
+        inReplyToId: String? = null,
+        isSensitive: Boolean? = null,
+        spoilerText: String? = null,
+        visibility: Visibility? = null,
+        language: String? = null
     ): Status
 
     public suspend fun scheduleStatus(
         scheduledAt: Instant,
-        status: String?,
-        mediaIds: List<String>?,
-        poll: PartialPoll?,
-        inReplyToId: String?,
-        isSensitive: Boolean?,
-        spoilerText: String?,
-        visibility: Visibility?,
-        language: String?
+        status: String? = null,
+        mediaIds: List<String>? = null,
+        poll: PartialPoll? = null,
+        inReplyToId: String? = null,
+        isSensitive: Boolean? = null,
+        spoilerText: String? = null,
+        visibility: Visibility? = null,
+        language: String? = null
     ): ScheduledStatus
 
     public suspend fun getStatus(id: String): Status
@@ -44,7 +44,7 @@ public interface StatusesApi : MastodonEndpoint {
 
     public suspend fun undoFavourite(id: String): Status
 
-    public suspend fun boost(id: String, visibility: Visibility?): Status
+    public suspend fun boost(id: String, visibility: Visibility? = null): Status
 
     public suspend fun undoBoost(id: String): Status
 

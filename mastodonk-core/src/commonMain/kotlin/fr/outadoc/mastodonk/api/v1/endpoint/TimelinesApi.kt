@@ -6,38 +6,38 @@ import fr.outadoc.mastodonk.api.v1.entity.Status
 public interface TimelinesApi : MastodonEndpoint {
 
     public suspend fun getPublicTimeline(
-        onlyLocal: Boolean?,
-        onlyRemote: Boolean?,
-        onlyMedia: Boolean?,
-        maxId: String?,
-        sinceId: String?,
-        minId: String?,
-        limit: Int?
+        onlyLocal: Boolean? = null,
+        onlyRemote: Boolean? = null,
+        onlyMedia: Boolean? = null,
+        maxId: String? = null,
+        sinceId: String? = null,
+        minId: String? = null,
+        limit: Int? = null
     ): List<Status>
 
     public suspend fun getHashtagTimeline(
         hashtag: String,
-        onlyLocal: Boolean?,
-        onlyMedia: Boolean?,
-        maxId: String?,
-        sinceId: String?,
-        minId: String?,
-        limit: Int?
+        onlyLocal: Boolean? = null,
+        onlyMedia: Boolean? = null,
+        maxId: String? = null,
+        sinceId: String? = null,
+        minId: String? = null,
+        limit: Int? = null
     ): List<Status>
 
     public suspend fun getHomeTimeline(
-        onlyLocal: Boolean?,
-        maxId: String?,
-        sinceId: String?,
-        minId: String?,
-        limit: Int?
+        onlyLocal: Boolean? = null,
+        maxId: String? = null,
+        sinceId: String? = null,
+        minId: String? = null,
+        limit: Int? = null
     ): List<Status>
 
     public suspend fun getList(
         listId: String,
-        maxId: String?,
-        sinceId: String?,
-        minId: String?,
-        limit: Int?
+        maxId: String? = null,
+        sinceId: String? = null,
+        minId: String? = null,
+        limit: Int? = null
     ): List<Status>
 }

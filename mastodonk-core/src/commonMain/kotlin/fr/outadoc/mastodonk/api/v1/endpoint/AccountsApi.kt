@@ -1,8 +1,8 @@
 package fr.outadoc.mastodonk.api.v1.endpoint
 
-import fr.outadoc.mastodonk.client.MastodonEndpoint
 import fr.outadoc.mastodonk.api.v1.entity.*
 import fr.outadoc.mastodonk.api.v1.request.PartialAccount
+import fr.outadoc.mastodonk.client.MastodonEndpoint
 
 public interface AccountsApi : MastodonEndpoint {
 
@@ -29,9 +29,19 @@ public interface AccountsApi : MastodonEndpoint {
 
     public suspend fun getStatuses(id: String): List<Status>
 
-    public suspend fun getFollowers(id: String, maxId: String?, sinceId: String?, limit: Int?): List<Account>
+    public suspend fun getFollowers(
+        id: String,
+        maxId: String? = null,
+        sinceId: String? = null,
+        limit: Int? = null
+    ): List<Account>
 
-    public suspend fun getFollowing(id: String, maxId: String?, sinceId: String?, limit: Int?): List<Account>
+    public suspend fun getFollowing(
+        id: String,
+        maxId: String? = null,
+        sinceId: String? = null,
+        limit: Int? = null
+    ): List<Account>
 
     public suspend fun getFeaturedTags(id: String): List<FeaturedTag>
 
@@ -43,7 +53,7 @@ public interface AccountsApi : MastodonEndpoint {
 
     // region Perform actions on an account
 
-    public suspend fun follow(id: String, reblogs: Boolean?, notify: Boolean?): Relationship
+    public suspend fun follow(id: String, reblogs: Boolean? = null, notify: Boolean? = null): Relationship
 
     public suspend fun unfollow(id: String): Relationship
 
@@ -59,7 +69,7 @@ public interface AccountsApi : MastodonEndpoint {
 
     public suspend fun unpin(id: String): Relationship
 
-    public suspend fun note(id: String, comment: String?): Relationship
+    public suspend fun note(id: String, comment: String? = null): Relationship
 
     // endregion
 
@@ -67,7 +77,12 @@ public interface AccountsApi : MastodonEndpoint {
 
     public suspend fun getRelationships(ids: List<String>): List<Relationship>
 
-    public suspend fun search(query: String, limit: Int?, resolve: Boolean?, following: Boolean?): List<Account>
+    public suspend fun search(
+        query: String,
+        limit: Int? = null,
+        resolve: Boolean? = null,
+        following: Boolean? = null
+    ): List<Account>
 
     // endregion
 }
