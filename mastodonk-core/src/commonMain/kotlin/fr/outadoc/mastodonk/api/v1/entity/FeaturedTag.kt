@@ -1,7 +1,7 @@
 package fr.outadoc.mastodonk.api.v1.entity
 
-import fr.outadoc.mastodonk.serializer.InstantSerializer
-import kotlinx.datetime.Instant
+import fr.outadoc.mastodonk.serializer.DateStringToLocalDateSerializer
+import kotlinx.datetime.LocalDate
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
@@ -18,6 +18,6 @@ public data class FeaturedTag(
     val statusesCount: Long,
 
     @SerialName("last_status_at")
-    @Serializable(with = InstantSerializer::class)
-    val lastStatusAt: Instant
+    @Serializable(with = DateStringToLocalDateSerializer::class)
+    val lastStatusAt: LocalDate
 )

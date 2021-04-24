@@ -1,7 +1,9 @@
 package fr.outadoc.mastodonk.api.v1.entity
 
+import fr.outadoc.mastodonk.serializer.DateStringToLocalDateSerializer
 import fr.outadoc.mastodonk.serializer.InstantSerializer
 import kotlinx.datetime.Instant
+import kotlinx.datetime.LocalDate
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
@@ -52,8 +54,8 @@ public data class Account(
     val createdAt: Instant,
 
     @SerialName("last_status_at")
-    @Serializable(with = InstantSerializer::class)
-    val lastStatusAt: Instant,
+    @Serializable(with = DateStringToLocalDateSerializer::class)
+    val lastStatusAt: LocalDate,
 
     @SerialName("statuses_count")
     val statusesCount: Long,
@@ -66,6 +68,9 @@ public data class Account(
 
     @SerialName("moved")
     val isMoved: Boolean?,
+
+    @SerialName("group")
+    val isGroup: Boolean,
 
     @SerialName("fields")
     val fields: List<Field>?,

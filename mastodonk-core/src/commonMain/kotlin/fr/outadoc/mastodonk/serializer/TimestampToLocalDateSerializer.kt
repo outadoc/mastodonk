@@ -11,10 +11,10 @@ import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 
-internal class LocalDateSerializer : KSerializer<LocalDate> {
+internal class TimestampToLocalDateSerializer : KSerializer<LocalDate> {
 
     override val descriptor: SerialDescriptor
-        get() = PrimitiveSerialDescriptor("LocalDate", PrimitiveKind.STRING)
+        get() = PrimitiveSerialDescriptor("TimestampToLocalDate", PrimitiveKind.STRING)
 
     override fun deserialize(decoder: Decoder): LocalDate {
         return Instant

@@ -27,6 +27,9 @@ public data class Status(
     @SerialName("visibility")
     val visibility: Visibility,
 
+    @SerialName("sensitive")
+    val isSensitive: Boolean,
+
     @SerialName("spoiler_text")
     val spoilerText: String,
 
