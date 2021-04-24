@@ -12,6 +12,10 @@ fun main() = runBlocking {
 
     GlobalScope.launch {
         val timeline = client.timelines.getPublicTimeline()
-        println(timeline)
+        println("got ${timeline.size} toots!")
+        println("here are the first 3:")
+        timeline.take(3).forEach { status ->
+            println(status)
+        }
     }.join()
 }
