@@ -2,9 +2,9 @@ package fr.outadoc.mastodonk.rest.v1.endpoint
 
 import fr.outadoc.mastodonk.api.v1.endpoint.TimelinesApi
 import fr.outadoc.mastodonk.api.v1.entity.Status
-import io.ktor.client.*
+import fr.outadoc.mastodonk.rest.v1.MastodonHttpClient
 
-internal class TimelinesApiImpl(private val client: HttpClient) : TimelinesApi {
+internal class TimelinesApiImpl(private val client: MastodonHttpClient) : TimelinesApi {
 
     override suspend fun getPublicTimeline(
         onlyLocal: Boolean?,

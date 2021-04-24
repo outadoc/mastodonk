@@ -5,9 +5,9 @@ import io.ktor.client.*
 import io.ktor.client.engine.cio.*
 import io.ktor.client.features.json.*
 
-internal actual class HttpClientProvider {
+public actual class HttpClientProvider {
 
-    actual val httpClient: HttpClient
+    public actual val httpClient: HttpClient
         get() = HttpClient(CIO) {
             engine {
                 endpoint {

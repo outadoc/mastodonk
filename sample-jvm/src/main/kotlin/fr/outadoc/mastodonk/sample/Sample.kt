@@ -7,7 +7,9 @@ import kotlinx.coroutines.launch
 class Sample {
 
     fun main() {
-        val client = MastodonClient.Builder().build()
+        val client = MastodonClient.Builder()
+            .baseUrl("https://mastodon.example")
+            .build()
 
         GlobalScope.launch {
             val timeline = client.timelines.getPublicTimeline()
