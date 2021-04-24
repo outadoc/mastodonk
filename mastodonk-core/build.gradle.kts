@@ -40,6 +40,7 @@ kotlin {
             dependencies {
                 implementation(libs.datetime)
                 implementation(libs.serialization)
+                implementation(libs.ktor.core)
             }
         }
         val commonTest by getting {
@@ -49,21 +50,33 @@ kotlin {
             }
         }
 
-        val jvmMain by getting
+        val jvmMain by getting {
+            dependencies {
+                implementation(libs.ktor.engine.cio)
+            }
+        }
         val jvmTest by getting {
             dependencies {
                 implementation(kotlin("test-junit"))
             }
         }
 
-        val jsMain by getting
+        val jsMain by getting {
+            dependencies {
+                implementation(libs.ktor.engine.js)
+            }
+        }
         val jsTest by getting {
             dependencies {
                 implementation(kotlin("test-js"))
             }
         }
 
-        val nativeMain by getting
+        val nativeMain by getting {
+            dependencies {
+                implementation(libs.ktor.engine.curl)
+            }
+        }
         val nativeTest by getting
     }
 }

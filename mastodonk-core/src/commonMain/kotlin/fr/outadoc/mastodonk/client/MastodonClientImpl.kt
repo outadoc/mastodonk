@@ -1,8 +1,11 @@
 package fr.outadoc.mastodonk.client
 
-internal class MastodonClientImpl : MastodonClient {
+import fr.outadoc.mastodonk.rest.v1.HttpClientProvider
+import fr.outadoc.mastodonk.rest.v1.endpoint.TimelinesApiImpl
 
-    override fun <T : MastodonEndpoint> getEndpoint(): T {
-        TODO("Not yet implemented")
-    }
+internal class MastodonClientImpl(clientProvider: HttpClientProvider) : MastodonClient {
+
+    private val client = clientProvider.httpClient
+
+    override val timelines = TimelinesApiImpl(client)
 }
