@@ -8,4 +8,5 @@ repositories {
 
 dependencies {
     implementation(projects.mastodonkCore)
+    implementation(libs.coroutines.core)
 }
