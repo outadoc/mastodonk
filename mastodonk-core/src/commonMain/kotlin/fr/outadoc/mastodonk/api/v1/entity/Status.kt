@@ -36,9 +36,6 @@ public data class Status(
     @SerialName("media_attachments")
     val mediaAttachments: List<Attachment>,
 
-    @SerialName("application")
-    val application: Application,
-
     @SerialName("mentions")
     val mentions: List<Mention>,
 
@@ -53,6 +50,9 @@ public data class Status(
 
     @SerialName("favourites_count")
     val favouritesCount: Long,
+
+    @SerialName("application")
+    val application: Application? = null,
 
     @SerialName("replies_count")
     val repliesCount: Long? = null,

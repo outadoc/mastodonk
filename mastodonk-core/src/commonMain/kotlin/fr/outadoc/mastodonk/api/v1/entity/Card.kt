@@ -34,10 +34,10 @@ public data class Card(
     val html: String? = null,
 
     @SerialName("width")
-    val width: String? = null,
+    val width: Long? = null,
 
     @SerialName("height")
-    val height: String? = null,
+    val height: Long? = null,
 
     @SerialName("image")
     val image: String? = null,

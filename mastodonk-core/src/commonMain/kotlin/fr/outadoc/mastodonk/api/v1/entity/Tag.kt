@@ -13,5 +13,5 @@ public data class Tag(
     val url: String,
 
     @SerialName("history")
-    val history: List<History>
+    val history: List<History>? = null
 )

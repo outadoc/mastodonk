@@ -46,9 +46,6 @@ public data class Account(
     @SerialName("emojis")
     val emojis: List<Emoji>,
 
-    @SerialName("discoverable")
-    val isDiscoverable: Boolean,
-
     @SerialName("created_at")
     @Serializable(with = InstantSerializer::class)
     val createdAt: Instant,
@@ -65,6 +62,9 @@ public data class Account(
 
     @SerialName("following_count")
     val followingCount: Long,
+
+    @SerialName("discoverable")
+    val isDiscoverable: Boolean? = null,
 
     @SerialName("moved")
     val isMoved: Boolean? = null,

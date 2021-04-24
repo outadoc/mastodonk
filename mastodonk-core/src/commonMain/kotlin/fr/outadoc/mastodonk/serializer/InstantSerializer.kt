@@ -14,7 +14,7 @@ internal class InstantSerializer : KSerializer<Instant> {
         get() = PrimitiveSerialDescriptor("Instant", PrimitiveKind.STRING)
 
     override fun deserialize(decoder: Decoder): Instant {
-        return Instant.parse(decoder.decodeString())
+        return Instant.parse(decoder.decodeString().replace("+00:00", "Z"))
     }
 
     override fun serialize(encoder: Encoder, value: Instant) {
