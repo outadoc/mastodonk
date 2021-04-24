@@ -1,9 +1,8 @@
 package fr.outadoc.mastodonk.rest.v1
 
-import fr.outadoc.mastodonk.serializer.JsonSerializerProvider
+import fr.outadoc.mastodonk.rest.installMastodonSerializer
 import io.ktor.client.*
 import io.ktor.client.engine.cio.*
-import io.ktor.client.features.json.*
 
 public actual class HttpClientProvider {
 
@@ -18,8 +17,6 @@ public actual class HttpClientProvider {
                 }
             }
 
-            install(JsonFeature) {
-                serializer = JsonSerializerProvider.serializer
-            }
+            installMastodonSerializer()
         }
 }
