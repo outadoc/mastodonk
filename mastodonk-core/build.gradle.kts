@@ -41,6 +41,7 @@ kotlin {
                 implementation(libs.datetime)
                 implementation(libs.serialization)
                 implementation(libs.ktor.core)
+                implementation(libs.ktor.serialization)
             }
         }
         val commonTest by getting {
