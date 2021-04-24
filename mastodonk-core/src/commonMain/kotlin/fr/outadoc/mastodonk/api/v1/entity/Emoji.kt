@@ -19,5 +19,5 @@ public data class Emoji(
     val isVisibleInPicker: Boolean,
 
     @SerialName("category")
-    val category: String?
+    val category: String? = null
 )

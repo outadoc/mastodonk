@@ -35,8 +35,8 @@ public data class AdminReport(
     val statuses: List<Status>,
 
     @SerialName("assigned_account")
-    val assignedAccount: Account?,
+    val assignedAccount: Account? = null,
 
     @SerialName("action_taken_by_account")
-    val actionTakenByAccount: Account?
+    val actionTakenByAccount: Account? = null
 )

@@ -16,5 +16,5 @@ public data class Conversation(
     val isUnread: Boolean,
 
     @SerialName("last_status")
-    val lastStatus: Status?
+    val lastStatus: Status? = null
 )

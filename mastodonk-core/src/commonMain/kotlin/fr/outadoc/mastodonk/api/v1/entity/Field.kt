@@ -16,5 +16,5 @@ public data class Field(
 
     @SerialName("verified_at")
     @Serializable(with = InstantSerializer::class)
-    val verifiedAt: Instant?
+    val verifiedAt: Instant? = null
 )

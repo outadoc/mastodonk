@@ -13,14 +13,14 @@ public data class Source(
     val fields: List<Field>,
 
     @SerialName("privacy")
-    val privacy: Visibility?,
+    val privacy: Visibility? = null,
 
     @SerialName("sensitive")
-    val isSensitive: Boolean?,
+    val isSensitive: Boolean? = null,
 
     @SerialName("language")
-    val language: String?,
+    val language: String? = null,
 
     @SerialName("follow_requests_count")
-    val followRequestsCount: Long?
+    val followRequestsCount: Long? = null
 )

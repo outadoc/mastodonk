@@ -10,5 +10,5 @@ public data class PollOption(
     val title: String,
 
     @SerialName("votes_count")
-    val votesCount: Long?
+    val votesCount: Long? = null
 )

@@ -36,13 +36,13 @@ public data class Announcement(
 
     @SerialName("scheduled_at")
     @Serializable(with = InstantSerializer::class)
-    val scheduledAt: Instant?,
+    val scheduledAt: Instant? = null,
 
     @SerialName("starts_at")
     @Serializable(with = InstantSerializer::class)
-    val startsAt: Instant?,
+    val startsAt: Instant? = null,
 
     @SerialName("ends_at")
     @Serializable(with = InstantSerializer::class)
-    val endsAt: Instant?
+    val endsAt: Instant? = null
 )

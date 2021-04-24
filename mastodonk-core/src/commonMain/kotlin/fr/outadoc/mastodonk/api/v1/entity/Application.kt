@@ -10,14 +10,14 @@ public data class Application(
     val name: String,
 
     @SerialName("website")
-    val website: String?,
+    val website: String? = null,
 
     @SerialName("vapid_key")
-    val vapidKey: String?,
+    val vapidKey: String? = null,
 
     @SerialName("client_id")
-    val clientId: String?,
+    val clientId: String? = null,
 
     @SerialName("client_secret")
-    val clientSecret: String?,
+    val clientSecret: String? = null,
 )

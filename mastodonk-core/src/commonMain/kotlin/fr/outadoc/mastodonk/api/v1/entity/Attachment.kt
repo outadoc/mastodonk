@@ -19,14 +19,14 @@ public data class Attachment(
     val previewUrl: String,
 
     @SerialName("remote_url")
-    val remoteUrl: String?,
+    val remoteUrl: String? = null,
 
     @SerialName("text_url")
-    val textUrl: String?,
+    val textUrl: String? = null,
 
     @SerialName("description")
-    val description: String?,
+    val description: String? = null,
 
     @SerialName("blurhash")
-    val blurHash: String?
+    val blurHash: String? = null
 )

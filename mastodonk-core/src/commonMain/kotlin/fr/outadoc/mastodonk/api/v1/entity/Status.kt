@@ -55,29 +55,29 @@ public data class Status(
     val favouritesCount: Long,
 
     @SerialName("replies_count")
-    val repliesCount: Long?,
+    val repliesCount: Long? = null,
 
     @SerialName("url")
-    val url: String?,
+    val url: String? = null,
 
     @SerialName("in_reply_to_id")
-    val inReplyToId: String?,
+    val inReplyToId: String? = null,
 
     @SerialName("in_reply_to_account_id")
-    val inReplyToAccountId: String?,
+    val inReplyToAccountId: String? = null,
 
     @SerialName("reblog")
-    val reblog: Status?,
+    val reblog: Status? = null,
 
     @SerialName("poll")
-    val poll: Poll?,
+    val poll: Poll? = null,
 
     @SerialName("card")
-    val card: Card?,
+    val card: Card? = null,
 
     @SerialName("language")
-    val language: String?,
+    val language: String? = null,
 
     @SerialName("text")
-    val text: String?
+    val text: String? = null
 )

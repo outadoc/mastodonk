@@ -67,24 +67,24 @@ public data class Account(
     val followingCount: Long,
 
     @SerialName("moved")
-    val isMoved: Boolean?,
+    val isMoved: Boolean? = null,
 
     @SerialName("group")
     val isGroup: Boolean,
 
     @SerialName("fields")
-    val fields: List<Field>?,
+    val fields: List<Field>? = null,
 
     @SerialName("bot")
-    val isBot: Boolean?,
+    val isBot: Boolean? = null,
 
     @SerialName("source")
-    val source: Source?,
+    val source: Source? = null,
 
     @SerialName("suspended")
-    val isSuspended: Boolean?,
+    val isSuspended: Boolean? = null,
 
     @SerialName("mute_expires_at")
     @Serializable(with = InstantSerializer::class)
-    val muteExpiresAt: Instant?
+    val muteExpiresAt: Instant? = null
 )

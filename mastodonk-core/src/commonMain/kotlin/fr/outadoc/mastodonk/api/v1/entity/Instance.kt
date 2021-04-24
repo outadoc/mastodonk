@@ -43,8 +43,8 @@ public data class Instance(
     val stats: InstanceStats,
 
     @SerialName("thumbnail")
-    val thumbnail: String?,
+    val thumbnail: String? = null,
 
     @SerialName("contact_account")
-    val contactAccount: Account?
+    val contactAccount: Account? = null
 )

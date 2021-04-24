@@ -13,7 +13,7 @@ public data class History(
     val day: LocalDate,
 
     @SerialName("uses")
-    val uses: String?,
+    val uses: String? = null,
 
     @SerialName("account")
     val accounts: String

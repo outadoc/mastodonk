@@ -22,5 +22,5 @@ public data class Notification(
     val account: Account,
 
     @SerialName("status")
-    val status: Status?
+    val status: Status? = null
 )

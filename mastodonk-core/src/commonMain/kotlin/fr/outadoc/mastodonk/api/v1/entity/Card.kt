@@ -19,32 +19,32 @@ public data class Card(
     val type: CardType,
 
     @SerialName("author_name")
-    val authorName: String?,
+    val authorName: String? = null,
 
     @SerialName("author_url")
-    val authorUrl: String?,
+    val authorUrl: String? = null,
 
     @SerialName("provider_name")
-    val providerName: String?,
+    val providerName: String? = null,
 
     @SerialName("provider_url")
-    val providerUrl: String?,
+    val providerUrl: String? = null,
 
     @SerialName("html")
-    val html: String?,
+    val html: String? = null,
 
     @SerialName("width")
-    val width: String?,
+    val width: String? = null,
 
     @SerialName("height")
-    val height: String?,
+    val height: String? = null,
 
     @SerialName("image")
-    val image: String?,
+    val image: String? = null,
 
     @SerialName("embed_url")
-    val embedUrl: String?,
+    val embedUrl: String? = null,
 
     @SerialName("blurhash")
-    val blurHash: String?
+    val blurHash: String? = null
 )

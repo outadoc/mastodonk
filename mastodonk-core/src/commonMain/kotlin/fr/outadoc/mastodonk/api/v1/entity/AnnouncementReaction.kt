@@ -16,8 +16,8 @@ public data class AnnouncementReaction(
     val me: Boolean,
 
     @SerialName("url")
-    val url: String?,
+    val url: String? = null,
 
     @SerialName("static_url")
-    val staticUrl: String?
+    val staticUrl: String? = null
 )

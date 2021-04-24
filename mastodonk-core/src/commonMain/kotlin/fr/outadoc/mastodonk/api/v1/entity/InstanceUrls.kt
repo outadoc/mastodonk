@@ -7,5 +7,5 @@ import kotlinx.serialization.Serializable
 public data class InstanceUrls(
 
     @SerialName("streaming_api")
-    val streamingApi: String?
+    val streamingApi: String? = null
 )

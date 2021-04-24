@@ -10,5 +10,5 @@ public data class Error(
     val error: String,
 
     @SerialName("error_description")
-    val errorDescription: String?
+    val errorDescription: String? = null
 )

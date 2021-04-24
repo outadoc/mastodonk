@@ -28,14 +28,14 @@ public data class Poll(
 
     @SerialName("expires_at")
     @Serializable(with = InstantSerializer::class)
-    val expiresAt: Instant?,
+    val expiresAt: Instant? = null,
 
     @SerialName("voters_count")
-    val votersCount: Long?,
+    val votersCount: Long? = null,
 
     @SerialName("voted")
-    val hasVoted: Boolean?,
+    val hasVoted: Boolean? = null,
 
     @SerialName("own_votes")
-    val ownVotes: List<Int>?
+    val ownVotes: List<Int>? = null
 )

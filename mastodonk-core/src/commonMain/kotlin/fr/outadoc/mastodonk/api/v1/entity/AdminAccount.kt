@@ -55,8 +55,8 @@ public data class AdminAccount(
     val account: Account,
 
     @SerialName("created_by_application_id")
-    val createdByApplicationId: String?,
+    val createdByApplicationId: String? = null,
 
     @SerialName("invited_by_account_id")
-    val invitedByAccountId: String?
+    val invitedByAccountId: String? = null
 )
