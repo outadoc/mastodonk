@@ -11,7 +11,7 @@ internal class MastodonHttpClient(
     val httpClient: HttpClient = httpClientProvider.httpClient
     val baseUrl: Url = Url(baseUrl)
 
-    suspend inline fun <reified T> get(route: String, builder: HttpRequestBuilder.() -> Unit = {}): T {
+    suspend inline fun <reified T> request(route: String, builder: HttpRequestBuilder.() -> Unit = {}): T {
         return httpClient.get(baseUrl.copy(encodedPath = route), builder)
     }
 }
