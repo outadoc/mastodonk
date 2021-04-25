@@ -1,4 +1,4 @@
-package fr.outadoc.mastodonk.api.v1.endpoint
+package fr.outadoc.mastodonk.api.v1.endpoint.trends
 
 import fr.outadoc.mastodonk.client.MastodonEndpoint
 import fr.outadoc.mastodonk.api.v1.entity.Tag

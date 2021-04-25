@@ -1,8 +1,8 @@
-package fr.outadoc.mastodonk.api.v1.endpoint
+package fr.outadoc.mastodonk.api.v1.endpoint.statuses
 
 import fr.outadoc.mastodonk.client.MastodonEndpoint
 import fr.outadoc.mastodonk.api.v1.entity.*
-import fr.outadoc.mastodonk.api.v1.request.PartialPoll
+import fr.outadoc.mastodonk.api.v1.entity.request.statuses.PartialPoll
 import kotlinx.datetime.Instant
 
 public interface StatusesApi : MastodonEndpoint {

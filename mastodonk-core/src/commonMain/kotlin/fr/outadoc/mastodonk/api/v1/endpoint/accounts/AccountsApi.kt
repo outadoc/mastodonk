@@ -1,25 +1,19 @@
-package fr.outadoc.mastodonk.api.v1.endpoint
+package fr.outadoc.mastodonk.api.v1.endpoint.accounts
 
 import fr.outadoc.mastodonk.api.v1.entity.*
-import fr.outadoc.mastodonk.api.v1.request.PartialAccount
+import fr.outadoc.mastodonk.api.v1.entity.request.accounts.AccountCreate
+import fr.outadoc.mastodonk.api.v1.entity.request.accounts.AccountUpdate
 import fr.outadoc.mastodonk.client.MastodonEndpoint
 
 public interface AccountsApi : MastodonEndpoint {
 
     // region Account credentials
 
-    public suspend fun register(
-        username: String,
-        email: String,
-        password: String,
-        agreement: String,
-        locale: String,
-        reason: String? = null
-    ): Token
+    public suspend fun register(account: AccountCreate): Token
 
     public suspend fun verifyCredentials(): Account
 
-    public suspend fun updateCredentials(account: PartialAccount): Account
+    public suspend fun updateCredentials(account: AccountUpdate): Account
 
     // endregion
 
