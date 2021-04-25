@@ -1,6 +1,7 @@
 package fr.outadoc.mastodonk.client
 
 import fr.outadoc.mastodonk.api.v1.entity.Error
+import fr.outadoc.mastodonk.auth.AuthTokenProvider
 import io.ktor.client.*
 import io.ktor.client.features.*
 import io.ktor.client.features.json.*
@@ -12,6 +13,7 @@ import kotlinx.serialization.json.Json
 
 internal class MastodonHttpClient(
     httpClientFactory: HttpClientFactory,
+    private val authTokenProvider: AuthTokenProvider?,
     baseUrl: String
 ) {
     val baseUrl: Url = Url(baseUrl)
@@ -52,6 +54,12 @@ internal class MastodonHttpClient(
     }
 
     suspend inline fun <reified T> request(route: String, builder: HttpRequestBuilder.() -> Unit = {}): T {
-        return httpClient.get(baseUrl.copy(encodedPath = route), builder)
+        return httpClient.get(baseUrl.copy(encodedPath = route)) {
+            // Inject auth token if available
+            authTokenProvider?.provideAuthToken()?.let { token ->
+                header(HttpHeaders.Authorization, token.toString())
+            }
+            builder()
+        }
     }
 }

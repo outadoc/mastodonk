@@ -1,6 +1,8 @@
 package fr.outadoc.mastodonk.sample
 
 import fr.outadoc.mastodonk.api.v1.entity.Status
+import fr.outadoc.mastodonk.auth.AuthToken
+import fr.outadoc.mastodonk.auth.AuthTokenProvider
 import fr.outadoc.mastodonk.client.MastodonClient
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
@@ -9,6 +11,9 @@ import kotlinx.coroutines.runBlocking
 fun main() = runBlocking {
     val client = MastodonClient {
         baseUrl = "https://mastodon.social"
+        authTokenProvider = AuthTokenProvider {
+            AuthToken(accessToken = "your-access-token-here")
+        }
     }
 
     GlobalScope.launch {
