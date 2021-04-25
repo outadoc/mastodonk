@@ -7,9 +7,9 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 
 fun main() = runBlocking {
-    val client = MastodonClient.Builder()
-        .baseUrl("https://mastodon.social")
-        .build()
+    val client = MastodonClient {
+        baseUrl = "https://mastodon.social"
+    }
 
     GlobalScope.launch {
         client.timelines.getPublicTimeline().print("timeline")
