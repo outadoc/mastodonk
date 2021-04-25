@@ -1,6 +1,7 @@
 package fr.outadoc.mastodonk.client
 
 import fr.outadoc.mastodonk.api.v1.endpoint.instance.InstanceApi
+import fr.outadoc.mastodonk.api.v1.endpoint.instance.TrendsApi
 import fr.outadoc.mastodonk.api.v1.endpoint.timelines.ConversationsApi
 import fr.outadoc.mastodonk.api.v1.endpoint.timelines.ListsApi
 import fr.outadoc.mastodonk.api.v1.endpoint.timelines.MarkersApi
@@ -20,6 +21,7 @@ public interface MastodonClient {
     // region Instance
 
     public val instance: InstanceApi
+    public val trends: TrendsApi
 
     // endregion
 }

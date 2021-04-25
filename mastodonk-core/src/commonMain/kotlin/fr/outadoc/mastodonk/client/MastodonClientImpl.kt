@@ -1,6 +1,7 @@
 package fr.outadoc.mastodonk.client
 
 import fr.outadoc.mastodonk.api.v1.repository.instance.InstanceApiImpl
+import fr.outadoc.mastodonk.api.v1.repository.instance.TrendsApiImpl
 import fr.outadoc.mastodonk.api.v1.repository.timelines.ConversationsApiImpl
 import fr.outadoc.mastodonk.api.v1.repository.timelines.ListsApiImpl
 import fr.outadoc.mastodonk.api.v1.repository.timelines.MarkersApiImpl
@@ -14,4 +15,5 @@ internal class MastodonClientImpl(httpClient: MastodonHttpClient) : MastodonClie
     override val markers = MarkersApiImpl(httpClient)
 
     override val instance = InstanceApiImpl(httpClient)
+    override val trends = TrendsApiImpl(httpClient)
 }
