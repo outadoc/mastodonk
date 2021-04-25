@@ -1,9 +1,9 @@
 package fr.outadoc.mastodonk.api.v1.endpoint.timelines
 
 import fr.outadoc.mastodonk.api.v1.entity.Conversation
-import fr.outadoc.mastodonk.client.MastodonEndpoint
+import fr.outadoc.mastodonk.api.ApiEndpoint
 
-public interface ConversationsApi : MastodonEndpoint {
+public interface ConversationsApi : ApiEndpoint {
 
     public suspend fun getConversation(
         maxId: String? = null,

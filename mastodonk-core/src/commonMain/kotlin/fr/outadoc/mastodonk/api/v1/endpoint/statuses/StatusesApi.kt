@@ -7,9 +7,9 @@ import fr.outadoc.mastodonk.api.v1.entity.Status
 import fr.outadoc.mastodonk.api.v1.entity.Visibility
 import fr.outadoc.mastodonk.api.v1.entity.request.statuses.ScheduledStatusCreate
 import fr.outadoc.mastodonk.api.v1.entity.request.statuses.StatusCreate
-import fr.outadoc.mastodonk.client.MastodonEndpoint
+import fr.outadoc.mastodonk.api.ApiEndpoint
 
-public interface StatusesApi : MastodonEndpoint {
+public interface StatusesApi : ApiEndpoint {
 
     public suspend fun postStatus(status: StatusCreate): Status
 

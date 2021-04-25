@@ -3,9 +3,9 @@ package fr.outadoc.mastodonk.api.v1.endpoint.timelines
 import fr.outadoc.mastodonk.api.v1.entity.Account
 import fr.outadoc.mastodonk.api.v1.entity.RepliesPolicy
 import fr.outadoc.mastodonk.api.v1.entity.UserList
-import fr.outadoc.mastodonk.client.MastodonEndpoint
+import fr.outadoc.mastodonk.api.ApiEndpoint
 
-public interface ListsApi : MastodonEndpoint {
+public interface ListsApi : ApiEndpoint {
 
     // region List Metadata
 

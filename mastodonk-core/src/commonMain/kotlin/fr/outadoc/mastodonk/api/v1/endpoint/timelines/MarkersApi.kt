@@ -2,9 +2,9 @@ package fr.outadoc.mastodonk.api.v1.endpoint.timelines
 
 import fr.outadoc.mastodonk.api.v1.entity.Marker
 import fr.outadoc.mastodonk.api.v1.entity.request.timelines.MarkerCreate
-import fr.outadoc.mastodonk.client.MastodonEndpoint
+import fr.outadoc.mastodonk.api.ApiEndpoint
 
-public interface MarkersApi : MastodonEndpoint {
+public interface MarkersApi : ApiEndpoint {
 
     public suspend fun getSavedPosition(markers: List<String>): Marker
 

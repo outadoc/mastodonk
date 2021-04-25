@@ -3,9 +3,9 @@ package fr.outadoc.mastodonk.api.v1.endpoint.accounts
 import fr.outadoc.mastodonk.api.v1.entity.*
 import fr.outadoc.mastodonk.api.v1.entity.request.accounts.AccountCreate
 import fr.outadoc.mastodonk.api.v1.entity.request.accounts.AccountUpdate
-import fr.outadoc.mastodonk.client.MastodonEndpoint
+import fr.outadoc.mastodonk.api.ApiEndpoint
 
-public interface AccountsApi : MastodonEndpoint {
+public interface AccountsApi : ApiEndpoint {
 
     // region Account credentials
 
