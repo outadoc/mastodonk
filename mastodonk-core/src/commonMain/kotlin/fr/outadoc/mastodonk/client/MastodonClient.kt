@@ -6,6 +6,7 @@ import fr.outadoc.mastodonk.api.v1.endpoint.accounts.BookmarksApi
 import fr.outadoc.mastodonk.api.v1.endpoint.accounts.DomainBlocksApi
 import fr.outadoc.mastodonk.api.v1.endpoint.accounts.FavouritesApi
 import fr.outadoc.mastodonk.api.v1.endpoint.accounts.FiltersApi
+import fr.outadoc.mastodonk.api.v1.endpoint.accounts.FollowRequestsApi
 import fr.outadoc.mastodonk.api.v1.endpoint.accounts.MutesApi
 import fr.outadoc.mastodonk.api.v1.endpoint.accounts.ReportsApi
 import fr.outadoc.mastodonk.api.v1.endpoint.apps.AppsApi
@@ -46,6 +47,7 @@ public interface MastodonClient {
     public val domainBlocks: DomainBlocksApi
     public val filters: FiltersApi
     public val reports: ReportsApi
+    public val followRequests: FollowRequestsApi
 
     // endregion
 
