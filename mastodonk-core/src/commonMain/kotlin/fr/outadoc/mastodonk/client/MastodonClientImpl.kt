@@ -3,6 +3,7 @@ package fr.outadoc.mastodonk.client
 import fr.outadoc.mastodonk.api.v1.repository.accounts.AccountsApiImpl
 import fr.outadoc.mastodonk.api.v1.repository.instance.InstanceApiImpl
 import fr.outadoc.mastodonk.api.v1.repository.instance.TrendsApiImpl
+import fr.outadoc.mastodonk.api.v1.repository.statuses.StatusesApiImpl
 import fr.outadoc.mastodonk.api.v1.repository.timelines.ConversationsApiImpl
 import fr.outadoc.mastodonk.api.v1.repository.timelines.ListsApiImpl
 import fr.outadoc.mastodonk.api.v1.repository.timelines.MarkersApiImpl
@@ -19,4 +20,6 @@ internal class MastodonClientImpl(httpClient: MastodonHttpClient) : MastodonClie
     override val trends = TrendsApiImpl(httpClient)
 
     override val accounts = AccountsApiImpl(httpClient)
+
+    override val statuses = StatusesApiImpl(httpClient)
 }

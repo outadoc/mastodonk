@@ -59,9 +59,9 @@ public interface AccountsApi : MastodonEndpoint {
 
     public suspend fun unmute(id: String): Relationship
 
-    public suspend fun pin(id: String): Relationship
+    public suspend fun feature(id: String): Relationship
 
-    public suspend fun unpin(id: String): Relationship
+    public suspend fun unfeature(id: String): Relationship
 
     public suspend fun note(id: String, comment: String? = null): Relationship
 

@@ -127,13 +127,13 @@ internal class AccountsApiImpl(private val client: MastodonHttpClient) : Account
         }
     }
 
-    override suspend fun pin(id: String): Relationship {
+    override suspend fun feature(id: String): Relationship {
         return client.request("/api/v1/accounts/${id.trim()}/pin") {
             method = HttpMethod.Post
         }
     }
 
-    override suspend fun unpin(id: String): Relationship {
+    override suspend fun unfeature(id: String): Relationship {
         return client.request("/api/v1/accounts/${id.trim()}/unpin") {
             method = HttpMethod.Post
         }
