@@ -1,6 +1,7 @@
 package fr.outadoc.mastodonk.client
 
 import fr.outadoc.mastodonk.api.v1.repository.accounts.AccountsApiImpl
+import fr.outadoc.mastodonk.api.v1.repository.apps.AppsApiImpl
 import fr.outadoc.mastodonk.api.v1.repository.instance.InstanceApiImpl
 import fr.outadoc.mastodonk.api.v1.repository.instance.TrendsApiImpl
 import fr.outadoc.mastodonk.api.v1.repository.statuses.StatusesApiImpl
@@ -22,4 +23,6 @@ internal class MastodonClientImpl(httpClient: MastodonHttpClient) : MastodonClie
     override val accounts = AccountsApiImpl(httpClient)
 
     override val statuses = StatusesApiImpl(httpClient)
+
+    override val apps = AppsApiImpl(httpClient)
 }

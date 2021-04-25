@@ -1,6 +1,7 @@
 package fr.outadoc.mastodonk.client
 
 import fr.outadoc.mastodonk.api.v1.endpoint.accounts.AccountsApi
+import fr.outadoc.mastodonk.api.v1.endpoint.apps.AppsApi
 import fr.outadoc.mastodonk.api.v1.endpoint.instance.InstanceApi
 import fr.outadoc.mastodonk.api.v1.endpoint.instance.TrendsApi
 import fr.outadoc.mastodonk.api.v1.endpoint.statuses.StatusesApi
@@ -36,6 +37,12 @@ public interface MastodonClient {
     // region Statuses
 
     public val statuses: StatusesApi
+
+    // endregion
+
+    // region Apps
+
+    public val apps: AppsApi
 
     // endregion
 }
