@@ -5,6 +5,7 @@ import fr.outadoc.mastodonk.api.v1.repository.accounts.BlocksApiImpl
 import fr.outadoc.mastodonk.api.v1.repository.accounts.BookmarksApiImpl
 import fr.outadoc.mastodonk.api.v1.repository.accounts.DomainBlocksApiImpl
 import fr.outadoc.mastodonk.api.v1.repository.accounts.FavouritesApiImpl
+import fr.outadoc.mastodonk.api.v1.repository.accounts.FiltersApiImpl
 import fr.outadoc.mastodonk.api.v1.repository.accounts.MutesApiImpl
 import fr.outadoc.mastodonk.api.v1.repository.apps.AppsApiImpl
 import fr.outadoc.mastodonk.api.v1.repository.apps.OAuthApiImpl
@@ -32,6 +33,7 @@ internal class MastodonClientImpl(httpClient: MastodonHttpClient) : MastodonClie
     override val mutes = MutesApiImpl(httpClient)
     override val blocks = BlocksApiImpl(httpClient)
     override val domainBlocks = DomainBlocksApiImpl(httpClient)
+    override val filters = FiltersApiImpl(httpClient)
 
     override val statuses = StatusesApiImpl(httpClient)
 
