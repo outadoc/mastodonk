@@ -6,6 +6,7 @@ import io.ktor.client.features.*
 import io.ktor.client.features.json.*
 import io.ktor.client.features.json.serializer.*
 import io.ktor.client.request.*
+import io.ktor.client.statement.*
 import io.ktor.http.*
 import kotlinx.serialization.json.Json
 
@@ -15,34 +16,37 @@ internal class MastodonHttpClient(
 ) {
     val baseUrl: Url = Url(baseUrl)
 
+    private val json = Json {
+        ignoreUnknownKeys = true
+    }
+
     val httpClient: HttpClient = httpClientProvider.getHttpClient {
         install(JsonFeature) {
-            KotlinxSerializer(
-                kotlinx.serialization.json.Json {
-                    ignoreUnknownKeys = true
-                }
-            )
+            KotlinxSerializer(json = json)
         }
 
         HttpResponseValidator {
             validateResponse { response ->
                 val statusCode = response.status.value
                 if (statusCode in 400..599) {
-                    val apiError = try {
-                        response.content.readUTF8Line(2048)
-                            ?.let { errorJson ->
-                                Json.Default.decodeFromString(
-                                    Error.serializer(),
-                                    errorJson
-                                )
-                            }
-                    } catch (e: Exception) {
-                        null
-                    }
-
+                    val apiError = response.decodeErrorBodyOrNull()
                     throw MastodonApiException(statusCode, apiError)
                 }
             }
+        }
+    }
+
+    private suspend fun HttpResponse.decodeErrorBodyOrNull(): Error? {
+        return try {
+            content.readUTF8Line(2048)
+                ?.let { errorJson ->
+                    json.decodeFromString(
+                        Error.serializer(),
+                        errorJson
+                    )
+                }
+        } catch (e: Exception) {
+            null
         }
     }
 
