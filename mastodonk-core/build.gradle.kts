@@ -1,6 +1,6 @@
 plugins {
-    kotlin("multiplatform") version "1.4.32"
-    kotlin("plugin.serialization") version "1.4.32"
+    kotlin("multiplatform")
+    kotlin("plugin.serialization")
 }
 
 group = "fr.outadoc.mastodonk"
