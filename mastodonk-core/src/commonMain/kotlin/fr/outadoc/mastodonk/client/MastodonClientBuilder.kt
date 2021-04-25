@@ -12,7 +12,7 @@ public class MastodonClientBuilder {
         val baseUrl = checkNotNull(baseUrl) { "Base URL must be set on MastodonClient.Builder" }
         return MastodonClientImpl(
             httpClient = MastodonHttpClient(
-                httpClientProvider = HttpClientProvider(),
+                httpClientFactory = HttpClientFactory(),
                 baseUrl = baseUrl
             )
         )

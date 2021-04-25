@@ -21,6 +21,9 @@ public data class Attachment(
     @SerialName("remote_url")
     val remoteUrl: String? = null,
 
+    @SerialName("preview_remote_url")
+    val previewRemoteUrl: String? = null,
+
     @SerialName("text_url")
     val textUrl: String? = null,
 
