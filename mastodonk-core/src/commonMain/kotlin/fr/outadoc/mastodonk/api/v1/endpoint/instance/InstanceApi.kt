@@ -1,10 +1,9 @@
 package fr.outadoc.mastodonk.api.v1.endpoint.instance
 
-import fr.outadoc.mastodonk.api.ApiEndpoint
 import fr.outadoc.mastodonk.api.v1.entity.Activity
 import fr.outadoc.mastodonk.api.v1.entity.Instance
 
-public interface InstanceApi : ApiEndpoint {
+public interface InstanceApi {
 
     public suspend fun getInstance(): Instance
 

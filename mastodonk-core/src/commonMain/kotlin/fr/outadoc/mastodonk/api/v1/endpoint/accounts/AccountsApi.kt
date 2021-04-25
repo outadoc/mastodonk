@@ -1,11 +1,16 @@
 package fr.outadoc.mastodonk.api.v1.endpoint.accounts
 
-import fr.outadoc.mastodonk.api.v1.entity.*
+import fr.outadoc.mastodonk.api.v1.entity.Account
+import fr.outadoc.mastodonk.api.v1.entity.FeaturedTag
+import fr.outadoc.mastodonk.api.v1.entity.IdentityProof
+import fr.outadoc.mastodonk.api.v1.entity.Relationship
+import fr.outadoc.mastodonk.api.v1.entity.Status
+import fr.outadoc.mastodonk.api.v1.entity.Token
+import fr.outadoc.mastodonk.api.v1.entity.UserList
 import fr.outadoc.mastodonk.api.v1.entity.request.accounts.AccountCreate
 import fr.outadoc.mastodonk.api.v1.entity.request.accounts.AccountUpdate
-import fr.outadoc.mastodonk.api.ApiEndpoint
 
-public interface AccountsApi : ApiEndpoint {
+public interface AccountsApi {
 
     // region Account credentials
 
