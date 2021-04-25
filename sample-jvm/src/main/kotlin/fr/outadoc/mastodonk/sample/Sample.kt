@@ -12,8 +12,15 @@ fun main() = runBlocking {
     }
 
     GlobalScope.launch {
-        client.timelines.getPublicTimeline().print("timeline")
-        client.timelines.getHashtagTimeline("cats").print("cats")
+        val instance = client.instance.getInstance()
+        println("connected to instance ${instance.title} at ${instance.uri}!")
+        println(instance)
+
+        client.timelines.getPublicTimeline()
+            .print("public timeline")
+
+        client.timelines.getHashtagTimeline("cats")
+            .print("cats")
     }.join()
 }
 
