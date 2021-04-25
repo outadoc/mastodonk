@@ -1,4 +1,4 @@
-package fr.outadoc.mastodonk.rest.v1.endpoint
+package fr.outadoc.mastodonk.api.v1.repository.timelines
 
 import fr.outadoc.mastodonk.api.v1.endpoint.timelines.TimelinesApi
 import fr.outadoc.mastodonk.api.v1.entity.Status
