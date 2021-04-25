@@ -6,6 +6,7 @@ import fr.outadoc.mastodonk.api.v1.repository.accounts.BookmarksApiImpl
 import fr.outadoc.mastodonk.api.v1.repository.accounts.DomainBlocksApiImpl
 import fr.outadoc.mastodonk.api.v1.repository.accounts.EndorsementsApiImpl
 import fr.outadoc.mastodonk.api.v1.repository.accounts.FavouritesApiImpl
+import fr.outadoc.mastodonk.api.v1.repository.accounts.FeaturedTagsApiImpl
 import fr.outadoc.mastodonk.api.v1.repository.accounts.FiltersApiImpl
 import fr.outadoc.mastodonk.api.v1.repository.accounts.FollowRequestsApiImpl
 import fr.outadoc.mastodonk.api.v1.repository.accounts.MutesApiImpl
@@ -40,6 +41,7 @@ internal class MastodonClientImpl(httpClient: MastodonHttpClient) : MastodonClie
     override val reports = ReportsApiImpl(httpClient)
     override val followRequests = FollowRequestsApiImpl(httpClient)
     override val endorsements = EndorsementsApiImpl(httpClient)
+    override val featuredTags = FeaturedTagsApiImpl(httpClient)
 
     override val statuses = StatusesApiImpl(httpClient)
 
