@@ -31,7 +31,7 @@ internal class ConversationsApiImpl(private val client: MastodonHttpClient) : Co
 
     override suspend fun markAsRead(id: String): Conversation {
         return client.request("/api/v1/conversations/${id.trim()}/read") {
-            method = HttpMethod.Get
+            method = HttpMethod.Post
         }
     }
 }

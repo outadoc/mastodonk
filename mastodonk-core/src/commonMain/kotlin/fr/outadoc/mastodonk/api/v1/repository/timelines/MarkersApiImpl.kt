@@ -18,7 +18,8 @@ internal class MarkersApiImpl(private val client: MastodonHttpClient) : MarkersA
 
     override suspend fun savePosition(marker: MarkerCreate): Marker {
         return client.request("/api/v1/markers") {
-            method = HttpMethod.Get
+            method = HttpMethod.Post
+            contentType(ContentType.Application.Json)
             body = marker
         }
     }
