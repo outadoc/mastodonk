@@ -12,6 +12,7 @@ import fr.outadoc.mastodonk.api.v1.repository.accounts.FollowRequestsApiImpl
 import fr.outadoc.mastodonk.api.v1.repository.accounts.MutesApiImpl
 import fr.outadoc.mastodonk.api.v1.repository.accounts.PreferencesApiImpl
 import fr.outadoc.mastodonk.api.v1.repository.accounts.ReportsApiImpl
+import fr.outadoc.mastodonk.api.v1.repository.accounts.SuggestionsApiImpl
 import fr.outadoc.mastodonk.api.v1.repository.apps.AppsApiImpl
 import fr.outadoc.mastodonk.api.v1.repository.apps.OAuthApiImpl
 import fr.outadoc.mastodonk.api.v1.repository.instance.InstanceApiImpl
@@ -44,6 +45,7 @@ internal class MastodonClientImpl(httpClient: MastodonHttpClient) : MastodonClie
     override val endorsements = EndorsementsApiImpl(httpClient)
     override val featuredTags = FeaturedTagsApiImpl(httpClient)
     override val preferences = PreferencesApiImpl(httpClient)
+    override val suggestions = SuggestionsApiImpl(httpClient)
 
     override val statuses = StatusesApiImpl(httpClient)
 
