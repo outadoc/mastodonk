@@ -23,7 +23,7 @@ internal class MastodonHttpClient(
     val httpClient: HttpClient = httpClientFactory.create()
         .config {
             install(JsonFeature) {
-                KotlinxSerializer(json = json)
+                serializer = KotlinxSerializer(json = json)
             }
 
             HttpResponseValidator {
