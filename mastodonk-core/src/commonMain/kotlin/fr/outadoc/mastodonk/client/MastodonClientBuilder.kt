@@ -16,7 +16,7 @@ public class MastodonClientBuilder {
     }
 
     public fun build(): MastodonClient {
-        val baseUrl = checkNotNull(baseUrl) { "Base URL must be set on MastodonClient.Builder" }
+        val baseUrl = checkNotNull(baseUrl) { "Base URL must be set on ${MastodonClientBuilder::class.simpleName}" }
         return MastodonClientImpl(
             httpClient = MastodonHttpClient(
                 httpClientFactory = HttpClientFactory(),
