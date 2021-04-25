@@ -5,7 +5,7 @@ import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 @Serializable
-public data class PartialPoll(
+public data class PollCreate(
 
     @SerialName("options")
     val options: List<PollOption>,

@@ -1,7 +1,7 @@
 package fr.outadoc.mastodonk.api.v1.entity.request.accounts
 
 import fr.outadoc.mastodonk.api.v1.entity.Field
-import fr.outadoc.mastodonk.api.v1.entity.request.statuses.PartialSource
+import fr.outadoc.mastodonk.api.v1.entity.request.statuses.SourceCreate
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
@@ -33,5 +33,5 @@ public data class AccountUpdate(
     val fields: List<Field>? = null,
 
     @SerialName("source")
-    val source: PartialSource? = null
+    val source: SourceCreate? = null
 )

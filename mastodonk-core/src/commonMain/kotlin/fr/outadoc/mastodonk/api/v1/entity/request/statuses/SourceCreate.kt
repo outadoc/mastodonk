@@ -5,7 +5,7 @@ import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 @Serializable
-public data class PartialSource(
+public data class SourceCreate(
 
     @SerialName("privacy")
     val privacy: Visibility?,

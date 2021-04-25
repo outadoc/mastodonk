@@ -1,34 +1,19 @@
 package fr.outadoc.mastodonk.api.v1.endpoint.statuses
 
+import fr.outadoc.mastodonk.api.v1.entity.Account
+import fr.outadoc.mastodonk.api.v1.entity.Context
+import fr.outadoc.mastodonk.api.v1.entity.ScheduledStatus
+import fr.outadoc.mastodonk.api.v1.entity.Status
+import fr.outadoc.mastodonk.api.v1.entity.Visibility
+import fr.outadoc.mastodonk.api.v1.entity.request.statuses.ScheduledStatusCreate
+import fr.outadoc.mastodonk.api.v1.entity.request.statuses.StatusCreate
 import fr.outadoc.mastodonk.client.MastodonEndpoint
-import fr.outadoc.mastodonk.api.v1.entity.*
-import fr.outadoc.mastodonk.api.v1.entity.request.statuses.PartialPoll
-import kotlinx.datetime.Instant
 
 public interface StatusesApi : MastodonEndpoint {
 
-    public suspend fun postStatus(
-        status: String? = null,
-        mediaIds: List<String>? = null,
-        poll: PartialPoll? = null,
-        inReplyToId: String? = null,
-        isSensitive: Boolean? = null,
-        spoilerText: String? = null,
-        visibility: Visibility? = null,
-        language: String? = null
-    ): Status
+    public suspend fun postStatus(status: StatusCreate): Status
 
-    public suspend fun scheduleStatus(
-        scheduledAt: Instant,
-        status: String? = null,
-        mediaIds: List<String>? = null,
-        poll: PartialPoll? = null,
-        inReplyToId: String? = null,
-        isSensitive: Boolean? = null,
-        spoilerText: String? = null,
-        visibility: Visibility? = null,
-        language: String? = null
-    ): ScheduledStatus
+    public suspend fun postStatus(status: ScheduledStatusCreate): ScheduledStatus
 
     public suspend fun getStatus(id: String): Status
 
