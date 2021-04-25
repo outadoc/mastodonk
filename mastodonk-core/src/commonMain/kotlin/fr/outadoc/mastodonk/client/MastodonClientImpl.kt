@@ -3,6 +3,7 @@ package fr.outadoc.mastodonk.client
 import fr.outadoc.mastodonk.api.v1.repository.accounts.AccountsApiImpl
 import fr.outadoc.mastodonk.api.v1.repository.accounts.BookmarksApiImpl
 import fr.outadoc.mastodonk.api.v1.repository.accounts.FavouritesApiImpl
+import fr.outadoc.mastodonk.api.v1.repository.accounts.MutesApiImpl
 import fr.outadoc.mastodonk.api.v1.repository.apps.AppsApiImpl
 import fr.outadoc.mastodonk.api.v1.repository.apps.OAuthApiImpl
 import fr.outadoc.mastodonk.api.v1.repository.instance.InstanceApiImpl
@@ -26,6 +27,7 @@ internal class MastodonClientImpl(httpClient: MastodonHttpClient) : MastodonClie
     override val accounts = AccountsApiImpl(httpClient)
     override val bookmarks = BookmarksApiImpl(httpClient)
     override val favourites = FavouritesApiImpl(httpClient)
+    override val mutes = MutesApiImpl(httpClient)
 
     override val statuses = StatusesApiImpl(httpClient)
 

@@ -3,6 +3,7 @@ package fr.outadoc.mastodonk.client
 import fr.outadoc.mastodonk.api.v1.endpoint.accounts.AccountsApi
 import fr.outadoc.mastodonk.api.v1.endpoint.accounts.BookmarksApi
 import fr.outadoc.mastodonk.api.v1.endpoint.accounts.FavouritesApi
+import fr.outadoc.mastodonk.api.v1.endpoint.accounts.MutesApi
 import fr.outadoc.mastodonk.api.v1.endpoint.apps.AppsApi
 import fr.outadoc.mastodonk.api.v1.endpoint.apps.OAuthApi
 import fr.outadoc.mastodonk.api.v1.endpoint.instance.InstanceApi
@@ -36,6 +37,7 @@ public interface MastodonClient {
     public val accounts: AccountsApi
     public val bookmarks: BookmarksApi
     public val favourites: FavouritesApi
+    public val mutes: MutesApi
 
     // endregion
 
