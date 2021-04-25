@@ -4,7 +4,7 @@ import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 @Serializable
-public data class AccountList(
+public data class UserList(
 
     @SerialName("id")
     val id: String,

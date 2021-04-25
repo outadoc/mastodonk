@@ -45,7 +45,7 @@ public interface AccountsApi : MastodonEndpoint {
 
     public suspend fun getFeaturedTags(id: String): List<FeaturedTag>
 
-    public suspend fun getListsContainedIn(id: String): List<AccountList>
+    public suspend fun getListsContainedIn(id: String): List<UserList>
 
     public suspend fun getIdentityProofs(id: String): List<IdentityProof>
 
