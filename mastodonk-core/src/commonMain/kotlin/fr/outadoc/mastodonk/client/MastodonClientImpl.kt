@@ -22,6 +22,7 @@ import fr.outadoc.mastodonk.api.v1.repository.instance.InstanceApiImpl
 import fr.outadoc.mastodonk.api.v1.repository.instance.TrendsApiImpl
 import fr.outadoc.mastodonk.api.v1.repository.notifications.NotificationsApiImpl
 import fr.outadoc.mastodonk.api.v1.repository.notifications.PushApiImpl
+import fr.outadoc.mastodonk.api.v1.repository.proofs.ProofsApiImpl
 import fr.outadoc.mastodonk.api.v1.repository.search.SearchApiImpl
 import fr.outadoc.mastodonk.api.v1.repository.statuses.MediaApiImpl
 import fr.outadoc.mastodonk.api.v1.repository.statuses.PollsApiImpl
@@ -72,4 +73,6 @@ internal class MastodonClientImpl(httpClient: MastodonHttpClient) : MastodonClie
     override val search = SearchApiImpl(httpClient)
 
     override val announcements = AnnouncementsApiImpl(httpClient)
+
+    override val proofs = ProofsApiImpl(httpClient)
 }

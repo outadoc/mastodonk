@@ -22,6 +22,7 @@ import fr.outadoc.mastodonk.api.v1.endpoint.instance.InstanceApi
 import fr.outadoc.mastodonk.api.v1.endpoint.instance.TrendsApi
 import fr.outadoc.mastodonk.api.v1.endpoint.notifications.NotificationsApi
 import fr.outadoc.mastodonk.api.v1.endpoint.notifications.PushApi
+import fr.outadoc.mastodonk.api.v1.endpoint.proofs.ProofsApi
 import fr.outadoc.mastodonk.api.v1.endpoint.search.SearchApi
 import fr.outadoc.mastodonk.api.v1.endpoint.statuses.MediaApi
 import fr.outadoc.mastodonk.api.v1.endpoint.statuses.PollsApi
@@ -102,6 +103,12 @@ public interface MastodonClient {
     // region Announcements
 
     public val announcements: AnnouncementsApi
+
+    // endregion
+
+    // region Proofs
+
+    public val proofs: ProofsApi
 
     // endregion
 }
