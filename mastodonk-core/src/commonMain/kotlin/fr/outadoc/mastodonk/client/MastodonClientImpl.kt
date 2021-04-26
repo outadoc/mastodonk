@@ -13,6 +13,7 @@ import fr.outadoc.mastodonk.api.v1.repository.accounts.MutesApiImpl
 import fr.outadoc.mastodonk.api.v1.repository.accounts.PreferencesApiImpl
 import fr.outadoc.mastodonk.api.v1.repository.accounts.ReportsApiImpl
 import fr.outadoc.mastodonk.api.v1.repository.accounts.SuggestionsApiImpl
+import fr.outadoc.mastodonk.api.v1.repository.announcements.AnnouncementsApiImpl
 import fr.outadoc.mastodonk.api.v1.repository.apps.AppsApiImpl
 import fr.outadoc.mastodonk.api.v1.repository.apps.OAuthApiImpl
 import fr.outadoc.mastodonk.api.v1.repository.instance.CustomEmojiApiImpl
@@ -69,4 +70,6 @@ internal class MastodonClientImpl(httpClient: MastodonHttpClient) : MastodonClie
     override val oauth = OAuthApiImpl(httpClient)
 
     override val search = SearchApiImpl(httpClient)
+
+    override val announcements = AnnouncementsApiImpl(httpClient)
 }
