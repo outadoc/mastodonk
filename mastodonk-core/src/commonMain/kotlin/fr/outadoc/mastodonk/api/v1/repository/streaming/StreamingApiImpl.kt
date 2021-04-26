@@ -7,14 +7,12 @@ import io.ktor.client.request.*
 
 internal class StreamingApiImpl(private val client: MastodonHttpClient) : StreamingApi {
 
-    private val endpoint = "/api/v1/streaming"
-
     private suspend fun getStream(
         stream: String,
         session: suspend ClientWebSocketSession.() -> Unit,
         builder: HttpRequestBuilder.() -> Unit = {}
     ) {
-        client.getStream(endpoint, session) {
+        client.getStream("/api/v1/streaming", session) {
             parameter("stream", stream)
             builder()
         }
