@@ -1,10 +1,10 @@
 package fr.outadoc.mastodonk.sample
 
 import fr.outadoc.mastodonk.api.entity.Status
-import fr.outadoc.mastodonk.auth.AuthToken
 import fr.outadoc.mastodonk.auth.AuthTokenProvider
 import fr.outadoc.mastodonk.client.MastodonClient
 import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 
@@ -12,7 +12,8 @@ fun main() = runBlocking {
     val client = MastodonClient {
         baseUrl = "https://mastodon.social"
         authTokenProvider = AuthTokenProvider {
-            AuthToken(accessToken = "your-access-token-here")
+            //AuthToken(accessToken = "your-access-token-here")
+            null
         }
     }
 
@@ -26,6 +27,10 @@ fun main() = runBlocking {
 
         client.timelines.getHashtagTimeline("cats")
             .print("cats")
+
+        client.streaming.getPublicStream().collect {
+            println(it)
+        }
     }.join()
 }
 

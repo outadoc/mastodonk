@@ -1,7 +1,9 @@
 package fr.outadoc.mastodonk.client
 
 import fr.outadoc.mastodonk.api.entity.Error
+import fr.outadoc.mastodonk.api.entity.streaming.RawStreamingEvent
 import fr.outadoc.mastodonk.api.entity.streaming.StreamingEvent
+import fr.outadoc.mastodonk.api.entity.streaming.StreamingEventFactory
 import fr.outadoc.mastodonk.auth.AuthTokenProvider
 import io.ktor.client.*
 import io.ktor.client.features.*
@@ -17,7 +19,9 @@ import kotlinx.coroutines.flow.emitAll
 import kotlinx.coroutines.flow.filterIsInstance
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.map
+import kotlinx.coroutines.flow.mapNotNull
 import kotlinx.coroutines.flow.receiveAsFlow
+import kotlinx.serialization.decodeFromString
 import kotlinx.serialization.json.Json
 
 internal class MastodonHttpClient(
@@ -30,6 +34,8 @@ internal class MastodonHttpClient(
     private val json = Json {
         ignoreUnknownKeys = true
     }
+
+    private val streamingEventFactory = StreamingEventFactory(json)
 
     val httpClient: HttpClient = httpClientFactory.create()
         .config {
@@ -88,9 +94,8 @@ internal class MastodonHttpClient(
         ) {
             incoming.receiveAsFlow()
                 .filterIsInstance<Frame.Text>()
-                .map { frame ->
-                    json.decodeFromString(StreamingEvent.serializer(), frame.readText())
-                }
+                .map { frame -> json.decodeFromString<RawStreamingEvent>(frame.readText()) }
+                .mapNotNull { rawEvent -> streamingEventFactory.from(rawEvent) }
                 .let { flow -> emitAll(flow) }
         }
     }
