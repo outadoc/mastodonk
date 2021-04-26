@@ -29,6 +29,7 @@ import fr.outadoc.mastodonk.api.v1.repository.statuses.MediaApiImpl
 import fr.outadoc.mastodonk.api.v1.repository.statuses.PollsApiImpl
 import fr.outadoc.mastodonk.api.v1.repository.statuses.ScheduledStatusesApiImpl
 import fr.outadoc.mastodonk.api.v1.repository.statuses.StatusesApiImpl
+import fr.outadoc.mastodonk.api.v1.repository.streaming.StreamingApiImpl
 import fr.outadoc.mastodonk.api.v1.repository.timelines.ConversationsApiImpl
 import fr.outadoc.mastodonk.api.v1.repository.timelines.ListsApiImpl
 import fr.outadoc.mastodonk.api.v1.repository.timelines.MarkersApiImpl
@@ -78,4 +79,6 @@ internal class MastodonClientImpl(httpClient: MastodonHttpClient) : MastodonClie
     override val proofs = ProofsApiImpl(httpClient)
 
     override val admin = AdminApiImpl(httpClient)
+
+    override val streaming = StreamingApiImpl(httpClient)
 }

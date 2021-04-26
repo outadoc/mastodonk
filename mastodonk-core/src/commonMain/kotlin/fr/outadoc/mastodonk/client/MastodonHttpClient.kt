@@ -6,6 +6,7 @@ import io.ktor.client.*
 import io.ktor.client.features.*
 import io.ktor.client.features.json.*
 import io.ktor.client.features.json.serializer.*
+import io.ktor.client.features.websocket.*
 import io.ktor.client.request.*
 import io.ktor.client.statement.*
 import io.ktor.http.*
@@ -24,6 +25,7 @@ internal class MastodonHttpClient(
 
     val httpClient: HttpClient = httpClientFactory.create()
         .config {
+            install(WebSockets)
             install(JsonFeature) {
                 serializer = KotlinxSerializer(json = json)
             }
@@ -61,5 +63,22 @@ internal class MastodonHttpClient(
             }
             builder()
         }
+    }
+
+    suspend fun getStream(
+        route: String,
+        webSocketSession: suspend ClientWebSocketSession.() -> Unit,
+        builder: HttpRequestBuilder.() -> Unit
+    ) {
+        httpClient.ws(
+            urlString = baseUrl.copy(protocol = URLProtocol.WSS, encodedPath = route).toString(),
+            request = {
+                authTokenProvider?.provideAuthToken()?.let { token ->
+                    parameter("access_token", token.toString())
+                }
+                builder()
+            },
+            block = webSocketSession
+        )
     }
 }

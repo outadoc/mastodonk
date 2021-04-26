@@ -42,6 +42,7 @@ kotlin {
                 implementation(libs.serialization)
                 implementation(libs.ktor.core)
                 implementation(libs.ktor.serialization)
+                implementation(libs.ktor.websockets)
             }
         }
         val commonTest by getting {

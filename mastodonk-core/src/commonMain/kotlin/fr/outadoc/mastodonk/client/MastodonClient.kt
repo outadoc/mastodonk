@@ -29,6 +29,7 @@ import fr.outadoc.mastodonk.api.v1.endpoint.statuses.MediaApi
 import fr.outadoc.mastodonk.api.v1.endpoint.statuses.PollsApi
 import fr.outadoc.mastodonk.api.v1.endpoint.statuses.ScheduledStatusesApi
 import fr.outadoc.mastodonk.api.v1.endpoint.statuses.StatusesApi
+import fr.outadoc.mastodonk.api.v1.endpoint.streaming.StreamingApi
 import fr.outadoc.mastodonk.api.v1.endpoint.timelines.ConversationsApi
 import fr.outadoc.mastodonk.api.v1.endpoint.timelines.ListsApi
 import fr.outadoc.mastodonk.api.v1.endpoint.timelines.MarkersApi
@@ -116,6 +117,12 @@ public interface MastodonClient {
     // region Admin
 
     public val admin: AdminApi
+
+    // endregion
+
+    // region Streaming
+
+    public val streaming: StreamingApi
 
     // endregion
 }
