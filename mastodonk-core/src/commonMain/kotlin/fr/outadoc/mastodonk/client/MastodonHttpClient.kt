@@ -1,6 +1,7 @@
 package fr.outadoc.mastodonk.client
 
 import fr.outadoc.mastodonk.api.v1.entity.Error
+import fr.outadoc.mastodonk.api.v1.entity.streaming.StreamingEvent
 import fr.outadoc.mastodonk.auth.AuthTokenProvider
 import io.ktor.client.*
 import io.ktor.client.features.*
@@ -10,6 +11,13 @@ import io.ktor.client.features.websocket.*
 import io.ktor.client.request.*
 import io.ktor.client.statement.*
 import io.ktor.http.*
+import io.ktor.http.cio.websocket.*
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.emitAll
+import kotlinx.coroutines.flow.filterIsInstance
+import kotlinx.coroutines.flow.flow
+import kotlinx.coroutines.flow.map
+import kotlinx.coroutines.flow.receiveAsFlow
 import kotlinx.serialization.json.Json
 
 internal class MastodonHttpClient(
@@ -67,9 +75,8 @@ internal class MastodonHttpClient(
 
     suspend fun getStream(
         route: String,
-        webSocketSession: suspend ClientWebSocketSession.() -> Unit,
         builder: HttpRequestBuilder.() -> Unit
-    ) {
+    ): Flow<StreamingEvent> = flow {
         httpClient.ws(
             urlString = baseUrl.copy(protocol = URLProtocol.WSS, encodedPath = route).toString(),
             request = {
@@ -77,8 +84,14 @@ internal class MastodonHttpClient(
                     parameter("access_token", token.toString())
                 }
                 builder()
-            },
-            block = webSocketSession
-        )
+            }
+        ) {
+            incoming.receiveAsFlow()
+                .filterIsInstance<Frame.Text>()
+                .map { frame ->
+                    json.decodeFromString(StreamingEvent.serializer(), frame.readText())
+                }
+                .let { flow -> emitAll(flow) }
+        }
     }
 }
