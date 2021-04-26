@@ -13,6 +13,7 @@ import fr.outadoc.mastodonk.api.v1.repository.accounts.MutesApiImpl
 import fr.outadoc.mastodonk.api.v1.repository.accounts.PreferencesApiImpl
 import fr.outadoc.mastodonk.api.v1.repository.accounts.ReportsApiImpl
 import fr.outadoc.mastodonk.api.v1.repository.accounts.SuggestionsApiImpl
+import fr.outadoc.mastodonk.api.v1.repository.admin.AdminApiImpl
 import fr.outadoc.mastodonk.api.v1.repository.announcements.AnnouncementsApiImpl
 import fr.outadoc.mastodonk.api.v1.repository.apps.AppsApiImpl
 import fr.outadoc.mastodonk.api.v1.repository.apps.OAuthApiImpl
@@ -75,4 +76,6 @@ internal class MastodonClientImpl(httpClient: MastodonHttpClient) : MastodonClie
     override val announcements = AnnouncementsApiImpl(httpClient)
 
     override val proofs = ProofsApiImpl(httpClient)
+
+    override val admin = AdminApiImpl(httpClient)
 }

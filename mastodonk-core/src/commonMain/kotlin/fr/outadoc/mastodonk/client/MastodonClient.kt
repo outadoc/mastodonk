@@ -13,6 +13,7 @@ import fr.outadoc.mastodonk.api.v1.endpoint.accounts.MutesApi
 import fr.outadoc.mastodonk.api.v1.endpoint.accounts.PreferencesApi
 import fr.outadoc.mastodonk.api.v1.endpoint.accounts.ReportsApi
 import fr.outadoc.mastodonk.api.v1.endpoint.accounts.SuggestionsApi
+import fr.outadoc.mastodonk.api.v1.endpoint.admin.AdminApi
 import fr.outadoc.mastodonk.api.v1.endpoint.announcements.AnnouncementsApi
 import fr.outadoc.mastodonk.api.v1.endpoint.apps.AppsApi
 import fr.outadoc.mastodonk.api.v1.endpoint.apps.OAuthApi
@@ -109,6 +110,12 @@ public interface MastodonClient {
     // region Proofs
 
     public val proofs: ProofsApi
+
+    // endregion
+
+    // region Admin
+
+    public val admin: AdminApi
 
     // endregion
 }
