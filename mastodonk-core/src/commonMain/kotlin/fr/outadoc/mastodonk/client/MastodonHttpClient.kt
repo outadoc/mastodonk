@@ -1,7 +1,7 @@
 package fr.outadoc.mastodonk.client
 
-import fr.outadoc.mastodonk.api.v1.entity.Error
-import fr.outadoc.mastodonk.api.v1.entity.streaming.StreamingEvent
+import fr.outadoc.mastodonk.api.entity.Error
+import fr.outadoc.mastodonk.api.entity.streaming.StreamingEvent
 import fr.outadoc.mastodonk.auth.AuthTokenProvider
 import io.ktor.client.*
 import io.ktor.client.features.*
