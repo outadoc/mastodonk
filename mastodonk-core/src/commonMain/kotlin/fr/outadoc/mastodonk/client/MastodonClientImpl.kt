@@ -15,6 +15,7 @@ import fr.outadoc.mastodonk.api.v1.repository.accounts.ReportsApiImpl
 import fr.outadoc.mastodonk.api.v1.repository.accounts.SuggestionsApiImpl
 import fr.outadoc.mastodonk.api.v1.repository.apps.AppsApiImpl
 import fr.outadoc.mastodonk.api.v1.repository.apps.OAuthApiImpl
+import fr.outadoc.mastodonk.api.v1.repository.instance.CustomEmojiApiImpl
 import fr.outadoc.mastodonk.api.v1.repository.instance.DirectoryApiImpl
 import fr.outadoc.mastodonk.api.v1.repository.instance.InstanceApiImpl
 import fr.outadoc.mastodonk.api.v1.repository.instance.TrendsApiImpl
@@ -40,6 +41,7 @@ internal class MastodonClientImpl(httpClient: MastodonHttpClient) : MastodonClie
     override val instance = InstanceApiImpl(httpClient)
     override val trends = TrendsApiImpl(httpClient)
     override val directory = DirectoryApiImpl(httpClient)
+    override val customEmoji = CustomEmojiApiImpl(httpClient)
 
     override val accounts = AccountsApiImpl(httpClient)
     override val bookmarks = BookmarksApiImpl(httpClient)

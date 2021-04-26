@@ -15,6 +15,7 @@ import fr.outadoc.mastodonk.api.v1.endpoint.accounts.ReportsApi
 import fr.outadoc.mastodonk.api.v1.endpoint.accounts.SuggestionsApi
 import fr.outadoc.mastodonk.api.v1.endpoint.apps.AppsApi
 import fr.outadoc.mastodonk.api.v1.endpoint.apps.OAuthApi
+import fr.outadoc.mastodonk.api.v1.endpoint.instance.CustomEmojiApi
 import fr.outadoc.mastodonk.api.v1.endpoint.instance.DirectoryApi
 import fr.outadoc.mastodonk.api.v1.endpoint.instance.InstanceApi
 import fr.outadoc.mastodonk.api.v1.endpoint.instance.TrendsApi
@@ -46,6 +47,7 @@ public interface MastodonClient {
     public val instance: InstanceApi
     public val trends: TrendsApi
     public val directory: DirectoryApi
+    public val customEmoji: CustomEmojiApi
 
     // endregion
 
