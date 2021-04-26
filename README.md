@@ -8,6 +8,7 @@
 
 ```kt
 fun main() = runBlocking {
+
     val client = MastodonClient {
         baseUrl = "https://mastodon.social"
         authTokenProvider = AuthTokenProvider {
@@ -17,6 +18,7 @@ fun main() = runBlocking {
     }
 
     GlobalScope.launch {
+
         // Get some information about the configured instance
         val instance = client.instance.getInstance()
         println("connected to instance ${instance.title} at ${instance.uri}!")
@@ -31,6 +33,7 @@ fun main() = runBlocking {
         client.streaming.getPublicStream().collect { toot ->
             println(toot)
         }
+
     }.join()
 }
 ```
