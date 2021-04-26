@@ -1,4 +1,4 @@
-name: Gradle Test
+name: JS Build
 
 on:
   workflow_dispatch:
@@ -20,11 +20,5 @@ jobs:
         java-version: '11'
         distribution: 'adopt'
 
-    - name: JVM Tests
-      run: ./gradlew mastodonk-core:jvmTest
-
     - name: JS Tests
       run: ./gradlew mastodonk-core:jsTest
-
-    - name: Native Tests
-      run: ./gradlew mastodonk-core:nativeTest
