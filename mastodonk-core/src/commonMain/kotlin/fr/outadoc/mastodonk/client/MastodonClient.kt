@@ -17,6 +17,7 @@ import fr.outadoc.mastodonk.api.v1.endpoint.apps.AppsApi
 import fr.outadoc.mastodonk.api.v1.endpoint.apps.OAuthApi
 import fr.outadoc.mastodonk.api.v1.endpoint.instance.InstanceApi
 import fr.outadoc.mastodonk.api.v1.endpoint.instance.TrendsApi
+import fr.outadoc.mastodonk.api.v1.endpoint.statuses.MediaApi
 import fr.outadoc.mastodonk.api.v1.endpoint.statuses.StatusesApi
 import fr.outadoc.mastodonk.api.v1.endpoint.timelines.ConversationsApi
 import fr.outadoc.mastodonk.api.v1.endpoint.timelines.ListsApi
@@ -56,6 +57,7 @@ public interface MastodonClient {
     public val featuredTags: FeaturedTagsApi
     public val preferences: PreferencesApi
     public val suggestions: SuggestionsApi
+    public val media: MediaApi
 
     // endregion
 

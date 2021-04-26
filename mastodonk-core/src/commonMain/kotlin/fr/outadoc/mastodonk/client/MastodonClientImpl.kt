@@ -17,6 +17,7 @@ import fr.outadoc.mastodonk.api.v1.repository.apps.AppsApiImpl
 import fr.outadoc.mastodonk.api.v1.repository.apps.OAuthApiImpl
 import fr.outadoc.mastodonk.api.v1.repository.instance.InstanceApiImpl
 import fr.outadoc.mastodonk.api.v1.repository.instance.TrendsApiImpl
+import fr.outadoc.mastodonk.api.v1.repository.statuses.MediaApiImpl
 import fr.outadoc.mastodonk.api.v1.repository.statuses.StatusesApiImpl
 import fr.outadoc.mastodonk.api.v1.repository.timelines.ConversationsApiImpl
 import fr.outadoc.mastodonk.api.v1.repository.timelines.ListsApiImpl
@@ -46,6 +47,7 @@ internal class MastodonClientImpl(httpClient: MastodonHttpClient) : MastodonClie
     override val featuredTags = FeaturedTagsApiImpl(httpClient)
     override val preferences = PreferencesApiImpl(httpClient)
     override val suggestions = SuggestionsApiImpl(httpClient)
+    override val media = MediaApiImpl(httpClient)
 
     override val statuses = StatusesApiImpl(httpClient)
 
