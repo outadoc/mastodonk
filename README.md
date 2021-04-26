@@ -1,4 +1,4 @@
-# mastodonk — A Kotlin/Multiplatform Mastodon client
+# mastodonk — A Kotlin/Multiplatform Mastodon API client
 [![JVM Build](https://github.com/outadoc/mastodonk/actions/workflows/jvm-build.yml/badge.svg)](https://github.com/outadoc/mastodonk/actions/workflows/jvm-build.yml)
 [![JS Build](https://github.com/outadoc/mastodonk/actions/workflows/js-build.yml/badge.svg)](https://github.com/outadoc/mastodonk/actions/workflows/js-build.yml)
 [![Native Build](https://github.com/outadoc/mastodonk/actions/workflows/native-build.yml/badge.svg)](https://github.com/outadoc/mastodonk/actions/workflows/native-build.yml)
