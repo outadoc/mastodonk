@@ -6,7 +6,7 @@ import fr.outadoc.mastodonk.api.entity.Tag
 /**
  * View and managed featured hashtags.
  *
- * @see [featured_tags - Mastodon Documentation](https://docs.joinmastodon.org/methods/featured_tags/)
+ * @see [Official Docs](https://docs.joinmastodon.org/methods/accounts/featured_tags/)
  */
 public interface FeaturedTagsApi {
 

@@ -6,7 +6,7 @@ import fr.outadoc.mastodonk.api.entity.Relationship
 /**
  * View and manage follow requests.
  *
- * @see [follow_requests - Mastodon Documentation](https://docs.joinmastodon.org/methods/follow_requests/)
+ * @see [Official Docs](https://docs.joinmastodon.org/methods/accounts/follow_requests/)
  */
 public interface FollowRequestsApi {
 

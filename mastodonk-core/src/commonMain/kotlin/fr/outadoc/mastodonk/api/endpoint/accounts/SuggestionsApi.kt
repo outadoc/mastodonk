@@ -5,7 +5,7 @@ import fr.outadoc.mastodonk.api.entity.Account
 /**
  * View and manage follow suggestions.
  *
- * @see [suggestions - Mastodon Documentation](https://docs.joinmastodon.org/methods/suggestions/)
+ * @see [Official Docs](https://docs.joinmastodon.org/methods/accounts/suggestions/)
  */
 public interface SuggestionsApi {
 

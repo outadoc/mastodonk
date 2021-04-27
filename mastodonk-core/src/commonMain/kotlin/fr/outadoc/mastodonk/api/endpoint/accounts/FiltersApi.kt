@@ -7,7 +7,7 @@ import fr.outadoc.mastodonk.api.entity.request.accounts.FilterUpdate
 /**
  * View and manage filters.
  *
- * @see [filters - Mastodon Documentation](https://docs.joinmastodon.org/methods/filters/)
+ * @see [Official Docs](https://docs.joinmastodon.org/methods/accounts/filters/)
  */
 public interface FiltersApi {
 

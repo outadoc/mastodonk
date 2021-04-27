@@ -5,7 +5,7 @@ import fr.outadoc.mastodonk.api.entity.Account
 /**
  * View muted accounts.
  *
- * @see [mutes - Mastodon Documentation](https://docs.joinmastodon.org/methods/mutes/)
+ * @see [Official Docs](https://docs.joinmastodon.org/methods/accounts/mutes/)
  */
 public interface MutesApi {
 

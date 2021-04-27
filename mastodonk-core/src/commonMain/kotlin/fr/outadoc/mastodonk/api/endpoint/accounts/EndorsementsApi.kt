@@ -5,7 +5,7 @@ import fr.outadoc.mastodonk.api.entity.Account
 /**
  * View featured profiles.
  *
- * @see [endorsements - Mastodon Documentation](https://docs.joinmastodon.org/methods/endorsements/)
+ * @see [Official Docs](https://docs.joinmastodon.org/methods/accounts/endorsements/)
  */
 public interface EndorsementsApi {
 

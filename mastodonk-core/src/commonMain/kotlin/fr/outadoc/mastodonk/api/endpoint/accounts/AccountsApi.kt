@@ -15,7 +15,7 @@ import fr.outadoc.mastodonk.api.entity.request.accounts.AccountCreate
 /**
  * Methods concerning user accounts and related information.
  *
- * @see [accounts - Mastodon Documentation](https://docs.joinmastodon.org/methods/accounts/)
+ * @see [Official Docs](https://docs.joinmastodon.org/methods/accounts/)
  */
 public interface AccountsApi {
 

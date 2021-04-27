@@ -5,7 +5,7 @@ import fr.outadoc.mastodonk.api.entity.Account
 /**
  * View blocked accounts.
  *
- * @see [blocks - Mastodon Documentation](https://docs.joinmastodon.org/methods/blocks/)
+ * @see [Official Docs](https://docs.joinmastodon.org/methods/accounts/blocks/)
  */
 public interface BlocksApi {
 

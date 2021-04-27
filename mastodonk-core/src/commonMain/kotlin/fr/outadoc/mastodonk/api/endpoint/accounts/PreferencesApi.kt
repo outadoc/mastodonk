@@ -5,7 +5,7 @@ import fr.outadoc.mastodonk.api.entity.Preferences
 /**
  * View account preferences.
  *
- * @see [preferences - Mastodon Documentation](https://docs.joinmastodon.org/methods/preferences/)
+ * @see [Official Docs](https://docs.joinmastodon.org/methods/accounts/preferences/)
  */
 public interface PreferencesApi {
 
