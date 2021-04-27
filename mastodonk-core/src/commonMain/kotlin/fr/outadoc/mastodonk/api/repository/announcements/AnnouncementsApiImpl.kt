@@ -7,7 +7,7 @@ import io.ktor.http.*
 
 internal class AnnouncementsApiImpl(private val client: MastodonHttpClient) : AnnouncementsApi {
 
-    override suspend fun getAllAnnouncements(withDismissed: Boolean?): List<Announcement> {
+    override suspend fun getAnnouncements(withDismissed: Boolean?): List<Announcement> {
         return client.request("/api/v1/announcements") {
             method = HttpMethod.Get
         }

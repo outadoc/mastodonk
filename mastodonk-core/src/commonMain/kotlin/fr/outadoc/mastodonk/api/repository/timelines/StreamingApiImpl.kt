@@ -1,6 +1,6 @@
-package fr.outadoc.mastodonk.api.repository.streaming
+package fr.outadoc.mastodonk.api.repository.timelines
 
-import fr.outadoc.mastodonk.api.endpoint.streaming.StreamingApi
+import fr.outadoc.mastodonk.api.endpoint.timelines.StreamingApi
 import fr.outadoc.mastodonk.api.entity.streaming.StreamingEvent
 import fr.outadoc.mastodonk.client.MastodonHttpClient
 import io.ktor.client.request.*
@@ -18,7 +18,7 @@ internal class StreamingApiImpl(private val client: MastodonHttpClient) : Stream
         }
     }
 
-    override suspend fun getUserStream(): Flow<StreamingEvent> {
+    override suspend fun getHomeStream(): Flow<StreamingEvent> {
         return getStream("user")
     }
 
@@ -42,13 +42,13 @@ internal class StreamingApiImpl(private val client: MastodonHttpClient) : Stream
         }
     }
 
-    override suspend fun getListStream(list: String): Flow<StreamingEvent> {
+    override suspend fun getListStream(listId: String): Flow<StreamingEvent> {
         return getStream("list") {
-            parameter("list", list)
+            parameter("list", listId)
         }
     }
 
-    override suspend fun getDirectStream(): Flow<StreamingEvent> {
+    override suspend fun getDirectMessageStream(): Flow<StreamingEvent> {
         return getStream("direct")
     }
 }

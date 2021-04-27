@@ -18,7 +18,7 @@ fun main() = runBlocking {
     }
 
     GlobalScope.launch {
-        val instance = client.instance.getInstance()
+        val instance = client.instance.getInstanceInfo()
         println("connected to instance ${instance.title} at ${instance.uri}!")
         println(instance)
 

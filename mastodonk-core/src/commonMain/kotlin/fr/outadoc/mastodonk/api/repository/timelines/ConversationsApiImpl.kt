@@ -8,7 +8,7 @@ import io.ktor.http.*
 
 internal class ConversationsApiImpl(private val client: MastodonHttpClient) : ConversationsApi {
 
-    override suspend fun getConversation(
+    override suspend fun getConversations(
         maxId: String?,
         sinceId: String?,
         minId: String?,

@@ -29,10 +29,10 @@ import fr.outadoc.mastodonk.api.repository.statuses.MediaApiImpl
 import fr.outadoc.mastodonk.api.repository.statuses.PollsApiImpl
 import fr.outadoc.mastodonk.api.repository.statuses.ScheduledStatusesApiImpl
 import fr.outadoc.mastodonk.api.repository.statuses.StatusesApiImpl
-import fr.outadoc.mastodonk.api.repository.streaming.StreamingApiImpl
 import fr.outadoc.mastodonk.api.repository.timelines.ConversationsApiImpl
 import fr.outadoc.mastodonk.api.repository.timelines.ListsApiImpl
 import fr.outadoc.mastodonk.api.repository.timelines.MarkersApiImpl
+import fr.outadoc.mastodonk.api.repository.timelines.StreamingApiImpl
 import fr.outadoc.mastodonk.api.repository.timelines.TimelinesApiImpl
 
 internal class MastodonClientImpl(httpClient: MastodonHttpClient) : MastodonClient {
@@ -41,6 +41,7 @@ internal class MastodonClientImpl(httpClient: MastodonHttpClient) : MastodonClie
     override val conversations = ConversationsApiImpl(httpClient)
     override val lists = ListsApiImpl(httpClient)
     override val markers = MarkersApiImpl(httpClient)
+    override val streaming = StreamingApiImpl(httpClient)
 
     override val instance = InstanceApiImpl(httpClient)
     override val trends = TrendsApiImpl(httpClient)
@@ -79,6 +80,4 @@ internal class MastodonClientImpl(httpClient: MastodonHttpClient) : MastodonClie
     override val proofs = ProofsApiImpl(httpClient)
 
     override val admin = AdminApiImpl(httpClient)
-
-    override val streaming = StreamingApiImpl(httpClient)
 }

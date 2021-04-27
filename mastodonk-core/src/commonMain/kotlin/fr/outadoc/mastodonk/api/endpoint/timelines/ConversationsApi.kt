@@ -2,16 +2,32 @@ package fr.outadoc.mastodonk.api.endpoint.timelines
 
 import fr.outadoc.mastodonk.api.entity.Conversation
 
+/**
+ * Direct conversations with other participants.
+ *
+ * Currently, just threads containing a post with "direct" visibility.
+ *
+ * @see [Official Docs](https://docs.joinmastodon.org/methods/timelines/conversations/)
+ */
 public interface ConversationsApi {
 
-    public suspend fun getConversation(
+    /**
+     * Gets the list of conversations for the current account.
+     */
+    public suspend fun getConversations(
         maxId: String? = null,
         sinceId: String? = null,
         minId: String? = null,
         limit: Int? = null
     ): List<Conversation>
 
+    /**
+     * Deletes a conversation.
+     */
     public suspend fun deleteConversation(id: String)
 
+    /**
+     * Marks a conversation as read.
+     */
     public suspend fun markAsRead(id: String): Conversation
 }

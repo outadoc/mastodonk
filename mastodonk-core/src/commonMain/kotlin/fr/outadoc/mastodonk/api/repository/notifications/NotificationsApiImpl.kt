@@ -11,7 +11,7 @@ import kotlinx.serialization.json.Json
 
 internal class NotificationsApiImpl(private val client: MastodonHttpClient) : NotificationsApi {
 
-    override suspend fun getAllNotifications(
+    override suspend fun getNotifications(
         excludeTypes: List<NotificationType>?,
         accountId: String?,
         limit: Int?,

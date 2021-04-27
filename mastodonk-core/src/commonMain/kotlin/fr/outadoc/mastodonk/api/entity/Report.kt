@@ -1,7 +1,14 @@
 package fr.outadoc.mastodonk.api.entity
 
+import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
-// TODO https://docs.joinmastodon.org/entities/report/
 @Serializable
-public class Report
+public data class Report(
+
+    @SerialName("id")
+    val id: String,
+
+    @SerialName("action_taken")
+    val wasActionTaken: Boolean
+)

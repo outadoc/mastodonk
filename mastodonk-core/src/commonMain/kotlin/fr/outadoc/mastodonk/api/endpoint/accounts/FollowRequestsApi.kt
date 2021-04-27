@@ -3,11 +3,25 @@ package fr.outadoc.mastodonk.api.endpoint.accounts
 import fr.outadoc.mastodonk.api.entity.Account
 import fr.outadoc.mastodonk.api.entity.Relationship
 
+/**
+ * View and manage follow requests.
+ *
+ * @see [Official Docs](https://docs.joinmastodon.org/methods/accounts/follow_requests/)
+ */
 public interface FollowRequestsApi {
 
-    public suspend fun getPendingFollows(limit: String?): List<Account>
+    /**
+     * Gets the list of accounts with a pending follow request.
+     */
+    public suspend fun getPendingFollowRequests(limit: String?): List<Account>
 
-    public suspend fun acceptFollow(id: String): Relationship
+    /**
+     * Accepts a follow request from another [Account].
+     */
+    public suspend fun acceptFollowRequest(id: String): Relationship
 
-    public suspend fun rejectFollow(id: String): Relationship
+    /**
+     * Rejects a follow request from another [Account].
+     */
+    public suspend fun rejectFollowRequest(id: String): Relationship
 }
