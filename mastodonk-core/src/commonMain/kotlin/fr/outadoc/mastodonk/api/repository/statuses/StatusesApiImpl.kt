@@ -110,13 +110,13 @@ internal class StatusesApiImpl(private val client: MastodonHttpClient) : Statuse
         }
     }
 
-    override suspend fun pin(id: String): Status {
+    override suspend fun featureStatus(id: String): Status {
         return client.request("/api/v1/statuses/${id.trim()}/pin") {
             method = HttpMethod.Post
         }
     }
 
-    override suspend fun undoPin(id: String): Status {
+    override suspend fun unfeatureStatus(id: String): Status {
         return client.request("/api/v1/statuses/${id.trim()}/unpin") {
             method = HttpMethod.Post
         }
