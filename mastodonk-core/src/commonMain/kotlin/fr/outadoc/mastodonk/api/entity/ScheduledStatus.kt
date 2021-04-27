@@ -9,7 +9,7 @@ import kotlinx.serialization.Serializable
 public data class ScheduledStatus(
 
     @SerialName("id")
-    val id: String,
+    val statusId: String,
 
     @SerialName("scheduled_at")
     @Serializable(with = InstantSerializer::class)

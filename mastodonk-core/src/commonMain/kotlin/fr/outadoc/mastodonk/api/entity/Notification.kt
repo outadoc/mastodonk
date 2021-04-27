@@ -9,7 +9,7 @@ import kotlinx.serialization.Serializable
 public data class Notification(
 
     @SerialName("id")
-    val id: String,
+    val notificationId: String,
 
     @SerialName("type")
     val type: NotificationType,

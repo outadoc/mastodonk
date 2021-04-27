@@ -7,7 +7,7 @@ import kotlinx.serialization.Serializable
 public data class Relationship(
 
     @SerialName("id")
-    val id: String,
+    val accountId: String,
 
     @SerialName("following")
     val isFollowing: Boolean,

@@ -16,14 +16,14 @@ internal class FollowRequestsApiImpl(private val client: MastodonHttpClient) : F
         }
     }
 
-    override suspend fun acceptFollowRequest(id: String): Relationship {
-        return client.request("/api/v1/follow_requests/${id.trim()}/authorize") {
+    override suspend fun acceptFollowRequest(accountId: String): Relationship {
+        return client.request("/api/v1/follow_requests/${accountId.trim()}/authorize") {
             method = HttpMethod.Post
         }
     }
 
-    override suspend fun rejectFollowRequest(id: String): Relationship {
-        return client.request("/api/v1/follow_requests/${id.trim()}/reject") {
+    override suspend fun rejectFollowRequest(accountId: String): Relationship {
+        return client.request("/api/v1/follow_requests/${accountId.trim()}/reject") {
             method = HttpMethod.Post
         }
     }

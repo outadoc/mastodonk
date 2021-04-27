@@ -7,7 +7,7 @@ import kotlinx.serialization.Serializable
 public data class PushSubscription(
 
     @SerialName("id")
-    val id: String,
+    val subscriptionId: String,
 
     @SerialName("endpoint")
     val endpoint: String,

@@ -24,10 +24,10 @@ public interface ConversationsApi {
     /**
      * Deletes a conversation.
      */
-    public suspend fun deleteConversation(id: String)
+    public suspend fun deleteConversation(conversationId: String)
 
     /**
      * Marks a conversation as read.
      */
-    public suspend fun markAsRead(id: String): Conversation
+    public suspend fun markAsRead(conversationId: String): Conversation
 }

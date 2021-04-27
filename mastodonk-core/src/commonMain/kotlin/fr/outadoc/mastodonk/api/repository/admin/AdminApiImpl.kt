@@ -43,8 +43,8 @@ internal class AdminApiImpl(private val client: MastodonHttpClient) : AdminApi {
         }
     }
 
-    override suspend fun getAccount(id: String): AdminAccount {
-        return client.request("/api/v1/admin/accounts/${id.trim()}") {
+    override suspend fun getAccount(accountId: String): AdminAccount {
+        return client.request("/api/v1/admin/accounts/${accountId.trim()}") {
             method = HttpMethod.Get
         }
     }
@@ -57,32 +57,32 @@ internal class AdminApiImpl(private val client: MastodonHttpClient) : AdminApi {
         }
     }
 
-    override suspend fun approvePendingAccount(id: String): AdminAccount {
-        return client.request("/api/v1/admin/accounts/${id.trim()}/approve") {
+    override suspend fun approvePendingAccount(accountId: String): AdminAccount {
+        return client.request("/api/v1/admin/accounts/${accountId.trim()}/approve") {
             method = HttpMethod.Post
         }
     }
 
-    override suspend fun rejectPendingAccount(id: String): AdminAccount {
-        return client.request("/api/v1/admin/accounts/${id.trim()}/reject") {
+    override suspend fun rejectPendingAccount(accountId: String): AdminAccount {
+        return client.request("/api/v1/admin/accounts/${accountId.trim()}/reject") {
             method = HttpMethod.Post
         }
     }
 
-    override suspend fun reenableAccount(id: String): AdminAccount {
-        return client.request("/api/v1/admin/accounts/${id.trim()}/enable") {
+    override suspend fun reenableAccount(accountId: String): AdminAccount {
+        return client.request("/api/v1/admin/accounts/${accountId.trim()}/enable") {
             method = HttpMethod.Post
         }
     }
 
-    override suspend fun unsilenceAccount(id: String): AdminAccount {
-        return client.request("/api/v1/admin/accounts/${id.trim()}/unsilence") {
+    override suspend fun unsilenceAccount(accountId: String): AdminAccount {
+        return client.request("/api/v1/admin/accounts/${accountId.trim()}/unsilence") {
             method = HttpMethod.Post
         }
     }
 
-    override suspend fun unsuspendAccount(id: String): AdminAccount {
-        return client.request("/api/v1/admin/accounts/${id.trim()}/unsuspend") {
+    override suspend fun unsuspendAccount(accountId: String): AdminAccount {
+        return client.request("/api/v1/admin/accounts/${accountId.trim()}/unsuspend") {
             method = HttpMethod.Post
         }
     }
@@ -100,32 +100,32 @@ internal class AdminApiImpl(private val client: MastodonHttpClient) : AdminApi {
         }
     }
 
-    override suspend fun getReport(id: String): AdminReport {
-        return client.request("/api/v1/admin/reports/${id.trim()}") {
+    override suspend fun getReport(reportId: String): AdminReport {
+        return client.request("/api/v1/admin/reports/${reportId.trim()}") {
             method = HttpMethod.Get
         }
     }
 
-    override suspend fun assignReportToSelf(id: String): AdminReport {
-        return client.request("/api/v1/admin/reports/${id.trim()}/assign_to_self") {
+    override suspend fun assignReportToSelf(reportId: String): AdminReport {
+        return client.request("/api/v1/admin/reports/${reportId.trim()}/assign_to_self") {
             method = HttpMethod.Post
         }
     }
 
-    override suspend fun unassignReport(id: String): AdminReport {
-        return client.request("/api/v1/admin/reports/${id.trim()}/unassign") {
+    override suspend fun unassignReport(reportId: String): AdminReport {
+        return client.request("/api/v1/admin/reports/${reportId.trim()}/unassign") {
             method = HttpMethod.Post
         }
     }
 
-    override suspend fun resolveReport(id: String): AdminReport {
-        return client.request("/api/v1/admin/reports/${id.trim()}/resolve") {
+    override suspend fun resolveReport(reportId: String): AdminReport {
+        return client.request("/api/v1/admin/reports/${reportId.trim()}/resolve") {
             method = HttpMethod.Post
         }
     }
 
-    override suspend fun reopenReport(id: String): AdminReport {
-        return client.request("/api/v1/admin/reports/${id.trim()}/reopen") {
+    override suspend fun reopenReport(reportId: String): AdminReport {
+        return client.request("/api/v1/admin/reports/${reportId.trim()}/reopen") {
             method = HttpMethod.Post
         }
     }

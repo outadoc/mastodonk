@@ -28,77 +28,77 @@ public interface StatusesApi {
     /**
      * Gets information about a status.
      */
-    public suspend fun getStatus(id: String): Status
+    public suspend fun getStatus(statusId: String): Status
 
     /**
      * Deletes a status.
      */
-    public suspend fun deleteStatus(id: String): Status
+    public suspend fun deleteStatus(statusId: String): Status
 
     /**
      * Gets statuses above and below this status in the thread.
      */
-    public suspend fun getContext(id: String): Context
+    public suspend fun getContext(statusId: String): Context
 
     /**
      * Gets who boosted a given status.
      */
-    public suspend fun getBoostedBy(id: String): List<Account>
+    public suspend fun getBoostedBy(statusId: String): List<Account>
 
     /**
      * Gets who favourited a given status.
      */
-    public suspend fun getFavouritedBy(id: String): List<Account>
+    public suspend fun getFavouritedBy(statusId: String): List<Account>
 
     /**
      * Adds a status to your favourites list.
      */
-    public suspend fun favourite(id: String): Status
+    public suspend fun favourite(statusId: String): Status
 
     /**
      * Removes a status from your favourites list.
      */
-    public suspend fun undoFavourite(id: String): Status
+    public suspend fun undoFavourite(statusId: String): Status
 
     /**
      * Boosts a status.
      */
-    public suspend fun boost(id: String, visibility: Visibility? = null): Status
+    public suspend fun boost(statusId: String, visibility: Visibility? = null): Status
 
     /**
      * Un-boosts a status.
      */
-    public suspend fun undoBoost(id: String): Status
+    public suspend fun undoBoost(statusId: String): Status
 
     /**
      * Privately bookmarks a status.
      */
-    public suspend fun bookmark(id: String): Status
+    public suspend fun bookmark(statusId: String): Status
 
     /**
      * Removes a status from the account's private bookmarks.
      */
-    public suspend fun undoBookmark(id: String): Status
+    public suspend fun undoBookmark(statusId: String): Status
 
     /**
      * Turns off notifications for the thread that this status is part of.
      *
      * Must be a thread in which the current account is a participant.
      */
-    public suspend fun mute(id: String): Status
+    public suspend fun mute(statusId: String): Status
 
     /**
      * Un-mutes notifications for the thread that this status is part of.
      */
-    public suspend fun undoMute(id: String): Status
+    public suspend fun undoMute(statusId: String): Status
 
     /**
      * Features a status from the current account at the top of their profile.
      */
-    public suspend fun featureStatus(id: String): Status
+    public suspend fun featureStatus(statusId: String): Status
 
     /**
      * Un-features a currently featured status.
      */
-    public suspend fun unfeatureStatus(id: String): Status
+    public suspend fun unfeatureStatus(statusId: String): Status
 }

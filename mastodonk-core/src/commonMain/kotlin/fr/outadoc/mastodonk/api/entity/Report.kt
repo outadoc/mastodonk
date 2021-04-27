@@ -7,7 +7,7 @@ import kotlinx.serialization.Serializable
 public data class Report(
 
     @SerialName("id")
-    val id: String,
+    val reportId: String,
 
     @SerialName("action_taken")
     val wasActionTaken: Boolean

@@ -30,8 +30,8 @@ internal class FeaturedTagsApiImpl(private val client: MastodonHttpClient) : Fea
         }
     }
 
-    override suspend fun unfeatureTag(id: String) {
-        return client.request("/api/v1/featured_tags/${id.trim()}") {
+    override suspend fun unfeatureTag(tagId: String) {
+        return client.request("/api/v1/featured_tags/${tagId.trim()}") {
             method = HttpMethod.Delete
         }
     }

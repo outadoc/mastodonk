@@ -9,7 +9,7 @@ import kotlinx.serialization.Serializable
 public data class FeaturedTag(
 
     @SerialName("id")
-    val id: String,
+    val tagId: String,
 
     @SerialName("name")
     val name: String,

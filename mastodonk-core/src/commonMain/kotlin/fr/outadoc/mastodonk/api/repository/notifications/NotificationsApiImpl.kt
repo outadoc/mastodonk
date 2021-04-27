@@ -35,8 +35,8 @@ internal class NotificationsApiImpl(private val client: MastodonHttpClient) : No
         }
     }
 
-    override suspend fun getNotification(id: String): Notification {
-        return client.request("/api/v1/notifications/${id.trim()}") {
+    override suspend fun getNotification(notificationId: String): Notification {
+        return client.request("/api/v1/notifications/${notificationId.trim()}") {
             method = HttpMethod.Get
         }
     }
@@ -47,8 +47,8 @@ internal class NotificationsApiImpl(private val client: MastodonHttpClient) : No
         }
     }
 
-    override suspend fun dismissNotification(id: String) {
-        return client.request("/api/v1/notifications/${id.trim()}/dismiss") {
+    override suspend fun dismissNotification(notificationId: String) {
+        return client.request("/api/v1/notifications/${notificationId.trim()}/dismiss") {
             method = HttpMethod.Post
         }
     }

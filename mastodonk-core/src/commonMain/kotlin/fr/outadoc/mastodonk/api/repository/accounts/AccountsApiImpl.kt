@@ -94,25 +94,25 @@ internal class AccountsApiImpl(private val client: MastodonHttpClient) : Account
         }
     }
 
-    override suspend fun getAccount(id: String): Account {
-        return client.request("/api/v1/accounts/${id.trim()}") {
+    override suspend fun getAccount(accountId: String): Account {
+        return client.request("/api/v1/accounts/${accountId.trim()}") {
             method = HttpMethod.Get
         }
     }
 
-    override suspend fun getStatuses(id: String): List<Status> {
-        return client.request("/api/v1/accounts/${id.trim()}/statuses") {
+    override suspend fun getStatuses(accountId: String): List<Status> {
+        return client.request("/api/v1/accounts/${accountId.trim()}/statuses") {
             method = HttpMethod.Get
         }
     }
 
     override suspend fun getFollowers(
-        id: String,
+        accountId: String,
         maxId: String?,
         sinceId: String?,
         limit: Int?
     ): List<Account> {
-        return client.request("/api/v1/accounts/${id.trim()}/followers") {
+        return client.request("/api/v1/accounts/${accountId.trim()}/followers") {
             method = HttpMethod.Get
             parameter("max_id", maxId)
             parameter("since_id", sinceId)
@@ -121,12 +121,12 @@ internal class AccountsApiImpl(private val client: MastodonHttpClient) : Account
     }
 
     override suspend fun getFollowing(
-        id: String,
+        accountId: String,
         maxId: String?,
         sinceId: String?,
         limit: Int?
     ): List<Account> {
-        return client.request("/api/v1/accounts/${id.trim()}/following") {
+        return client.request("/api/v1/accounts/${accountId.trim()}/following") {
             method = HttpMethod.Get
             parameter("max_id", maxId)
             parameter("since_id", sinceId)
@@ -134,30 +134,30 @@ internal class AccountsApiImpl(private val client: MastodonHttpClient) : Account
         }
     }
 
-    override suspend fun getFeaturedTags(id: String): List<FeaturedTag> {
-        return client.request("/api/v1/accounts/${id.trim()}/featured_tags") {
+    override suspend fun getFeaturedTags(accountId: String): List<FeaturedTag> {
+        return client.request("/api/v1/accounts/${accountId.trim()}/featured_tags") {
             method = HttpMethod.Get
         }
     }
 
-    override suspend fun getListsContainedIn(id: String): List<UserList> {
-        return client.request("/api/v1/accounts/${id.trim()}/lists") {
+    override suspend fun getListsContainedIn(accountId: String): List<UserList> {
+        return client.request("/api/v1/accounts/${accountId.trim()}/lists") {
             method = HttpMethod.Get
         }
     }
 
-    override suspend fun getIdentityProofs(id: String): List<IdentityProof> {
-        return client.request("/api/v1/accounts/${id.trim()}/identity_proofs") {
+    override suspend fun getIdentityProofs(accountId: String): List<IdentityProof> {
+        return client.request("/api/v1/accounts/${accountId.trim()}/identity_proofs") {
             method = HttpMethod.Get
         }
     }
 
     override suspend fun followAccount(
-        id: String,
+        accountId: String,
         reblogs: Boolean?,
         notify: Boolean?
     ): Relationship {
-        return client.request("/api/v1/accounts/${id.trim()}/follow") {
+        return client.request("/api/v1/accounts/${accountId.trim()}/follow") {
             method = HttpMethod.Post
             formData {
                 reblogs?.let { append("reblogs", it.toString()) }
@@ -166,50 +166,50 @@ internal class AccountsApiImpl(private val client: MastodonHttpClient) : Account
         }
     }
 
-    override suspend fun unfollowAccount(id: String): Relationship {
-        return client.request("/api/v1/accounts/${id.trim()}/unfollow") {
+    override suspend fun unfollowAccount(accountId: String): Relationship {
+        return client.request("/api/v1/accounts/${accountId.trim()}/unfollow") {
             method = HttpMethod.Post
         }
     }
 
-    override suspend fun blockAccount(id: String): Relationship {
-        return client.request("/api/v1/accounts/${id.trim()}/block") {
+    override suspend fun blockAccount(accountId: String): Relationship {
+        return client.request("/api/v1/accounts/${accountId.trim()}/block") {
             method = HttpMethod.Post
         }
     }
 
-    override suspend fun unblockAccount(id: String): Relationship {
-        return client.request("/api/v1/accounts/${id.trim()}/unblock") {
+    override suspend fun unblockAccount(accountId: String): Relationship {
+        return client.request("/api/v1/accounts/${accountId.trim()}/unblock") {
             method = HttpMethod.Post
         }
     }
 
-    override suspend fun muteAccount(id: String): Relationship {
-        return client.request("/api/v1/accounts/${id.trim()}/mute") {
+    override suspend fun muteAccount(accountId: String): Relationship {
+        return client.request("/api/v1/accounts/${accountId.trim()}/mute") {
             method = HttpMethod.Post
         }
     }
 
-    override suspend fun unmuteAccount(id: String): Relationship {
-        return client.request("/api/v1/accounts/${id.trim()}/unmute") {
+    override suspend fun unmuteAccount(accountId: String): Relationship {
+        return client.request("/api/v1/accounts/${accountId.trim()}/unmute") {
             method = HttpMethod.Post
         }
     }
 
-    override suspend fun featureAccount(id: String): Relationship {
-        return client.request("/api/v1/accounts/${id.trim()}/pin") {
+    override suspend fun featureAccount(accountId: String): Relationship {
+        return client.request("/api/v1/accounts/${accountId.trim()}/pin") {
             method = HttpMethod.Post
         }
     }
 
-    override suspend fun unfeatureAccount(id: String): Relationship {
-        return client.request("/api/v1/accounts/${id.trim()}/unpin") {
+    override suspend fun unfeatureAccount(accountId: String): Relationship {
+        return client.request("/api/v1/accounts/${accountId.trim()}/unpin") {
             method = HttpMethod.Post
         }
     }
 
-    override suspend fun commentOnAccount(id: String, comment: String?): Relationship {
-        return client.request("/api/v1/accounts/${id.trim()}/note") {
+    override suspend fun commentOnAccount(accountId: String, comment: String?): Relationship {
+        return client.request("/api/v1/accounts/${accountId.trim()}/note") {
             method = HttpMethod.Post
             formData {
                 comment?.let { append("comment", it) }
@@ -217,11 +217,11 @@ internal class AccountsApiImpl(private val client: MastodonHttpClient) : Account
         }
     }
 
-    override suspend fun getRelationships(ids: List<String>): List<Relationship> {
+    override suspend fun getRelationships(accountIds: List<String>): List<Relationship> {
         return client.request("/api/v1/accounts/relationships") {
             method = HttpMethod.Post
             formData {
-                ids.forEach { append("id", it) }
+                accountIds.forEach { append("id", it) }
             }
         }
     }

@@ -8,13 +8,13 @@ import io.ktor.http.*
 
 internal class PollsApiImpl(private val client: MastodonHttpClient) : PollsApi {
 
-    override suspend fun getPoll(id: String): Poll {
-        return client.request("/api/v1/polls/${id.trim()}") {
+    override suspend fun getPoll(pollId: String): Poll {
+        return client.request("/api/v1/polls/${pollId.trim()}") {
             method = HttpMethod.Get
         }
     }
 
-    override suspend fun addVote(id: String, choices: List<Int>): Poll {
+    override suspend fun addVote(pollId: String, choices: List<Int>): Poll {
         return client.request("/api/v1/statuses") {
             method = HttpMethod.Post
             contentType(ContentType.Application.Json)

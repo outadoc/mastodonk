@@ -18,10 +18,10 @@ public interface FollowRequestsApi {
     /**
      * Accepts a follow request from another [Account].
      */
-    public suspend fun acceptFollowRequest(id: String): Relationship
+    public suspend fun acceptFollowRequest(accountId: String): Relationship
 
     /**
      * Rejects a follow request from another [Account].
      */
-    public suspend fun rejectFollowRequest(id: String): Relationship
+    public suspend fun rejectFollowRequest(accountId: String): Relationship
 }

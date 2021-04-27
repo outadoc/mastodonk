@@ -15,8 +15,8 @@ internal class SuggestionsApiImpl(private val client: MastodonHttpClient) : Sugg
         }
     }
 
-    override suspend fun removeSuggestion(id: String) {
-        return client.request("/api/v1/suggestions/${id.trim()}") {
+    override suspend fun removeSuggestion(accountId: String) {
+        return client.request("/api/v1/suggestions/${accountId.trim()}") {
             method = HttpMethod.Delete
         }
     }

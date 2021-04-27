@@ -13,20 +13,20 @@ internal class AnnouncementsApiImpl(private val client: MastodonHttpClient) : An
         }
     }
 
-    override suspend fun dismissAnnouncement(id: String) {
-        return client.request("/api/v1/announcements/${id.trim()}/dismiss") {
+    override suspend fun dismissAnnouncement(announcementId: String) {
+        return client.request("/api/v1/announcements/${announcementId.trim()}/dismiss") {
             method = HttpMethod.Post
         }
     }
 
-    override suspend fun addReaction(id: String, name: String) {
-        return client.request("/api/v1/announcements/${id.trim()}/reactions/${name.trim()}") {
+    override suspend fun addReaction(announcementId: String, name: String) {
+        return client.request("/api/v1/announcements/${announcementId.trim()}/reactions/${name.trim()}") {
             method = HttpMethod.Put
         }
     }
 
-    override suspend fun removeReaction(id: String, name: String) {
-        return client.request("/api/v1/announcements/${id.trim()}/reactions/${name.trim()}") {
+    override suspend fun removeReaction(announcementId: String, name: String) {
+        return client.request("/api/v1/announcements/${announcementId.trim()}/reactions/${name.trim()}") {
             method = HttpMethod.Delete
         }
     }

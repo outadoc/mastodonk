@@ -71,19 +71,19 @@ public interface AccountsApi {
     /**
      * Gets information about a profile.
      */
-    public suspend fun getAccount(id: String): Account
+    public suspend fun getAccount(accountId: String): Account
 
     /**
      * Gets statuses posted by the given account.
      */
-    public suspend fun getStatuses(id: String): List<Status>
+    public suspend fun getStatuses(accountId: String): List<Status>
 
     /**
      * Gets the list of accounts which follow the given account,
      * if network is not hidden by the account owner.
      */
     public suspend fun getFollowers(
-        id: String,
+        accountId: String,
         maxId: String? = null,
         sinceId: String? = null,
         limit: Int? = null
@@ -94,7 +94,7 @@ public interface AccountsApi {
      * if network is not hidden by the account owner.
      */
     public suspend fun getFollowing(
-        id: String,
+        accountId: String,
         maxId: String? = null,
         sinceId: String? = null,
         limit: Int? = null
@@ -103,17 +103,17 @@ public interface AccountsApi {
     /**
      * Gets tags featured by this account.
      */
-    public suspend fun getFeaturedTags(id: String): List<FeaturedTag>
+    public suspend fun getFeaturedTags(accountId: String): List<FeaturedTag>
 
     /**
      * Gets the user lists that you have added this account to.
      */
-    public suspend fun getListsContainedIn(id: String): List<UserList>
+    public suspend fun getListsContainedIn(accountId: String): List<UserList>
 
     /**
      * Gets identity proofs for this account.
      */
-    public suspend fun getIdentityProofs(id: String): List<IdentityProof>
+    public suspend fun getIdentityProofs(accountId: String): List<IdentityProof>
 
     // endregion
 
@@ -125,7 +125,7 @@ public interface AccountsApi {
      * Can also be used to update whether to show reblogs or enable notifications.
      */
     public suspend fun followAccount(
-        id: String,
+        accountId: String,
         reblogs: Boolean? = null,
         notify: Boolean? = null
     ): Relationship
@@ -133,7 +133,7 @@ public interface AccountsApi {
     /**
      * Unfollows the given account.
      */
-    public suspend fun unfollowAccount(id: String): Relationship
+    public suspend fun unfollowAccount(accountId: String): Relationship
 
     /**
      * Blocks the given account.
@@ -141,12 +141,12 @@ public interface AccountsApi {
      * Clients should filter statuses from this account,
      * if received (e.g. due to a boost in the Home timeline).
      */
-    public suspend fun blockAccount(id: String): Relationship
+    public suspend fun blockAccount(accountId: String): Relationship
 
     /**
      * Unblocks the given account.
      */
-    public suspend fun unblockAccount(id: String): Relationship
+    public suspend fun unblockAccount(accountId: String): Relationship
 
     /**
      * Mutes the given account.
@@ -154,27 +154,27 @@ public interface AccountsApi {
      * Clients should filter statuses and notifications from this account,
      * if received (e.g. due to a boost in the Home timeline).
      */
-    public suspend fun muteAccount(id: String): Relationship
+    public suspend fun muteAccount(accountId: String): Relationship
 
     /**
      * Unmutes the given account.
      */
-    public suspend fun unmuteAccount(id: String): Relationship
+    public suspend fun unmuteAccount(accountId: String): Relationship
 
     /**
      * Adds the given account to the user's featured profiles.
      */
-    public suspend fun featureAccount(id: String): Relationship
+    public suspend fun featureAccount(accountId: String): Relationship
 
     /**
      * Removes the given account from the user's featured profiles.
      */
-    public suspend fun unfeatureAccount(id: String): Relationship
+    public suspend fun unfeatureAccount(accountId: String): Relationship
 
     /**
      * Sets a private note on a user.
      */
-    public suspend fun commentOnAccount(id: String, comment: String? = null): Relationship
+    public suspend fun commentOnAccount(accountId: String, comment: String? = null): Relationship
 
     // endregion
 
@@ -185,7 +185,7 @@ public interface AccountsApi {
      *
      * Find out whether given accounts are followed, blocked, muted, etc.
      */
-    public suspend fun getRelationships(ids: List<String>): List<Relationship>
+    public suspend fun getRelationships(accountIds: List<String>): List<Relationship>
 
     /**
      * Searches for matching accounts by username or display name.

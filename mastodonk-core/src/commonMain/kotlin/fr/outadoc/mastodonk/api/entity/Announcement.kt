@@ -9,7 +9,7 @@ import kotlinx.serialization.Serializable
 public data class Announcement(
 
     @SerialName("id")
-    val id: String,
+    val announcementId: String,
 
     @SerialName("text")
     val text: String,

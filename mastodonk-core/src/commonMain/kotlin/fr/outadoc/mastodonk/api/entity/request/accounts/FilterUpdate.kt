@@ -10,7 +10,7 @@ import kotlinx.serialization.Serializable
 public data class FilterUpdate(
 
     @SerialName("id")
-    val id: String,
+    val filterId: String,
 
     @SerialName("phrase")
     val phrase: String,

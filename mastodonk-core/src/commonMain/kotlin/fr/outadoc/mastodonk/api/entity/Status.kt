@@ -9,7 +9,7 @@ import kotlinx.serialization.Serializable
 public data class Status(
 
     @SerialName("id")
-    val id: String,
+    val statusId: String,
 
     @SerialName("uri")
     val uri: String,

@@ -21,9 +21,9 @@ public data class UpdateEvent(public val payload: Status) : StreamingEvent()
 public data class NotificationEvent(public val payload: Notification) : StreamingEvent()
 
 /**
- * The status with the given [id] has been deleted.
+ * The status with the given [statusId] has been deleted.
  */
-public data class DeleteEvent(public val id: String) : StreamingEvent()
+public data class DeleteEvent(public val statusId: String) : StreamingEvent()
 
 /**
  * Keyword filters have been changed.

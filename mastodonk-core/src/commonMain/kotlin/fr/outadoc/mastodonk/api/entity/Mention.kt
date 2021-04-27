@@ -7,7 +7,7 @@ import kotlinx.serialization.Serializable
 public data class Mention(
 
     @SerialName("id")
-    val id: String,
+    val accountId: String,
 
     @SerialName("username")
     val username: String,

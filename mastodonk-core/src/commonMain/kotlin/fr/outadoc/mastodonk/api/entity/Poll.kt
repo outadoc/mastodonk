@@ -9,7 +9,7 @@ import kotlinx.serialization.Serializable
 public data class Poll(
 
     @SerialName("id")
-    val id: String,
+    val pollId: String,
 
     @SerialName("expired")
     val isExpired: Boolean,

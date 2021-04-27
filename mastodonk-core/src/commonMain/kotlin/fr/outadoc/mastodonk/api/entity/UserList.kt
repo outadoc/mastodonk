@@ -7,7 +7,7 @@ import kotlinx.serialization.Serializable
 public data class UserList(
 
     @SerialName("id")
-    val id: String,
+    val listId: String,
 
     @SerialName("title")
     val title: String,

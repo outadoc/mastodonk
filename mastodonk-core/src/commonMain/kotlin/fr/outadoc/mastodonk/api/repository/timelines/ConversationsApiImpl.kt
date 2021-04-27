@@ -23,14 +23,14 @@ internal class ConversationsApiImpl(private val client: MastodonHttpClient) : Co
         }
     }
 
-    override suspend fun deleteConversation(id: String) {
-        return client.request("/api/v1/conversations/${id.trim()}") {
+    override suspend fun deleteConversation(conversationId: String) {
+        return client.request("/api/v1/conversations/${conversationId.trim()}") {
             method = HttpMethod.Delete
         }
     }
 
-    override suspend fun markAsRead(id: String): Conversation {
-        return client.request("/api/v1/conversations/${id.trim()}/read") {
+    override suspend fun markAsRead(conversationId: String): Conversation {
+        return client.request("/api/v1/conversations/${conversationId.trim()}/read") {
             method = HttpMethod.Post
         }
     }

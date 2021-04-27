@@ -49,7 +49,7 @@ public interface AdminApi {
     /**
      * Gets a specific account with admin-level information.
      */
-    public suspend fun getAccount(id: String): AdminAccount
+    public suspend fun getAccount(accountId: String): AdminAccount
 
     /**
      * Performs an action against an account and logs this action in the moderation history.
@@ -59,27 +59,27 @@ public interface AdminApi {
     /**
      * Approves the given local account if it is currently pending approval.
      */
-    public suspend fun approvePendingAccount(id: String): AdminAccount
+    public suspend fun approvePendingAccount(accountId: String): AdminAccount
 
     /**
      * Rejects the given local account if it is currently pending approval.
      */
-    public suspend fun rejectPendingAccount(id: String): AdminAccount
+    public suspend fun rejectPendingAccount(accountId: String): AdminAccount
 
     /**
      * Re-enable a local account whose login is currently disabled.
      */
-    public suspend fun reenableAccount(id: String): AdminAccount
+    public suspend fun reenableAccount(accountId: String): AdminAccount
 
     /**
      * Unsilence a currently silenced account.
      */
-    public suspend fun unsilenceAccount(id: String): AdminAccount
+    public suspend fun unsilenceAccount(accountId: String): AdminAccount
 
     /**
      * Unsuspend a currently suspended account.
      */
-    public suspend fun unsuspendAccount(id: String): AdminAccount
+    public suspend fun unsuspendAccount(accountId: String): AdminAccount
 
     // endregion
 
@@ -97,27 +97,27 @@ public interface AdminApi {
     /**
      * Gets information about a specific report.
      */
-    public suspend fun getReport(id: String): AdminReport
+    public suspend fun getReport(reportId: String): AdminReport
 
     /**
      * Assigns the handling of this report to the current account.
      */
-    public suspend fun assignReportToSelf(id: String): AdminReport
+    public suspend fun assignReportToSelf(reportId: String): AdminReport
 
     /**
      * Un-assigns a report, so that another account may be assigned to it.
      */
-    public suspend fun unassignReport(id: String): AdminReport
+    public suspend fun unassignReport(reportId: String): AdminReport
 
     /**
      * Marks a report as resolved.
      */
-    public suspend fun resolveReport(id: String): AdminReport
+    public suspend fun resolveReport(reportId: String): AdminReport
 
     /**
      * Re-opens a currently closed report.
      */
-    public suspend fun reopenReport(id: String): AdminReport
+    public suspend fun reopenReport(reportId: String): AdminReport
 
     // endregion
 }

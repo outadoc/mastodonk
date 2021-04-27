@@ -7,7 +7,7 @@ import kotlinx.serialization.Serializable
 public data class Attachment(
 
     @SerialName("id")
-    val id: String,
+    val attachmentId: String,
 
     @SerialName("type")
     val type: AttachmentType,

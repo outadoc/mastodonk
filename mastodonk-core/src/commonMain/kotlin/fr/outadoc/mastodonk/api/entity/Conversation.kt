@@ -7,7 +7,7 @@ import kotlinx.serialization.Serializable
 public data class Conversation(
 
     @SerialName("id")
-    val id: String,
+    val conversationId: String,
 
     @SerialName("accounts")
     val accounts: List<Account>,

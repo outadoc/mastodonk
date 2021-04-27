@@ -10,8 +10,8 @@ import io.ktor.http.*
 
 internal class MediaApiImpl(private val client: MastodonHttpClient) : MediaApi {
 
-    override suspend fun getMediaAttachment(id: String): Attachment {
-        return client.request("/api/v1/media/${id.trim()}") {
+    override suspend fun getMediaAttachment(attachmentId: String): Attachment {
+        return client.request("/api/v1/media/${attachmentId.trim()}") {
             method = HttpMethod.Get
         }
     }
@@ -34,7 +34,7 @@ internal class MediaApiImpl(private val client: MastodonHttpClient) : MediaApi {
     }
 
     override suspend fun updateMediaAttachment(
-        id: String,
+        attachmentId: String,
         file: File?,
         thumbnail: File?,
         description: String?,
@@ -42,7 +42,7 @@ internal class MediaApiImpl(private val client: MastodonHttpClient) : MediaApi {
     ): Attachment {
         val filePart = file?.toFormPart("file")
         val thumbnailPart = thumbnail?.toFormPart("thumbnail")
-        return client.request("/api/v1/media/${id.trim()}") {
+        return client.request("/api/v1/media/${attachmentId.trim()}") {
             method = HttpMethod.Post
             formData {
                 filePart?.let { append(it) }

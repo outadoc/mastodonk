@@ -9,7 +9,7 @@ import kotlinx.serialization.Serializable
 public data class AdminAccount(
 
     @SerialName("id")
-    val id: String,
+    val accountId: String,
 
     @SerialName("username")
     val username: String,

@@ -11,7 +11,7 @@ import kotlinx.serialization.Serializable
 public data class Account(
 
     @SerialName("id")
-    val id: String,
+    val accountId: String,
 
     @SerialName("username")
     val username: String,

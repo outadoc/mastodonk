@@ -13,7 +13,7 @@ public interface MediaApi {
     /**
      * Gets a single attachment by its id.
      */
-    public suspend fun getMediaAttachment(id: String): Attachment
+    public suspend fun getMediaAttachment(attachmentId: String): Attachment
 
     /**
      * Creates an attachment to be used with a new status.
@@ -40,7 +40,7 @@ public interface MediaApi {
      * @param focus Two floating points (x,y), comma-delimited, ranging from -1.0 to 1.0
      */
     public suspend fun updateMediaAttachment(
-        id: String,
+        attachmentId: String,
         file: File?,
         thumbnail: File?,
         description: String?,

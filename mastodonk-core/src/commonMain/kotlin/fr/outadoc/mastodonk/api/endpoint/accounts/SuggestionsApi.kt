@@ -17,5 +17,5 @@ public interface SuggestionsApi {
     /**
      * Removes an account from the list of suggested accounts to follow.
      */
-    public suspend fun removeSuggestion(id: String)
+    public suspend fun removeSuggestion(accountId: String)
 }

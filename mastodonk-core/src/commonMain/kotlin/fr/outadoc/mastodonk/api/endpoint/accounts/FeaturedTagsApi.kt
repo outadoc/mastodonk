@@ -30,5 +30,5 @@ public interface FeaturedTagsApi {
     /**
      * Unfeature a hashtag.
      */
-    public suspend fun unfeatureTag(id: String)
+    public suspend fun unfeatureTag(tagId: String)
 }

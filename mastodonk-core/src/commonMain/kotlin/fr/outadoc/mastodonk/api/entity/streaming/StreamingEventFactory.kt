@@ -15,7 +15,7 @@ internal class StreamingEventFactory(private val json: Json) {
                 payload = json.decodeFromString(rawEvent.payload)
             )
             "delete" -> DeleteEvent(
-                id = rawEvent.payload
+                statusId = rawEvent.payload
             )
             "filters_changed" -> FiltersChangedEvent
             else -> null

@@ -19,9 +19,9 @@ public interface ListsApi {
     public suspend fun getOwnLists(): List<UserList>
 
     /**
-     * Fetches the list with the given [id].
+     * Fetches the list with the given [listId].
      */
-    public suspend fun getList(id: String): UserList
+    public suspend fun getList(listId: String): UserList
 
     /**
      * Creates a new list.
@@ -31,12 +31,12 @@ public interface ListsApi {
     /**
      * Changes the title of a list, or which replies to show.
      */
-    public suspend fun updateList(id: String, title: String?, repliesPolicy: RepliesPolicy?): UserList
+    public suspend fun updateList(listId: String, title: String?, repliesPolicy: RepliesPolicy?): UserList
 
     /**
      * Deletes a list.
      */
-    public suspend fun deleteList(id: String)
+    public suspend fun deleteList(listId: String)
 
     // endregion
 
@@ -46,7 +46,7 @@ public interface ListsApi {
      * Gets the list of accounts in the given list.
      */
     public suspend fun getListAccounts(
-        id: String,
+        listId: String,
         maxId: String? = null,
         sinceId: String? = null,
         limit: Int? = null
@@ -57,12 +57,12 @@ public interface ListsApi {
      *
      * Note that the current account must be following these accounts.
      */
-    public suspend fun addAccountsToList(id: String, accountIds: List<String>)
+    public suspend fun addAccountsToList(listId: String, accountIds: List<String>)
 
     /**
      * Removes the given accounts from the given list.
      */
-    public suspend fun removeAccountsFromList(id: String, accountIds: List<String>)
+    public suspend fun removeAccountsFromList(listId: String, accountIds: List<String>)
 
     // endregion
 }

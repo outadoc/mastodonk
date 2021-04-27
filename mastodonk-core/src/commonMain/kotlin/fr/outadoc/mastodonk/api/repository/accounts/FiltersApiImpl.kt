@@ -15,8 +15,8 @@ internal class FiltersApiImpl(private val client: MastodonHttpClient) : FiltersA
         }
     }
 
-    override suspend fun getFilter(id: String): Filter {
-        return client.request("/api/v1/filters/${id.trim()}") {
+    override suspend fun getFilter(filterId: String): Filter {
+        return client.request("/api/v1/filters/${filterId.trim()}") {
             method = HttpMethod.Get
         }
     }
@@ -37,8 +37,8 @@ internal class FiltersApiImpl(private val client: MastodonHttpClient) : FiltersA
         }
     }
 
-    override suspend fun deleteFilter(id: String) {
-        return client.request("/api/v1/filters/${id.trim()}") {
+    override suspend fun deleteFilter(filterId: String) {
+        return client.request("/api/v1/filters/${filterId.trim()}") {
             method = HttpMethod.Delete
         }
     }
