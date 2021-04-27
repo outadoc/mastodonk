@@ -14,7 +14,7 @@ public interface AnnouncementsApi {
      *
      * @param withDismissed Whether to include dismissed announcements.
      */
-    public suspend fun getAllAnnouncements(withDismissed: Boolean? = null): List<Announcement>
+    public suspend fun getAnnouncements(withDismissed: Boolean? = null): List<Announcement>
 
     /**
      * Dismisses an announcement.

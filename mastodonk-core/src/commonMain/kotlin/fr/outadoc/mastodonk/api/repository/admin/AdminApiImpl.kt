@@ -87,7 +87,7 @@ internal class AdminApiImpl(private val client: MastodonHttpClient) : AdminApi {
         }
     }
 
-    override suspend fun getAllReports(
+    override suspend fun getReports(
         isResolved: Boolean?,
         accountId: String?,
         targetAccountId: String?

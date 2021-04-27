@@ -88,7 +88,7 @@ public interface AdminApi {
     /**
      * Gets a list of reports matching the given criteria.
      */
-    public suspend fun getAllReports(
+    public suspend fun getReports(
         isResolved: Boolean? = null,
         accountId: String? = null,
         targetAccountId: String? = null
