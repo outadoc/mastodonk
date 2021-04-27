@@ -17,6 +17,7 @@ internal class SearchApiImpl(private val client: MastodonHttpClient) : SearchApi
         type: SearchType?,
         excludeUnreviewed: Boolean?,
         attemptResolve: Boolean?,
+        onlyFollowing: Boolean?,
         maxId: String?,
         minId: String?,
         limit: Int?,
@@ -30,6 +31,7 @@ internal class SearchApiImpl(private val client: MastodonHttpClient) : SearchApi
             type?.let { parameter("type", Json.Default.encodeToString(it)) }
             parameter("exclude_unreviewed", excludeUnreviewed)
             parameter("resolve", attemptResolve)
+            parameter("following", onlyFollowing)
 
             parameter("max_id", maxId)
             parameter("min_id", minId)
