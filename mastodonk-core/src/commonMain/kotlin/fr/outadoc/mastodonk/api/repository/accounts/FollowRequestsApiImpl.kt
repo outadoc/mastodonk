@@ -9,20 +9,20 @@ import io.ktor.http.*
 
 internal class FollowRequestsApiImpl(private val client: MastodonHttpClient) : FollowRequestsApi {
 
-    override suspend fun getPendingFollows(limit: String?): List<Account> {
+    override suspend fun getPendingFollowRequests(limit: String?): List<Account> {
         return client.request("/api/v1/follow_requests") {
             method = HttpMethod.Get
             parameter("limit", limit)
         }
     }
 
-    override suspend fun acceptFollow(id: String): Relationship {
+    override suspend fun acceptFollowRequest(id: String): Relationship {
         return client.request("/api/v1/follow_requests/${id.trim()}/authorize") {
             method = HttpMethod.Post
         }
     }
 
-    override suspend fun rejectFollow(id: String): Relationship {
+    override suspend fun rejectFollowRequest(id: String): Relationship {
         return client.request("/api/v1/follow_requests/${id.trim()}/reject") {
             method = HttpMethod.Post
         }
