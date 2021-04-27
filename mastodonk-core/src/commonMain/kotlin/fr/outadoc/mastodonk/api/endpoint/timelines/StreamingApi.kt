@@ -13,7 +13,7 @@ public interface StreamingApi {
     /**
      * Gets a real-time stream of new statuses on the user's home timeline.
      */
-    public suspend fun getUserStream(): Flow<StreamingEvent>
+    public suspend fun getHomeStream(): Flow<StreamingEvent>
 
     /**
      * Gets a real-time stream of new statuses on the federated public timeline.

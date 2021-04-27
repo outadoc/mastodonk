@@ -18,7 +18,7 @@ internal class StreamingApiImpl(private val client: MastodonHttpClient) : Stream
         }
     }
 
-    override suspend fun getUserStream(): Flow<StreamingEvent> {
+    override suspend fun getHomeStream(): Flow<StreamingEvent> {
         return getStream("user")
     }
 
