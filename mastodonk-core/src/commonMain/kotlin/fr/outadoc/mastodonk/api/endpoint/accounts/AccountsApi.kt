@@ -2,13 +2,15 @@ package fr.outadoc.mastodonk.api.endpoint.accounts
 
 import fr.outadoc.mastodonk.api.entity.Account
 import fr.outadoc.mastodonk.api.entity.FeaturedTag
+import fr.outadoc.mastodonk.api.entity.Field
 import fr.outadoc.mastodonk.api.entity.IdentityProof
 import fr.outadoc.mastodonk.api.entity.Relationship
 import fr.outadoc.mastodonk.api.entity.Status
 import fr.outadoc.mastodonk.api.entity.Token
 import fr.outadoc.mastodonk.api.entity.UserList
+import fr.outadoc.mastodonk.api.entity.Visibility
+import fr.outadoc.mastodonk.api.entity.request.File
 import fr.outadoc.mastodonk.api.entity.request.accounts.AccountCreate
-import fr.outadoc.mastodonk.api.entity.request.accounts.AccountUpdate
 
 /**
  * Methods concerning user accounts and related information.
@@ -35,8 +37,32 @@ public interface AccountsApi {
 
     /**
      * Updates the user's display and preferences.
+     *
+     * @param displayName The account's display name.
+     * @param note The account bio.
+     * @param avatar The account's avatar.
+     * @param header The account's header image.
+     * @param isBot Whether the account should identify itself as a bot.
+     * @param isDiscoverable Whether the account should be shown in the profile directory.
+     * @param isLocked Whether manual approval of follow requests is required.
+     * @param isSensitive Whether to mark authored statuses as sensitive by default.
+     * @param privacy Default post privacy for authored statuses.
+     * @param language Default language to use for authored statuses. (ISO 6391)
+     * @param fields Profile metadata name and value.
      */
-    public suspend fun updateCredentials(account: AccountUpdate): Account
+    public suspend fun updateCredentials(
+        displayName: String? = null,
+        note: String? = null,
+        avatar: File? = null,
+        header: File? = null,
+        isBot: Boolean? = null,
+        isDiscoverable: Boolean? = null,
+        isLocked: Boolean? = null,
+        isSensitive: Boolean? = null,
+        privacy: Visibility? = null,
+        language: String? = null,
+        fields: List<Field>? = null
+    ): Account
 
     // endregion
 
