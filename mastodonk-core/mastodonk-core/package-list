@@ -125,7 +125,7 @@ $dokka.location:fr.outadoc.mastodonk.api.endpoint.statuses/PollsApi///PointingTo
 $dokka.location:fr.outadoc.mastodonk.api.endpoint.statuses/PollsApi/addVote/#kotlin.String#kotlin.collections.List[kotlin.Int]/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.endpoint.statuses/-polls-api/add-vote.html
 $dokka.location:fr.outadoc.mastodonk.api.endpoint.statuses/PollsApi/getPoll/#kotlin.String/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.endpoint.statuses/-polls-api/get-poll.html
 $dokka.location:fr.outadoc.mastodonk.api.endpoint.statuses/ScheduledStatusesApi///PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.endpoint.statuses/-scheduled-statuses-api/index.html
-$dokka.location:fr.outadoc.mastodonk.api.endpoint.statuses/ScheduledStatusesApi/cancelSchedulesStatus/#kotlin.String/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.endpoint.statuses/-scheduled-statuses-api/cancel-schedules-status.html
+$dokka.location:fr.outadoc.mastodonk.api.endpoint.statuses/ScheduledStatusesApi/cancelScheduledStatus/#kotlin.String/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.endpoint.statuses/-scheduled-statuses-api/cancel-scheduled-status.html
 $dokka.location:fr.outadoc.mastodonk.api.endpoint.statuses/ScheduledStatusesApi/getScheduledStatus/#kotlin.String/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.endpoint.statuses/-scheduled-statuses-api/get-scheduled-status.html
 $dokka.location:fr.outadoc.mastodonk.api.endpoint.statuses/ScheduledStatusesApi/getScheduledStatuses/#kotlin.Int?#kotlin.String?#kotlin.String?#kotlin.String?/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.endpoint.statuses/-scheduled-statuses-api/get-scheduled-statuses.html
 $dokka.location:fr.outadoc.mastodonk.api.endpoint.statuses/ScheduledStatusesApi/updateScheduledStatus/#kotlin.String#fr.outadoc.mastodonk.api.entity.request.statuses.ScheduledStatusUpdate/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.endpoint.statuses/-scheduled-statuses-api/update-scheduled-status.html
@@ -197,7 +197,7 @@ $dokka.location:fr.outadoc.mastodonk.api.entity.request.accounts/FilterUpdate///
 $dokka.location:fr.outadoc.mastodonk.api.entity.request.accounts/FilterUpdate/FilterUpdate/#kotlin.String#kotlin.String#kotlin.collections.List[fr.outadoc.mastodonk.api.entity.FilterContext]#kotlin.Boolean?#kotlin.Boolean?#kotlinx.datetime.Instant?/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity.request.accounts/-filter-update/-filter-update.html
 $dokka.location:fr.outadoc.mastodonk.api.entity.request.accounts/FilterUpdate/context/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity.request.accounts/-filter-update/context.html
 $dokka.location:fr.outadoc.mastodonk.api.entity.request.accounts/FilterUpdate/expiresIn/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity.request.accounts/-filter-update/expires-in.html
-$dokka.location:fr.outadoc.mastodonk.api.entity.request.accounts/FilterUpdate/id/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity.request.accounts/-filter-update/id.html
+$dokka.location:fr.outadoc.mastodonk.api.entity.request.accounts/FilterUpdate/filterId/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity.request.accounts/-filter-update/filter-id.html
 $dokka.location:fr.outadoc.mastodonk.api.entity.request.accounts/FilterUpdate/isIrreversible/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity.request.accounts/-filter-update/is-irreversible.html
 $dokka.location:fr.outadoc.mastodonk.api.entity.request.accounts/FilterUpdate/phrase/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity.request.accounts/-filter-update/phrase.html
 $dokka.location:fr.outadoc.mastodonk.api.entity.request.accounts/FilterUpdate/wholeWord/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity.request.accounts/-filter-update/whole-word.html
@@ -302,7 +302,7 @@ $dokka.location:fr.outadoc.mastodonk.api.entity.request/File/filename/#/Pointing
 $dokka.location:fr.outadoc.mastodonk.api.entity.streaming////PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity.streaming/index.html
 $dokka.location:fr.outadoc.mastodonk.api.entity.streaming/DeleteEvent///PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity.streaming/-delete-event/index.html
 $dokka.location:fr.outadoc.mastodonk.api.entity.streaming/DeleteEvent/DeleteEvent/#kotlin.String/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity.streaming/-delete-event/-delete-event.html
-$dokka.location:fr.outadoc.mastodonk.api.entity.streaming/DeleteEvent/id/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity.streaming/-delete-event/id.html
+$dokka.location:fr.outadoc.mastodonk.api.entity.streaming/DeleteEvent/statusId/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity.streaming/-delete-event/status-id.html
 $dokka.location:fr.outadoc.mastodonk.api.entity.streaming/FiltersChangedEvent///PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity.streaming/-filters-changed-event/index.html
 $dokka.location:fr.outadoc.mastodonk.api.entity.streaming/NotificationEvent///PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity.streaming/-notification-event/index.html
 $dokka.location:fr.outadoc.mastodonk.api.entity.streaming/NotificationEvent/NotificationEvent/#fr.outadoc.mastodonk.api.entity.Notification/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity.streaming/-notification-event/-notification-event.html
@@ -314,6 +314,7 @@ $dokka.location:fr.outadoc.mastodonk.api.entity.streaming/UpdateEvent/payload/#/
 $dokka.location:fr.outadoc.mastodonk.api.entity////PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/index.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Account///PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-account/index.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Account/Account/#kotlin.String#kotlin.String#kotlin.String#kotlin.String#kotlin.String#kotlin.String#kotlin.String#kotlin.String#kotlin.String#kotlin.String#kotlin.Boolean#kotlin.collections.List[fr.outadoc.mastodonk.api.entity.Emoji]#kotlinx.datetime.Instant#kotlinx.datetime.LocalDate#kotlin.Long#kotlin.Long#kotlin.Long#kotlin.Boolean?#kotlin.Boolean?#kotlin.Boolean#kotlin.collections.List[fr.outadoc.mastodonk.api.entity.Field]?#kotlin.Boolean?#fr.outadoc.mastodonk.api.entity.Source?#kotlin.Boolean?#kotlinx.datetime.Instant?/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-account/-account.html
+$dokka.location:fr.outadoc.mastodonk.api.entity/Account/accountId/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-account/account-id.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Account/acct/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-account/acct.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Account/avatar/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-account/avatar.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Account/avatarStatic/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-account/avatar-static.html
@@ -325,7 +326,6 @@ $dokka.location:fr.outadoc.mastodonk.api.entity/Account/followersCount/#/Pointin
 $dokka.location:fr.outadoc.mastodonk.api.entity/Account/followingCount/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-account/following-count.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Account/header/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-account/header.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Account/headerStatic/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-account/header-static.html
-$dokka.location:fr.outadoc.mastodonk.api.entity/Account/id/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-account/id.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Account/isBot/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-account/is-bot.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Account/isDiscoverable/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-account/is-discoverable.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Account/isGroup/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-account/is-group.html
@@ -361,11 +361,11 @@ $dokka.location:fr.outadoc.mastodonk.api.entity/Activity/week/#/PointingToDeclar
 $dokka.location:fr.outadoc.mastodonk.api.entity/AdminAccount///PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-admin-account/index.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/AdminAccount/AdminAccount/#kotlin.String#kotlin.String#kotlin.String#kotlinx.datetime.Instant#kotlin.String#kotlin.String#kotlin.String#kotlin.String#fr.outadoc.mastodonk.api.entity.Role#kotlin.Boolean#kotlin.Boolean#kotlin.Boolean#kotlin.Boolean#kotlin.Boolean#fr.outadoc.mastodonk.api.entity.Account#kotlin.String?#kotlin.String?/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-admin-account/-admin-account.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/AdminAccount/account/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-admin-account/account.html
+$dokka.location:fr.outadoc.mastodonk.api.entity/AdminAccount/accountId/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-admin-account/account-id.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/AdminAccount/createdAt/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-admin-account/created-at.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/AdminAccount/createdByApplicationId/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-admin-account/created-by-application-id.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/AdminAccount/domain/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-admin-account/domain.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/AdminAccount/email/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-admin-account/email.html
-$dokka.location:fr.outadoc.mastodonk.api.entity/AdminAccount/id/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-admin-account/id.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/AdminAccount/inviteRequest/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-admin-account/invite-request.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/AdminAccount/invitedByAccountId/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-admin-account/invited-by-account-id.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/AdminAccount/ip/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-admin-account/ip.html
@@ -384,7 +384,7 @@ $dokka.location:fr.outadoc.mastodonk.api.entity/AdminReport/actionTakenByAccount
 $dokka.location:fr.outadoc.mastodonk.api.entity/AdminReport/assignedAccount/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-admin-report/assigned-account.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/AdminReport/comment/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-admin-report/comment.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/AdminReport/createdAt/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-admin-report/created-at.html
-$dokka.location:fr.outadoc.mastodonk.api.entity/AdminReport/id/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-admin-report/id.html
+$dokka.location:fr.outadoc.mastodonk.api.entity/AdminReport/reportId/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-admin-report/report-id.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/AdminReport/statuses/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-admin-report/statuses.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/AdminReport/targetAccount/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-admin-report/target-account.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/AdminReport/updatedAt/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-admin-report/updated-at.html
@@ -398,9 +398,9 @@ $dokka.location:fr.outadoc.mastodonk.api.entity/Alerts/onMention/#/PointingToDec
 $dokka.location:fr.outadoc.mastodonk.api.entity/Alerts/onPoll/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-alerts/on-poll.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Announcement///PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-announcement/index.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Announcement/Announcement/#kotlin.String#kotlin.String#kotlin.Boolean#kotlin.Boolean#kotlinx.datetime.Instant#kotlinx.datetime.Instant#kotlin.Boolean#kotlin.collections.List[fr.outadoc.mastodonk.api.entity.AnnouncementReaction]#kotlinx.datetime.Instant?#kotlinx.datetime.Instant?#kotlinx.datetime.Instant?/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-announcement/-announcement.html
+$dokka.location:fr.outadoc.mastodonk.api.entity/Announcement/announcementId/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-announcement/announcement-id.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Announcement/createdAt/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-announcement/created-at.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Announcement/endsAt/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-announcement/ends-at.html
-$dokka.location:fr.outadoc.mastodonk.api.entity/Announcement/id/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-announcement/id.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Announcement/isAllDay/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-announcement/is-all-day.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Announcement/isPublished/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-announcement/is-published.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Announcement/isRead/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-announcement/is-read.html
@@ -425,9 +425,9 @@ $dokka.location:fr.outadoc.mastodonk.api.entity/Application/vapidKey/#/PointingT
 $dokka.location:fr.outadoc.mastodonk.api.entity/Application/website/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-application/website.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Attachment///PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-attachment/index.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Attachment/Attachment/#kotlin.String#fr.outadoc.mastodonk.api.entity.AttachmentType#kotlin.String#kotlin.String#kotlin.String?#kotlin.String?#kotlin.String?#kotlin.String?#kotlin.String?/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-attachment/-attachment.html
+$dokka.location:fr.outadoc.mastodonk.api.entity/Attachment/attachmentId/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-attachment/attachment-id.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Attachment/blurHash/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-attachment/blur-hash.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Attachment/description/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-attachment/description.html
-$dokka.location:fr.outadoc.mastodonk.api.entity/Attachment/id/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-attachment/id.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Attachment/previewRemoteUrl/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-attachment/preview-remote-url.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Attachment/previewUrl/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-attachment/preview-url.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Attachment/remoteUrl/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-attachment/remote-url.html
@@ -486,7 +486,7 @@ $dokka.location:fr.outadoc.mastodonk.api.entity/Context/descendants/#/PointingTo
 $dokka.location:fr.outadoc.mastodonk.api.entity/Conversation///PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-conversation/index.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Conversation/Conversation/#kotlin.String#kotlin.collections.List[fr.outadoc.mastodonk.api.entity.Account]#kotlin.Boolean#fr.outadoc.mastodonk.api.entity.Status?/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-conversation/-conversation.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Conversation/accounts/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-conversation/accounts.html
-$dokka.location:fr.outadoc.mastodonk.api.entity/Conversation/id/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-conversation/id.html
+$dokka.location:fr.outadoc.mastodonk.api.entity/Conversation/conversationId/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-conversation/conversation-id.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Conversation/isUnread/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-conversation/is-unread.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Conversation/lastStatus/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-conversation/last-status.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/DirectoryOrder.Active///PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-directory-order/-active/index.html
@@ -509,10 +509,10 @@ $dokka.location:fr.outadoc.mastodonk.api.entity/Error/error/#/PointingToDeclarat
 $dokka.location:fr.outadoc.mastodonk.api.entity/Error/errorDescription/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-error/error-description.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/FeaturedTag///PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-featured-tag/index.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/FeaturedTag/FeaturedTag/#kotlin.String#kotlin.String#kotlin.Long#kotlinx.datetime.LocalDate/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-featured-tag/-featured-tag.html
-$dokka.location:fr.outadoc.mastodonk.api.entity/FeaturedTag/id/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-featured-tag/id.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/FeaturedTag/lastStatusAt/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-featured-tag/last-status-at.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/FeaturedTag/name/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-featured-tag/name.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/FeaturedTag/statusesCount/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-featured-tag/statuses-count.html
+$dokka.location:fr.outadoc.mastodonk.api.entity/FeaturedTag/tagId/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-featured-tag/tag-id.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Field///PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-field/index.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Field/Field/#kotlin.String#kotlin.String#kotlinx.datetime.Instant?/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-field/-field.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Field/name/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-field/name.html
@@ -522,7 +522,7 @@ $dokka.location:fr.outadoc.mastodonk.api.entity/Filter///PointingToDeclaration/
 $dokka.location:fr.outadoc.mastodonk.api.entity/Filter/Filter/#kotlin.String#kotlin.String#kotlin.collections.List[fr.outadoc.mastodonk.api.entity.FilterContext]#kotlin.Boolean#kotlin.Boolean#kotlinx.datetime.Instant?/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-filter/-filter.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Filter/context/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-filter/context.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Filter/expiresAt/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-filter/expires-at.html
-$dokka.location:fr.outadoc.mastodonk.api.entity/Filter/id/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-filter/id.html
+$dokka.location:fr.outadoc.mastodonk.api.entity/Filter/filterId/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-filter/filter-id.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Filter/isIrreversible/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-filter/is-irreversible.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Filter/phrase/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-filter/phrase.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Filter/wholeWord/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-filter/whole-word.html
@@ -603,15 +603,15 @@ $dokka.location:fr.outadoc.mastodonk.api.entity/MediaVisibility.ShowAll/ordinal/
 $dokka.location:fr.outadoc.mastodonk.api.entity/MediaVisibility///PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-media-visibility/index.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Mention///PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-mention/index.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Mention/Mention/#kotlin.String#kotlin.String#kotlin.String#kotlin.String/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-mention/-mention.html
+$dokka.location:fr.outadoc.mastodonk.api.entity/Mention/accountId/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-mention/account-id.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Mention/acct/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-mention/acct.html
-$dokka.location:fr.outadoc.mastodonk.api.entity/Mention/id/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-mention/id.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Mention/url/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-mention/url.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Mention/username/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-mention/username.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Notification///PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-notification/index.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Notification/Notification/#kotlin.String#fr.outadoc.mastodonk.api.entity.NotificationType#kotlinx.datetime.Instant#fr.outadoc.mastodonk.api.entity.Account#fr.outadoc.mastodonk.api.entity.Status?/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-notification/-notification.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Notification/account/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-notification/account.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Notification/createdAt/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-notification/created-at.html
-$dokka.location:fr.outadoc.mastodonk.api.entity/Notification/id/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-notification/id.html
+$dokka.location:fr.outadoc.mastodonk.api.entity/Notification/notificationId/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-notification/notification-id.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Notification/status/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-notification/status.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Notification/type/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-notification/type.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/NotificationType.Boost///PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-notification-type/-boost/index.html
@@ -641,11 +641,11 @@ $dokka.location:fr.outadoc.mastodonk.api.entity/Poll/Poll/#kotlin.String#kotlin.
 $dokka.location:fr.outadoc.mastodonk.api.entity/Poll/emojis/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-poll/emojis.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Poll/expiresAt/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-poll/expires-at.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Poll/hasVoted/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-poll/has-voted.html
-$dokka.location:fr.outadoc.mastodonk.api.entity/Poll/id/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-poll/id.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Poll/isExpired/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-poll/is-expired.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Poll/isMultiple/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-poll/is-multiple.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Poll/options/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-poll/options.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Poll/ownVotes/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-poll/own-votes.html
+$dokka.location:fr.outadoc.mastodonk.api.entity/Poll/pollId/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-poll/poll-id.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Poll/votersCount/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-poll/voters-count.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Poll/votesCount/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-poll/votes-count.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/PollOption///PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-poll-option/index.html
@@ -663,11 +663,11 @@ $dokka.location:fr.outadoc.mastodonk.api.entity/PushSubscription///PointingToDec
 $dokka.location:fr.outadoc.mastodonk.api.entity/PushSubscription/PushSubscription/#kotlin.String#kotlin.String#kotlin.String#fr.outadoc.mastodonk.api.entity.Alerts/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-push-subscription/-push-subscription.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/PushSubscription/alerts/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-push-subscription/alerts.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/PushSubscription/endpoint/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-push-subscription/endpoint.html
-$dokka.location:fr.outadoc.mastodonk.api.entity/PushSubscription/id/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-push-subscription/id.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/PushSubscription/serverKey/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-push-subscription/server-key.html
+$dokka.location:fr.outadoc.mastodonk.api.entity/PushSubscription/subscriptionId/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-push-subscription/subscription-id.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Relationship///PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-relationship/index.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Relationship/Relationship/#kotlin.String#kotlin.Boolean#kotlin.Boolean#kotlin.Boolean#kotlin.Boolean#kotlin.Boolean#kotlin.Boolean#kotlin.Boolean#kotlin.Boolean#kotlin.Boolean#kotlin.Boolean#kotlin.Boolean#kotlin.String/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-relationship/-relationship.html
-$dokka.location:fr.outadoc.mastodonk.api.entity/Relationship/id/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-relationship/id.html
+$dokka.location:fr.outadoc.mastodonk.api.entity/Relationship/accountId/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-relationship/account-id.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Relationship/isBlockedBy/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-relationship/is-blocked-by.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Relationship/isBlocking/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-relationship/is-blocking.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Relationship/isDomainBlocking/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-relationship/is-domain-blocking.html
@@ -692,7 +692,7 @@ $dokka.location:fr.outadoc.mastodonk.api.entity/RepliesPolicy.None/ordinal/#/Poi
 $dokka.location:fr.outadoc.mastodonk.api.entity/RepliesPolicy///PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-replies-policy/index.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Report///PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-report/index.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Report/Report/#kotlin.String#kotlin.Boolean/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-report/-report.html
-$dokka.location:fr.outadoc.mastodonk.api.entity/Report/id/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-report/id.html
+$dokka.location:fr.outadoc.mastodonk.api.entity/Report/reportId/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-report/report-id.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Report/wasActionTaken/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-report/was-action-taken.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Results///PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-results/index.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Results/Results/#kotlin.collections.List[fr.outadoc.mastodonk.api.entity.Account]#kotlin.collections.List[fr.outadoc.mastodonk.api.entity.Status]#kotlin.collections.List[fr.outadoc.mastodonk.api.entity.Tag]/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-results/-results.html
@@ -711,10 +711,10 @@ $dokka.location:fr.outadoc.mastodonk.api.entity/Role.User/ordinal/#/PointingToDe
 $dokka.location:fr.outadoc.mastodonk.api.entity/Role///PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-role/index.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/ScheduledStatus///PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-scheduled-status/index.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/ScheduledStatus/ScheduledStatus/#kotlin.String#kotlinx.datetime.Instant#fr.outadoc.mastodonk.api.entity.StatusParams#kotlin.collections.List[fr.outadoc.mastodonk.api.entity.Attachment]/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-scheduled-status/-scheduled-status.html
-$dokka.location:fr.outadoc.mastodonk.api.entity/ScheduledStatus/id/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-scheduled-status/id.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/ScheduledStatus/mediaAttachments/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-scheduled-status/media-attachments.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/ScheduledStatus/params/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-scheduled-status/params.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/ScheduledStatus/scheduledAt/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-scheduled-status/scheduled-at.html
+$dokka.location:fr.outadoc.mastodonk.api.entity/ScheduledStatus/statusId/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-scheduled-status/status-id.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/SearchType.Accounts///PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-search-type/-accounts/index.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/SearchType.Accounts/name/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-search-type/-accounts/name.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/SearchType.Accounts/ordinal/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-search-type/-accounts/ordinal.html
@@ -742,7 +742,6 @@ $dokka.location:fr.outadoc.mastodonk.api.entity/Status/content/#/PointingToDecla
 $dokka.location:fr.outadoc.mastodonk.api.entity/Status/createdAt/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-status/created-at.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Status/emojis/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-status/emojis.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Status/favouritesCount/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-status/favourites-count.html
-$dokka.location:fr.outadoc.mastodonk.api.entity/Status/id/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-status/id.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Status/inReplyToAccountId/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-status/in-reply-to-account-id.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Status/inReplyToId/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-status/in-reply-to-id.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Status/isSensitive/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-status/is-sensitive.html
@@ -754,6 +753,7 @@ $dokka.location:fr.outadoc.mastodonk.api.entity/Status/reblog/#/PointingToDeclar
 $dokka.location:fr.outadoc.mastodonk.api.entity/Status/reblogsCount/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-status/reblogs-count.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Status/repliesCount/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-status/replies-count.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Status/spoilerText/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-status/spoiler-text.html
+$dokka.location:fr.outadoc.mastodonk.api.entity/Status/statusId/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-status/status-id.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Status/tags/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-status/tags.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Status/text/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-status/text.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Status/uri/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-status/uri.html
@@ -782,7 +782,7 @@ $dokka.location:fr.outadoc.mastodonk.api.entity/Token/scope/#/PointingToDeclarat
 $dokka.location:fr.outadoc.mastodonk.api.entity/Token/tokenType/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-token/token-type.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/UserList///PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-user-list/index.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/UserList/UserList/#kotlin.String#kotlin.String#fr.outadoc.mastodonk.api.entity.RepliesPolicy/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-user-list/-user-list.html
-$dokka.location:fr.outadoc.mastodonk.api.entity/UserList/id/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-user-list/id.html
+$dokka.location:fr.outadoc.mastodonk.api.entity/UserList/listId/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-user-list/list-id.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/UserList/repliesPolicy/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-user-list/replies-policy.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/UserList/title/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-user-list/title.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Visibility.Direct///PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-visibility/-direct/index.html
