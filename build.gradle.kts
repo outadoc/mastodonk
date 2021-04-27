@@ -38,7 +38,3 @@ configure<SpotlessExtension> {
         endWithNewline()
     }
 }
-
-tasks.dokkaHtmlMultiModule.configure {
-    outputDirectory.set(buildDir.resolve("dokkaCustomMultiModuleOutput"))
-}

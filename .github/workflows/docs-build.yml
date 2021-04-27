@@ -1,9 +1,7 @@
-name: Deploy documentation
+name: Build documentation
 
 on:
-  push:
-    branches:
-      - develop
+  pull_request:
 
 jobs:
   build:
@@ -20,9 +18,3 @@ jobs:
 
       - name: Dokka Generate
         run: ./gradlew dokkaHtmlMultiModule
-
-      - name: Deploy documentation
-        uses: JamesIves/github-pages-deploy-action@4.1.1
-        with:
-          branch: gh-pages
-          folder: build/dokka/htmlMultiModule
