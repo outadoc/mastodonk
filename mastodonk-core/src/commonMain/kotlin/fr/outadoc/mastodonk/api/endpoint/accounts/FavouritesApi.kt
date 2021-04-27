@@ -4,6 +4,8 @@ import fr.outadoc.mastodonk.api.entity.Status
 
 /**
  * View favourites.
+ *
+ * @see [favourites - Mastodon Documentation](https://docs.joinmastodon.org/methods/favourites/)
  */
 public interface FavouritesApi {
 

@@ -4,6 +4,8 @@ import fr.outadoc.mastodonk.api.entity.Account
 
 /**
  * View featured profiles.
+ *
+ * @see [endorsements - Mastodon Documentation](https://docs.joinmastodon.org/methods/endorsements/)
  */
 public interface EndorsementsApi {
 

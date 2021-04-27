@@ -2,6 +2,8 @@ package fr.outadoc.mastodonk.api.endpoint.accounts
 
 /**
  * View and manage blocked domains.
+ *
+ * @see [domain_blocks - Mastodon Documentation](https://docs.joinmastodon.org/methods/domain_blocks/)
  */
 public interface DomainBlocksApi {
 

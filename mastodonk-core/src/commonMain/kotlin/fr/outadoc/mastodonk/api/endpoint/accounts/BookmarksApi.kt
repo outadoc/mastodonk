@@ -4,6 +4,8 @@ import fr.outadoc.mastodonk.api.entity.Status
 
 /**
  * View bookmarked statuses.
+ *
+ * @see [bookmarks - Mastodon Documentation](https://docs.joinmastodon.org/methods/bookmarks/)
  */
 public interface BookmarksApi {
 
