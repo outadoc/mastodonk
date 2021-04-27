@@ -45,3 +45,15 @@ Endpoints to stream status activity via a WebSocket connection.
 # Package fr.outadoc.mastodonk.api.endpoint.timelines
 
 Endpoints to read and view timelines of statuses.
+
+# Package fr.outadoc.mastodonk.api.entity
+
+Objects returned by the Mastodon API.
+
+# Package fr.outadoc.mastodonk.auth
+
+Classes related to API authentication. 
+
+# Package fr.outadoc.mastodonk.client
+
+Mastodon client, used to configure and access Mastodon APIs.
