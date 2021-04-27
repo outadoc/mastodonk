@@ -87,7 +87,7 @@ internal class AccountsApiImpl(private val client: MastodonHttpClient) : Account
         }
     }
 
-    override suspend fun follow(id: String, reblogs: Boolean?, notify: Boolean?): Relationship {
+    override suspend fun followAccount(id: String, reblogs: Boolean?, notify: Boolean?): Relationship {
         return client.request("/api/v1/accounts/${id.trim()}/follow") {
             method = HttpMethod.Post
             formData {
@@ -97,49 +97,49 @@ internal class AccountsApiImpl(private val client: MastodonHttpClient) : Account
         }
     }
 
-    override suspend fun unfollow(id: String): Relationship {
+    override suspend fun unfollowAccount(id: String): Relationship {
         return client.request("/api/v1/accounts/${id.trim()}/unfollow") {
             method = HttpMethod.Post
         }
     }
 
-    override suspend fun block(id: String): Relationship {
+    override suspend fun blockAccount(id: String): Relationship {
         return client.request("/api/v1/accounts/${id.trim()}/block") {
             method = HttpMethod.Post
         }
     }
 
-    override suspend fun unblock(id: String): Relationship {
+    override suspend fun unblockAccount(id: String): Relationship {
         return client.request("/api/v1/accounts/${id.trim()}/unblock") {
             method = HttpMethod.Post
         }
     }
 
-    override suspend fun mute(id: String): Relationship {
+    override suspend fun muteAccount(id: String): Relationship {
         return client.request("/api/v1/accounts/${id.trim()}/mute") {
             method = HttpMethod.Post
         }
     }
 
-    override suspend fun unmute(id: String): Relationship {
+    override suspend fun unmuteAccount(id: String): Relationship {
         return client.request("/api/v1/accounts/${id.trim()}/unmute") {
             method = HttpMethod.Post
         }
     }
 
-    override suspend fun feature(id: String): Relationship {
+    override suspend fun featureAccount(id: String): Relationship {
         return client.request("/api/v1/accounts/${id.trim()}/pin") {
             method = HttpMethod.Post
         }
     }
 
-    override suspend fun unfeature(id: String): Relationship {
+    override suspend fun unfeatureAccount(id: String): Relationship {
         return client.request("/api/v1/accounts/${id.trim()}/unpin") {
             method = HttpMethod.Post
         }
     }
 
-    override suspend fun note(id: String, comment: String?): Relationship {
+    override suspend fun commentOnAccount(id: String, comment: String?): Relationship {
         return client.request("/api/v1/accounts/${id.trim()}/note") {
             method = HttpMethod.Post
             formData {
