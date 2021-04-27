@@ -5,6 +5,11 @@ import kotlinx.datetime.Instant
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
+/**
+ * Profile metadata name and value.
+ *
+ * By default, max 4 fields and 255 characters per property/value.
+ */
 @Serializable
 public data class Field(
 
