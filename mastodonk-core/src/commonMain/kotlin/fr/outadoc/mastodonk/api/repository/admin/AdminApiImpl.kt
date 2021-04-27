@@ -88,19 +88,19 @@ internal class AdminApiImpl(private val client: MastodonHttpClient) : AdminApi {
     }
 
     override suspend fun getAllReports(
-        resolved: Boolean?,
+        isResolved: Boolean?,
         accountId: String?,
         targetAccountId: String?
-    ): List<AdminAccount> {
+    ): List<AdminReport> {
         return client.request("/api/v1/admin/reports") {
             method = HttpMethod.Get
-            parameter("resolved", resolved)
+            parameter("resolved", isResolved)
             parameter("account_id", accountId)
             parameter("target_account_id", targetAccountId)
         }
     }
 
-    override suspend fun getReport(id: String): AdminAccount {
+    override suspend fun getReport(id: String): AdminReport {
         return client.request("/api/v1/admin/reports/${id.trim()}") {
             method = HttpMethod.Get
         }
