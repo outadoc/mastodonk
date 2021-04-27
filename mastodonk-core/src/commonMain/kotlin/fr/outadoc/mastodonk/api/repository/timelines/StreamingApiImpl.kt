@@ -1,6 +1,6 @@
-package fr.outadoc.mastodonk.api.repository.streaming
+package fr.outadoc.mastodonk.api.repository.timelines
 
-import fr.outadoc.mastodonk.api.endpoint.streaming.StreamingApi
+import fr.outadoc.mastodonk.api.endpoint.timelines.StreamingApi
 import fr.outadoc.mastodonk.api.entity.streaming.StreamingEvent
 import fr.outadoc.mastodonk.client.MastodonHttpClient
 import io.ktor.client.request.*

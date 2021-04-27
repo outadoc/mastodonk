@@ -38,10 +38,6 @@ Endpoints to search for content in accounts, statuses and hashtags.
 
 Endpoints to publish, interact, and view information about statuses.
 
-# Package fr.outadoc.mastodonk.api.endpoint.streaming
-
-Endpoints to stream status activity via a WebSocket connection.
-
 # Package fr.outadoc.mastodonk.api.endpoint.timelines
 
 Endpoints to read and view timelines of statuses.

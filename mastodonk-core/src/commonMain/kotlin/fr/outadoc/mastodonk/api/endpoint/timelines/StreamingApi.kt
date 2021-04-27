@@ -1,4 +1,4 @@
-package fr.outadoc.mastodonk.api.endpoint.streaming
+package fr.outadoc.mastodonk.api.endpoint.timelines
 
 import fr.outadoc.mastodonk.api.entity.streaming.StreamingEvent
 import kotlinx.coroutines.flow.Flow
