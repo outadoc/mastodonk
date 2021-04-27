@@ -8,7 +8,7 @@ import io.ktor.http.*
 
 internal class InstanceApiImpl(private val client: MastodonHttpClient) : InstanceApi {
 
-    override suspend fun getInstance(): Instance {
+    override suspend fun getInstanceInfo(): Instance {
         return client.request("/api/v1/instance") {
             method = HttpMethod.Get
         }

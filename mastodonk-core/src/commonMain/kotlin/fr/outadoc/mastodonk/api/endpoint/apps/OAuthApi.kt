@@ -6,6 +6,8 @@ import fr.outadoc.mastodonk.api.entity.request.apps.TokenRevoke
 
 /**
  * Generate and manage OAuth tokens.
+ *
+ * @see [Official Docs](https://docs.joinmastodon.org/methods/apps/oauth/)
  */
 public interface OAuthApi {
 

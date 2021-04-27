@@ -5,6 +5,8 @@ import fr.outadoc.mastodonk.api.entity.request.apps.ApplicationCreate
 
 /**
  * Register client applications that can be used to obtain OAuth tokens.
+ *
+ * @see [Official Docs](https://docs.joinmastodon.org/methods/apps/)
  */
 public interface AppsApi {
 
