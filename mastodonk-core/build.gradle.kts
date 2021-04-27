@@ -1,3 +1,5 @@
+import org.jetbrains.dokka.gradle.DokkaTaskPartial
+
 plugins {
     kotlin("multiplatform")
     kotlin("plugin.serialization")
@@ -81,5 +83,13 @@ kotlin {
             }
         }
         val nativeTest by getting
+    }
+}
+
+tasks.withType<DokkaTaskPartial>().configureEach {
+    dokkaSourceSets {
+        configureEach {
+            includes.from("README.md")
+        }
     }
 }
