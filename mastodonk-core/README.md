@@ -48,7 +48,7 @@ Objects returned by the Mastodon API.
 
 # Package fr.outadoc.mastodonk.auth
 
-Classes related to API authentication. 
+Classes related to API authentication.
 
 # Package fr.outadoc.mastodonk.client
 
