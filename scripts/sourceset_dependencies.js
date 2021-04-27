@@ -1,0 +1,1 @@
+sourceset_dependencies = '{":mastodonk-core:dokkaHtmlPartial/commonMain":[],":mastodonk-core:dokkaHtmlPartial/jsMain":[":mastodonk-core:dokkaHtmlPartial/commonMain"],":mastodonk-core:dokkaHtmlPartial/jvmMain":[":mastodonk-core:dokkaHtmlPartial/commonMain"],":mastodonk-core:dokkaHtmlPartial/nativeMain":[":mastodonk-core:dokkaHtmlPartial/commonMain"]}'
