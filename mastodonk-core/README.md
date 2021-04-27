@@ -1,6 +1,6 @@
 # Module mastodonk-core
 
-This module contains the core functionality of `mastdonk`.
+This module contains the core functionality of `mastodonk`.
 
 # Package fr.outadoc.mastodonk.api.endpoint.accounts
 
