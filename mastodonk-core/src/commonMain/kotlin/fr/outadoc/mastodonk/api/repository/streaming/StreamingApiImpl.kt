@@ -42,13 +42,13 @@ internal class StreamingApiImpl(private val client: MastodonHttpClient) : Stream
         }
     }
 
-    override suspend fun getListStream(list: String): Flow<StreamingEvent> {
+    override suspend fun getListStream(listId: String): Flow<StreamingEvent> {
         return getStream("list") {
-            parameter("list", list)
+            parameter("list", listId)
         }
     }
 
-    override suspend fun getDirectStream(): Flow<StreamingEvent> {
+    override suspend fun getDirectMessageStream(): Flow<StreamingEvent> {
         return getStream("direct")
     }
 }
