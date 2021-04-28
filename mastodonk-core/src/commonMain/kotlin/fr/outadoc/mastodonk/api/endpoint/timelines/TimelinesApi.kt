@@ -1,6 +1,7 @@
 package fr.outadoc.mastodonk.api.endpoint.timelines
 
 import fr.outadoc.mastodonk.api.entity.Status
+import fr.outadoc.mastodonk.api.entity.paging.Page
 
 /**
  * Read and view timelines of statuses.
@@ -20,7 +21,7 @@ public interface TimelinesApi {
         sinceId: String? = null,
         minId: String? = null,
         limit: Int? = null
-    ): List<Status>
+    ): Page<Status>
 
     /**
      * Gets the timeline for the given [hashtag].

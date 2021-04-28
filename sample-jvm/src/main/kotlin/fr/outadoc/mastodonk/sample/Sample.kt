@@ -1,12 +1,13 @@
 package fr.outadoc.mastodonk.sample
 
-import fr.outadoc.mastodonk.api.entity.Status
+import fr.outadoc.mastodonk.api.entity.streaming.UpdateEvent
 import fr.outadoc.mastodonk.auth.AuthTokenProvider
 import fr.outadoc.mastodonk.client.MastodonClient
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
+import kotlinx.coroutines.withTimeout
 
 fun main() = runBlocking {
     val client = MastodonClient {
@@ -21,24 +22,29 @@ fun main() = runBlocking {
         val instance = client.instance.getInstanceInfo()
         println("connected to instance ${instance.title} at ${instance.uri}!")
         println(instance)
+        println()
 
-        client.timelines.getPublicTimeline()
-            .print("public timeline")
+        client.timelines.getPublicTimeline().also { timeline ->
+            println(timeline)
+            println()
+        }
 
-        client.timelines.getHashtagTimeline("cats")
-            .print("cats")
+        client.timelines.getHashtagTimeline("cats").also { cats ->
+            println("got ${cats.size} cat toots!")
+            println("here are the first 3:")
+            cats.take(3).forEach { status ->
+                println(status)
+            }
+            println()
+        }
 
-        client.streaming.getPublicStream().collect {
-            println(it)
+        // Automatically stop after 10 seconds
+        withTimeout(10_000L) {
+            client.streaming.getPublicStream().collect { event ->
+                if (event is UpdateEvent) {
+                    println("new toot from ${event.payload.account.displayName}!")
+                }
+            }
         }
     }.join()
-}
-
-private fun List<Status>.print(tag: String) {
-    println("got $size toots for $tag!")
-    println("here are the first 3:")
-    take(3).forEach { status ->
-        println(status)
-    }
-    println()
 }
