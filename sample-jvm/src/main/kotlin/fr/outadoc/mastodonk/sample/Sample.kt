@@ -1,5 +1,6 @@
 package fr.outadoc.mastodonk.sample
 
+import fr.outadoc.mastodonk.api.entity.streaming.DeleteEvent
 import fr.outadoc.mastodonk.api.entity.streaming.UpdateEvent
 import fr.outadoc.mastodonk.auth.AuthTokenProvider
 import fr.outadoc.mastodonk.client.MastodonClient
@@ -19,18 +20,19 @@ fun main() = runBlocking {
     }
 
     GlobalScope.launch {
-        val instance = client.instance.getInstanceInfo()
-        println("connected to instance ${instance.title} at ${instance.uri}!")
-        println(instance)
-        println()
+        client.instance.getInstanceInfo().let { instance ->
+            println("connected to instance ${instance.title} at ${instance.uri}!")
+            println(instance)
+            println()
+        }
 
-        client.timelines.getPublicTimeline().also { timeline ->
+        client.timelines.getPublicTimeline().let { timeline ->
             println(timeline)
             println()
         }
 
-        client.timelines.getHashtagTimeline("cats").also { cats ->
-            println("got ${cats.size} cat toots!")
+        client.timelines.getHashtagTimeline("cats").let { cats ->
+            println("got ${cats.size} cat statuses!")
             println("here are the first 3:")
             cats.take(3).forEach { status ->
                 println(status)
@@ -41,8 +43,10 @@ fun main() = runBlocking {
         // Automatically stop after 10 seconds
         withTimeout(10_000L) {
             client.streaming.getPublicStream().collect { event ->
-                if (event is UpdateEvent) {
-                    println("new toot from ${event.payload.account.displayName}!")
+                when (event) {
+                    is UpdateEvent -> println("new status from ${event.payload.account.displayName}!")
+                    is DeleteEvent -> println("status ${event.statusId} was deleted")
+                    else -> Unit
                 }
             }
         }
