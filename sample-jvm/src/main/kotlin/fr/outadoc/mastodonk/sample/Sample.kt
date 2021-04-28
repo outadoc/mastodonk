@@ -41,7 +41,7 @@ fun main() = runBlocking {
 
             val nextCats = client.timelines.getHashtagTimeline(
                 "cats",
-                pageInfo = cats.next
+                pageInfo = cats.nextPage
             )
 
             println("next three cat statuses:")

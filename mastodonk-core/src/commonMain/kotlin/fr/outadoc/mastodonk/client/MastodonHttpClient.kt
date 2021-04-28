@@ -90,8 +90,8 @@ internal class MastodonHttpClient(
         val linkHeaders = res.headers["Link"]?.parseLinkHeaderToPageRefs()
         return Page(
             contents = json.decodeFromString(res.readText()),
-            next = linkHeaders?.get("next"),
-            prev = linkHeaders?.get("prev")
+            nextPage = linkHeaders?.get("next"),
+            previousPage = linkHeaders?.get("prev")
         )
     }
 
