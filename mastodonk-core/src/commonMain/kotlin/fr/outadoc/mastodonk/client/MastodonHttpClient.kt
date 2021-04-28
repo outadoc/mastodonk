@@ -79,6 +79,17 @@ internal class MastodonHttpClient(
         }
     }
 
+    suspend inline fun <reified T> requestOrNull(route: String, builder: HttpRequestBuilder.() -> Unit = {}): T? {
+        return try {
+            request(route, builder)
+        } catch (e: MastodonApiException) {
+            when (e.errorCode) {
+                HttpStatusCode.NotFound.value -> null
+                else -> throw e
+            }
+        }
+    }
+
     suspend fun getStream(
         route: String,
         builder: HttpRequestBuilder.() -> Unit
