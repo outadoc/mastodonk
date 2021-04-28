@@ -2,6 +2,7 @@ package fr.outadoc.mastodonk.api.repository.timelines
 
 import fr.outadoc.mastodonk.api.endpoint.timelines.TimelinesApi
 import fr.outadoc.mastodonk.api.entity.Status
+import fr.outadoc.mastodonk.api.entity.paging.Page
 import fr.outadoc.mastodonk.client.MastodonHttpClient
 import io.ktor.client.request.*
 import io.ktor.http.*
@@ -16,8 +17,8 @@ internal class TimelinesApiImpl(private val client: MastodonHttpClient) : Timeli
         sinceId: String?,
         minId: String?,
         limit: Int?
-    ): List<Status> {
-        return client.request("/api/v1/timelines/public") {
+    ): Page<Status> {
+        return client.requestPage("/api/v1/timelines/public") {
             method = HttpMethod.Get
             parameter("local", onlyLocal)
             parameter("remote", onlyRemote)
