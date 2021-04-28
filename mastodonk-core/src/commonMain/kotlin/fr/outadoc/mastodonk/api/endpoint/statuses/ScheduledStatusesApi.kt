@@ -23,7 +23,7 @@ public interface ScheduledStatusesApi {
     /**
      * Gets a single [ScheduledStatus].
      */
-    public suspend fun getScheduledStatus(statusId: String): ScheduledStatus
+    public suspend fun getScheduledStatus(statusId: String): ScheduledStatus?
 
     /**
      * Updates the schedule of a [ScheduledStatus].
@@ -33,5 +33,5 @@ public interface ScheduledStatusesApi {
     /**
      * Cancels a [ScheduledStatus].
      */
-    public suspend fun cancelScheduledStatus(statusId: String): ScheduledStatus
+    public suspend fun cancelScheduledStatus(statusId: String)
 }

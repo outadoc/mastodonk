@@ -20,6 +20,5 @@ internal class AppsApiImpl(private val client: MastodonHttpClient) : AppsApi {
         return client.request("/api/v1/apps/verify_credentials") {
             method = HttpMethod.Get
         }
-
     }
 }

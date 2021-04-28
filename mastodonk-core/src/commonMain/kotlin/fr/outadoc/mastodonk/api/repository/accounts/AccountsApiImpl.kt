@@ -94,14 +94,14 @@ internal class AccountsApiImpl(private val client: MastodonHttpClient) : Account
         }
     }
 
-    override suspend fun getAccount(accountId: String): Account {
-        return client.request("/api/v1/accounts/${accountId.trim()}") {
+    override suspend fun getAccount(accountId: String): Account? {
+        return client.requestOrNull("/api/v1/accounts/${accountId.trim()}") {
             method = HttpMethod.Get
         }
     }
 
-    override suspend fun getStatuses(accountId: String): List<Status> {
-        return client.request("/api/v1/accounts/${accountId.trim()}/statuses") {
+    override suspend fun getStatuses(accountId: String): List<Status>? {
+        return client.requestOrNull("/api/v1/accounts/${accountId.trim()}/statuses") {
             method = HttpMethod.Get
         }
     }
@@ -111,8 +111,8 @@ internal class AccountsApiImpl(private val client: MastodonHttpClient) : Account
         maxId: String?,
         sinceId: String?,
         limit: Int?
-    ): List<Account> {
-        return client.request("/api/v1/accounts/${accountId.trim()}/followers") {
+    ): List<Account>? {
+        return client.requestOrNull("/api/v1/accounts/${accountId.trim()}/followers") {
             method = HttpMethod.Get
             parameter("max_id", maxId)
             parameter("since_id", sinceId)
@@ -125,8 +125,8 @@ internal class AccountsApiImpl(private val client: MastodonHttpClient) : Account
         maxId: String?,
         sinceId: String?,
         limit: Int?
-    ): List<Account> {
-        return client.request("/api/v1/accounts/${accountId.trim()}/following") {
+    ): List<Account>? {
+        return client.requestOrNull("/api/v1/accounts/${accountId.trim()}/following") {
             method = HttpMethod.Get
             parameter("max_id", maxId)
             parameter("since_id", sinceId)
@@ -134,20 +134,20 @@ internal class AccountsApiImpl(private val client: MastodonHttpClient) : Account
         }
     }
 
-    override suspend fun getFeaturedTags(accountId: String): List<FeaturedTag> {
-        return client.request("/api/v1/accounts/${accountId.trim()}/featured_tags") {
+    override suspend fun getFeaturedTags(accountId: String): List<FeaturedTag>? {
+        return client.requestOrNull("/api/v1/accounts/${accountId.trim()}/featured_tags") {
             method = HttpMethod.Get
         }
     }
 
-    override suspend fun getListsContainedIn(accountId: String): List<UserList> {
-        return client.request("/api/v1/accounts/${accountId.trim()}/lists") {
+    override suspend fun getListsContainedIn(accountId: String): List<UserList>? {
+        return client.requestOrNull("/api/v1/accounts/${accountId.trim()}/lists") {
             method = HttpMethod.Get
         }
     }
 
-    override suspend fun getIdentityProofs(accountId: String): List<IdentityProof> {
-        return client.request("/api/v1/accounts/${accountId.trim()}/identity_proofs") {
+    override suspend fun getIdentityProofs(accountId: String): List<IdentityProof>? {
+        return client.requestOrNull("/api/v1/accounts/${accountId.trim()}/identity_proofs") {
             method = HttpMethod.Get
         }
     }

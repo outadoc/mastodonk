@@ -28,17 +28,17 @@ public interface StatusesApi {
     /**
      * Gets information about a status.
      */
-    public suspend fun getStatus(statusId: String): Status
+    public suspend fun getStatus(statusId: String): Status?
 
     /**
      * Deletes a status.
      */
-    public suspend fun deleteStatus(statusId: String): Status
+    public suspend fun deleteStatus(statusId: String): Status?
 
     /**
      * Gets statuses above and below this status in the thread.
      */
-    public suspend fun getContext(statusId: String): Context
+    public suspend fun getContext(statusId: String): Context?
 
     /**
      * Gets who boosted a given status.

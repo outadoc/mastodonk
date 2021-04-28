@@ -10,8 +10,8 @@ import io.ktor.http.*
 
 internal class MediaApiImpl(private val client: MastodonHttpClient) : MediaApi {
 
-    override suspend fun getMediaAttachment(attachmentId: String): Attachment {
-        return client.request("/api/v1/media/${attachmentId.trim()}") {
+    override suspend fun getMediaAttachment(attachmentId: String): Attachment? {
+        return client.requestOrNull("/api/v1/media/${attachmentId.trim()}") {
             method = HttpMethod.Get
         }
     }

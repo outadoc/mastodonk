@@ -12,7 +12,7 @@ public interface PollsApi {
     /**
      * Gets a single [Poll]'s details.
      */
-    public suspend fun getPoll(pollId: String): Poll
+    public suspend fun getPoll(pollId: String): Poll?
 
     /**
      * Votes on a poll for the given [choices].

@@ -13,7 +13,7 @@ public interface MediaApi {
     /**
      * Gets a single attachment by its id.
      */
-    public suspend fun getMediaAttachment(attachmentId: String): Attachment
+    public suspend fun getMediaAttachment(attachmentId: String): Attachment?
 
     /**
      * Creates an attachment to be used with a new status.

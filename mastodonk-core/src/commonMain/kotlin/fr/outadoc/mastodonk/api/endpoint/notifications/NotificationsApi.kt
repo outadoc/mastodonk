@@ -27,7 +27,7 @@ public interface NotificationsApi {
     /**
      * Gets information about a notification.
      */
-    public suspend fun getNotification(notificationId: String): Notification
+    public suspend fun getNotification(notificationId: String): Notification?
 
     /**
      * Clears all notifications for the account.

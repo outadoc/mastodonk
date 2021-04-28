@@ -71,12 +71,12 @@ public interface AccountsApi {
     /**
      * Gets information about a profile.
      */
-    public suspend fun getAccount(accountId: String): Account
+    public suspend fun getAccount(accountId: String): Account?
 
     /**
      * Gets statuses posted by the given account.
      */
-    public suspend fun getStatuses(accountId: String): List<Status>
+    public suspend fun getStatuses(accountId: String): List<Status>?
 
     /**
      * Gets the list of accounts which follow the given account,
@@ -87,7 +87,7 @@ public interface AccountsApi {
         maxId: String? = null,
         sinceId: String? = null,
         limit: Int? = null
-    ): List<Account>
+    ): List<Account>?
 
     /**
      * Gets the list of accounts which the given account is following,
@@ -98,22 +98,22 @@ public interface AccountsApi {
         maxId: String? = null,
         sinceId: String? = null,
         limit: Int? = null
-    ): List<Account>
+    ): List<Account>?
 
     /**
      * Gets tags featured by this account.
      */
-    public suspend fun getFeaturedTags(accountId: String): List<FeaturedTag>
+    public suspend fun getFeaturedTags(accountId: String): List<FeaturedTag>?
 
     /**
      * Gets the user lists that you have added this account to.
      */
-    public suspend fun getListsContainedIn(accountId: String): List<UserList>
+    public suspend fun getListsContainedIn(accountId: String): List<UserList>?
 
     /**
      * Gets identity proofs for this account.
      */
-    public suspend fun getIdentityProofs(accountId: String): List<IdentityProof>
+    public suspend fun getIdentityProofs(accountId: String): List<IdentityProof>?
 
     // endregion
 

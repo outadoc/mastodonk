@@ -43,8 +43,8 @@ internal class AdminApiImpl(private val client: MastodonHttpClient) : AdminApi {
         }
     }
 
-    override suspend fun getAccount(accountId: String): AdminAccount {
-        return client.request("/api/v1/admin/accounts/${accountId.trim()}") {
+    override suspend fun getAccount(accountId: String): AdminAccount? {
+        return client.requestOrNull("/api/v1/admin/accounts/${accountId.trim()}") {
             method = HttpMethod.Get
         }
     }
@@ -100,8 +100,8 @@ internal class AdminApiImpl(private val client: MastodonHttpClient) : AdminApi {
         }
     }
 
-    override suspend fun getReport(reportId: String): AdminReport {
-        return client.request("/api/v1/admin/reports/${reportId.trim()}") {
+    override suspend fun getReport(reportId: String): AdminReport? {
+        return client.requestOrNull("/api/v1/admin/reports/${reportId.trim()}") {
             method = HttpMethod.Get
         }
     }

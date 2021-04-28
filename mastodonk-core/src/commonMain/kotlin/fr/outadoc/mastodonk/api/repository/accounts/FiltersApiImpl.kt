@@ -15,8 +15,8 @@ internal class FiltersApiImpl(private val client: MastodonHttpClient) : FiltersA
         }
     }
 
-    override suspend fun getFilter(filterId: String): Filter {
-        return client.request("/api/v1/filters/${filterId.trim()}") {
+    override suspend fun getFilter(filterId: String): Filter? {
+        return client.requestOrNull("/api/v1/filters/${filterId.trim()}") {
             method = HttpMethod.Get
         }
     }
@@ -29,8 +29,8 @@ internal class FiltersApiImpl(private val client: MastodonHttpClient) : FiltersA
         }
     }
 
-    override suspend fun updateFilter(filter: FilterUpdate): Filter {
-        return client.request("/api/v1/filters") {
+    override suspend fun updateFilter(filter: FilterUpdate): Filter? {
+        return client.requestOrNull("/api/v1/filters") {
             method = HttpMethod.Put
             contentType(ContentType.Application.Json)
             body = filter

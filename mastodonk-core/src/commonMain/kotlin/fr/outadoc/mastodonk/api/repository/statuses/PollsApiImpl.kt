@@ -8,8 +8,8 @@ import io.ktor.http.*
 
 internal class PollsApiImpl(private val client: MastodonHttpClient) : PollsApi {
 
-    override suspend fun getPoll(pollId: String): Poll {
-        return client.request("/api/v1/polls/${pollId.trim()}") {
+    override suspend fun getPoll(pollId: String): Poll? {
+        return client.requestOrNull("/api/v1/polls/${pollId.trim()}") {
             method = HttpMethod.Get
         }
     }

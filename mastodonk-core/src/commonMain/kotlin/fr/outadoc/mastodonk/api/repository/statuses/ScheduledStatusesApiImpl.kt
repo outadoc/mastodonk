@@ -24,8 +24,8 @@ internal class ScheduledStatusesApiImpl(private val client: MastodonHttpClient) 
         }
     }
 
-    override suspend fun getScheduledStatus(statusId: String): ScheduledStatus {
-        return client.request("/api/v1/scheduled_statuses/${statusId.trim()}") {
+    override suspend fun getScheduledStatus(statusId: String): ScheduledStatus? {
+        return client.requestOrNull("/api/v1/scheduled_statuses/${statusId.trim()}") {
             method = HttpMethod.Get
         }
     }
@@ -38,7 +38,7 @@ internal class ScheduledStatusesApiImpl(private val client: MastodonHttpClient) 
         }
     }
 
-    override suspend fun cancelScheduledStatus(statusId: String): ScheduledStatus {
+    override suspend fun cancelScheduledStatus(statusId: String) {
         return client.request("/api/v1/scheduled_statuses/${statusId.trim()}") {
             method = HttpMethod.Delete
         }

@@ -16,8 +16,8 @@ internal class ListsApiImpl(private val client: MastodonHttpClient) : ListsApi {
         }
     }
 
-    override suspend fun getList(listId: String): UserList {
-        return client.request("/api/v1/lists/${listId.trim()}") {
+    override suspend fun getList(listId: String): UserList? {
+        return client.requestOrNull("/api/v1/lists/${listId.trim()}") {
             method = HttpMethod.Get
         }
     }
@@ -44,8 +44,8 @@ internal class ListsApiImpl(private val client: MastodonHttpClient) : ListsApi {
         }
     }
 
-    override suspend fun getListAccounts(listId: String, maxId: String?, sinceId: String?, limit: Int?): List<Account> {
-        return client.request("/api/v1/lists/${listId.trim()}/accounts") {
+    override suspend fun getListAccounts(listId: String, maxId: String?, sinceId: String?, limit: Int?): List<Account>? {
+        return client.requestOrNull("/api/v1/lists/${listId.trim()}/accounts") {
             method = HttpMethod.Get
             parameter("max_id", maxId)
             parameter("since_id", sinceId)

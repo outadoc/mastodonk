@@ -21,7 +21,7 @@ public interface ListsApi {
     /**
      * Fetches the list with the given [listId].
      */
-    public suspend fun getList(listId: String): UserList
+    public suspend fun getList(listId: String): UserList?
 
     /**
      * Creates a new list.
@@ -50,7 +50,7 @@ public interface ListsApi {
         maxId: String? = null,
         sinceId: String? = null,
         limit: Int? = null
-    ): List<Account>
+    ): List<Account>?
 
     /**
      * Adds the given accounts to the given list.

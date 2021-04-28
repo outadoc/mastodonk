@@ -55,5 +55,5 @@ public interface TimelinesApi {
         sinceId: String? = null,
         minId: String? = null,
         limit: Int? = null
-    ): List<Status>
+    ): List<Status>?
 }

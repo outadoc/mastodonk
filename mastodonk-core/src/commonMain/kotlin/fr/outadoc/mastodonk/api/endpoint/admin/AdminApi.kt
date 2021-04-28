@@ -49,7 +49,7 @@ public interface AdminApi {
     /**
      * Gets a specific account with admin-level information.
      */
-    public suspend fun getAccount(accountId: String): AdminAccount
+    public suspend fun getAccount(accountId: String): AdminAccount?
 
     /**
      * Performs an action against an account and logs this action in the moderation history.
@@ -97,7 +97,7 @@ public interface AdminApi {
     /**
      * Gets information about a specific report.
      */
-    public suspend fun getReport(reportId: String): AdminReport
+    public suspend fun getReport(reportId: String): AdminReport?
 
     /**
      * Assigns the handling of this report to the current account.

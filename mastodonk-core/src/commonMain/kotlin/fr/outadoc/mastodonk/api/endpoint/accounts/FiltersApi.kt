@@ -19,7 +19,7 @@ public interface FiltersApi {
     /**
      * Gets a single [Filter].
      */
-    public suspend fun getFilter(filterId: String): Filter
+    public suspend fun getFilter(filterId: String): Filter?
 
     /**
      * Creates a new [Filter].
@@ -29,7 +29,7 @@ public interface FiltersApi {
     /**
      * Updates an existing [Filter].
      */
-    public suspend fun updateFilter(filter: FilterUpdate): Filter
+    public suspend fun updateFilter(filter: FilterUpdate): Filter?
 
     /**
      * Deletes a [Filter].

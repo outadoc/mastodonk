@@ -72,8 +72,8 @@ internal class TimelinesApiImpl(private val client: MastodonHttpClient) : Timeli
         sinceId: String?,
         minId: String?,
         limit: Int?
-    ): List<Status> {
-        return client.request("/api/v1/timelines/list/${listId.trim()}") {
+    ): List<Status>? {
+        return client.requestOrNull("/api/v1/timelines/list/${listId.trim()}") {
             method = HttpMethod.Get
             parameter("max_id", maxId)
             parameter("since_id", sinceId)

@@ -30,20 +30,20 @@ internal class StatusesApiImpl(private val client: MastodonHttpClient) : Statuse
         }
     }
 
-    override suspend fun getStatus(statusId: String): Status {
-        return client.request("/api/v1/statuses/${statusId.trim()}") {
+    override suspend fun getStatus(statusId: String): Status? {
+        return client.requestOrNull("/api/v1/statuses/${statusId.trim()}") {
             method = HttpMethod.Get
         }
     }
 
-    override suspend fun deleteStatus(statusId: String): Status {
-        return client.request("/api/v1/statuses/${statusId.trim()}") {
+    override suspend fun deleteStatus(statusId: String): Status? {
+        return client.requestOrNull("/api/v1/statuses/${statusId.trim()}") {
             method = HttpMethod.Delete
         }
     }
 
-    override suspend fun getContext(statusId: String): Context {
-        return client.request("/api/v1/statuses/${statusId.trim()}/context") {
+    override suspend fun getContext(statusId: String): Context? {
+        return client.requestOrNull("/api/v1/statuses/${statusId.trim()}/context") {
             method = HttpMethod.Get
         }
     }
