@@ -1,5 +1,6 @@
 package fr.outadoc.mastodonk.sample
 
+import fr.outadoc.mastodonk.api.entity.paging.PageInfo
 import fr.outadoc.mastodonk.api.entity.streaming.DeleteEvent
 import fr.outadoc.mastodonk.api.entity.streaming.UpdateEvent
 import fr.outadoc.mastodonk.auth.AuthTokenProvider
@@ -31,13 +32,20 @@ fun main() = runBlocking {
             println()
         }
 
-        client.timelines.getHashtagTimeline("cats").contents.let { cats ->
-            println("got ${cats.size} cat statuses!")
-            println("here are the first 3:")
-            cats.take(3).forEach { status ->
-                println(status)
-            }
-            println()
+        client.timelines.getHashtagTimeline(
+            "cats",
+            pageInfo = PageInfo(limit = 3)
+        ).let { cats ->
+            println("three cat statuses:")
+            cats.contents.forEach { status -> println(status) }
+
+            val nextCats = client.timelines.getHashtagTimeline(
+                "cats",
+                pageInfo = cats.next
+            )
+
+            println("next three cat statuses:")
+            nextCats.contents.forEach { status -> println(status) }
         }
 
         // Automatically stop after 10 seconds

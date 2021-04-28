@@ -2,7 +2,7 @@ package fr.outadoc.mastodonk.api.endpoint.timelines
 
 import fr.outadoc.mastodonk.api.entity.Status
 import fr.outadoc.mastodonk.api.entity.paging.Page
-import fr.outadoc.mastodonk.api.entity.paging.PaginationState
+import fr.outadoc.mastodonk.api.entity.paging.PageInfo
 
 /**
  * Read and view timelines of statuses.
@@ -18,7 +18,7 @@ public interface TimelinesApi {
         onlyLocal: Boolean? = null,
         onlyRemote: Boolean? = null,
         onlyMedia: Boolean? = null,
-        paginationState: PaginationState? = null
+        pageInfo: PageInfo? = null
     ): Page<List<Status>>
 
     /**
@@ -28,7 +28,7 @@ public interface TimelinesApi {
         hashtag: String,
         onlyLocal: Boolean? = null,
         onlyMedia: Boolean? = null,
-        paginationState: PaginationState? = null
+        pageInfo: PageInfo? = null
     ): Page<List<Status>>
 
     /**
@@ -36,7 +36,7 @@ public interface TimelinesApi {
      */
     public suspend fun getHomeTimeline(
         onlyLocal: Boolean? = null,
-        paginationState: PaginationState? = null
+        pageInfo: PageInfo? = null
     ): Page<List<Status>>
 
     /**
@@ -44,6 +44,6 @@ public interface TimelinesApi {
      */
     public suspend fun getList(
         listId: String,
-        paginationState: PaginationState? = null
+        pageInfo: PageInfo? = null
     ): Page<List<Status>>?
 }

@@ -16,7 +16,7 @@ private val linkRegexCache = Regex("<(.+)>; rel=\"(.*)\"")
  * @return A list of the parameters required to fetch the next and previous page,
  * mapped with "rel" as the key.
  */
-internal fun String.parseLinkHeaderToPageRefs(): Map<String, PaginationState> {
+internal fun String.parseLinkHeaderToPageRefs(): Map<String, PageInfo> {
     val parts = split(',').map(String::trim)
     return parts.mapNotNull { part ->
         linkRegexCache.find(part)
@@ -27,7 +27,7 @@ internal fun String.parseLinkHeaderToPageRefs(): Map<String, PaginationState> {
             .flattenEntries()
             .toMap()
 
-        rel to PaginationState(
+        rel to PageInfo(
             minId = params["min_id"],
             sinceId = params["since_id"],
             maxId = params["max_id"],
@@ -36,9 +36,9 @@ internal fun String.parseLinkHeaderToPageRefs(): Map<String, PaginationState> {
     }
 }
 
-internal fun HttpRequestBuilder.append(paginationState: PaginationState?) {
-    paginationState?.minId?.let { parameter("min_id", it) }
-    paginationState?.sinceId?.let { parameter("since_id", it) }
-    paginationState?.maxId?.let { parameter("max_id", it) }
-    paginationState?.limit?.let { parameter("limit", it) }
+internal fun HttpRequestBuilder.append(pageInfo: PageInfo?) {
+    pageInfo?.minId?.let { parameter("min_id", it) }
+    pageInfo?.sinceId?.let { parameter("since_id", it) }
+    pageInfo?.maxId?.let { parameter("max_id", it) }
+    pageInfo?.limit?.let { parameter("limit", it) }
 }
