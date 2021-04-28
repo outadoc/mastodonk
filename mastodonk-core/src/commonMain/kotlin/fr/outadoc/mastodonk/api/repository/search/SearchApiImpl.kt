@@ -28,7 +28,7 @@ internal class SearchApiImpl(private val client: MastodonHttpClient) : SearchApi
             parameter("q", q)
 
             parameter("account_id", accountId)
-            type?.let { parameter("type", Json.encodeToString(it)) }
+            type?.let { parameter("type", Json.Default.encodeToString(it)) }
             parameter("exclude_unreviewed", excludeUnreviewed)
             parameter("resolve", attemptResolve)
             parameter("following", onlyFollowing)

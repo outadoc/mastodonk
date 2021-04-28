@@ -34,16 +34,10 @@ public interface TimelinesApi {
     /**
      * Gets the current user's home timeline.
      */
-    public suspend fun getHomeTimeline(
-        onlyLocal: Boolean? = null,
-        pageInfo: PageInfo? = null
-    ): Page<List<Status>>
+    public suspend fun getHomeTimeline(onlyLocal: Boolean? = null, pageInfo: PageInfo? = null): Page<List<Status>>
 
     /**
      * Gets the timeline for the given list.
      */
-    public suspend fun getList(
-        listId: String,
-        pageInfo: PageInfo? = null
-    ): Page<List<Status>>?
+    public suspend fun getList(listId: String, pageInfo: PageInfo? = null): Page<List<Status>>?
 }
