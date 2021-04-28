@@ -27,8 +27,9 @@ fun main() = runBlocking {
             println()
         }
 
-        client.timelines.getPublicTimeline(onlyLocal = true).contents.let { timeline ->
-            println(timeline)
+        client.timelines.getPublicTimeline().let { timeline ->
+            println(timeline.contents)
+            println(timeline.nextPage)
             println()
         }
 
@@ -47,6 +48,9 @@ fun main() = runBlocking {
             println("next three cat statuses:")
             nextCats.contents.forEach { status -> println(status) }
         }
+
+        println()
+        println("start streaming statuses from the public stream")
 
         // Automatically stop after 10 seconds
         withTimeout(10_000L) {
