@@ -95,6 +95,20 @@ internal class MastodonHttpClient(
         )
     }
 
+    suspend inline fun <reified T> requestPageOrNull(
+        route: String,
+        builder: HttpRequestBuilder.() -> Unit = {}
+    ): Page<T>? {
+        return try {
+            requestPage(route, builder)
+        } catch (e: MastodonApiException) {
+            when (e.errorCode) {
+                HttpStatusCode.NotFound.value -> null
+                else -> throw e
+            }
+        }
+    }
+
     suspend inline fun <reified T> request(route: String, builder: HttpRequestBuilder.() -> Unit = {}): T {
         return httpClient.request(baseUrl.copy(encodedPath = route)) {
             addAuthToken()

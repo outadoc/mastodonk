@@ -1,5 +1,6 @@
 package fr.outadoc.mastodonk.api.entity.paging
 
+import io.ktor.client.request.*
 import io.ktor.http.*
 import io.ktor.util.*
 
@@ -13,9 +14,9 @@ private val linkRegexCache = Regex("<(.+)>; rel=\"(.*)\"")
  * <https://mastodon.social/api/v1/accounts/14715/followers?limit=2&max_id=7486869>; rel="next", <https://mastodon.social/api/v1/accounts/14715/followers?limit=2&since_id=7489740>; rel="prev"
  *
  * @return A list of the parameters required to fetch the next and previous page,
- * mapped with `rel` as the key.
+ * mapped with "rel" as the key.
  */
-internal fun String.parseLinkHeaderToPageRefs(): Map<String, PageRef> {
+internal fun String.parseLinkHeaderToPageRefs(): Map<String, PaginationState> {
     val parts = split(',').map(String::trim)
     return parts.mapNotNull { part ->
         linkRegexCache.find(part)
@@ -24,7 +25,20 @@ internal fun String.parseLinkHeaderToPageRefs(): Map<String, PageRef> {
         val params = Url(res.groupValues[1])
             .parameters
             .flattenEntries()
+            .toMap()
 
-        rel to PageRef(params)
+        rel to PaginationState(
+            minId = params["min_id"],
+            sinceId = params["since_id"],
+            maxId = params["max_id"],
+            limit = params["limit"]?.toIntOrNull()
+        )
     }
+}
+
+internal fun HttpRequestBuilder.append(paginationState: PaginationState?) {
+    paginationState?.minId?.let { parameter("min_id", it) }
+    paginationState?.sinceId?.let { parameter("since_id", it) }
+    paginationState?.maxId?.let { parameter("max_id", it) }
+    paginationState?.limit?.let { parameter("limit", it) }
 }

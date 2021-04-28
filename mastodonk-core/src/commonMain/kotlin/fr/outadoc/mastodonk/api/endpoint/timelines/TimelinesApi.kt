@@ -2,6 +2,7 @@ package fr.outadoc.mastodonk.api.endpoint.timelines
 
 import fr.outadoc.mastodonk.api.entity.Status
 import fr.outadoc.mastodonk.api.entity.paging.Page
+import fr.outadoc.mastodonk.api.entity.paging.PaginationState
 
 /**
  * Read and view timelines of statuses.
@@ -17,10 +18,7 @@ public interface TimelinesApi {
         onlyLocal: Boolean? = null,
         onlyRemote: Boolean? = null,
         onlyMedia: Boolean? = null,
-        maxId: String? = null,
-        sinceId: String? = null,
-        minId: String? = null,
-        limit: Int? = null
+        paginationState: PaginationState? = null
     ): Page<List<Status>>
 
     /**
@@ -30,31 +28,22 @@ public interface TimelinesApi {
         hashtag: String,
         onlyLocal: Boolean? = null,
         onlyMedia: Boolean? = null,
-        maxId: String? = null,
-        sinceId: String? = null,
-        minId: String? = null,
-        limit: Int? = null
-    ): List<Status>
+        paginationState: PaginationState? = null
+    ): Page<List<Status>>
 
     /**
      * Gets the current user's home timeline.
      */
     public suspend fun getHomeTimeline(
         onlyLocal: Boolean? = null,
-        maxId: String? = null,
-        sinceId: String? = null,
-        minId: String? = null,
-        limit: Int? = null
-    ): List<Status>
+        paginationState: PaginationState? = null
+    ): Page<List<Status>>
 
     /**
      * Gets the timeline for the given list.
      */
     public suspend fun getList(
         listId: String,
-        maxId: String? = null,
-        sinceId: String? = null,
-        minId: String? = null,
-        limit: Int? = null
-    ): List<Status>?
+        paginationState: PaginationState? = null
+    ): Page<List<Status>>?
 }

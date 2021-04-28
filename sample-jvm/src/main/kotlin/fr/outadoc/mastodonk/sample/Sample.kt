@@ -26,12 +26,12 @@ fun main() = runBlocking {
             println()
         }
 
-        client.timelines.getPublicTimeline().let { timeline ->
+        client.timelines.getPublicTimeline(onlyLocal = true).contents.let { timeline ->
             println(timeline)
             println()
         }
 
-        client.timelines.getHashtagTimeline("cats").let { cats ->
+        client.timelines.getHashtagTimeline("cats").contents.let { cats ->
             println("got ${cats.size} cat statuses!")
             println("here are the first 3:")
             cats.take(3).forEach { status ->
