@@ -36,7 +36,10 @@ fun main() = runBlocking {
         val catToots = client.timelines.getHashtagTimeline("cats")
 
         // Easy pagination
-        val moreCatToots = client.timelines.getHashtagTimeline("cats", catToots.nextPage)
+        val moreCatToots = client.timelines.getHashtagTimeline(
+            "cats",
+            pageInfo = catToots.nextPage
+        )
 
         // Subscribe to streaming APIs and get a Flow
         client.streaming.getPublicStream().collect { event ->
