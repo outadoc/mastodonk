@@ -1,6 +1,8 @@
 package fr.outadoc.mastodonk.api.endpoint.timelines
 
 import fr.outadoc.mastodonk.api.entity.Conversation
+import fr.outadoc.mastodonk.api.entity.paging.Page
+import fr.outadoc.mastodonk.api.entity.paging.PageInfo
 
 /**
  * Direct conversations with other participants.
@@ -14,12 +16,7 @@ public interface ConversationsApi {
     /**
      * Gets the list of conversations for the current account.
      */
-    public suspend fun getConversations(
-        maxId: String? = null,
-        sinceId: String? = null,
-        minId: String? = null,
-        limit: Int? = null
-    ): List<Conversation>
+    public suspend fun getConversations(pageInfo: PageInfo? = null): Page<List<Conversation>>
 
     /**
      * Deletes a conversation.

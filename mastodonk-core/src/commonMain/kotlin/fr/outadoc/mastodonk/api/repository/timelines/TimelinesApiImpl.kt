@@ -4,7 +4,7 @@ import fr.outadoc.mastodonk.api.endpoint.timelines.TimelinesApi
 import fr.outadoc.mastodonk.api.entity.Status
 import fr.outadoc.mastodonk.api.entity.paging.Page
 import fr.outadoc.mastodonk.api.entity.paging.PageInfo
-import fr.outadoc.mastodonk.api.entity.paging.append
+import fr.outadoc.mastodonk.api.entity.paging.parameter
 import fr.outadoc.mastodonk.client.MastodonHttpClient
 import io.ktor.client.request.*
 import io.ktor.http.*
@@ -22,7 +22,7 @@ internal class TimelinesApiImpl(private val client: MastodonHttpClient) : Timeli
             parameter("local", onlyLocal)
             parameter("remote", onlyRemote)
             parameter("only_media", onlyMedia)
-            append(pageInfo)
+            parameter(pageInfo)
         }
     }
 
@@ -36,7 +36,7 @@ internal class TimelinesApiImpl(private val client: MastodonHttpClient) : Timeli
             method = HttpMethod.Get
             parameter("local", onlyLocal)
             parameter("only_media", onlyMedia)
-            append(pageInfo)
+            parameter(pageInfo)
         }
     }
 
@@ -47,7 +47,7 @@ internal class TimelinesApiImpl(private val client: MastodonHttpClient) : Timeli
         return client.requestPage("/api/v1/timelines/home") {
             method = HttpMethod.Get
             parameter("local", onlyLocal)
-            append(pageInfo)
+            parameter(pageInfo)
         }
     }
 
@@ -57,7 +57,7 @@ internal class TimelinesApiImpl(private val client: MastodonHttpClient) : Timeli
     ): Page<List<Status>>? {
         return client.requestPageOrNull("/api/v1/timelines/list/${listId.trim()}") {
             method = HttpMethod.Get
-            append(pageInfo)
+            parameter(pageInfo)
         }
     }
 }

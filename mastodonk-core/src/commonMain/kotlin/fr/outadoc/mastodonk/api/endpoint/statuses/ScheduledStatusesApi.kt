@@ -1,6 +1,8 @@
 package fr.outadoc.mastodonk.api.endpoint.statuses
 
 import fr.outadoc.mastodonk.api.entity.ScheduledStatus
+import fr.outadoc.mastodonk.api.entity.paging.Page
+import fr.outadoc.mastodonk.api.entity.paging.PageInfo
 import fr.outadoc.mastodonk.api.entity.request.statuses.ScheduledStatusUpdate
 
 /**
@@ -13,12 +15,7 @@ public interface ScheduledStatusesApi {
     /**
      * Gets currently scheduled statuses for this account.
      */
-    public suspend fun getScheduledStatuses(
-        limit: Int? = null,
-        maxId: String? = null,
-        sinceId: String? = null,
-        minId: String? = null
-    ): List<ScheduledStatus>
+    public suspend fun getScheduledStatuses(pageInfo: PageInfo? = null): Page<List<ScheduledStatus>>
 
     /**
      * Gets a single [ScheduledStatus].

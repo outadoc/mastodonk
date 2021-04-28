@@ -1,6 +1,8 @@
 package fr.outadoc.mastodonk.api.endpoint.accounts
 
 import fr.outadoc.mastodonk.api.entity.Status
+import fr.outadoc.mastodonk.api.entity.paging.Page
+import fr.outadoc.mastodonk.api.entity.paging.PageInfo
 
 /**
  * View bookmarked statuses.
@@ -12,10 +14,5 @@ public interface BookmarksApi {
     /**
      * Gets the bookmarked statuses for this account.
      */
-    public suspend fun getBookmarks(
-        maxId: String?,
-        sinceId: String?,
-        limit: Int?,
-        minId: String?
-    ): List<Status>
+    public suspend fun getBookmarks(pageInfo: PageInfo? = null): Page<List<Status>>
 }

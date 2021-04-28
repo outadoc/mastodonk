@@ -19,7 +19,7 @@ internal class DirectoryApiImpl(private val client: MastodonHttpClient) : Direct
     ): List<Account> {
         return client.request("/api/v1/directory") {
             method = HttpMethod.Get
-            parameter("order", order?.let { Json.Default.encodeToString(it) })
+            parameter("order", order?.let { Json.encodeToString(it) })
             parameter("local", onlyLocal)
             parameter("limit", limit)
             parameter("offset", offset)

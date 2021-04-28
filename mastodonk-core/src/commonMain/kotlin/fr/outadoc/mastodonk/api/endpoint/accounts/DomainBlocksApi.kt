@@ -1,5 +1,8 @@
 package fr.outadoc.mastodonk.api.endpoint.accounts
 
+import fr.outadoc.mastodonk.api.entity.paging.Page
+import fr.outadoc.mastodonk.api.entity.paging.PageInfo
+
 /**
  * View and manage blocked domains.
  *
@@ -10,7 +13,7 @@ public interface DomainBlocksApi {
     /**
      * Gets the list of blocked domains (Mastodon instances) for this account.
      */
-    public suspend fun getDomainBlocks(maxId: String?, limit: Int?, sinceId: String?): List<String>
+    public suspend fun getDomainBlocks(pageInfo: PageInfo? = null): Page<List<String>>
 
     /**
      * Blocks the domain of a Mastodon instance.

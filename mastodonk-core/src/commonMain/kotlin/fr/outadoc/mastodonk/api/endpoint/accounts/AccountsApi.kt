@@ -9,6 +9,8 @@ import fr.outadoc.mastodonk.api.entity.Status
 import fr.outadoc.mastodonk.api.entity.Token
 import fr.outadoc.mastodonk.api.entity.UserList
 import fr.outadoc.mastodonk.api.entity.Visibility
+import fr.outadoc.mastodonk.api.entity.paging.Page
+import fr.outadoc.mastodonk.api.entity.paging.PageInfo
 import fr.outadoc.mastodonk.api.entity.request.File
 import fr.outadoc.mastodonk.api.entity.request.accounts.AccountCreate
 
@@ -82,23 +84,13 @@ public interface AccountsApi {
      * Gets the list of accounts which follow the given account,
      * if network is not hidden by the account owner.
      */
-    public suspend fun getFollowers(
-        accountId: String,
-        maxId: String? = null,
-        sinceId: String? = null,
-        limit: Int? = null
-    ): List<Account>?
+    public suspend fun getFollowers(accountId: String, pageInfo: PageInfo? = null): Page<List<Account>>?
 
     /**
      * Gets the list of accounts which the given account is following,
      * if network is not hidden by the account owner.
      */
-    public suspend fun getFollowing(
-        accountId: String,
-        maxId: String? = null,
-        sinceId: String? = null,
-        limit: Int? = null
-    ): List<Account>?
+    public suspend fun getFollowing(accountId: String, pageInfo: PageInfo? = null): Page<List<Account>>?
 
     /**
      * Gets tags featured by this account.

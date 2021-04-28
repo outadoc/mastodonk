@@ -3,6 +3,9 @@ package fr.outadoc.mastodonk.api.repository.notifications
 import fr.outadoc.mastodonk.api.endpoint.notifications.NotificationsApi
 import fr.outadoc.mastodonk.api.entity.Notification
 import fr.outadoc.mastodonk.api.entity.NotificationType
+import fr.outadoc.mastodonk.api.entity.paging.Page
+import fr.outadoc.mastodonk.api.entity.paging.PageInfo
+import fr.outadoc.mastodonk.api.entity.paging.parameter
 import fr.outadoc.mastodonk.client.MastodonHttpClient
 import io.ktor.client.request.*
 import io.ktor.http.*
@@ -14,18 +17,12 @@ internal class NotificationsApiImpl(private val client: MastodonHttpClient) : No
     override suspend fun getNotifications(
         excludeTypes: List<NotificationType>?,
         accountId: String?,
-        limit: Int?,
-        maxId: String?,
-        sinceId: String?,
-        minId: String?
-    ): List<Notification> {
-        return client.request("/api/v1/notifications") {
+        pageInfo: PageInfo?
+    ): Page<List<Notification>> {
+        return client.requestPage("/api/v1/notifications") {
             method = HttpMethod.Get
-            parameter("limit", limit)
-            parameter("max_id", maxId)
-            parameter("since_id", sinceId)
-            parameter("min_id", minId)
             parameter("account_id", accountId)
+            parameter(pageInfo)
 
             excludeTypes?.map { type ->
                 Json.Default.encodeToString(type)

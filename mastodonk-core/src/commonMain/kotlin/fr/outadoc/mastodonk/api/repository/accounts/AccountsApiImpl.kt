@@ -10,6 +10,9 @@ import fr.outadoc.mastodonk.api.entity.Status
 import fr.outadoc.mastodonk.api.entity.Token
 import fr.outadoc.mastodonk.api.entity.UserList
 import fr.outadoc.mastodonk.api.entity.Visibility
+import fr.outadoc.mastodonk.api.entity.paging.Page
+import fr.outadoc.mastodonk.api.entity.paging.PageInfo
+import fr.outadoc.mastodonk.api.entity.paging.parameter
 import fr.outadoc.mastodonk.api.entity.request.File
 import fr.outadoc.mastodonk.api.entity.request.accounts.AccountCreate
 import fr.outadoc.mastodonk.api.entity.request.toFormPart
@@ -106,31 +109,17 @@ internal class AccountsApiImpl(private val client: MastodonHttpClient) : Account
         }
     }
 
-    override suspend fun getFollowers(
-        accountId: String,
-        maxId: String?,
-        sinceId: String?,
-        limit: Int?
-    ): List<Account>? {
-        return client.requestOrNull("/api/v1/accounts/${accountId.trim()}/followers") {
+    override suspend fun getFollowers(accountId: String, pageInfo: PageInfo?): Page<List<Account>>? {
+        return client.requestPageOrNull("/api/v1/accounts/${accountId.trim()}/followers") {
             method = HttpMethod.Get
-            parameter("max_id", maxId)
-            parameter("since_id", sinceId)
-            parameter("limit", limit)
+            parameter(pageInfo)
         }
     }
 
-    override suspend fun getFollowing(
-        accountId: String,
-        maxId: String?,
-        sinceId: String?,
-        limit: Int?
-    ): List<Account>? {
-        return client.requestOrNull("/api/v1/accounts/${accountId.trim()}/following") {
+    override suspend fun getFollowing(accountId: String, pageInfo: PageInfo?): Page<List<Account>>? {
+        return client.requestPageOrNull("/api/v1/accounts/${accountId.trim()}/following") {
             method = HttpMethod.Get
-            parameter("max_id", maxId)
-            parameter("since_id", sinceId)
-            parameter("limit", limit)
+            parameter(pageInfo)
         }
     }
 
