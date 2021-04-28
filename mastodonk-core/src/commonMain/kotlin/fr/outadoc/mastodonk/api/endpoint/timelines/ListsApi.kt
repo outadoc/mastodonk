@@ -3,6 +3,8 @@ package fr.outadoc.mastodonk.api.endpoint.timelines
 import fr.outadoc.mastodonk.api.entity.Account
 import fr.outadoc.mastodonk.api.entity.RepliesPolicy
 import fr.outadoc.mastodonk.api.entity.UserList
+import fr.outadoc.mastodonk.api.entity.paging.Page
+import fr.outadoc.mastodonk.api.entity.paging.PageInfo
 
 /**
  * View and manage lists.
@@ -45,12 +47,7 @@ public interface ListsApi {
     /**
      * Gets the list of accounts in the given list.
      */
-    public suspend fun getListAccounts(
-        listId: String,
-        maxId: String? = null,
-        sinceId: String? = null,
-        limit: Int? = null
-    ): List<Account>?
+    public suspend fun getListAccounts(listId: String, pageInfo: PageInfo? = null): Page<List<Account>>?
 
     /**
      * Adds the given accounts to the given list.

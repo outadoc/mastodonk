@@ -1,12 +1,15 @@
 package fr.outadoc.mastodonk.sample
 
-import fr.outadoc.mastodonk.api.entity.Status
+import fr.outadoc.mastodonk.api.entity.paging.PageInfo
+import fr.outadoc.mastodonk.api.entity.streaming.DeleteEvent
+import fr.outadoc.mastodonk.api.entity.streaming.UpdateEvent
 import fr.outadoc.mastodonk.auth.AuthTokenProvider
 import fr.outadoc.mastodonk.client.MastodonClient
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
+import kotlinx.coroutines.withTimeout
 
 fun main() = runBlocking {
     val client = MastodonClient {
@@ -18,27 +21,46 @@ fun main() = runBlocking {
     }
 
     GlobalScope.launch {
-        val instance = client.instance.getInstanceInfo()
-        println("connected to instance ${instance.title} at ${instance.uri}!")
-        println(instance)
+        client.instance.getInstanceInfo().let { instance ->
+            println("connected to instance ${instance.title} at ${instance.uri}!")
+            println(instance)
+            println()
+        }
 
-        client.timelines.getPublicTimeline()
-            .print("public timeline")
+        client.timelines.getPublicTimeline().let { timeline ->
+            println(timeline.contents)
+            println(timeline.nextPage)
+            println()
+        }
 
-        client.timelines.getHashtagTimeline("cats")
-            .print("cats")
+        client.timelines.getHashtagTimeline(
+            "cats",
+            pageInfo = PageInfo(limit = 3)
+        ).let { cats ->
+            println("three cat statuses:")
+            cats.contents.forEach { status -> println(status) }
 
-        client.streaming.getPublicStream().collect {
-            println(it)
+            val nextCats = client.timelines.getHashtagTimeline(
+                "cats",
+                pageInfo = cats.nextPage
+            )
+
+            println("next three cat statuses:")
+            nextCats.contents.forEach { status -> println(status) }
+        }
+
+        println()
+        println("start streaming statuses from the public stream")
+
+        // Automatically stop after 10 seconds
+        withTimeout(10_000L) {
+            client.streaming.getPublicStream().collect { event ->
+                when (event) {
+                    is UpdateEvent -> println("new status from ${event.payload.account.displayName}!")
+                    is DeleteEvent -> println("status ${event.statusId} was deleted")
+                    else -> Unit
+                }
+            }
         }
     }.join()
-}
-
-private fun List<Status>.print(tag: String) {
-    println("got $size toots for $tag!")
-    println("here are the first 3:")
-    take(3).forEach { status ->
-        println(status)
-    }
-    println()
 }

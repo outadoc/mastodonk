@@ -2,24 +2,18 @@ package fr.outadoc.mastodonk.api.repository.timelines
 
 import fr.outadoc.mastodonk.api.endpoint.timelines.ConversationsApi
 import fr.outadoc.mastodonk.api.entity.Conversation
+import fr.outadoc.mastodonk.api.entity.paging.Page
+import fr.outadoc.mastodonk.api.entity.paging.PageInfo
+import fr.outadoc.mastodonk.api.entity.paging.parameter
 import fr.outadoc.mastodonk.client.MastodonHttpClient
-import io.ktor.client.request.*
 import io.ktor.http.*
 
 internal class ConversationsApiImpl(private val client: MastodonHttpClient) : ConversationsApi {
 
-    override suspend fun getConversations(
-        maxId: String?,
-        sinceId: String?,
-        minId: String?,
-        limit: Int?
-    ): List<Conversation> {
-        return client.request("/api/v1/conversations") {
+    override suspend fun getConversations(pageInfo: PageInfo?): Page<List<Conversation>> {
+        return client.requestPage("/api/v1/conversations") {
             method = HttpMethod.Get
-            parameter("max_id", maxId)
-            parameter("since_id", sinceId)
-            parameter("min_id", minId)
-            parameter("limit", limit)
+            parameter(pageInfo)
         }
     }
 

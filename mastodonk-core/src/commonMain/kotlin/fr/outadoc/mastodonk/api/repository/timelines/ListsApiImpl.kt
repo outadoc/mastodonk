@@ -4,6 +4,9 @@ import fr.outadoc.mastodonk.api.endpoint.timelines.ListsApi
 import fr.outadoc.mastodonk.api.entity.Account
 import fr.outadoc.mastodonk.api.entity.RepliesPolicy
 import fr.outadoc.mastodonk.api.entity.UserList
+import fr.outadoc.mastodonk.api.entity.paging.Page
+import fr.outadoc.mastodonk.api.entity.paging.PageInfo
+import fr.outadoc.mastodonk.api.entity.paging.parameter
 import fr.outadoc.mastodonk.client.MastodonHttpClient
 import io.ktor.client.request.*
 import io.ktor.http.*
@@ -44,12 +47,10 @@ internal class ListsApiImpl(private val client: MastodonHttpClient) : ListsApi {
         }
     }
 
-    override suspend fun getListAccounts(listId: String, maxId: String?, sinceId: String?, limit: Int?): List<Account>? {
-        return client.requestOrNull("/api/v1/lists/${listId.trim()}/accounts") {
+    override suspend fun getListAccounts(listId: String, pageInfo: PageInfo?): Page<List<Account>>? {
+        return client.requestPageOrNull("/api/v1/lists/${listId.trim()}/accounts") {
             method = HttpMethod.Get
-            parameter("max_id", maxId)
-            parameter("since_id", sinceId)
-            parameter("limit", limit)
+            parameter(pageInfo)
         }
     }
 

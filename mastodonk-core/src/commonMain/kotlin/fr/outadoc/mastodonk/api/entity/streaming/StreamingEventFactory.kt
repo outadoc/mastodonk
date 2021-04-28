@@ -14,6 +14,9 @@ internal class StreamingEventFactory(private val json: Json) {
             "notification" -> NotificationEvent(
                 payload = json.decodeFromString(rawEvent.payload)
             )
+            "conversation" -> ConversationEvent(
+                payload = json.decodeFromString(rawEvent.payload)
+            )
             "delete" -> DeleteEvent(
                 statusId = rawEvent.payload
             )

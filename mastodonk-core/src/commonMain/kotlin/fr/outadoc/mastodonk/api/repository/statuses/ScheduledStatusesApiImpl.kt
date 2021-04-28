@@ -2,25 +2,19 @@ package fr.outadoc.mastodonk.api.repository.statuses
 
 import fr.outadoc.mastodonk.api.endpoint.statuses.ScheduledStatusesApi
 import fr.outadoc.mastodonk.api.entity.ScheduledStatus
+import fr.outadoc.mastodonk.api.entity.paging.Page
+import fr.outadoc.mastodonk.api.entity.paging.PageInfo
+import fr.outadoc.mastodonk.api.entity.paging.parameter
 import fr.outadoc.mastodonk.api.entity.request.statuses.ScheduledStatusUpdate
 import fr.outadoc.mastodonk.client.MastodonHttpClient
-import io.ktor.client.request.*
 import io.ktor.http.*
 
 internal class ScheduledStatusesApiImpl(private val client: MastodonHttpClient) : ScheduledStatusesApi {
 
-    override suspend fun getScheduledStatuses(
-        limit: Int?,
-        maxId: String?,
-        sinceId: String?,
-        minId: String?
-    ): List<ScheduledStatus> {
-        return client.request("/api/v1/scheduled_statuses") {
+    override suspend fun getScheduledStatuses(pageInfo: PageInfo?): Page<List<ScheduledStatus>> {
+        return client.requestPage("/api/v1/scheduled_statuses") {
             method = HttpMethod.Get
-            parameter("limit", limit)
-            parameter("max_id", maxId)
-            parameter("since_id", sinceId)
-            parameter("min_id", minId)
+            parameter(pageInfo)
         }
     }
 

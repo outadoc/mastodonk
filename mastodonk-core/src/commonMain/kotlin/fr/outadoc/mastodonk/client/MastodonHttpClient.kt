@@ -1,6 +1,8 @@
 package fr.outadoc.mastodonk.client
 
 import fr.outadoc.mastodonk.api.entity.Error
+import fr.outadoc.mastodonk.api.entity.paging.Page
+import fr.outadoc.mastodonk.api.entity.paging.parseLinkHeaderToPageRefs
 import fr.outadoc.mastodonk.api.entity.streaming.RawStreamingEvent
 import fr.outadoc.mastodonk.api.entity.streaming.StreamingEvent
 import fr.outadoc.mastodonk.api.entity.streaming.StreamingEventFactory
@@ -69,12 +71,47 @@ internal class MastodonHttpClient(
         }
     }
 
-    suspend inline fun <reified T> request(route: String, builder: HttpRequestBuilder.() -> Unit = {}): T {
-        return httpClient.get(baseUrl.copy(encodedPath = route)) {
-            // Inject auth token if available
-            authTokenProvider?.provideAuthToken()?.let { token ->
-                header(HttpHeaders.Authorization, token.toString())
+    fun HttpRequestBuilder.addAuthToken() {
+        // Inject auth token if available
+        authTokenProvider?.provideAuthToken()?.let { token ->
+            header(HttpHeaders.Authorization, token.toString())
+        }
+    }
+
+    suspend inline fun <reified T> requestPage(
+        route: String,
+        builder: HttpRequestBuilder.() -> Unit = {}
+    ): Page<T> {
+        val res = httpClient.request<HttpResponse>(baseUrl.copy(encodedPath = route)) {
+            addAuthToken()
+            builder()
+        }
+
+        val linkHeaders = res.headers["Link"]?.parseLinkHeaderToPageRefs()
+        return Page(
+            contents = json.decodeFromString(res.readText()),
+            nextPage = linkHeaders?.get("next"),
+            previousPage = linkHeaders?.get("prev")
+        )
+    }
+
+    suspend inline fun <reified T> requestPageOrNull(
+        route: String,
+        builder: HttpRequestBuilder.() -> Unit = {}
+    ): Page<T>? {
+        return try {
+            requestPage(route, builder)
+        } catch (e: MastodonApiException) {
+            when (e.errorCode) {
+                HttpStatusCode.NotFound.value -> null
+                else -> throw e
             }
+        }
+    }
+
+    suspend inline fun <reified T> request(route: String, builder: HttpRequestBuilder.() -> Unit = {}): T {
+        return httpClient.request(baseUrl.copy(encodedPath = route)) {
+            addAuthToken()
             builder()
         }
     }
