@@ -21,7 +21,7 @@ public interface TimelinesApi {
         sinceId: String? = null,
         minId: String? = null,
         limit: Int? = null
-    ): Page<Status>
+    ): Page<List<Status>>
 
     /**
      * Gets the timeline for the given [hashtag].

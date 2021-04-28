@@ -17,7 +17,7 @@ internal class TimelinesApiImpl(private val client: MastodonHttpClient) : Timeli
         sinceId: String?,
         minId: String?,
         limit: Int?
-    ): Page<Status> {
+    ): Page<List<Status>> {
         return client.requestPage("/api/v1/timelines/public") {
             method = HttpMethod.Get
             parameter("local", onlyLocal)
