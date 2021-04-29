@@ -133,11 +133,17 @@ kotlin {
             }
         }
 
-        val desktopTest by creating
-
         val linuxX64Main by getting { dependsOn(desktopMain) }
         val mingwX64Main by getting { dependsOn(desktopMain) }
         val macosX64Main by getting { dependsOn(desktopMain) }
+
+        val desktopTest by creating {
+            dependsOn(commonTest)
+        }
+
+        val linuxX64Test by getting { dependsOn(desktopTest) }
+        val mingwX64Test by getting { dependsOn(desktopTest) }
+        val macosX64Test by getting { dependsOn(desktopTest) }
     }
 }
 

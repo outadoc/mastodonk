@@ -15,5 +15,5 @@ public data class InstanceUrls(
      * e.g. wss://mastodon.example
      */
     @SerialName("streaming_api")
-    val streamingApi: String? = null
+    val streamingApiUrl: String
 )
