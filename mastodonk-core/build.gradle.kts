@@ -107,8 +107,6 @@ kotlin {
             }
         }
 
-        val desktopTest by getting
-
         val linuxX64Main by getting { dependsOn(desktopMain) }
         val mingwX64Main by getting { dependsOn(desktopMain) }
         val macosX64Main by getting { dependsOn(desktopMain) }
