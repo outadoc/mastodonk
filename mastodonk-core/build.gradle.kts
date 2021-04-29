@@ -4,10 +4,8 @@ plugins {
     kotlin("multiplatform")
     kotlin("plugin.serialization")
     id("org.jetbrains.dokka")
+    `maven-publish`
 }
-
-group = "fr.outadoc.mastodonk"
-version = "0.1-alpha"
 
 kotlin {
     explicitApi()
@@ -15,7 +13,6 @@ kotlin {
     jvm {
         compilations.all {
             kotlinOptions {
-                useIR = true
                 jvmTarget = "1.8"
             }
         }
@@ -26,16 +23,30 @@ kotlin {
     }
 
     js(IR) {
+        browser()
         nodejs()
     }
 
-    val hostOs = System.getProperty("os.name")
-    val isMingwX64 = hostOs.startsWith("Windows")
-    val nativeTarget = when {
-        hostOs == "Mac OS X" -> macosX64("native")
-        hostOs == "Linux" -> linuxX64("native")
-        isMingwX64 -> mingwX64("native")
-        else -> throw GradleException("Host OS is not supported in Kotlin/Native.")
+    linuxX64("native")
+    macosX64("native")
+    mingwX64("native")
+
+    val publicationsFromMainHost =
+        listOf(jvm(), js()).map { it.name } + "kotlinMultiplatform"
+
+    publishing {
+        repositories {
+            mavenLocal()
+        }
+
+        publications {
+            matching { it.name in publicationsFromMainHost }.all {
+                val targetPublication = this@all
+                tasks.withType<AbstractPublishToMaven>()
+                    .matching { it.publication == targetPublication }
+                    .configureEach { onlyIf { findProperty("isMainHost") == "true" } }
+            }
+        }
     }
 
     sourceSets {
