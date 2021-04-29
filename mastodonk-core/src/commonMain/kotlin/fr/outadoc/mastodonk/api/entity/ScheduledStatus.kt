@@ -1,6 +1,5 @@
 package fr.outadoc.mastodonk.api.entity
 
-import fr.outadoc.mastodonk.serializer.InstantSerializer
 import kotlinx.datetime.Instant
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
@@ -12,7 +11,6 @@ public data class ScheduledStatus(
     val statusId: String,
 
     @SerialName("scheduled_at")
-    @Serializable(with = InstantSerializer::class)
     val scheduledAt: Instant,
 
     @SerialName("params")

@@ -1,6 +1,5 @@
 package fr.outadoc.mastodonk.api.entity
 
-import fr.outadoc.mastodonk.serializer.InstantSerializer
 import kotlinx.datetime.Instant
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
@@ -18,7 +17,6 @@ public data class AdminAccount(
     val domain: String,
 
     @SerialName("created_at")
-    @Serializable(with = InstantSerializer::class)
     val createdAt: Instant,
 
     @SerialName("email")

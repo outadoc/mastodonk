@@ -1,6 +1,5 @@
 package fr.outadoc.mastodonk.api.entity
 
-import fr.outadoc.mastodonk.serializer.InstantSerializer
 import kotlinx.datetime.Instant
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
@@ -21,11 +20,9 @@ public data class Announcement(
     val isAllDay: Boolean,
 
     @SerialName("created_at")
-    @Serializable(with = InstantSerializer::class)
     val createdAt: Instant,
 
     @SerialName("updated_at")
-    @Serializable(with = InstantSerializer::class)
     val updatedAt: Instant,
 
     @SerialName("read")
@@ -35,14 +32,11 @@ public data class Announcement(
     val reactions: List<AnnouncementReaction>,
 
     @SerialName("scheduled_at")
-    @Serializable(with = InstantSerializer::class)
     val scheduledAt: Instant? = null,
 
     @SerialName("starts_at")
-    @Serializable(with = InstantSerializer::class)
     val startsAt: Instant? = null,
 
     @SerialName("ends_at")
-    @Serializable(with = InstantSerializer::class)
     val endsAt: Instant? = null
 )

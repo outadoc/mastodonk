@@ -1,7 +1,6 @@
 package fr.outadoc.mastodonk.api.entity.request.accounts
 
 import fr.outadoc.mastodonk.api.entity.FilterContext
-import fr.outadoc.mastodonk.serializer.InstantSerializer
 import kotlinx.datetime.Instant
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
@@ -25,6 +24,5 @@ public data class FilterUpdate(
     val wholeWord: Boolean?,
 
     @SerialName("expires_in")
-    @Serializable(with = InstantSerializer::class)
     val expiresIn: Instant?
 )

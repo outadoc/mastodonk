@@ -1,7 +1,5 @@
 package fr.outadoc.mastodonk.api.entity
 
-import fr.outadoc.mastodonk.serializer.DateStringToLocalDateSerializer
-import fr.outadoc.mastodonk.serializer.InstantSerializer
 import kotlinx.datetime.Instant
 import kotlinx.datetime.LocalDate
 import kotlinx.serialization.SerialName
@@ -47,11 +45,9 @@ public data class Account(
     val emojis: List<Emoji>,
 
     @SerialName("created_at")
-    @Serializable(with = InstantSerializer::class)
     val createdAt: Instant,
 
     @SerialName("last_status_at")
-    @Serializable(with = DateStringToLocalDateSerializer::class)
     val lastStatusAt: LocalDate,
 
     @SerialName("statuses_count")
@@ -85,6 +81,5 @@ public data class Account(
     val isSuspended: Boolean? = null,
 
     @SerialName("mute_expires_at")
-    @Serializable(with = InstantSerializer::class)
     val muteExpiresAt: Instant? = null
 )
