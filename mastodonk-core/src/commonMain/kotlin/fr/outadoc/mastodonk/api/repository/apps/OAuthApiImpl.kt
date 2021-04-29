@@ -2,8 +2,8 @@ package fr.outadoc.mastodonk.api.repository.apps
 
 import fr.outadoc.mastodonk.api.endpoint.apps.OAuthApi
 import fr.outadoc.mastodonk.api.entity.Token
-import fr.outadoc.mastodonk.api.entity.request.apps.TokenCreate
-import fr.outadoc.mastodonk.api.entity.request.apps.TokenRevoke
+import fr.outadoc.mastodonk.api.entity.request.TokenCreate
+import fr.outadoc.mastodonk.api.entity.request.TokenRevoke
 import fr.outadoc.mastodonk.client.MastodonHttpClient
 import io.ktor.http.*
 

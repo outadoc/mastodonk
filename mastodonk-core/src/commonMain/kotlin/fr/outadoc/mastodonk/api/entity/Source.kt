@@ -3,24 +3,49 @@ package fr.outadoc.mastodonk.api.entity
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
+/**
+ * Represents display or publishing preferences of the [Account].
+ *
+ * Returned as an additional entity when verifying and updated credentials.
+ */
 @Serializable
 public data class Source(
 
+    /**
+     * The account's bio.
+     */
     @SerialName("note")
-    val note: String,
+    val bio: String,
 
+    /**
+     * Metadata about the account as a list of name/values.
+     */
     @SerialName("fields")
     val fields: List<Field>,
 
+    /**
+     * The default post privacy to be used for new statuses.
+     */
     @SerialName("privacy")
-    val privacy: Visibility? = null,
+    val defaultPrivacy: StatusVisibility? = null,
 
+    /**
+     * Whether new statuses should be marked sensitive by default.
+     */
     @SerialName("sensitive")
-    val isSensitive: Boolean? = null,
+    val defaultSensitivity: Boolean? = null,
 
+    /**
+     * The default posting language for new statuses.
+     *
+     * ISO 639-1 language two-letter code.
+     */
     @SerialName("language")
-    val language: String? = null,
+    val defaultLanguage: String? = null,
 
+    /**
+     * The number of pending follow requests.
+     */
     @SerialName("follow_requests_count")
     val followRequestsCount: Long? = null
 )

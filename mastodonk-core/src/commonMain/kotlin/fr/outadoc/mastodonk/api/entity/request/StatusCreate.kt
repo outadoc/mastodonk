@@ -1,6 +1,6 @@
-package fr.outadoc.mastodonk.api.entity.request.statuses
+package fr.outadoc.mastodonk.api.entity.request
 
-import fr.outadoc.mastodonk.api.entity.Visibility
+import fr.outadoc.mastodonk.api.entity.StatusVisibility
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
@@ -45,16 +45,16 @@ public data class StatusCreate(
      * Statuses are generally collapsed behind this field.
      */
     @SerialName("spoiler_text")
-    val spoilerText: String? = null,
+    val contentWarningText: String? = null,
 
     /**
      * Visibility of the posted status.
      */
     @SerialName("visibility")
-    val visibility: Visibility? = null,
+    val visibility: StatusVisibility? = null,
 
     /**
-     * ISO 639 language code for this status.
+     * ISO 639-1 language code for this status.
      */
     @SerialName("language")
     val language: String? = null

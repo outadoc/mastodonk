@@ -2,7 +2,7 @@ package fr.outadoc.mastodonk.api.repository.apps
 
 import fr.outadoc.mastodonk.api.endpoint.apps.AppsApi
 import fr.outadoc.mastodonk.api.entity.Application
-import fr.outadoc.mastodonk.api.entity.request.apps.ApplicationCreate
+import fr.outadoc.mastodonk.api.entity.request.ApplicationCreate
 import fr.outadoc.mastodonk.client.MastodonHttpClient
 import io.ktor.http.*
 

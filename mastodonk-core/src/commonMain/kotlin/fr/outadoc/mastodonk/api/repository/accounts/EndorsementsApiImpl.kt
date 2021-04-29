@@ -10,7 +10,7 @@ import io.ktor.http.*
 
 internal class EndorsementsApiImpl(private val client: MastodonHttpClient) : EndorsementsApi {
 
-    override suspend fun getEndorsements(pageInfo: PageInfo?): Page<List<Account>> {
+    override suspend fun getFeaturedAccounts(pageInfo: PageInfo?): Page<List<Account>> {
         return client.requestPage("/api/v1/endorsements") {
             method = HttpMethod.Get
             parameter(pageInfo)

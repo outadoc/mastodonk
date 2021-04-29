@@ -1,8 +1,8 @@
 package fr.outadoc.mastodonk.api.endpoint.apps
 
 import fr.outadoc.mastodonk.api.entity.Token
-import fr.outadoc.mastodonk.api.entity.request.apps.TokenCreate
-import fr.outadoc.mastodonk.api.entity.request.apps.TokenRevoke
+import fr.outadoc.mastodonk.api.entity.request.TokenCreate
+import fr.outadoc.mastodonk.api.entity.request.TokenRevoke
 
 /**
  * Generate and manage OAuth tokens.

@@ -1,4 +1,4 @@
-package fr.outadoc.mastodonk.api.entity.request.admin
+package fr.outadoc.mastodonk.api.entity.request
 
 import fr.outadoc.mastodonk.api.entity.ActionType
 import kotlinx.serialization.SerialName

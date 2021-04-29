@@ -2,7 +2,7 @@ package fr.outadoc.mastodonk.api.repository.timelines
 
 import fr.outadoc.mastodonk.api.endpoint.timelines.MarkersApi
 import fr.outadoc.mastodonk.api.entity.Marker
-import fr.outadoc.mastodonk.api.entity.request.timelines.MarkerCreate
+import fr.outadoc.mastodonk.api.entity.request.MarkerCreate
 import fr.outadoc.mastodonk.client.MastodonHttpClient
 import io.ktor.client.request.*
 import io.ktor.http.*

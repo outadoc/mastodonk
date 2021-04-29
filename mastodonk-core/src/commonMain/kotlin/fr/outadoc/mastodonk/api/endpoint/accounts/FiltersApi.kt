@@ -1,8 +1,8 @@
 package fr.outadoc.mastodonk.api.endpoint.accounts
 
 import fr.outadoc.mastodonk.api.entity.Filter
-import fr.outadoc.mastodonk.api.entity.request.accounts.FilterCreate
-import fr.outadoc.mastodonk.api.entity.request.accounts.FilterUpdate
+import fr.outadoc.mastodonk.api.entity.request.FilterCreate
+import fr.outadoc.mastodonk.api.entity.request.FilterUpdate
 
 /**
  * View and manage filters.

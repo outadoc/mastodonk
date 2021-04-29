@@ -2,7 +2,7 @@ package fr.outadoc.mastodonk.api.endpoint.admin
 
 import fr.outadoc.mastodonk.api.entity.AdminAccount
 import fr.outadoc.mastodonk.api.entity.AdminReport
-import fr.outadoc.mastodonk.api.entity.request.admin.AccountAction
+import fr.outadoc.mastodonk.api.entity.request.AccountAction
 
 /**
  * Methods reserved to instance administrators.

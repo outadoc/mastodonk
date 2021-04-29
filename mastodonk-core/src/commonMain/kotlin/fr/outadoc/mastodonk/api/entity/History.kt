@@ -5,16 +5,28 @@ import kotlinx.datetime.LocalDate
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
+/**
+ * Represents daily usage history of a hashtag.
+ */
 @Serializable
 public data class History(
 
+    /**
+     * Day the historical data was recorded on.
+     */
     @SerialName("day")
     @Serializable(with = TimestampToLocalDateSerializer::class)
     val day: LocalDate,
 
+    /**
+     * The counted usage of the tag within that day.
+     */
     @SerialName("uses")
-    val uses: String? = null,
+    val usageCount: Long? = null,
 
+    /**
+     * the total of accounts using the tag within that day.
+     */
     @SerialName("account")
-    val accounts: String
+    val accountCount: Long
 )

@@ -1,7 +1,7 @@
 package fr.outadoc.mastodonk.api.endpoint.timelines
 
 import fr.outadoc.mastodonk.api.entity.Marker
-import fr.outadoc.mastodonk.api.entity.request.timelines.MarkerCreate
+import fr.outadoc.mastodonk.api.entity.request.MarkerCreate
 
 /**
  * Save and restore your position in timelines.

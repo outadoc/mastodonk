@@ -3,7 +3,7 @@ package fr.outadoc.mastodonk.api.endpoint.statuses
 import fr.outadoc.mastodonk.api.entity.ScheduledStatus
 import fr.outadoc.mastodonk.api.entity.paging.Page
 import fr.outadoc.mastodonk.api.entity.paging.PageInfo
-import fr.outadoc.mastodonk.api.entity.request.statuses.ScheduledStatusUpdate
+import fr.outadoc.mastodonk.api.entity.request.ScheduledStatusUpdate
 
 /**
  * View and manage currently scheduled statuses.

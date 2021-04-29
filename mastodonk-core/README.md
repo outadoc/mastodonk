@@ -46,6 +46,18 @@ Endpoints to read and view timelines of statuses.
 
 Objects returned by the Mastodon API.
 
+# Package fr.outadoc.mastodonk.api.entity.paging
+
+Classes related to API paging.
+
+# Package fr.outadoc.mastodonk.api.entity.request
+
+Objects used for sending API requests.
+
+# Package fr.outadoc.mastodonk.api.entity.streaming
+
+Objects returned by the streaming API.
+
 # Package fr.outadoc.mastodonk.auth
 
 Classes related to API authentication.

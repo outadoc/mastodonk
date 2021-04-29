@@ -1,4 +1,4 @@
-package fr.outadoc.mastodonk.api.entity.request.statuses
+package fr.outadoc.mastodonk.api.entity.request
 
 import fr.outadoc.mastodonk.api.entity.PollOption
 import kotlinx.serialization.SerialName

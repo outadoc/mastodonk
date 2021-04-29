@@ -6,13 +6,13 @@ import fr.outadoc.mastodonk.api.entity.Field
 import fr.outadoc.mastodonk.api.entity.IdentityProof
 import fr.outadoc.mastodonk.api.entity.Relationship
 import fr.outadoc.mastodonk.api.entity.Status
+import fr.outadoc.mastodonk.api.entity.StatusVisibility
 import fr.outadoc.mastodonk.api.entity.Token
 import fr.outadoc.mastodonk.api.entity.UserList
-import fr.outadoc.mastodonk.api.entity.Visibility
 import fr.outadoc.mastodonk.api.entity.paging.Page
 import fr.outadoc.mastodonk.api.entity.paging.PageInfo
+import fr.outadoc.mastodonk.api.entity.request.AccountCreate
 import fr.outadoc.mastodonk.api.entity.request.File
-import fr.outadoc.mastodonk.api.entity.request.accounts.AccountCreate
 
 /**
  * Methods concerning user accounts and related information.
@@ -61,7 +61,7 @@ public interface AccountsApi {
         isDiscoverable: Boolean? = null,
         isLocked: Boolean? = null,
         isSensitive: Boolean? = null,
-        privacy: Visibility? = null,
+        privacy: StatusVisibility? = null,
         language: String? = null,
         fields: List<Field>? = null
     ): Account

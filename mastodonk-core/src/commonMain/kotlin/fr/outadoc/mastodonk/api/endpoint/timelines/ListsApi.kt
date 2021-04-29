@@ -1,7 +1,7 @@
 package fr.outadoc.mastodonk.api.endpoint.timelines
 
 import fr.outadoc.mastodonk.api.entity.Account
-import fr.outadoc.mastodonk.api.entity.RepliesPolicy
+import fr.outadoc.mastodonk.api.entity.ListReplyPolicy
 import fr.outadoc.mastodonk.api.entity.UserList
 import fr.outadoc.mastodonk.api.entity.paging.Page
 import fr.outadoc.mastodonk.api.entity.paging.PageInfo
@@ -28,12 +28,12 @@ public interface ListsApi {
     /**
      * Creates a new list.
      */
-    public suspend fun createList(title: String, repliesPolicy: RepliesPolicy?): UserList
+    public suspend fun createList(title: String, replyPolicy: ListReplyPolicy?): UserList
 
     /**
      * Changes the title of a list, or which replies to show.
      */
-    public suspend fun updateList(listId: String, title: String?, repliesPolicy: RepliesPolicy?): UserList
+    public suspend fun updateList(listId: String, title: String?, replyPolicy: ListReplyPolicy?): UserList
 
     /**
      * Deletes a list.

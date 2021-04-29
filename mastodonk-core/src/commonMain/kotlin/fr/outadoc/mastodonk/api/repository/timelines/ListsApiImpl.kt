@@ -2,7 +2,7 @@ package fr.outadoc.mastodonk.api.repository.timelines
 
 import fr.outadoc.mastodonk.api.endpoint.timelines.ListsApi
 import fr.outadoc.mastodonk.api.entity.Account
-import fr.outadoc.mastodonk.api.entity.RepliesPolicy
+import fr.outadoc.mastodonk.api.entity.ListReplyPolicy
 import fr.outadoc.mastodonk.api.entity.UserList
 import fr.outadoc.mastodonk.api.entity.paging.Page
 import fr.outadoc.mastodonk.api.entity.paging.PageInfo
@@ -25,19 +25,19 @@ internal class ListsApiImpl(private val client: MastodonHttpClient) : ListsApi {
         }
     }
 
-    override suspend fun createList(title: String, repliesPolicy: RepliesPolicy?): UserList {
+    override suspend fun createList(title: String, replyPolicy: ListReplyPolicy?): UserList {
         return client.request("/api/v1/lists") {
             method = HttpMethod.Post
             parameter("title", title)
-            parameter("replies_policy", repliesPolicy)
+            parameter("replies_policy", replyPolicy)
         }
     }
 
-    override suspend fun updateList(listId: String, title: String?, repliesPolicy: RepliesPolicy?): UserList {
+    override suspend fun updateList(listId: String, title: String?, replyPolicy: ListReplyPolicy?): UserList {
         return client.request("/api/v1/lists/${listId.trim()}") {
             method = HttpMethod.Put
             parameter("title", title)
-            parameter("replies_policy", repliesPolicy)
+            parameter("replies_policy", replyPolicy)
         }
     }
 

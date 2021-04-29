@@ -2,8 +2,8 @@ package fr.outadoc.mastodonk.api.repository.notifications
 
 import fr.outadoc.mastodonk.api.endpoint.notifications.PushApi
 import fr.outadoc.mastodonk.api.entity.PushSubscription
-import fr.outadoc.mastodonk.api.entity.request.notifications.PushSubscribe
-import fr.outadoc.mastodonk.api.entity.request.notifications.PushUpdate
+import fr.outadoc.mastodonk.api.entity.request.PushSubscribe
+import fr.outadoc.mastodonk.api.entity.request.PushUpdate
 import fr.outadoc.mastodonk.client.MastodonHttpClient
 import io.ktor.http.*
 

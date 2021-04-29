@@ -2,7 +2,7 @@ package fr.outadoc.mastodonk.api.repository.accounts
 
 import fr.outadoc.mastodonk.api.endpoint.accounts.ReportsApi
 import fr.outadoc.mastodonk.api.entity.Report
-import fr.outadoc.mastodonk.api.entity.request.accounts.ReportCreate
+import fr.outadoc.mastodonk.api.entity.request.ReportCreate
 import fr.outadoc.mastodonk.client.MastodonHttpClient
 import io.ktor.http.*
 

@@ -2,8 +2,8 @@ package fr.outadoc.mastodonk.api.repository.accounts
 
 import fr.outadoc.mastodonk.api.endpoint.accounts.FiltersApi
 import fr.outadoc.mastodonk.api.entity.Filter
-import fr.outadoc.mastodonk.api.entity.request.accounts.FilterCreate
-import fr.outadoc.mastodonk.api.entity.request.accounts.FilterUpdate
+import fr.outadoc.mastodonk.api.entity.request.FilterCreate
+import fr.outadoc.mastodonk.api.entity.request.FilterUpdate
 import fr.outadoc.mastodonk.client.MastodonHttpClient
 import io.ktor.http.*
 

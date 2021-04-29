@@ -4,16 +4,17 @@ import fr.outadoc.mastodonk.auth.AuthTokenProvider
 
 public class MastodonClientBuilder {
 
+    /**
+     * The base URL for the Mastodon instance. Required.
+     *
+     * The API path will be appended automatically.
+     */
     public var baseUrl: String? = null
+
+    /**
+     * Authentication token provider, to authenticate the requests. Optional.
+     */
     public var authTokenProvider: AuthTokenProvider? = null
-
-    public fun setBaseUrl(baseUrl: String): MastodonClientBuilder = apply {
-        this.baseUrl = baseUrl
-    }
-
-    public fun setAuthTokenProvider(authTokenProvider: AuthTokenProvider): MastodonClientBuilder = apply {
-        this.authTokenProvider = authTokenProvider
-    }
 
     public fun build(): MastodonClient {
         val baseUrl = checkNotNull(baseUrl) { "Base URL must be set on ${MastodonClientBuilder::class.simpleName}" }

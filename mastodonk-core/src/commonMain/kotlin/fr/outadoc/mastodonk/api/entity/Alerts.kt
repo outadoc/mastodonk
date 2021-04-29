@@ -3,6 +3,9 @@ package fr.outadoc.mastodonk.api.entity
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
+/**
+ * Used to select which alerts to receive from a [PushSubscription].
+ */
 @Serializable
 public data class Alerts(
 

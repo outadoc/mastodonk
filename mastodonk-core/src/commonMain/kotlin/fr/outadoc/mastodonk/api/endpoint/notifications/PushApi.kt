@@ -1,8 +1,8 @@
 package fr.outadoc.mastodonk.api.endpoint.notifications
 
 import fr.outadoc.mastodonk.api.entity.PushSubscription
-import fr.outadoc.mastodonk.api.entity.request.notifications.PushSubscribe
-import fr.outadoc.mastodonk.api.entity.request.notifications.PushUpdate
+import fr.outadoc.mastodonk.api.entity.request.PushSubscribe
+import fr.outadoc.mastodonk.api.entity.request.PushUpdate
 
 /**
  * Subscribe to and receive push notifications when a server-side

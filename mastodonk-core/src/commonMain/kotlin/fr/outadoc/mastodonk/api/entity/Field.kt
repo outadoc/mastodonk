@@ -18,6 +18,9 @@ public data class Field(
     @SerialName("value")
     val value: String,
 
+    /**
+     * Timestamp of the time the server verified a URL value for a `rel="me”` link.
+     */
     @SerialName("verified_at")
     val verifiedAt: Instant? = null
 )

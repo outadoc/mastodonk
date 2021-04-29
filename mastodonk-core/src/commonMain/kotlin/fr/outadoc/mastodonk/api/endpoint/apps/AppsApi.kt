@@ -1,7 +1,7 @@
 package fr.outadoc.mastodonk.api.endpoint.apps
 
 import fr.outadoc.mastodonk.api.entity.Application
-import fr.outadoc.mastodonk.api.entity.request.apps.ApplicationCreate
+import fr.outadoc.mastodonk.api.entity.request.ApplicationCreate
 
 /**
  * Register client applications that can be used to obtain OAuth tokens.

@@ -3,7 +3,7 @@ package fr.outadoc.mastodonk.api.repository.admin
 import fr.outadoc.mastodonk.api.endpoint.admin.AdminApi
 import fr.outadoc.mastodonk.api.entity.AdminAccount
 import fr.outadoc.mastodonk.api.entity.AdminReport
-import fr.outadoc.mastodonk.api.entity.request.admin.AccountAction
+import fr.outadoc.mastodonk.api.entity.request.AccountAction
 import fr.outadoc.mastodonk.client.MastodonHttpClient
 import io.ktor.client.request.*
 import io.ktor.http.*

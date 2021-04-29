@@ -35,6 +35,9 @@ import fr.outadoc.mastodonk.api.endpoint.timelines.MarkersApi
 import fr.outadoc.mastodonk.api.endpoint.timelines.StreamingApi
 import fr.outadoc.mastodonk.api.endpoint.timelines.TimelinesApi
 
+/**
+ * Entry point for all Mastodon APIs.
+ */
 public interface MastodonClient {
 
     // region Timelines

@@ -1,4 +1,4 @@
-package fr.outadoc.mastodonk.api.entity.request.statuses
+package fr.outadoc.mastodonk.api.entity.request
 
 import kotlinx.datetime.Instant
 import kotlinx.serialization.SerialName

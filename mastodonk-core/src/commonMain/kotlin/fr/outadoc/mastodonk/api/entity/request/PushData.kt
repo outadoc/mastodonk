@@ -1,4 +1,4 @@
-package fr.outadoc.mastodonk.api.entity.request.notifications
+package fr.outadoc.mastodonk.api.entity.request
 
 import fr.outadoc.mastodonk.api.entity.Alerts
 import kotlinx.serialization.SerialName

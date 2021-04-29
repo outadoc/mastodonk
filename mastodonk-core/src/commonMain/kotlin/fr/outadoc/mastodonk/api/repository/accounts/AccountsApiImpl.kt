@@ -7,14 +7,14 @@ import fr.outadoc.mastodonk.api.entity.Field
 import fr.outadoc.mastodonk.api.entity.IdentityProof
 import fr.outadoc.mastodonk.api.entity.Relationship
 import fr.outadoc.mastodonk.api.entity.Status
+import fr.outadoc.mastodonk.api.entity.StatusVisibility
 import fr.outadoc.mastodonk.api.entity.Token
 import fr.outadoc.mastodonk.api.entity.UserList
-import fr.outadoc.mastodonk.api.entity.Visibility
 import fr.outadoc.mastodonk.api.entity.paging.Page
 import fr.outadoc.mastodonk.api.entity.paging.PageInfo
 import fr.outadoc.mastodonk.api.entity.paging.parameter
+import fr.outadoc.mastodonk.api.entity.request.AccountCreate
 import fr.outadoc.mastodonk.api.entity.request.File
-import fr.outadoc.mastodonk.api.entity.request.accounts.AccountCreate
 import fr.outadoc.mastodonk.api.entity.request.toFormPart
 import fr.outadoc.mastodonk.client.MastodonHttpClient
 import io.ktor.client.request.*
@@ -48,7 +48,7 @@ internal class AccountsApiImpl(private val client: MastodonHttpClient) : Account
         isDiscoverable: Boolean?,
         isLocked: Boolean?,
         isSensitive: Boolean?,
-        privacy: Visibility?,
+        privacy: StatusVisibility?,
         language: String?,
         fields: List<Field>?
     ): Account {

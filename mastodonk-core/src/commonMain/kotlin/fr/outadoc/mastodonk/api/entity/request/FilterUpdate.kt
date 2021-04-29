@@ -1,4 +1,4 @@
-package fr.outadoc.mastodonk.api.entity.request.accounts
+package fr.outadoc.mastodonk.api.entity.request
 
 import fr.outadoc.mastodonk.api.entity.FilterContext
 import kotlinx.datetime.Instant
