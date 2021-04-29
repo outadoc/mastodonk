@@ -10,7 +10,7 @@ buildscript {
         gradlePluginPortal()
     }
 
-    val kotlinVersion = "1.4.32"
+    val kotlinVersion = "1.5.0"
     dependencies {
         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion")
         classpath("org.jetbrains.kotlin:kotlin-serialization:$kotlinVersion")
