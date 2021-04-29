@@ -27,9 +27,9 @@ kotlin {
         nodejs()
     }
 
-    linuxX64("native")
-    macosX64("native")
-    mingwX64("native")
+    linuxX64()
+    macosX64()
+    mingwX64()
 
     val publicationsFromMainHost =
         listOf(jvm(), js()).map { it.name } + "kotlinMultiplatform"
@@ -50,6 +50,9 @@ kotlin {
     }
 
     sourceSets {
+
+        // Common source-sets
+
         val commonMain by getting {
             dependencies {
                 implementation(libs.datetime)
@@ -59,6 +62,7 @@ kotlin {
                 implementation(libs.ktor.websockets)
             }
         }
+
         val commonTest by getting {
             dependencies {
                 implementation(kotlin("test-common"))
@@ -66,34 +70,48 @@ kotlin {
             }
         }
 
+        // JVM source-sets
+
         val jvmMain by getting {
             dependencies {
                 implementation(libs.ktor.engine.cio)
             }
         }
+
         val jvmTest by getting {
             dependencies {
                 implementation(kotlin("test-junit"))
             }
         }
 
+        // JS source-sets
+
         val jsMain by getting {
             dependencies {
                 implementation(libs.ktor.engine.js)
             }
         }
+
         val jsTest by getting {
             dependencies {
                 implementation(kotlin("test-js"))
             }
         }
 
-        val nativeMain by getting {
+        // Desktop source-sets
+
+        val desktopMain by creating {
+            dependsOn(commonMain)
             dependencies {
                 implementation(libs.ktor.engine.curl)
             }
         }
-        val nativeTest by getting
+
+        val desktopTest by getting
+
+        val linuxX64Main by getting { dependsOn(desktopMain) }
+        val mingwX64Main by getting { dependsOn(desktopMain) }
+        val macosX64Main by getting { dependsOn(desktopMain) }
     }
 }
 
