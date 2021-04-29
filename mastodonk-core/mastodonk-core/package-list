@@ -595,8 +595,8 @@ $dokka.location:fr.outadoc.mastodonk.api.entity/InstanceStats/domainCount/#/Poin
 $dokka.location:fr.outadoc.mastodonk.api.entity/InstanceStats/statusCount/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-instance-stats/status-count.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/InstanceStats/userCount/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-instance-stats/user-count.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/InstanceUrls///PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-instance-urls/index.html
-$dokka.location:fr.outadoc.mastodonk.api.entity/InstanceUrls/InstanceUrls/#kotlin.String?/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-instance-urls/-instance-urls.html
-$dokka.location:fr.outadoc.mastodonk.api.entity/InstanceUrls/streamingApi/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-instance-urls/streaming-api.html
+$dokka.location:fr.outadoc.mastodonk.api.entity/InstanceUrls/InstanceUrls/#kotlin.String/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-instance-urls/-instance-urls.html
+$dokka.location:fr.outadoc.mastodonk.api.entity/InstanceUrls/streamingApiUrl/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-instance-urls/streaming-api-url.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/ListReplyPolicy.Followed///PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-list-reply-policy/-followed/index.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/ListReplyPolicy.Followed/name/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-list-reply-policy/-followed/name.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/ListReplyPolicy.Followed/ordinal/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-list-reply-policy/-followed/ordinal.html
