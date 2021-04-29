@@ -8,7 +8,7 @@ on:
   pull_request:
 
 jobs:
-  build:
+  build-native:
     runs-on: ubuntu-latest
 
     steps:
@@ -20,5 +20,5 @@ jobs:
           java-version: '11'
           distribution: 'adopt'
 
-      - name: Native Tests
+      - name: Linux Tests
         run: ./gradlew mastodonk-core:linuxX64Test

@@ -31,23 +31,27 @@ kotlin {
     macosX64()
     mingwX64()
 
-    val publicationsFromMainHost = listOf(
-        jvm().name,
-        js().name,
-        "kotlinMultiplatform"
-    )
-
     publishing {
         repositories {
             mavenLocal()
         }
+
+        val publicationsFromMainHost = listOf(
+            jvm().name,
+            js().name,
+            "kotlinMultiplatform"
+        )
 
         publications {
             matching { it.name in publicationsFromMainHost }.all {
                 val targetPublication = this@all
                 tasks.withType<AbstractPublishToMaven>()
                     .matching { it.publication == targetPublication }
-                    .configureEach { onlyIf { findProperty("isMainHost") == "true" } }
+                    .configureEach {
+                        onlyIf {
+                            findProperty("isMainHost") == "true"
+                        }
+                    }
             }
         }
     }
