@@ -23,7 +23,7 @@ jobs:
         run: ./gradlew -PisMainHost=true publish
         env:
           GHP_USERNAME: ${{ github.actor }}
-          GHP_TOKEN: ${{ secrets.GITHUB_GHP_TOKEN }}
+          GHP_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   macos-publish:
     runs-on: macos-latest
@@ -43,7 +43,7 @@ jobs:
         run: ./gradlew publish
         env:
           GHP_USERNAME: ${{ github.actor }}
-          GHP_TOKEN: ${{ secrets.GITHUB_GHP_TOKEN }}
+          GHP_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   windows-publish:
     runs-on: windows-latest
@@ -63,4 +63,4 @@ jobs:
         run: ./gradlew publish
         env:
           GHP_USERNAME: ${{ github.actor }}
-          GHP_TOKEN: ${{ secrets.GITHUB_GHP_TOKEN }}
+          GHP_TOKEN: ${{ secrets.GITHUB_TOKEN }}
