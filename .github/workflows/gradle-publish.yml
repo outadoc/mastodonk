@@ -1,7 +1,6 @@
 name: Publish to Maven
 
 on:
-  pull_request: # TODO remove
   release:
     types: [ created ]
 
@@ -23,11 +22,11 @@ jobs:
       - name: Publish to GitHub Packages
         run: ./gradlew -PisMainHost=true publish
         env:
-          USERNAME: ${{ github.actor }}
-          TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GHP_USERNAME: ${{ github.actor }}
+          GHP_TOKEN: ${{ secrets.GITHUB_GHP_TOKEN }}
 
   macos-publish:
-    runs-on: macos-11.0
+    runs-on: macos-latest
     steps:
       - uses: actions/checkout@v2
 
@@ -43,8 +42,8 @@ jobs:
       - name: Publish to GitHub Packages
         run: ./gradlew publish
         env:
-          USERNAME: ${{ github.actor }}
-          TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GHP_USERNAME: ${{ github.actor }}
+          GHP_TOKEN: ${{ secrets.GITHUB_GHP_TOKEN }}
 
   windows-publish:
     runs-on: windows-latest
@@ -63,5 +62,5 @@ jobs:
       - name: Publish to GitHub Packages
         run: ./gradlew publish
         env:
-          USERNAME: ${{ github.actor }}
-          TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GHP_USERNAME: ${{ github.actor }}
+          GHP_TOKEN: ${{ secrets.GITHUB_GHP_TOKEN }}
