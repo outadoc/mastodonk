@@ -21,4 +21,4 @@ jobs:
           distribution: 'adopt'
 
       - name: Native Tests
-        run: ./gradlew mastodonk-core:nativeTest
+        run: ./gradlew mastodonk-core:linuxX64Test
