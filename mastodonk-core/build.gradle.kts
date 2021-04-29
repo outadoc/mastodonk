@@ -31,8 +31,11 @@ kotlin {
     macosX64()
     mingwX64()
 
-    val publicationsFromMainHost =
-        listOf(jvm(), js()).map { it.name } + "kotlinMultiplatform"
+    val publicationsFromMainHost = listOf(
+        jvm().name,
+        js().name,
+        "kotlinMultiplatform"
+    )
 
     publishing {
         repositories {
