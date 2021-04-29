@@ -1,9 +1,13 @@
 package fr.outadoc.mastodonk.api.entity.request
 
+import fr.outadoc.mastodonk.api.entity.Status
 import fr.outadoc.mastodonk.api.entity.StatusVisibility
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
+/**
+ * Object used to post a new [Status].
+ */
 @Serializable
 public data class StatusCreate(
 

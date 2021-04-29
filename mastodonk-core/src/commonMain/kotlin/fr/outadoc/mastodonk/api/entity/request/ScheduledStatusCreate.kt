@@ -5,6 +5,9 @@ import kotlinx.datetime.Instant
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
+/**
+ * Object used to schedule a status.
+ */
 @Serializable
 public data class ScheduledStatusCreate(
 

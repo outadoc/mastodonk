@@ -3,7 +3,7 @@ package fr.outadoc.mastodonk.api.endpoint.statuses
 import fr.outadoc.mastodonk.api.entity.ScheduledStatus
 import fr.outadoc.mastodonk.api.entity.paging.Page
 import fr.outadoc.mastodonk.api.entity.paging.PageInfo
-import fr.outadoc.mastodonk.api.entity.request.ScheduledStatusUpdate
+import kotlinx.datetime.Instant
 
 /**
  * View and manage currently scheduled statuses.
@@ -25,7 +25,7 @@ public interface ScheduledStatusesApi {
     /**
      * Updates the schedule of a [ScheduledStatus].
      */
-    public suspend fun updateScheduledStatus(statusId: String, update: ScheduledStatusUpdate): ScheduledStatus
+    public suspend fun updateScheduledStatus(statusId: String, scheduledAt: Instant?): ScheduledStatus
 
     /**
      * Cancels a [ScheduledStatus].

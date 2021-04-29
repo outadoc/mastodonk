@@ -5,9 +5,12 @@ import fr.outadoc.mastodonk.api.entity.ScheduledStatus
 import fr.outadoc.mastodonk.api.entity.paging.Page
 import fr.outadoc.mastodonk.api.entity.paging.PageInfo
 import fr.outadoc.mastodonk.api.entity.paging.parameter
-import fr.outadoc.mastodonk.api.entity.request.ScheduledStatusUpdate
 import fr.outadoc.mastodonk.client.MastodonHttpClient
+import io.ktor.client.request.forms.*
 import io.ktor.http.*
+import kotlinx.datetime.Instant
+import kotlinx.serialization.encodeToString
+import kotlinx.serialization.json.Json
 
 internal class ScheduledStatusesApiImpl(private val client: MastodonHttpClient) : ScheduledStatusesApi {
 
@@ -24,11 +27,12 @@ internal class ScheduledStatusesApiImpl(private val client: MastodonHttpClient) 
         }
     }
 
-    override suspend fun updateScheduledStatus(statusId: String, update: ScheduledStatusUpdate): ScheduledStatus {
+    override suspend fun updateScheduledStatus(statusId: String, scheduledAt: Instant?): ScheduledStatus {
         return client.request("/api/v1/scheduled_statuses/${statusId.trim()}") {
             method = HttpMethod.Put
-            contentType(ContentType.Application.Json)
-            body = update
+            formData {
+                scheduledAt?.let { append("scheduled_at", Json.encodeToString(it)) }
+            }
         }
     }
 

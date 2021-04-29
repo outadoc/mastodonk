@@ -1,9 +1,13 @@
 package fr.outadoc.mastodonk.api.entity.request
 
+import fr.outadoc.mastodonk.api.entity.Poll
 import fr.outadoc.mastodonk.api.entity.PollOption
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
+/**
+ * Object used to create a new [Poll].
+ */
 @Serializable
 public data class PollCreate(
 

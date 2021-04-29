@@ -1,8 +1,12 @@
 package fr.outadoc.mastodonk.api.entity.request
 
+import fr.outadoc.mastodonk.api.entity.Token
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
+/**
+ * Object used to revoke a [Token].
+ */
 @Serializable
 public data class TokenRevoke(
 

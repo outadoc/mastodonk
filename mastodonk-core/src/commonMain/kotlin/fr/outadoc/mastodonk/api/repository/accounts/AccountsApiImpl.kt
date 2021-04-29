@@ -80,7 +80,7 @@ internal class AccountsApiImpl(private val client: MastodonHttpClient) : Account
                 }
 
                 privacy?.let {
-                    append("source[privacy]", Json.Default.encodeToString(it))
+                    append("source[privacy]", Json.encodeToString(it))
                 }
 
                 isSensitive?.let {

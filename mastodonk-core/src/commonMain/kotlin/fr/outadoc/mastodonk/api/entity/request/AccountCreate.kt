@@ -1,17 +1,30 @@
 package fr.outadoc.mastodonk.api.entity.request
 
+import fr.outadoc.mastodonk.api.entity.Account
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
+/**
+ * Object to create a new [Account].
+ */
 @Serializable
 public data class AccountCreate(
 
+    /**
+     * The desired username for the account.
+     */
     @SerialName("username")
     val username: String,
 
+    /**
+     * The email address to be used for login.
+     */
     @SerialName("email")
     val email: String,
 
+    /**
+     * The password to be used for login.
+     */
     @SerialName("password")
     val password: String,
 

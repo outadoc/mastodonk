@@ -25,7 +25,7 @@ internal class NotificationsApiImpl(private val client: MastodonHttpClient) : No
             parameter(pageInfo)
 
             excludeTypes?.map { type ->
-                Json.Default.encodeToString(type)
+                Json.encodeToString(type)
             }?.forEach { type ->
                 parameter("exclude_types", type)
             }

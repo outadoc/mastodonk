@@ -1,11 +1,15 @@
 package fr.outadoc.mastodonk.api.entity.request
 
 import fr.outadoc.mastodonk.api.entity.GrantType
+import fr.outadoc.mastodonk.api.entity.Token
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
+/**
+ * Object used to get a new [Token].
+ */
 @Serializable
-public data class TokenCreate(
+public data class TokenGet(
 
     /**
      * Client ID, obtained during app registration.

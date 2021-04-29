@@ -3,6 +3,9 @@ package fr.outadoc.mastodonk.api.entity.request
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
+/**
+ * Push subscription
+ */
 @Serializable
 public data class PushSubscription(
 
@@ -12,6 +15,9 @@ public data class PushSubscription(
     @SerialName("endpoint")
     val endpoint: String,
 
+    /**
+     * Push server keys.
+     */
     @SerialName("keys")
     val keys: PushKeys
 )

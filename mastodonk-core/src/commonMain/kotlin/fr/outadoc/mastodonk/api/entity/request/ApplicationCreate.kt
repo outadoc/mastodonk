@@ -1,8 +1,12 @@
 package fr.outadoc.mastodonk.api.entity.request
 
+import fr.outadoc.mastodonk.api.entity.Application
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
+/**
+ * Object to register a new [Application].
+ */
 @Serializable
 public data class ApplicationCreate(
 

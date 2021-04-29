@@ -3,6 +3,9 @@ package fr.outadoc.mastodonk.api.entity.request
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
+/**
+ * Push keys used for notifications.
+ */
 @Serializable
 public data class PushKeys(
 
