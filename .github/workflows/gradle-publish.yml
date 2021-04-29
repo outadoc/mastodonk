@@ -21,7 +21,7 @@ jobs:
         run: ./gradlew build
 
       - name: Publish to GitHub Packages
-        run: ./gradlew -pisMainHost=true publish
+        run: ./gradlew -PisMainHost=true publish
         env:
           USERNAME: ${{ github.actor }}
           TOKEN: ${{ secrets.GITHUB_TOKEN }}
