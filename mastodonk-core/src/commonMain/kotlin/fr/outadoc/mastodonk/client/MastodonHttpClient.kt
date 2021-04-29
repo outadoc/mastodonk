@@ -6,6 +6,7 @@ import fr.outadoc.mastodonk.api.entity.paging.parseLinkHeaderToPageRefs
 import fr.outadoc.mastodonk.api.entity.streaming.RawStreamingEvent
 import fr.outadoc.mastodonk.api.entity.streaming.StreamingEvent
 import fr.outadoc.mastodonk.api.entity.streaming.StreamingEventFactory
+import fr.outadoc.mastodonk.api.repository.instance.InstanceApiImpl
 import fr.outadoc.mastodonk.auth.AuthTokenProvider
 import io.ktor.client.*
 import io.ktor.client.features.*
@@ -29,17 +30,24 @@ import kotlinx.serialization.json.Json
 internal class MastodonHttpClient(
     httpClientFactory: HttpClientFactory,
     private val authTokenProvider: AuthTokenProvider?,
-    baseUrl: String
+    private val baseUrl: Url
 ) {
-    val baseUrl: Url = Url(baseUrl)
-
     private val json = Json {
         ignoreUnknownKeys = true
     }
 
     private val streamingEventFactory = StreamingEventFactory(json)
 
-    val httpClient: HttpClient = httpClientFactory.create()
+    private val streamingBaseUrlCache: Url? = null
+    private suspend fun getStreamingBaseUrl(): Url {
+        return streamingBaseUrlCache
+            ?: InstanceApiImpl(this)
+                .getInstanceInfo()
+                .urls.streamingApiUrl
+                .let { Url(it) }
+    }
+
+    private val httpClient: HttpClient = httpClientFactory.create()
         .config {
             install(WebSockets)
             install(JsonFeature) {
@@ -82,7 +90,8 @@ internal class MastodonHttpClient(
         route: String,
         builder: HttpRequestBuilder.() -> Unit = {}
     ): Page<T> {
-        val res = httpClient.request<HttpResponse>(baseUrl.copy(encodedPath = route)) {
+        val res = httpClient.request<HttpResponse> {
+            url(baseUrl.copy(encodedPath = route))
             addAuthToken()
             builder()
         }
@@ -116,7 +125,10 @@ internal class MastodonHttpClient(
         }
     }
 
-    suspend inline fun <reified T> requestOrNull(route: String, builder: HttpRequestBuilder.() -> Unit = {}): T? {
+    suspend inline fun <reified T> requestOrNull(
+        route: String,
+        builder: HttpRequestBuilder.() -> Unit = {}
+    ): T? {
         return try {
             request(route, builder)
         } catch (e: MastodonApiException) {
@@ -131,20 +143,21 @@ internal class MastodonHttpClient(
         route: String,
         builder: HttpRequestBuilder.() -> Unit
     ): Flow<StreamingEvent> = flow {
+        val streamingBaseUrl = getStreamingBaseUrl()
         httpClient.ws(
-            urlString = baseUrl.copy(protocol = URLProtocol.WSS, encodedPath = route).toString(),
             request = {
+                url(streamingBaseUrl.copy(encodedPath = route))
                 authTokenProvider?.provideAuthToken()?.let { token ->
                     parameter("access_token", token.toString())
                 }
                 builder()
-            }
-        ) {
-            incoming.receiveAsFlow()
-                .filterIsInstance<Frame.Text>()
-                .map { frame -> json.decodeFromString<RawStreamingEvent>(frame.readText()) }
-                .mapNotNull { rawEvent -> streamingEventFactory.from(rawEvent) }
-                .let { flow -> emitAll(flow) }
-        }
+            },
+            block = {
+                incoming.receiveAsFlow()
+                    .filterIsInstance<Frame.Text>()
+                    .map { frame -> json.decodeFromString<RawStreamingEvent>(frame.readText()) }
+                    .mapNotNull { rawEvent -> streamingEventFactory.from(rawEvent) }
+                    .let { flow -> emitAll(flow) }
+            })
     }
 }

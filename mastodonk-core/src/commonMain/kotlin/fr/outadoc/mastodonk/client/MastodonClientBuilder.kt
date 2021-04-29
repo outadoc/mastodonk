@@ -1,6 +1,7 @@
 package fr.outadoc.mastodonk.client
 
 import fr.outadoc.mastodonk.auth.AuthTokenProvider
+import io.ktor.http.*
 
 public class MastodonClientBuilder {
 
@@ -22,7 +23,7 @@ public class MastodonClientBuilder {
             httpClient = MastodonHttpClient(
                 httpClientFactory = HttpClientFactory(),
                 authTokenProvider = authTokenProvider,
-                baseUrl = baseUrl
+                baseUrl = Url(baseUrl)
             )
         )
     }
