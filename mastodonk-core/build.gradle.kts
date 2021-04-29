@@ -42,24 +42,7 @@ kotlin {
             }
         }
 
-        val publicationsFromMainHost = listOf(
-            jvm().name,
-            js().name,
-            "kotlinMultiplatform"
-        )
-
         publications {
-            matching { it.name in publicationsFromMainHost }.all {
-                val targetPublication = this@all
-                tasks.withType<AbstractPublishToMaven>()
-                    .matching { it.publication == targetPublication }
-                    .configureEach {
-                        onlyIf {
-                            findProperty("isMainHost") == "true"
-                        }
-                    }
-            }
-
             create<MavenPublication>("maven") {
                 pom {
                     name.set("Mastodonk")

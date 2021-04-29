@@ -20,7 +20,7 @@ jobs:
         run: ./gradlew build
 
       - name: Publish to GitHub Packages
-        run: ./gradlew -PisMainHost=true publish
+        run: ./gradlew publishKotlinMultiplatformPublicationToMavenRepository publishJvmPublicationToMavenRepository publishJsPublicationToMavenRepository publishLinuxX64PublicationToMavenRepository
         env:
           GHP_USERNAME: ${{ github.actor }}
           GHP_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -40,7 +40,7 @@ jobs:
         run: ./gradlew build
 
       - name: Publish to GitHub Packages
-        run: ./gradlew publish
+        run: ./gradlew publishMacosX64PublicationToMavenRepository
         env:
           GHP_USERNAME: ${{ github.actor }}
           GHP_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -60,7 +60,7 @@ jobs:
         run: ./gradlew build
 
       - name: Publish to GitHub Packages
-        run: ./gradlew publish
+        run: ./gradlew publishMingwX64PublicationToMavenRepository
         env:
           GHP_USERNAME: ${{ github.actor }}
           GHP_TOKEN: ${{ secrets.GITHUB_TOKEN }}
