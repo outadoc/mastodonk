@@ -27,6 +27,8 @@ internal class MediaApiImpl(private val client: MastodonHttpClient) : MediaApi {
         return client.request("/api/v2/media") {
             method = HttpMethod.Post
             formData {
+                description?.let { append("description", it) }
+                focus?.let { append("focus", it) }
                 append(filePart)
                 thumbnailPart?.let { append(it) }
             }
@@ -45,6 +47,8 @@ internal class MediaApiImpl(private val client: MastodonHttpClient) : MediaApi {
         return client.request("/api/v1/media/${attachmentId.trim()}") {
             method = HttpMethod.Post
             formData {
+                description?.let { append("description", it) }
+                focus?.let { append("focus", it) }
                 filePart?.let { append(it) }
                 thumbnailPart?.let { append(it) }
             }
