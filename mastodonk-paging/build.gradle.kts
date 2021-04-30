@@ -20,3 +20,11 @@ dependencies {
     api(projects.mastodonkCore)
     implementation(libs.androidx.paging.common)
 }
+
+tasks.withType<org.jetbrains.dokka.gradle.DokkaTaskPartial>().configureEach {
+    dokkaSourceSets {
+        configureEach {
+            includes.from("README.md")
+        }
+    }
+}
