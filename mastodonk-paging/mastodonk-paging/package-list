@@ -1,0 +1,6 @@
+$dokka.format:html-v1
+$dokka.linkExtension:html
+$dokka.location:fr.outadoc.mastodonk.paging.api.endpoint.timelines////PointingToDeclaration/mastodonk-paging/fr.outadoc.mastodonk.paging.api.endpoint.timelines/index.html
+$dokka.location:fr.outadoc.mastodonk.paging.api.endpoint.timelines//getPublicTimelineSource/fr.outadoc.mastodonk.api.endpoint.timelines.TimelinesApi#kotlin.Boolean?#kotlin.Boolean?#kotlin.Boolean?/PointingToDeclaration/mastodonk-paging/fr.outadoc.mastodonk.paging.api.endpoint.timelines/get-public-timeline-source.html
+fr.outadoc.mastodonk.paging.api.endpoint.timelines
+
