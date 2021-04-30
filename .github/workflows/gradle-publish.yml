@@ -20,7 +20,7 @@ jobs:
         run: ./gradlew build
 
       - name: Publish to GitHub Packages
-        run: ./gradlew publishKotlinMultiplatformPublicationToMavenRepository publishJvmPublicationToMavenRepository publishJsPublicationToMavenRepository publishLinuxX64PublicationToMavenRepository publishMavenPublicationToMavenRepository
+        run: ./gradlew -PisMainHost=true publish
         env:
           GHP_USERNAME: ${{ github.actor }}
           GHP_TOKEN: ${{ secrets.GITHUB_TOKEN }}
