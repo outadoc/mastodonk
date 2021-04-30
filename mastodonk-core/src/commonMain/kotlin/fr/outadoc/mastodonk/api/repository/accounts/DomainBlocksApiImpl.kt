@@ -5,14 +5,16 @@ import fr.outadoc.mastodonk.api.entity.paging.Page
 import fr.outadoc.mastodonk.api.entity.paging.PageInfo
 import fr.outadoc.mastodonk.api.entity.paging.parameter
 import fr.outadoc.mastodonk.client.MastodonHttpClient
+import io.ktor.client.request.*
 import io.ktor.client.request.forms.*
 import io.ktor.http.*
 
 internal class DomainBlocksApiImpl(private val client: MastodonHttpClient) : DomainBlocksApi {
 
-    override suspend fun getDomainBlocks(pageInfo: PageInfo?): Page<List<String>> {
+    override suspend fun getDomainBlocks(limit: Int?, pageInfo: PageInfo?): Page<List<String>> {
         return client.requestPage("/api/v1/domain_blocks") {
             method = HttpMethod.Get
+            parameter("limit", limit)
             parameter(pageInfo)
         }
     }

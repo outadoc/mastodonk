@@ -47,9 +47,10 @@ internal class ListsApiImpl(private val client: MastodonHttpClient) : ListsApi {
         }
     }
 
-    override suspend fun getListAccounts(listId: String, pageInfo: PageInfo?): Page<List<Account>>? {
+    override suspend fun getListAccounts(listId: String, limit: Int?, pageInfo: PageInfo?): Page<List<Account>>? {
         return client.requestPageOrNull("/api/v1/lists/${listId.trim()}/accounts") {
             method = HttpMethod.Get
+            parameter("limit", limit)
             parameter(pageInfo)
         }
     }

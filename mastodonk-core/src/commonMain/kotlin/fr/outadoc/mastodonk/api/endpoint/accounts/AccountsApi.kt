@@ -84,13 +84,21 @@ public interface AccountsApi {
      * Gets the list of accounts which follow the given account,
      * if network is not hidden by the account owner.
      */
-    public suspend fun getFollowers(accountId: String, pageInfo: PageInfo? = null): Page<List<Account>>?
+    public suspend fun getFollowers(
+        accountId: String,
+        limit: Int? = null,
+        pageInfo: PageInfo? = null
+    ): Page<List<Account>>?
 
     /**
      * Gets the list of accounts which the given account is following,
      * if network is not hidden by the account owner.
      */
-    public suspend fun getFollowing(accountId: String, pageInfo: PageInfo? = null): Page<List<Account>>?
+    public suspend fun getFollowing(
+        accountId: String,
+        limit: Int? = null,
+        pageInfo: PageInfo? = null
+    ): Page<List<Account>>?
 
     /**
      * Gets tags featured by this account.

@@ -21,6 +21,7 @@ internal class SearchApiImpl(private val client: MastodonHttpClient) : SearchApi
         excludeUnreviewed: Boolean?,
         attemptResolve: Boolean?,
         onlyFollowing: Boolean?,
+        limit: Int?,
         pageInfo: PageInfo?
     ): Page<Results> {
         return client.requestPage("/api/v2/search") {
@@ -32,7 +33,7 @@ internal class SearchApiImpl(private val client: MastodonHttpClient) : SearchApi
             parameter("exclude_unreviewed", excludeUnreviewed)
             parameter("resolve", attemptResolve)
             parameter("following", onlyFollowing)
-
+            parameter("limit", limit)
             parameter(pageInfo)
         }
     }

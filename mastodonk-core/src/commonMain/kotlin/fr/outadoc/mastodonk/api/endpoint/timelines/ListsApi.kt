@@ -47,7 +47,11 @@ public interface ListsApi {
     /**
      * Gets the list of accounts in the given list.
      */
-    public suspend fun getListAccounts(listId: String, pageInfo: PageInfo? = null): Page<List<Account>>?
+    public suspend fun getListAccounts(
+        listId: String,
+        limit: Int? = null,
+        pageInfo: PageInfo? = null
+    ): Page<List<Account>>?
 
     /**
      * Adds the given accounts to the given list.

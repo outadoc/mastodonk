@@ -14,5 +14,5 @@ public interface EndorsementsApi {
     /**
      * Gets the list of accounts currently featured the current account's profile.
      */
-    public suspend fun getFeaturedAccounts(pageInfo: PageInfo? = null): Page<List<Account>>
+    public suspend fun getFeaturedAccounts(limit: Int? = null, pageInfo: PageInfo? = null): Page<List<Account>>
 }
