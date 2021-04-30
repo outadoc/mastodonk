@@ -20,5 +20,5 @@ jobs:
           java-version: '11'
           distribution: 'adopt'
 
-      - name: Linux Tests
+      - name: Core Linux Tests
         run: ./gradlew mastodonk-core:linuxX64Test
