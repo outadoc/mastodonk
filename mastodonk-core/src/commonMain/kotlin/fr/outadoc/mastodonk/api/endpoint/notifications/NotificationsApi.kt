@@ -20,6 +20,7 @@ public interface NotificationsApi {
     public suspend fun getNotifications(
         excludeTypes: List<NotificationType>? = null,
         accountId: String? = null,
+        limit: Int? = null,
         pageInfo: PageInfo? = null
     ): Page<List<Notification>>
 

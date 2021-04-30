@@ -30,8 +30,7 @@ internal fun String.parseLinkHeaderToPageRefs(): Map<String, PageInfo> {
         rel to PageInfo(
             minId = params["min_id"],
             sinceId = params["since_id"],
-            maxId = params["max_id"],
-            limit = params["limit"]?.toIntOrNull()
+            maxId = params["max_id"]
         )
     }
 }
@@ -40,5 +39,4 @@ internal fun HttpRequestBuilder.parameter(pageInfo: PageInfo?) {
     pageInfo?.minId?.let { parameter("min_id", it) }
     pageInfo?.sinceId?.let { parameter("since_id", it) }
     pageInfo?.maxId?.let { parameter("max_id", it) }
-    pageInfo?.limit?.let { parameter("limit", it) }
 }

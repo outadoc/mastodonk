@@ -14,5 +14,5 @@ public interface FavouritesApi {
     /**
      * Gets the current account's favourite statuses.
      */
-    public suspend fun getFavourites(pageInfo: PageInfo? = null): Page<List<Status>>
+    public suspend fun getFavourites(limit: Int? = null, pageInfo: PageInfo? = null): Page<List<Status>>
 }

@@ -20,5 +20,11 @@ jobs:
           java-version: '11'
           distribution: 'adopt'
 
-      - name: JVM Tests
+      - name: Core JVM Tests
         run: ./gradlew mastodonk-core:jvmTest
+
+      - name: Paging JVM Tests
+        run: ./gradlew mastodonk-paging:test
+
+      - name: Sample JVM Build
+        run: ./gradlew sample-jvm:build

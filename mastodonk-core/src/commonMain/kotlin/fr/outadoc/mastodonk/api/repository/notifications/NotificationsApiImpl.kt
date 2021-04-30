@@ -17,11 +17,13 @@ internal class NotificationsApiImpl(private val client: MastodonHttpClient) : No
     override suspend fun getNotifications(
         excludeTypes: List<NotificationType>?,
         accountId: String?,
+        limit: Int?,
         pageInfo: PageInfo?
     ): Page<List<Notification>> {
         return client.requestPage("/api/v1/notifications") {
             method = HttpMethod.Get
             parameter("account_id", accountId)
+            parameter("limit", limit)
             parameter(pageInfo)
 
             excludeTypes?.map { type ->

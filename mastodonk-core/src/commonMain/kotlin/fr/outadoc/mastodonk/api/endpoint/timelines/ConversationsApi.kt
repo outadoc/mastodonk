@@ -16,7 +16,7 @@ public interface ConversationsApi {
     /**
      * Gets the list of conversations for the current account.
      */
-    public suspend fun getConversations(pageInfo: PageInfo? = null): Page<List<Conversation>>
+    public suspend fun getConversations(limit: Int? = null, pageInfo: PageInfo? = null): Page<List<Conversation>>
 
     /**
      * Deletes a conversation.

@@ -6,13 +6,15 @@ import fr.outadoc.mastodonk.api.entity.paging.Page
 import fr.outadoc.mastodonk.api.entity.paging.PageInfo
 import fr.outadoc.mastodonk.api.entity.paging.parameter
 import fr.outadoc.mastodonk.client.MastodonHttpClient
+import io.ktor.client.request.*
 import io.ktor.http.*
 
 internal class ConversationsApiImpl(private val client: MastodonHttpClient) : ConversationsApi {
 
-    override suspend fun getConversations(pageInfo: PageInfo?): Page<List<Conversation>> {
+    override suspend fun getConversations(limit: Int?, pageInfo: PageInfo?): Page<List<Conversation>> {
         return client.requestPage("/api/v1/conversations") {
             method = HttpMethod.Get
+            parameter("limit", limit)
             parameter(pageInfo)
         }
     }

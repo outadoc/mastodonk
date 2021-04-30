@@ -15,6 +15,7 @@ internal class TimelinesApiImpl(private val client: MastodonHttpClient) : Timeli
         onlyLocal: Boolean?,
         onlyRemote: Boolean?,
         onlyMedia: Boolean?,
+        limit: Int?,
         pageInfo: PageInfo?
     ): Page<List<Status>> {
         return client.requestPage("/api/v1/timelines/public") {
@@ -22,6 +23,7 @@ internal class TimelinesApiImpl(private val client: MastodonHttpClient) : Timeli
             parameter("local", onlyLocal)
             parameter("remote", onlyRemote)
             parameter("only_media", onlyMedia)
+            parameter("limit", limit)
             parameter(pageInfo)
         }
     }
@@ -30,33 +32,39 @@ internal class TimelinesApiImpl(private val client: MastodonHttpClient) : Timeli
         hashtag: String,
         onlyLocal: Boolean?,
         onlyMedia: Boolean?,
+        limit: Int?,
         pageInfo: PageInfo?
     ): Page<List<Status>> {
         return client.requestPage("/api/v1/timelines/tag/${hashtag.trim()}") {
             method = HttpMethod.Get
             parameter("local", onlyLocal)
             parameter("only_media", onlyMedia)
+            parameter("limit", limit)
             parameter(pageInfo)
         }
     }
 
     override suspend fun getHomeTimeline(
         onlyLocal: Boolean?,
+        limit: Int?,
         pageInfo: PageInfo?
     ): Page<List<Status>> {
         return client.requestPage("/api/v1/timelines/home") {
             method = HttpMethod.Get
             parameter("local", onlyLocal)
+            parameter("limit", limit)
             parameter(pageInfo)
         }
     }
 
     override suspend fun getList(
         listId: String,
+        limit: Int?,
         pageInfo: PageInfo?
     ): Page<List<Status>>? {
         return client.requestPageOrNull("/api/v1/timelines/list/${listId.trim()}") {
             method = HttpMethod.Get
+            parameter("limit", limit)
             parameter(pageInfo)
         }
     }

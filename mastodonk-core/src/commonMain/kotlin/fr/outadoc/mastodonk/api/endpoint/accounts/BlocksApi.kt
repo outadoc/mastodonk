@@ -14,5 +14,5 @@ public interface BlocksApi {
     /**
      * Gets all blocked accounts for this account.
      */
-    public suspend fun getBlocks(pageInfo: PageInfo? = null): Page<List<Account>>
+    public suspend fun getBlocks(limit: Int? = null, pageInfo: PageInfo? = null): Page<List<Account>>
 }

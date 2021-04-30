@@ -14,5 +14,5 @@ public interface MutesApi {
     /**
      * Gets the list of accounts that are muted by the current account.
      */
-    public suspend fun getMutes(pageInfo: PageInfo? = null): Page<List<Account>>
+    public suspend fun getMutes(limit: Int? = null, pageInfo: PageInfo? = null): Page<List<Account>>
 }

@@ -13,7 +13,7 @@ public interface DomainBlocksApi {
     /**
      * Gets the list of blocked domains (Mastodon instances) for this account.
      */
-    public suspend fun getDomainBlocks(pageInfo: PageInfo? = null): Page<List<String>>
+    public suspend fun getDomainBlocks(limit: Int? = null, pageInfo: PageInfo? = null): Page<List<String>>
 
     /**
      * Blocks the domain of a Mastodon instance.

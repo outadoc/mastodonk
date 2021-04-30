@@ -35,7 +35,7 @@ fun main() = runBlocking {
 
         client.timelines.getHashtagTimeline(
             "cats",
-            pageInfo = PageInfo(limit = 3)
+            limit = 3
         ).let { cats ->
             println("three cat statuses:")
             cats.contents.forEach { status -> println(status) }

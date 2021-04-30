@@ -15,7 +15,7 @@ public interface ScheduledStatusesApi {
     /**
      * Gets currently scheduled statuses for this account.
      */
-    public suspend fun getScheduledStatuses(pageInfo: PageInfo? = null): Page<List<ScheduledStatus>>
+    public suspend fun getScheduledStatuses(limit: Int? = null, pageInfo: PageInfo? = null): Page<List<ScheduledStatus>>
 
     /**
      * Gets a single [ScheduledStatus].

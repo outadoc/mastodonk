@@ -109,16 +109,26 @@ internal class AccountsApiImpl(private val client: MastodonHttpClient) : Account
         }
     }
 
-    override suspend fun getFollowers(accountId: String, pageInfo: PageInfo?): Page<List<Account>>? {
+    override suspend fun getFollowers(
+        accountId: String,
+        limit: Int?,
+        pageInfo: PageInfo?
+    ): Page<List<Account>>? {
         return client.requestPageOrNull("/api/v1/accounts/${accountId.trim()}/followers") {
             method = HttpMethod.Get
+            parameter("limit", limit)
             parameter(pageInfo)
         }
     }
 
-    override suspend fun getFollowing(accountId: String, pageInfo: PageInfo?): Page<List<Account>>? {
+    override suspend fun getFollowing(
+        accountId: String,
+        limit: Int?,
+        pageInfo: PageInfo?
+    ): Page<List<Account>>? {
         return client.requestPageOrNull("/api/v1/accounts/${accountId.trim()}/following") {
             method = HttpMethod.Get
+            parameter("limit", limit)
             parameter(pageInfo)
         }
     }

@@ -6,6 +6,7 @@ import fr.outadoc.mastodonk.api.entity.paging.Page
 import fr.outadoc.mastodonk.api.entity.paging.PageInfo
 import fr.outadoc.mastodonk.api.entity.paging.parameter
 import fr.outadoc.mastodonk.client.MastodonHttpClient
+import io.ktor.client.request.*
 import io.ktor.client.request.forms.*
 import io.ktor.http.*
 import kotlinx.datetime.Instant
@@ -14,9 +15,10 @@ import kotlinx.serialization.json.Json
 
 internal class ScheduledStatusesApiImpl(private val client: MastodonHttpClient) : ScheduledStatusesApi {
 
-    override suspend fun getScheduledStatuses(pageInfo: PageInfo?): Page<List<ScheduledStatus>> {
+    override suspend fun getScheduledStatuses(limit: Int?, pageInfo: PageInfo?): Page<List<ScheduledStatus>> {
         return client.requestPage("/api/v1/scheduled_statuses") {
             method = HttpMethod.Get
+            parameter("limit", limit)
             parameter(pageInfo)
         }
     }

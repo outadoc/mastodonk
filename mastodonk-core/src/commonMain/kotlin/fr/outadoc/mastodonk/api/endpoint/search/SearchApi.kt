@@ -29,6 +29,7 @@ public interface SearchApi {
         excludeUnreviewed: Boolean? = null,
         attemptResolve: Boolean? = null,
         onlyFollowing: Boolean? = null,
+        limit: Int? = null,
         pageInfo: PageInfo? = null
     ): Page<Results>
 }

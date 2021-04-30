@@ -14,5 +14,5 @@ public interface BookmarksApi {
     /**
      * Gets the bookmarked statuses for this account.
      */
-    public suspend fun getBookmarks(pageInfo: PageInfo? = null): Page<List<Status>>
+    public suspend fun getBookmarks(limit: Int? = null, pageInfo: PageInfo? = null): Page<List<Status>>
 }
