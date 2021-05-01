@@ -29,12 +29,13 @@ allprojects {
 }
 
 subprojects {
-
     val isMainHost = findProperty("isMainHost") == "true"
     val isLibraryProject = name.startsWith("mastodonk-")
 
     if (isLibraryProject) {
         apply(plugin = "org.gradle.maven-publish")
+
+        val projectName = name
 
         publishing {
             repositories {
@@ -53,18 +54,17 @@ subprojects {
             )
 
             publications {
-                matching {
-                    it.name in publicationsFromMainHost
-                }.all {
-                    val targetPublication = this@all
-                    tasks.withType<AbstractPublishToMaven>()
-                        .matching { it.publication == targetPublication }
-                        .configureEach { onlyIf { isMainHost } }
-                }
+                matching { it.name in publicationsFromMainHost }
+                    .all {
+                        val targetPublication = this
+                        tasks.withType<AbstractPublishToMaven>()
+                            .matching { it.publication == targetPublication }
+                            .configureEach { onlyIf { isMainHost } }
+                    }
 
-                create<MavenPublication>("nexus") {
+                create<MavenPublication>("maven") {
                     pom {
-                        name.set("Mastodonk")
+                        name.set(projectName)
                         description.set("Kotlin/Multiplatform library for Mastodon")
                         url.set("https://github.com/outadoc/mastodonk")
 
