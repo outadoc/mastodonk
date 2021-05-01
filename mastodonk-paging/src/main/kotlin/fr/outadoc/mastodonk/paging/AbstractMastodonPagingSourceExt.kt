@@ -4,7 +4,7 @@ import androidx.paging.PagingSource
 import fr.outadoc.mastodonk.api.entity.paging.Page
 import fr.outadoc.mastodonk.api.entity.paging.PageInfo
 
-internal fun <T : Any> createPagingSource(
+internal fun <T : Any> pagingSource(
     block: suspend (PagingSource.LoadParams<PageInfo>) -> Page<List<T>>
 ): PagingSource<PageInfo, T> {
 
@@ -15,7 +15,7 @@ internal fun <T : Any> createPagingSource(
     }
 }
 
-internal fun <T : Any> createPagingSourceFromNullable(
+internal fun <T : Any> pagingSourceFromNullable(
     block: suspend (PagingSource.LoadParams<PageInfo>) -> Page<List<T>>?
 ): PagingSource<PageInfo, T> {
 

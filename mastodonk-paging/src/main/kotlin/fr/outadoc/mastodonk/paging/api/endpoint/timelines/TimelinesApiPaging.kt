@@ -4,15 +4,15 @@ import androidx.paging.PagingSource
 import fr.outadoc.mastodonk.api.endpoint.timelines.TimelinesApi
 import fr.outadoc.mastodonk.api.entity.Status
 import fr.outadoc.mastodonk.api.entity.paging.PageInfo
-import fr.outadoc.mastodonk.paging.createPagingSource
-import fr.outadoc.mastodonk.paging.createPagingSourceFromNullable
+import fr.outadoc.mastodonk.paging.pagingSource
+import fr.outadoc.mastodonk.paging.pagingSourceFromNullable
 
 public fun TimelinesApi.getPublicTimelineSource(
     onlyLocal: Boolean? = null,
     onlyRemote: Boolean? = null,
     onlyMedia: Boolean? = null
 ): PagingSource<PageInfo, Status> {
-    return createPagingSource { params ->
+    return pagingSource { params ->
         getPublicTimeline(
             onlyLocal = onlyLocal,
             onlyRemote = onlyRemote,
@@ -28,7 +28,7 @@ public fun TimelinesApi.getHashtagTimelineSource(
     onlyLocal: Boolean? = null,
     onlyMedia: Boolean? = null
 ): PagingSource<PageInfo, Status> {
-    return createPagingSource { params ->
+    return pagingSource { params ->
         getHashtagTimeline(
             hashtag = hashtag,
             onlyLocal = onlyLocal,
@@ -40,7 +40,7 @@ public fun TimelinesApi.getHashtagTimelineSource(
 }
 
 public fun TimelinesApi.getHomeTimelineSource(onlyLocal: Boolean? = null): PagingSource<PageInfo, Status> {
-    return createPagingSource { params ->
+    return pagingSource { params ->
         getHomeTimeline(
             onlyLocal = onlyLocal,
             limit = params.loadSize,
@@ -50,7 +50,7 @@ public fun TimelinesApi.getHomeTimelineSource(onlyLocal: Boolean? = null): Pagin
 }
 
 public fun TimelinesApi.getListSource(listId: String): PagingSource<PageInfo, Status> {
-    return createPagingSourceFromNullable { params ->
+    return pagingSourceFromNullable { params ->
         getList(
             listId = listId,
             limit = params.loadSize,
