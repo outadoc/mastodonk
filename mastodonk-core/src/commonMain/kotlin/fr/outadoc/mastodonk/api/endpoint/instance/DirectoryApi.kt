@@ -2,6 +2,8 @@ package fr.outadoc.mastodonk.api.endpoint.instance
 
 import fr.outadoc.mastodonk.api.entity.Account
 import fr.outadoc.mastodonk.api.entity.DirectoryOrder
+import fr.outadoc.mastodonk.api.entity.paging.Page
+import fr.outadoc.mastodonk.api.entity.paging.PageInfo
 
 /**
  * View the directory of accounts published by the instance.
@@ -21,6 +23,6 @@ public interface DirectoryApi {
         order: DirectoryOrder? = null,
         onlyLocal: Boolean? = null,
         limit: Int? = null,
-        offset: Int? = null
-    ): List<Account>
+        pageInfo: PageInfo? = null
+    ): Page<List<Account>>
 }

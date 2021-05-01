@@ -3,6 +3,9 @@ package fr.outadoc.mastodonk.api.repository.instance
 import fr.outadoc.mastodonk.api.endpoint.instance.DirectoryApi
 import fr.outadoc.mastodonk.api.entity.Account
 import fr.outadoc.mastodonk.api.entity.DirectoryOrder
+import fr.outadoc.mastodonk.api.entity.paging.Page
+import fr.outadoc.mastodonk.api.entity.paging.PageInfo
+import fr.outadoc.mastodonk.api.entity.paging.parameter
 import fr.outadoc.mastodonk.client.MastodonHttpClient
 import io.ktor.client.request.*
 import io.ktor.http.*
@@ -15,14 +18,14 @@ internal class DirectoryApiImpl(private val client: MastodonHttpClient) : Direct
         order: DirectoryOrder?,
         onlyLocal: Boolean?,
         limit: Int?,
-        offset: Int?
-    ): List<Account> {
-        return client.request("/api/v1/directory") {
+        pageInfo: PageInfo?
+    ): Page<List<Account>> {
+        return client.requestPage("/api/v1/directory") {
             method = HttpMethod.Get
             order?.let { parameter("order", Json.encodeToString(it)) }
             parameter("local", onlyLocal)
             parameter("limit", limit)
-            parameter("offset", offset)
+            parameter(pageInfo)
         }
     }
 }
