@@ -20,7 +20,7 @@ buildscript {
 
 allprojects {
     group = "fr.outadoc.mastodonk"
-    version = "0.1-alpha05"
+    version = "0.1-alpha06"
 
     repositories {
         mavenCentral()
@@ -29,16 +29,20 @@ allprojects {
 }
 
 subprojects {
-    if (name.startsWith("mastodonk-")) {
+
+    val isMainHost = findProperty("isMainHost") == "true"
+    val isLibraryProject = name.startsWith("mastodonk-")
+
+    if (isLibraryProject) {
         apply(plugin = "org.gradle.maven-publish")
 
         publishing {
             repositories {
                 maven {
-                    url = uri("https://maven.pkg.github.com/outadoc/mastodonk")
+                    url = uri("https://nexus.outadoc.fr/content/repositories/releases")
                     credentials {
-                        username = System.getenv("GHP_USERNAME")
-                        password = System.getenv("GHP_TOKEN")
+                        username = System.getenv("NEXUS_USERNAME")
+                        password = System.getenv("NEXUS_PASSWORD")
                     }
                 }
             }
@@ -54,11 +58,7 @@ subprojects {
                     val targetPublication = this@all
                     tasks.withType<AbstractPublishToMaven>()
                         .matching { it.publication == targetPublication }
-                        .configureEach {
-                            onlyIf {
-                                findProperty("isMainHost") == "true"
-                            }
-                        }
+                        .configureEach { onlyIf { isMainHost } }
                 }
 
                 create<MavenPublication>("maven") {

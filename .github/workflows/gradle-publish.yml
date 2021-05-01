@@ -22,8 +22,8 @@ jobs:
       - name: Publish to GitHub Packages
         run: ./gradlew -PisMainHost=true publish
         env:
-          GHP_USERNAME: ${{ github.actor }}
-          GHP_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NEXUS_USERNAME: ${{ secrets.NEXUS_USERNAME }}
+          NEXUS_PASSWORD: ${{ secrets.NEXUS_PASSWORD }}
 
   macos-publish:
     runs-on: macos-latest
@@ -42,8 +42,8 @@ jobs:
       - name: Publish to GitHub Packages
         run: ./gradlew publishMacosX64PublicationToMavenRepository
         env:
-          GHP_USERNAME: ${{ github.actor }}
-          GHP_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NEXUS_USERNAME: ${{ secrets.NEXUS_USERNAME }}
+          NEXUS_PASSWORD: ${{ secrets.NEXUS_PASSWORD }}
 
   windows-publish:
     runs-on: windows-latest
@@ -62,5 +62,5 @@ jobs:
       - name: Publish to GitHub Packages
         run: ./gradlew publishMingwX64PublicationToMavenRepository
         env:
-          GHP_USERNAME: ${{ github.actor }}
-          GHP_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NEXUS_USERNAME: ${{ secrets.NEXUS_USERNAME }}
+          NEXUS_PASSWORD: ${{ secrets.NEXUS_PASSWORD }}
