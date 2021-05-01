@@ -8,6 +8,22 @@
 
 [API Reference](https://outadoc.github.io/mastodonk/)
 
+## Setup
+
+```kt
+repositories {
+    maven { url = uri("https://nexus.outadoc.fr/repository/public") }
+}
+
+dependencies {
+    # Core library (Multiplatform)
+    implementation("fr.outadoc.mastodonk:mastodonk-core")
+
+    # Wrapper library for androidx.paging (v3)
+    implementation("fr.outadoc.mastodonk:mastodonk-paging")
+}
+```
+
 ## Usage
 
 Mastodonk provides a Kotlin-first API based on coroutines and Flows.

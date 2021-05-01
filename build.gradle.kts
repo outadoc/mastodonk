@@ -29,13 +29,12 @@ allprojects {
 }
 
 subprojects {
+    val projectName = name
     val isMainHost = findProperty("isMainHost") == "true"
-    val isLibraryProject = name.startsWith("mastodonk-")
+    val isLibraryProject = projectName.startsWith("mastodonk-")
 
     if (isLibraryProject) {
         apply(plugin = "org.gradle.maven-publish")
-
-        val projectName = name
 
         publishing {
             repositories {
