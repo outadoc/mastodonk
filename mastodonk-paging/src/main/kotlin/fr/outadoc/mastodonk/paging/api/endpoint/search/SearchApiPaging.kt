@@ -13,7 +13,6 @@ import fr.outadoc.mastodonk.paging.pagingSource
 public fun SearchApi.searchAccountsSource(
     q: String,
     accountId: String? = null,
-    type: SearchType? = null,
     excludeUnreviewed: Boolean? = null,
     attemptResolve: Boolean? = null,
     onlyFollowing: Boolean? = null,
@@ -22,7 +21,7 @@ public fun SearchApi.searchAccountsSource(
         val page = search(
             q = q,
             accountId = accountId,
-            type = type,
+            type = SearchType.Accounts,
             excludeUnreviewed = excludeUnreviewed,
             attemptResolve = attemptResolve,
             onlyFollowing = onlyFollowing,
@@ -41,7 +40,6 @@ public fun SearchApi.searchAccountsSource(
 public fun SearchApi.searchStatusesSource(
     q: String,
     accountId: String? = null,
-    type: SearchType? = null,
     excludeUnreviewed: Boolean? = null,
     attemptResolve: Boolean? = null,
     onlyFollowing: Boolean? = null,
@@ -50,7 +48,7 @@ public fun SearchApi.searchStatusesSource(
         val page = search(
             q = q,
             accountId = accountId,
-            type = type,
+            type = SearchType.Statuses,
             excludeUnreviewed = excludeUnreviewed,
             attemptResolve = attemptResolve,
             onlyFollowing = onlyFollowing,
@@ -69,7 +67,6 @@ public fun SearchApi.searchStatusesSource(
 public fun SearchApi.searchHashtagsSource(
     q: String,
     accountId: String? = null,
-    type: SearchType? = null,
     excludeUnreviewed: Boolean? = null,
     attemptResolve: Boolean? = null,
     onlyFollowing: Boolean? = null,
@@ -78,7 +75,7 @@ public fun SearchApi.searchHashtagsSource(
         val page = search(
             q = q,
             accountId = accountId,
-            type = type,
+            type = SearchType.Hashtags,
             excludeUnreviewed = excludeUnreviewed,
             attemptResolve = attemptResolve,
             onlyFollowing = onlyFollowing,
