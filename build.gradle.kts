@@ -39,6 +39,7 @@ subprojects {
         publishing {
             repositories {
                 maven {
+                    name = "nexus"
                     url = uri("https://nexus.outadoc.fr/repository/maven-releases")
                     credentials {
                         username = System.getenv("NEXUS_USERNAME")
@@ -61,7 +62,7 @@ subprojects {
                         .configureEach { onlyIf { isMainHost } }
                 }
 
-                create<MavenPublication>("maven") {
+                create<MavenPublication>("nexus") {
                     pom {
                         name.set("Mastodonk")
                         description.set("Kotlin/Multiplatform library for Mastodon")

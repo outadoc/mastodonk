@@ -20,7 +20,7 @@ jobs:
         run: ./gradlew build
 
       - name: Publish to Maven repo
-        run: ./gradlew -PisMainHost=true publish
+        run: ./gradlew -PisMainHost=true publishAllPublicationsToNexusRepository
         env:
           NEXUS_USERNAME: ${{ secrets.NEXUS_USERNAME }}
           NEXUS_PASSWORD: ${{ secrets.NEXUS_PASSWORD }}
@@ -40,7 +40,7 @@ jobs:
         run: ./gradlew build
 
       - name: Publish to Maven repo
-        run: ./gradlew publishMacosX64PublicationToMavenRepository
+        run: ./gradlew publishMacosX64PublicationToNexusRepository
         env:
           NEXUS_USERNAME: ${{ secrets.NEXUS_USERNAME }}
           NEXUS_PASSWORD: ${{ secrets.NEXUS_PASSWORD }}
@@ -60,7 +60,7 @@ jobs:
         run: ./gradlew build
 
       - name: Publish to Maven repo
-        run: ./gradlew publishMingwX64PublicationToMavenRepository
+        run: ./gradlew publishMingwX64PublicationToNexusRepository
         env:
           NEXUS_USERNAME: ${{ secrets.NEXUS_USERNAME }}
           NEXUS_PASSWORD: ${{ secrets.NEXUS_PASSWORD }}
