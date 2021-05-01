@@ -20,7 +20,7 @@ buildscript {
 
 allprojects {
     group = "fr.outadoc.mastodonk"
-    version = "0.1-alpha08"
+    version = "0.1-alpha09"
 
     repositories {
         mavenCentral()
@@ -41,7 +41,7 @@ subprojects {
             repositories {
                 maven {
                     name = "nexus"
-                    url = uri("https://nexus.outadoc.fr/repository/maven-releases")
+                    url = uri("https://nexus.outadoc.fr/repository/public")
                     credentials {
                         username = System.getenv("NEXUS_USERNAME")
                         password = System.getenv("NEXUS_PASSWORD")
