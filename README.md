@@ -16,10 +16,10 @@ repositories {
 }
 
 dependencies {
-    # Core library (Multiplatform)
+    // Core library (Multiplatform)
     implementation("fr.outadoc.mastodonk:mastodonk-core")
 
-    # Wrapper library for androidx.paging (v3)
+    // Wrapper library for androidx.paging (v3)
     implementation("fr.outadoc.mastodonk:mastodonk-paging")
 }
 ```
