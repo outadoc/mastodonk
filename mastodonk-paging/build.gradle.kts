@@ -1,3 +1,4 @@
+import org.jetbrains.dokka.gradle.DokkaTaskPartial
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
@@ -21,7 +22,7 @@ dependencies {
     implementation(libs.androidx.paging.common)
 }
 
-tasks.withType<org.jetbrains.dokka.gradle.DokkaTaskPartial>().configureEach {
+tasks.withType<DokkaTaskPartial>().configureEach {
     dokkaSourceSets {
         configureEach {
             includes.from("README.md")
