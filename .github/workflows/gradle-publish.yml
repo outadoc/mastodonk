@@ -19,7 +19,7 @@ jobs:
       - name: Build everything
         run: ./gradlew build
 
-      - name: Publish to GitHub Packages
+      - name: Publish to Maven repo
         run: ./gradlew -PisMainHost=true publish
         env:
           NEXUS_USERNAME: ${{ secrets.NEXUS_USERNAME }}
@@ -39,7 +39,7 @@ jobs:
       - name: Build everything
         run: ./gradlew build
 
-      - name: Publish to GitHub Packages
+      - name: Publish to Maven repo
         run: ./gradlew publishMacosX64PublicationToMavenRepository
         env:
           NEXUS_USERNAME: ${{ secrets.NEXUS_USERNAME }}
@@ -59,7 +59,7 @@ jobs:
       - name: Build everything
         run: ./gradlew build
 
-      - name: Publish to GitHub Packages
+      - name: Publish to Maven repo
         run: ./gradlew publishMingwX64PublicationToMavenRepository
         env:
           NEXUS_USERNAME: ${{ secrets.NEXUS_USERNAME }}

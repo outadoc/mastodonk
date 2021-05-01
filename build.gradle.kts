@@ -39,7 +39,7 @@ subprojects {
         publishing {
             repositories {
                 maven {
-                    url = uri("https://nexus.outadoc.fr/content/repositories/releases")
+                    url = uri("https://nexus.outadoc.fr/repository/maven-releases")
                     credentials {
                         username = System.getenv("NEXUS_USERNAME")
                         password = System.getenv("NEXUS_PASSWORD")
