@@ -5,7 +5,6 @@ import fr.outadoc.mastodonk.api.endpoint.timelines.TimelinesApi
 import fr.outadoc.mastodonk.api.entity.Status
 import fr.outadoc.mastodonk.api.entity.paging.PageInfo
 import fr.outadoc.mastodonk.paging.pagingSource
-import fr.outadoc.mastodonk.paging.pagingSourceFromNullable
 
 public fun TimelinesApi.getPublicTimelineSource(
     onlyLocal: Boolean? = null,
@@ -50,7 +49,7 @@ public fun TimelinesApi.getHomeTimelineSource(onlyLocal: Boolean? = null): Pagin
 }
 
 public fun TimelinesApi.getListSource(listId: String): PagingSource<PageInfo, Status> {
-    return pagingSourceFromNullable { params ->
+    return pagingSource { params ->
         getList(
             listId = listId,
             limit = params.loadSize,
