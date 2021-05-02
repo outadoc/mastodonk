@@ -15,12 +15,18 @@ repositories {
     maven { url = uri("https://nexus.outadoc.fr/repository/public") }
 }
 
-dependencies {
-    // Core library (Multiplatform)
-    implementation("fr.outadoc.mastodonk:mastodonk-core")
-
-    // Wrapper library for androidx.paging (v3)
-    implementation("fr.outadoc.mastodonk:mastodonk-paging")
+kotlin {
+    sourceSets {
+        val commonMain by getting {
+            dependencies {
+                // Core library
+                implementation("fr.outadoc.mastodonk:mastodonk-core")
+            
+                // Paging library, use with androidx.paging v3 on JVM
+                implementation("fr.outadoc.mastodonk:mastodonk-paging")
+            }
+        }
+    }
 }
 ```
 
