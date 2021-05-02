@@ -21,7 +21,7 @@ kotlin {
             dependencies {
                 // Core library
                 implementation("fr.outadoc.mastodonk:mastodonk-core")
-            
+
                 // Paging library, use with androidx.paging v3 on JVM
                 implementation("fr.outadoc.mastodonk:mastodonk-paging")
             }
