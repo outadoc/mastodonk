@@ -1,6 +1,5 @@
 package fr.outadoc.mastodonk.paging
 
-import androidx.paging.PagingSource
 import fr.outadoc.mastodonk.api.entity.paging.Page
 import fr.outadoc.mastodonk.api.entity.paging.PageInfo
 

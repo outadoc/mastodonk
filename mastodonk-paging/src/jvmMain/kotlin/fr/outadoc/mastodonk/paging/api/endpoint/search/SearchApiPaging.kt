@@ -1,6 +1,5 @@
 package fr.outadoc.mastodonk.paging.api.endpoint.search
 
-import androidx.paging.PagingSource
 import fr.outadoc.mastodonk.api.endpoint.search.SearchApi
 import fr.outadoc.mastodonk.api.entity.Account
 import fr.outadoc.mastodonk.api.entity.SearchType
@@ -8,14 +7,15 @@ import fr.outadoc.mastodonk.api.entity.Status
 import fr.outadoc.mastodonk.api.entity.Tag
 import fr.outadoc.mastodonk.api.entity.paging.Page
 import fr.outadoc.mastodonk.api.entity.paging.PageInfo
+import fr.outadoc.mastodonk.paging.PagingSource
 import fr.outadoc.mastodonk.paging.pagingSource
 
-public fun SearchApi.searchAccountsSource(
+public actual fun SearchApi.searchAccountsSource(
     q: String,
-    accountId: String? = null,
-    excludeUnreviewed: Boolean? = null,
-    attemptResolve: Boolean? = null,
-    onlyFollowing: Boolean? = null,
+    accountId: String?,
+    excludeUnreviewed: Boolean?,
+    attemptResolve: Boolean?,
+    onlyFollowing: Boolean?,
 ): PagingSource<PageInfo, Account> {
     return pagingSource { params ->
         val page = search(
@@ -37,12 +37,12 @@ public fun SearchApi.searchAccountsSource(
     }
 }
 
-public fun SearchApi.searchStatusesSource(
+public actual fun SearchApi.searchStatusesSource(
     q: String,
-    accountId: String? = null,
-    excludeUnreviewed: Boolean? = null,
-    attemptResolve: Boolean? = null,
-    onlyFollowing: Boolean? = null,
+    accountId: String?,
+    excludeUnreviewed: Boolean?,
+    attemptResolve: Boolean?,
+    onlyFollowing: Boolean?,
 ): PagingSource<PageInfo, Status> {
     return pagingSource { params ->
         val page = search(
@@ -64,12 +64,12 @@ public fun SearchApi.searchStatusesSource(
     }
 }
 
-public fun SearchApi.searchHashtagsSource(
+public actual fun SearchApi.searchHashtagsSource(
     q: String,
-    accountId: String? = null,
-    excludeUnreviewed: Boolean? = null,
-    attemptResolve: Boolean? = null,
-    onlyFollowing: Boolean? = null,
+    accountId: String?,
+    excludeUnreviewed: Boolean?,
+    attemptResolve: Boolean?,
+    onlyFollowing: Boolean?,
 ): PagingSource<PageInfo, Tag> {
     return pagingSource { params ->
         val page = search(

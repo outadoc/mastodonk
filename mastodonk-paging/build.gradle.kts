@@ -22,9 +22,15 @@ kotlin {
     }
 
     sourceSets {
-        val jvmMain by getting {
+        val commonMain by getting {
             dependencies {
                 api(projects.mastodonkCore)
+            }
+        }
+        val commonTest by getting
+
+        val jvmMain by getting {
+            dependencies {
                 implementation(libs.androidx.paging.common)
             }
         }
