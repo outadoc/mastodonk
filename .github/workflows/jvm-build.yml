@@ -24,7 +24,7 @@ jobs:
         run: ./gradlew mastodonk-core:jvmTest
 
       - name: Paging JVM Tests
-        run: ./gradlew mastodonk-paging:test
+        run: ./gradlew mastodonk-paging:jvmTest
 
       - name: Sample JVM Build
         run: ./gradlew sample-jvm:build

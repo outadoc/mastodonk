@@ -20,7 +20,7 @@ buildscript {
 
 allprojects {
     group = "fr.outadoc.mastodonk"
-    version = "0.1-alpha10"
+    version = "0.1-alpha11"
 
     repositories {
         mavenCentral()
@@ -53,13 +53,14 @@ subprojects {
             )
 
             publications {
-                matching { it.name in publicationsFromMainHost }
-                    .all {
-                        val targetPublication = this
-                        tasks.withType<AbstractPublishToMaven>()
-                            .matching { it.publication == targetPublication }
-                            .configureEach { onlyIf { isMainHost } }
-                    }
+                matching {
+                    it.name in publicationsFromMainHost
+                }.all {
+                    val targetPublication = this@all
+                    tasks.withType<AbstractPublishToMaven>()
+                        .matching { it.publication == targetPublication }
+                        .configureEach { onlyIf { isMainHost } }
+                }
 
                 create<MavenPublication>("maven") {
                     pom {
