@@ -29,6 +29,7 @@ $dokka.location:fr.outadoc.mastodonk.paging.api.endpoint.timelines//getPublicTim
 $dokka.location:fr.outadoc.mastodonk.paging////PointingToDeclaration/mastodonk-paging/fr.outadoc.mastodonk.paging/index.html
 $dokka.location:fr.outadoc.mastodonk.paging/NotFoundException///PointingToDeclaration/mastodonk-paging/fr.outadoc.mastodonk.paging/-not-found-exception/index.html
 $dokka.location:fr.outadoc.mastodonk.paging/NotFoundException/NotFoundException/#/PointingToDeclaration/mastodonk-paging/fr.outadoc.mastodonk.paging/-not-found-exception/-not-found-exception.html
+$dokka.location:fr.outadoc.mastodonk.paging/PagingSource///PointingToDeclaration/mastodonk-paging/fr.outadoc.mastodonk.paging/-paging-source/index.html
 fr.outadoc.mastodonk.paging
 fr.outadoc.mastodonk.paging.api.endpoint.accounts
 fr.outadoc.mastodonk.paging.api.endpoint.instance
