@@ -3,6 +3,8 @@
 [![JVM Build](https://github.com/outadoc/mastodonk/actions/workflows/jvm-build.yml/badge.svg)](https://github.com/outadoc/mastodonk/actions/workflows/jvm-build.yml)
 [![JS Build](https://github.com/outadoc/mastodonk/actions/workflows/js-build.yml/badge.svg)](https://github.com/outadoc/mastodonk/actions/workflows/js-build.yml)
 [![Native Build](https://github.com/outadoc/mastodonk/actions/workflows/native-build.yml/badge.svg)](https://github.com/outadoc/mastodonk/actions/workflows/native-build.yml)
+[![GitHub license](https://img.shields.io/github/license/outadoc/mastodonk)](https://github.com/outadoc/mastodonk/blob/develop/LICENSE)
+![GitHub release (latest SemVer including pre-releases)](https://img.shields.io/github/v/release/outadoc/mastodonk?include_prereleases)
 
 ## Documentation
 
@@ -20,10 +22,10 @@ kotlin {
         val commonMain by getting {
             dependencies {
                 // Core library
-                implementation("fr.outadoc.mastodonk:mastodonk-core")
+                implementation("fr.outadoc.mastodonk:mastodonk-core:+")
 
                 // Paging library, use with androidx.paging v3 on JVM
-                implementation("fr.outadoc.mastodonk:mastodonk-paging")
+                implementation("fr.outadoc.mastodonk:mastodonk-paging:+")
             }
         }
     }

@@ -4,7 +4,7 @@ import fr.outadoc.mastodonk.api.entity.paging.Page
 import fr.outadoc.mastodonk.api.entity.paging.PageInfo
 
 internal fun <T : Any> pagingSource(
-    block: suspend (PagingSource.LoadParams<PageInfo>) -> Page<List<T>>?
+    block: suspend (androidx.paging.PagingSource.LoadParams<PageInfo>) -> Page<List<T>>?
 ): PagingSource<PageInfo, T> {
 
     return object : AbstractMastodonPagingSource<T>() {
