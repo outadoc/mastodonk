@@ -1,6 +1,5 @@
 package fr.outadoc.mastodonk.sample
 
-import fr.outadoc.mastodonk.api.entity.paging.PageInfo
 import fr.outadoc.mastodonk.api.entity.streaming.DeleteEvent
 import fr.outadoc.mastodonk.api.entity.streaming.UpdateEvent
 import fr.outadoc.mastodonk.auth.AuthTokenProvider
@@ -13,7 +12,7 @@ import kotlinx.coroutines.withTimeout
 
 fun main() = runBlocking {
     val client = MastodonClient {
-        baseUrl = "https://mastodon.social"
+        domain = "mastodon.social"
         authTokenProvider = AuthTokenProvider {
             //AuthToken(accessToken = "your-access-token-here")
             null

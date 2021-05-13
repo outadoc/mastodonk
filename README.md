@@ -40,7 +40,7 @@ Mastodonk provides a Kotlin-first API based on coroutines and Flows.
 fun main() = runBlocking {
 
     val client = MastodonClient {
-        baseUrl = "https://mastodon.social"
+        domain = "mastodon.social"
         authTokenProvider = AuthTokenProvider {
             // Provide an authentication token
             AuthToken(accessToken = "your-access-token-here")

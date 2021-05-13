@@ -30,13 +30,11 @@ import kotlinx.serialization.json.Json
 internal class MastodonHttpClient(
     httpClientFactory: HttpClientFactory,
     private val authTokenProvider: AuthTokenProvider?,
-    private val baseUrl: Url
+    domain: String
 ) {
-    private val json = Json {
-        ignoreUnknownKeys = true
-    }
-
+    private val json = Json { ignoreUnknownKeys = true }
     private val streamingEventFactory = StreamingEventFactory(json)
+    private val baseUrl = URLBuilder(URLProtocol.HTTPS, domain).build()
 
     private val streamingBaseUrlCache: Url? = null
     private suspend fun getStreamingBaseUrl(): Url {
