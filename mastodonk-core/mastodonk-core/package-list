@@ -859,8 +859,8 @@ $dokka.location:fr.outadoc.mastodonk.client/MastodonClient/trends/#/PointingToDe
 $dokka.location:fr.outadoc.mastodonk.client/MastodonClientBuilder///PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.client/-mastodon-client-builder/index.html
 $dokka.location:fr.outadoc.mastodonk.client/MastodonClientBuilder/MastodonClientBuilder/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.client/-mastodon-client-builder/-mastodon-client-builder.html
 $dokka.location:fr.outadoc.mastodonk.client/MastodonClientBuilder/authTokenProvider/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.client/-mastodon-client-builder/auth-token-provider.html
-$dokka.location:fr.outadoc.mastodonk.client/MastodonClientBuilder/baseUrl/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.client/-mastodon-client-builder/base-url.html
 $dokka.location:fr.outadoc.mastodonk.client/MastodonClientBuilder/build/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.client/-mastodon-client-builder/build.html
+$dokka.location:fr.outadoc.mastodonk.client/MastodonClientBuilder/domain/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.client/-mastodon-client-builder/domain.html
 fr.outadoc.mastodonk.api.endpoint.accounts
 fr.outadoc.mastodonk.api.endpoint.admin
 fr.outadoc.mastodonk.api.endpoint.announcements
