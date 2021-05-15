@@ -33,7 +33,11 @@ internal class MastodonHttpClient(
     private val authTokenProvider: AuthTokenProvider?,
     domain: String
 ) {
-    private val json = Json { ignoreUnknownKeys = true }
+    private val json = Json {
+        ignoreUnknownKeys = true
+        isLenient = true
+    }
+
     private val streamingEventFactory = StreamingEventFactory(json)
     private val baseUrl = URLBuilder(URLProtocol.HTTPS, domain).build()
 
