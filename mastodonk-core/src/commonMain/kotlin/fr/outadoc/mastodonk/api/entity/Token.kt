@@ -1,5 +1,6 @@
 package fr.outadoc.mastodonk.api.entity
 
+import fr.outadoc.mastodonk.serializer.TimestampToInstantSerializer
 import kotlinx.datetime.Instant
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
@@ -32,5 +33,6 @@ public data class Token(
      * Time at which the token was generated.
      */
     @SerialName("created_at")
+    @Serializable(with = TimestampToInstantSerializer::class)
     val createdAt: Instant
 )
