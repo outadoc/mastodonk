@@ -2,7 +2,7 @@ package fr.outadoc.mastodonk.client
 
 import fr.outadoc.mastodonk.api.entity.Error
 
-public class MastodonApiException(
+public data class MastodonApiException(
 
     /**
      * HTTP status code returned by the API.

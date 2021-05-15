@@ -17,6 +17,7 @@ import io.ktor.client.request.*
 import io.ktor.client.statement.*
 import io.ktor.http.*
 import io.ktor.http.cio.websocket.*
+import io.ktor.utils.io.charsets.*
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.emitAll
 import kotlinx.coroutines.flow.filterIsInstance
@@ -53,11 +54,13 @@ internal class MastodonHttpClient(
             }
 
             HttpResponseValidator {
-                validateResponse { response ->
-                    val statusCode = response.status.value
-                    if (statusCode in 400..599) {
-                        val apiError = response.decodeErrorBodyOrNull()
-                        throw MastodonApiException(statusCode, apiError)
+                handleResponseException { e ->
+                    if (e is ClientRequestException) {
+                        val statusCode = e.response.status.value
+                        if (statusCode in 400..599) {
+                            val apiError = e.response.decodeErrorBodyOrNull()
+                            throw MastodonApiException(statusCode, apiError)
+                        }
                     }
                 }
             }
@@ -65,13 +68,12 @@ internal class MastodonHttpClient(
 
     private suspend fun HttpResponse.decodeErrorBodyOrNull(): Error? {
         return try {
-            content.readUTF8Line(2048)
-                ?.let { errorJson ->
-                    json.decodeFromString(
-                        Error.serializer(),
-                        errorJson
-                    )
-                }
+            readText(Charsets.UTF_8).let { errorJson ->
+                json.decodeFromString(
+                    Error.serializer(),
+                    errorJson
+                )
+            }
         } catch (e: Exception) {
             null
         }
