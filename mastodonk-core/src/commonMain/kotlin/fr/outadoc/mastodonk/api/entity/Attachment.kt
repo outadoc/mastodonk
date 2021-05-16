@@ -28,7 +28,7 @@ public data class Attachment(
      * URL of a scaled-down preview of the attachment.
      */
     @SerialName("preview_url")
-    val previewUrl: String,
+    val previewUrl: String? = null,
 
     /**
      * URL of the full-size original attachment on the remote website.
