@@ -125,7 +125,7 @@ public data class Account(
      * Indicates that the profile is currently inactive and that its user has moved to a new account.
      */
     @SerialName("moved")
-    val isMoved: Boolean? = null,
+    val movedTo: Account? = null,
 
     /**
      * Whether this account represents a group.
