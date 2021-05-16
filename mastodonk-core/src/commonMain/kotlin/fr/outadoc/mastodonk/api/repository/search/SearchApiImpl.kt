@@ -9,8 +9,6 @@ import fr.outadoc.mastodonk.api.entity.paging.parameter
 import fr.outadoc.mastodonk.client.MastodonHttpClient
 import io.ktor.client.request.*
 import io.ktor.http.*
-import kotlinx.serialization.encodeToString
-import kotlinx.serialization.json.Json
 
 internal class SearchApiImpl(private val client: MastodonHttpClient) : SearchApi {
 
@@ -29,7 +27,7 @@ internal class SearchApiImpl(private val client: MastodonHttpClient) : SearchApi
             parameter("q", q)
 
             parameter("account_id", accountId)
-            type?.let { parameter("type", Json.encodeToString(it)) }
+            type?.let { parameter("type", it.value) }
             parameter("exclude_unreviewed", excludeUnreviewed)
             parameter("resolve", attemptResolve)
             parameter("following", onlyFollowing)

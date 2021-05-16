@@ -20,8 +20,6 @@ import fr.outadoc.mastodonk.client.MastodonHttpClient
 import io.ktor.client.request.*
 import io.ktor.client.request.forms.*
 import io.ktor.http.*
-import kotlinx.serialization.encodeToString
-import kotlinx.serialization.json.Json
 
 internal class AccountsApiImpl(private val client: MastodonHttpClient) : AccountsApi {
 
@@ -80,7 +78,7 @@ internal class AccountsApiImpl(private val client: MastodonHttpClient) : Account
                 }
 
                 privacy?.let {
-                    append("source[privacy]", Json.encodeToString(it))
+                    append("source[privacy]", it.value)
                 }
 
                 isSensitive?.let {

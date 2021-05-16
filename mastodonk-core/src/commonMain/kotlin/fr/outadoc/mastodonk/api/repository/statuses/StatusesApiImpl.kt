@@ -11,8 +11,6 @@ import fr.outadoc.mastodonk.api.entity.request.StatusCreate
 import fr.outadoc.mastodonk.client.MastodonHttpClient
 import io.ktor.client.request.forms.*
 import io.ktor.http.*
-import kotlinx.serialization.encodeToString
-import kotlinx.serialization.json.Json
 
 internal class StatusesApiImpl(private val client: MastodonHttpClient) : StatusesApi {
 
@@ -78,7 +76,7 @@ internal class StatusesApiImpl(private val client: MastodonHttpClient) : Statuse
         return client.request("/api/v1/statuses/${statusId.trim()}/reblog") {
             method = HttpMethod.Post
             formData {
-                visibility?.let { append("visibility", Json.encodeToString(it)) }
+                visibility?.let { append("visibility", it.value) }
             }
         }
     }

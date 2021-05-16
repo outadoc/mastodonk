@@ -4,23 +4,23 @@ import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 @Serializable
-public enum class SearchType {
+public enum class SearchType(public val value: String) {
 
     /**
      * Search for accounts.
      */
     @SerialName("accounts")
-    Accounts,
+    Accounts("accounts"),
 
     /**
      * Search for hashtags.
      */
     @SerialName("hashtags")
-    Hashtags,
+    Hashtags("hashtags"),
 
     /**
      * Search for statuses.
      */
     @SerialName("statuses")
-    Statuses
+    Statuses("statuses")
 }

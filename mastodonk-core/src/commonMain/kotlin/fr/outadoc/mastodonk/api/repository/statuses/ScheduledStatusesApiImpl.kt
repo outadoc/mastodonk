@@ -10,8 +10,6 @@ import io.ktor.client.request.*
 import io.ktor.client.request.forms.*
 import io.ktor.http.*
 import kotlinx.datetime.Instant
-import kotlinx.serialization.encodeToString
-import kotlinx.serialization.json.Json
 
 internal class ScheduledStatusesApiImpl(private val client: MastodonHttpClient) : ScheduledStatusesApi {
 
@@ -33,7 +31,7 @@ internal class ScheduledStatusesApiImpl(private val client: MastodonHttpClient) 
         return client.request("/api/v1/scheduled_statuses/${statusId.trim()}") {
             method = HttpMethod.Put
             formData {
-                scheduledAt?.let { append("scheduled_at", Json.encodeToString(it)) }
+                scheduledAt?.let { append("scheduled_at", it.toString()) }
             }
         }
     }

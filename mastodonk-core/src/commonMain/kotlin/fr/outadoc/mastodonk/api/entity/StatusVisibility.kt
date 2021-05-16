@@ -7,29 +7,29 @@ import kotlinx.serialization.Serializable
  * Visibility of a [Status] to other users.
  */
 @Serializable
-public enum class StatusVisibility {
+public enum class StatusVisibility(public val value: String) {
 
     /**
      * Visible to everyone, shown in public timelines.
      */
     @SerialName("public")
-    Public,
+    Public("public"),
 
     /**
      * Visible to public, but not included in public timelines.
      */
     @SerialName("unlisted")
-    Unlisted,
+    Unlisted("unlisted"),
 
     /**
      * Visible to followers only, and to any mentioned users.
      */
     @SerialName("private")
-    Private,
+    Private("private"),
 
     /**
      * Visible only to mentioned users.
      */
     @SerialName("direct")
-    Direct
+    Direct("direct")
 }

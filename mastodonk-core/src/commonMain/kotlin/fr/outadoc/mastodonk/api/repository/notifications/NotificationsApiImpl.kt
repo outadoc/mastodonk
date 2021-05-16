@@ -9,8 +9,6 @@ import fr.outadoc.mastodonk.api.entity.paging.parameter
 import fr.outadoc.mastodonk.client.MastodonHttpClient
 import io.ktor.client.request.*
 import io.ktor.http.*
-import kotlinx.serialization.encodeToString
-import kotlinx.serialization.json.Json
 
 internal class NotificationsApiImpl(private val client: MastodonHttpClient) : NotificationsApi {
 
@@ -26,11 +24,11 @@ internal class NotificationsApiImpl(private val client: MastodonHttpClient) : No
             parameter("limit", limit)
             parameter(pageInfo)
 
-            excludeTypes?.map { type ->
-                Json.encodeToString(type)
-            }?.forEach { type ->
-                parameter("exclude_types", type)
-            }
+            excludeTypes
+                ?.map { type -> type.value }
+                ?.forEach { type ->
+                    parameter("exclude_types", type)
+                }
         }
     }
 
