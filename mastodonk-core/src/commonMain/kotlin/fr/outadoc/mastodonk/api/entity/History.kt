@@ -22,11 +22,11 @@ public data class History(
      * The counted usage of the tag within that day.
      */
     @SerialName("uses")
-    val usageCount: Long? = null,
+    val usageCount: Long,
 
     /**
      * the total of accounts using the tag within that day.
      */
-    @SerialName("account")
+    @SerialName("accounts")
     val accountCount: Long
 )

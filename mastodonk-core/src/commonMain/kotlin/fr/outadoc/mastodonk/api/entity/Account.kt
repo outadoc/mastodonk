@@ -95,7 +95,7 @@ public data class Account(
      * Date at which the last status was posted.
      */
     @SerialName("last_status_at")
-    val lastStatusAt: LocalDate,
+    val lastStatusAt: LocalDate? = null,
 
     /**
      * Total number of statuses posted.
