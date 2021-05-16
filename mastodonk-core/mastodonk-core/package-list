@@ -317,7 +317,7 @@ $dokka.location:fr.outadoc.mastodonk.api.entity.streaming/UpdateEvent/UpdateEven
 $dokka.location:fr.outadoc.mastodonk.api.entity.streaming/UpdateEvent/payload/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity.streaming/-update-event/payload.html
 $dokka.location:fr.outadoc.mastodonk.api.entity////PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/index.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Account///PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-account/index.html
-$dokka.location:fr.outadoc.mastodonk.api.entity/Account/Account/#kotlin.String#kotlin.String#kotlin.String#kotlin.String#kotlin.String#kotlin.String#kotlin.String#kotlin.String#kotlin.String#kotlin.String#kotlin.Boolean#kotlin.collections.List[fr.outadoc.mastodonk.api.entity.Emoji]#kotlinx.datetime.Instant#kotlinx.datetime.LocalDate#kotlin.Long#kotlin.Long#kotlin.Long#kotlin.Boolean?#kotlin.Boolean?#kotlin.Boolean#kotlin.collections.List[fr.outadoc.mastodonk.api.entity.Field]?#kotlin.Boolean?#fr.outadoc.mastodonk.api.entity.Source?#kotlin.Boolean?#kotlinx.datetime.Instant?/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-account/-account.html
+$dokka.location:fr.outadoc.mastodonk.api.entity/Account/Account/#kotlin.String#kotlin.String#kotlin.String#kotlin.String#kotlin.String#kotlin.String#kotlin.String#kotlin.String#kotlin.String#kotlin.String#kotlin.Boolean#kotlin.collections.List[fr.outadoc.mastodonk.api.entity.Emoji]#kotlinx.datetime.Instant#kotlinx.datetime.LocalDate?#kotlin.Long#kotlin.Long#kotlin.Long#kotlin.Boolean?#fr.outadoc.mastodonk.api.entity.Account?#kotlin.Boolean#kotlin.collections.List[fr.outadoc.mastodonk.api.entity.Field]?#kotlin.Boolean?#fr.outadoc.mastodonk.api.entity.Source?#kotlin.Boolean?#kotlinx.datetime.Instant?/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-account/-account.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Account/accountId/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-account/account-id.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Account/acct/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-account/acct.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Account/avatarStaticUrl/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-account/avatar-static-url.html
@@ -335,9 +335,9 @@ $dokka.location:fr.outadoc.mastodonk.api.entity/Account/isBot/#/PointingToDeclar
 $dokka.location:fr.outadoc.mastodonk.api.entity/Account/isDiscoverable/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-account/is-discoverable.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Account/isGroup/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-account/is-group.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Account/isLocked/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-account/is-locked.html
-$dokka.location:fr.outadoc.mastodonk.api.entity/Account/isMoved/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-account/is-moved.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Account/isSuspended/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-account/is-suspended.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Account/lastStatusAt/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-account/last-status-at.html
+$dokka.location:fr.outadoc.mastodonk.api.entity/Account/movedTo/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-account/moved-to.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Account/muteExpiresAt/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-account/mute-expires-at.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Account/source/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-account/source.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Account/statusesCount/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-account/statuses-count.html
@@ -438,7 +438,7 @@ $dokka.location:fr.outadoc.mastodonk.api.entity/Application/name/#/PointingToDec
 $dokka.location:fr.outadoc.mastodonk.api.entity/Application/vapidKey/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-application/vapid-key.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Application/website/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-application/website.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Attachment///PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-attachment/index.html
-$dokka.location:fr.outadoc.mastodonk.api.entity/Attachment/Attachment/#kotlin.String#fr.outadoc.mastodonk.api.entity.AttachmentType#kotlin.String#kotlin.String#kotlin.String?#kotlin.String?#kotlin.String?#kotlin.String?#kotlin.String?/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-attachment/-attachment.html
+$dokka.location:fr.outadoc.mastodonk.api.entity/Attachment/Attachment/#kotlin.String#fr.outadoc.mastodonk.api.entity.AttachmentType#kotlin.String#kotlin.String?#kotlin.String?#kotlin.String?#kotlin.String?#kotlin.String?#kotlin.String?/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-attachment/-attachment.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Attachment/attachmentId/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-attachment/attachment-id.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Attachment/blurHash/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-attachment/blur-hash.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Attachment/description/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-attachment/description.html
@@ -561,7 +561,7 @@ $dokka.location:fr.outadoc.mastodonk.api.entity/GrantType.ClientCredentials/name
 $dokka.location:fr.outadoc.mastodonk.api.entity/GrantType.ClientCredentials/ordinal/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-grant-type/-client-credentials/ordinal.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/GrantType///PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-grant-type/index.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/History///PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-history/index.html
-$dokka.location:fr.outadoc.mastodonk.api.entity/History/History/#kotlinx.datetime.LocalDate#kotlin.Long?#kotlin.Long/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-history/-history.html
+$dokka.location:fr.outadoc.mastodonk.api.entity/History/History/#kotlinx.datetime.LocalDate#kotlin.Long#kotlin.Long/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-history/-history.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/History/accountCount/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-history/account-count.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/History/day/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-history/day.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/History/usageCount/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-history/usage-count.html
