@@ -42,10 +42,12 @@ internal abstract class AbstractMastodonPagingSource<T : Pageable> : PagingSourc
         //
         //                minId
 
+        val pageSize = state.config.pageSize
         val anchorPosition = state.anchorPosition ?: return null
-        val currentPage = state.closestPageToPosition(anchorPosition) ?: return null
-        val idOfFirstItem = currentPage.data.firstOrNull()?.id ?: return null
 
-        return PageInfo(maxId = idOfFirstItem)
+        val previousPage = state.closestPageToPosition(anchorPosition - pageSize) ?: return null
+        val lastItemOfPreviousPage = previousPage.data.lastOrNull()?.id ?: return null
+
+        return PageInfo(maxId = lastItemOfPreviousPage)
     }
 }
