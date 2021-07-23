@@ -1,5 +1,6 @@
 package fr.outadoc.mastodonk.api.entity
 
+import fr.outadoc.mastodonk.api.entity.paging.Pageable
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
@@ -26,4 +27,8 @@ public data class Tag(
      */
     @SerialName("history")
     val history: List<History>? = null
-)
+) : Pageable {
+
+    override val id: String
+        get() = name
+}

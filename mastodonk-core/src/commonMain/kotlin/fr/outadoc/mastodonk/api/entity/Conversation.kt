@@ -1,5 +1,6 @@
 package fr.outadoc.mastodonk.api.entity
 
+import fr.outadoc.mastodonk.api.entity.paging.Pageable
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
@@ -29,4 +30,8 @@ public data class Conversation(
      */
     @SerialName("last_status")
     val lastStatus: Status? = null
-)
+) : Pageable {
+
+    override val id: String
+        get() = conversationId
+}

@@ -1,5 +1,6 @@
 package fr.outadoc.mastodonk.api.entity
 
+import fr.outadoc.mastodonk.api.entity.paging.Pageable
 import kotlinx.datetime.Instant
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
@@ -189,4 +190,8 @@ public data class Status(
      */
     @SerialName("pinned")
     val isPinned: Boolean? = null,
-)
+) : Pageable {
+
+    override val id: String
+        get() = statusId
+}

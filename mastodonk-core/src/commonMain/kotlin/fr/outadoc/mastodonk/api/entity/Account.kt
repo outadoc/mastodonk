@@ -1,5 +1,6 @@
 package fr.outadoc.mastodonk.api.entity
 
+import fr.outadoc.mastodonk.api.entity.paging.Pageable
 import kotlinx.datetime.Instant
 import kotlinx.datetime.LocalDate
 import kotlinx.serialization.SerialName
@@ -165,4 +166,8 @@ public data class Account(
      */
     @SerialName("mute_expires_at")
     val muteExpiresAt: Instant? = null
-)
+) : Pageable {
+
+    override val id: String
+        get() = accountId
+}

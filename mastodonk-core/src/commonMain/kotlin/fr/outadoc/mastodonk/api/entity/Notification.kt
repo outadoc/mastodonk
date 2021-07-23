@@ -1,5 +1,6 @@
 package fr.outadoc.mastodonk.api.entity
 
+import fr.outadoc.mastodonk.api.entity.paging.Pageable
 import kotlinx.datetime.Instant
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
@@ -36,4 +37,8 @@ public data class Notification(
      */
     @SerialName("status")
     val status: Status? = null
-)
+) : Pageable {
+
+    override val id: String
+        get() = notificationId
+}
