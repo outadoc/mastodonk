@@ -20,7 +20,7 @@ buildscript {
 
 allprojects {
     group = "fr.outadoc.mastodonk"
-    version = "0.1-alpha23"
+    version = "0.1-alpha24"
 
     repositories {
         mavenCentral()
