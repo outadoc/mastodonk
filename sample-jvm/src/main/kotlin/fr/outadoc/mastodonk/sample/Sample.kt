@@ -13,6 +13,7 @@ import kotlinx.coroutines.withTimeout
 fun main() = runBlocking {
     val client = MastodonClient {
         domain = "mastodon.social"
+        enableLogging = true
         authTokenProvider = AuthTokenProvider {
             //AuthToken(accessToken = "your-access-token-here")
             null

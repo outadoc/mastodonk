@@ -39,6 +39,7 @@ kotlin {
                 implementation(libs.datetime)
                 implementation(libs.serialization)
                 implementation(libs.ktor.core)
+                implementation(libs.ktor.logging)
                 implementation(libs.ktor.serialization)
                 implementation(libs.ktor.websockets)
             }
@@ -56,6 +57,7 @@ kotlin {
         val jvmMain by getting {
             dependencies {
                 implementation(libs.ktor.engine.cio)
+                implementation(libs.logback)
             }
         }
 

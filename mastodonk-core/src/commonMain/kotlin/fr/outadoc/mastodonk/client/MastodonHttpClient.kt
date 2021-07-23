@@ -12,26 +12,22 @@ import io.ktor.client.*
 import io.ktor.client.features.*
 import io.ktor.client.features.json.*
 import io.ktor.client.features.json.serializer.*
+import io.ktor.client.features.logging.*
 import io.ktor.client.features.websocket.*
 import io.ktor.client.request.*
 import io.ktor.client.statement.*
 import io.ktor.http.*
 import io.ktor.http.cio.websocket.*
 import io.ktor.utils.io.charsets.*
-import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.emitAll
-import kotlinx.coroutines.flow.filterIsInstance
-import kotlinx.coroutines.flow.flow
-import kotlinx.coroutines.flow.map
-import kotlinx.coroutines.flow.mapNotNull
-import kotlinx.coroutines.flow.receiveAsFlow
+import kotlinx.coroutines.flow.*
 import kotlinx.serialization.decodeFromString
 import kotlinx.serialization.json.Json
 
 internal class MastodonHttpClient(
     httpClientFactory: HttpClientFactory,
     private val authTokenProvider: AuthTokenProvider?,
-    domain: String
+    domain: String,
+    enableLogging: Boolean
 ) {
     private val json = Json {
         ignoreUnknownKeys = true
@@ -55,6 +51,10 @@ internal class MastodonHttpClient(
             install(WebSockets)
             install(JsonFeature) {
                 serializer = KotlinxSerializer(json = json)
+            }
+
+            install(Logging) {
+                level = if (enableLogging) LogLevel.HEADERS else LogLevel.NONE
             }
 
             HttpResponseValidator {
@@ -122,7 +122,10 @@ internal class MastodonHttpClient(
         }
     }
 
-    suspend inline fun <reified T> request(route: String, builder: HttpRequestBuilder.() -> Unit = {}): T {
+    suspend inline fun <reified T> request(
+        route: String,
+        builder: HttpRequestBuilder.() -> Unit = {}
+    ): T {
         return httpClient.request(baseUrl.copy(encodedPath = route)) {
             addAuthToken()
             builder()

@@ -14,13 +14,19 @@ public class MastodonClientBuilder {
      */
     public var authTokenProvider: AuthTokenProvider? = null
 
+    /**
+     * Whether to enable logging to the standard output.
+     */
+    public var enableLogging: Boolean = false
+
     public fun build(): MastodonClient {
         val domain = checkNotNull(domain) { "Base URL must be set on ${MastodonClientBuilder::class.simpleName}" }
         return MastodonClientImpl(
             httpClient = MastodonHttpClient(
                 httpClientFactory = HttpClientFactory(),
                 authTokenProvider = authTokenProvider,
-                domain = domain
+                domain = domain,
+                enableLogging = enableLogging
             )
         )
     }

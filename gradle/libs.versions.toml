@@ -5,10 +5,12 @@ ktor = "1.5.3"
 datetime = "org.jetbrains.kotlinx:kotlinx-datetime:0.2.0"
 serialization = "org.jetbrains.kotlinx:kotlinx-serialization-json:1.2.0"
 coroutines-core = "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.3"
+logback = "ch.qos.logback:logback-classic:1.2.4"
 ktor-core = { module = "io.ktor:ktor-client-core", version.ref = "ktor" }
 ktor-engine-cio = { module = "io.ktor:ktor-client-cio", version.ref = "ktor" }
 ktor-engine-js = { module = "io.ktor:ktor-client-js", version.ref = "ktor" }
 ktor-engine-curl = { module = "io.ktor:ktor-client-curl", version.ref = "ktor" }
+ktor-logging = { module = "io.ktor:ktor-client-logging", version.ref = "ktor" }
 ktor-serialization = { module = "io.ktor:ktor-client-serialization", version.ref = "ktor" }
 ktor-websockets = { module = "io.ktor:ktor-client-websockets", version.ref = "ktor" }
 androidx-paging-common = "androidx.paging:paging-common:3.0.0-rc01"
