@@ -881,6 +881,7 @@ $dokka.location:fr.outadoc.mastodonk.client/MastodonClientBuilder/MastodonClient
 $dokka.location:fr.outadoc.mastodonk.client/MastodonClientBuilder/authTokenProvider/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.client/-mastodon-client-builder/auth-token-provider.html
 $dokka.location:fr.outadoc.mastodonk.client/MastodonClientBuilder/build/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.client/-mastodon-client-builder/build.html
 $dokka.location:fr.outadoc.mastodonk.client/MastodonClientBuilder/domain/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.client/-mastodon-client-builder/domain.html
+$dokka.location:fr.outadoc.mastodonk.client/MastodonClientBuilder/enableLogging/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.client/-mastodon-client-builder/enable-logging.html
 fr.outadoc.mastodonk.api.endpoint.accounts
 fr.outadoc.mastodonk.api.endpoint.admin
 fr.outadoc.mastodonk.api.endpoint.announcements
