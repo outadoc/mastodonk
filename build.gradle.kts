@@ -1,42 +1,67 @@
 import com.diffplug.gradle.spotless.SpotlessExtension
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
+    val kotlinVersion = "1.5.20"
+    kotlin("multiplatform") version kotlinVersion apply false
+    kotlin("plugin.serialization") version kotlinVersion apply false
+
     id("com.diffplug.spotless") version "5.12.4"
     id("org.jetbrains.dokka") version "1.4.32"
-    `maven-publish`
 }
 
 buildscript {
     repositories {
         gradlePluginPortal()
     }
-
-    val kotlinVersion = "1.5.0"
-    dependencies {
-        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion")
-        classpath("org.jetbrains.kotlin:kotlin-serialization:$kotlinVersion")
-    }
 }
 
 allprojects {
     group = "fr.outadoc.mastodonk"
-    version = "0.1-alpha25"
+    version = "0.1-alpha26"
 
     repositories {
         mavenCentral()
         google()
     }
-}
 
-subprojects {
-    val projectName = name
-    val isMainHost = findProperty("isMainHost") == "true"
-    val isLibraryProject = projectName.startsWith("mastodonk-")
+    afterEvaluate {
+        val projectName = name
 
-    if (isLibraryProject) {
-        apply(plugin = "org.gradle.maven-publish")
+        extensions.findByType<PublishingExtension>()?.apply {
+            publications.withType<MavenPublication>().configureEach {
+                pom {
+                    name.set(projectName)
+                    description.set("Kotlin/Multiplatform library for Mastodon")
+                    url.set("https://github.com/outadoc/mastodonk")
 
-        publishing {
+                    issueManagement {
+                        url.set("https://github.com/outadoc/mastodonk/issues")
+                        system.set("GitHub Issues")
+                    }
+
+                    licenses {
+                        license {
+                            name.set("The Apache License, Version 2.0")
+                            url.set("http://www.apache.org/licenses/LICENSE-2.0.txt")
+                        }
+                    }
+
+                    developers {
+                        developer {
+                            name.set("Baptiste Candellier")
+                            email.set("baptiste@candellier.me")
+                        }
+                    }
+
+                    scm {
+                        connection.set("scm:git:git://github.com/outadoc/mastodonk.git")
+                        developerConnection.set("scm:git:git://github.com/outadoc/mastodonk.git")
+                        url.set("https://github.com/outadoc/mastodonk")
+                    }
+                }
+            }
+
             repositories {
                 maven {
                     name = "nexus"
@@ -47,54 +72,12 @@ subprojects {
                     }
                 }
             }
+        }
+    }
 
-            val publicationsFromMainHost = listOf(
-                "maven", "jvm", "js", "kotlinMultiplatform"
-            )
-
-            publications {
-                matching {
-                    it.name in publicationsFromMainHost
-                }.all {
-                    val targetPublication = this@all
-                    tasks.withType<AbstractPublishToMaven>()
-                        .matching { it.publication == targetPublication }
-                        .configureEach { onlyIf { isMainHost } }
-                }
-
-                create<MavenPublication>("maven") {
-                    pom {
-                        name.set(projectName)
-                        description.set("Kotlin/Multiplatform library for Mastodon")
-                        url.set("https://github.com/outadoc/mastodonk")
-
-                        issueManagement {
-                            url.set("https://github.com/outadoc/mastodonk/issues")
-                            system.set("GitHub Issues")
-                        }
-
-                        licenses {
-                            license {
-                                name.set("The Apache License, Version 2.0")
-                                url.set("http://www.apache.org/licenses/LICENSE-2.0.txt")
-                            }
-                        }
-
-                        developers {
-                            developer {
-                                name.set("Baptiste Candellier")
-                                email.set("baptiste@candellier.me")
-                            }
-                        }
-
-                        scm {
-                            connection.set("scm:git:git://github.com/outadoc/mastodonk.git")
-                            developerConnection.set("scm:git:git://github.com/outadoc/mastodonk.git")
-                            url.set("https://github.com/outadoc/mastodonk")
-                        }
-                    }
-                }
-            }
+    tasks.withType<KotlinCompile> {
+        kotlinOptions {
+            freeCompilerArgs = listOf("-Xopt-in=kotlin.RequiresOptIn")
         }
     }
 }

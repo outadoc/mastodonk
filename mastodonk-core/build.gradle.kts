@@ -4,6 +4,7 @@ plugins {
     kotlin("multiplatform")
     kotlin("plugin.serialization")
     id("org.jetbrains.dokka")
+    `maven-publish`
 }
 
 kotlin {
@@ -28,7 +29,6 @@ kotlin {
 
     linuxX64()
     macosX64()
-    mingwX64()
 
     sourceSets {
 
@@ -91,7 +91,6 @@ kotlin {
         }
 
         val linuxX64Main by getting { dependsOn(desktopMain) }
-        val mingwX64Main by getting { dependsOn(desktopMain) }
         val macosX64Main by getting { dependsOn(desktopMain) }
 
         val desktopTest by creating {
@@ -99,7 +98,6 @@ kotlin {
         }
 
         val linuxX64Test by getting { dependsOn(desktopTest) }
-        val mingwX64Test by getting { dependsOn(desktopTest) }
         val macosX64Test by getting { dependsOn(desktopTest) }
     }
 }
