@@ -449,7 +449,7 @@ $dokka.location:fr.outadoc.mastodonk.api.entity/Attachment.Audio.Meta/bitrate/#/
 $dokka.location:fr.outadoc.mastodonk.api.entity/Attachment.Audio.Meta/durationSeconds/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-attachment/-audio/-meta/duration-seconds.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Attachment.Audio.Meta/original/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-attachment/-audio/-meta/original.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Attachment.Audio///PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-attachment/-audio/index.html
-$dokka.location:fr.outadoc.mastodonk.api.entity/Attachment.Audio/Audio/#kotlin.String#kotlin.String#kotlin.String#kotlin.String?#kotlin.String?#kotlin.String?#kotlin.String?#kotlin.String?#kotlin.String?#fr.outadoc.mastodonk.api.entity.Attachment.Audio.Meta/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-attachment/-audio/-audio.html
+$dokka.location:fr.outadoc.mastodonk.api.entity/Attachment.Audio/Audio/#kotlin.String#kotlin.String#kotlin.String?#kotlin.String?#kotlin.String?#kotlin.String?#kotlin.String?#kotlin.String?#fr.outadoc.mastodonk.api.entity.Attachment.Audio.Meta/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-attachment/-audio/-audio.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Attachment.Audio/attachmentId/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-attachment/-audio/attachment-id.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Attachment.Audio/blurHash/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-attachment/-audio/blur-hash.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Attachment.Audio/description/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-attachment/-audio/description.html
@@ -458,7 +458,6 @@ $dokka.location:fr.outadoc.mastodonk.api.entity/Attachment.Audio/previewRemoteUr
 $dokka.location:fr.outadoc.mastodonk.api.entity/Attachment.Audio/previewUrl/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-attachment/-audio/preview-url.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Attachment.Audio/remoteUrl/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-attachment/-audio/remote-url.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Attachment.Audio/textUrl/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-attachment/-audio/text-url.html
-$dokka.location:fr.outadoc.mastodonk.api.entity/Attachment.Audio/type/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-attachment/-audio/type.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Attachment.Audio/url/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-attachment/-audio/url.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Attachment.Gifv.Meta///PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-attachment/-gifv/-meta/index.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Attachment.Gifv.Meta/Meta/#kotlin.Long?#kotlin.Long?#kotlin.Double?#kotlin.Double?#kotlin.Long?#kotlin.Long?#fr.outadoc.mastodonk.api.entity.Attachment.Gifv.Meta?#fr.outadoc.mastodonk.api.entity.Attachment.Gifv.Meta?/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-attachment/-gifv/-meta/-meta.html
@@ -471,7 +470,7 @@ $dokka.location:fr.outadoc.mastodonk.api.entity/Attachment.Gifv.Meta/original/#/
 $dokka.location:fr.outadoc.mastodonk.api.entity/Attachment.Gifv.Meta/small/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-attachment/-gifv/-meta/small.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Attachment.Gifv.Meta/width/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-attachment/-gifv/-meta/width.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Attachment.Gifv///PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-attachment/-gifv/index.html
-$dokka.location:fr.outadoc.mastodonk.api.entity/Attachment.Gifv/Gifv/#kotlin.String#kotlin.String#kotlin.String#kotlin.String?#kotlin.String?#kotlin.String?#kotlin.String?#kotlin.String?#kotlin.String?#fr.outadoc.mastodonk.api.entity.Attachment.Gifv.Meta/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-attachment/-gifv/-gifv.html
+$dokka.location:fr.outadoc.mastodonk.api.entity/Attachment.Gifv/Gifv/#kotlin.String#kotlin.String#kotlin.String?#kotlin.String?#kotlin.String?#kotlin.String?#kotlin.String?#kotlin.String?#fr.outadoc.mastodonk.api.entity.Attachment.Gifv.Meta/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-attachment/-gifv/-gifv.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Attachment.Gifv/attachmentId/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-attachment/-gifv/attachment-id.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Attachment.Gifv/blurHash/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-attachment/-gifv/blur-hash.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Attachment.Gifv/description/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-attachment/-gifv/description.html
@@ -480,7 +479,6 @@ $dokka.location:fr.outadoc.mastodonk.api.entity/Attachment.Gifv/previewRemoteUrl
 $dokka.location:fr.outadoc.mastodonk.api.entity/Attachment.Gifv/previewUrl/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-attachment/-gifv/preview-url.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Attachment.Gifv/remoteUrl/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-attachment/-gifv/remote-url.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Attachment.Gifv/textUrl/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-attachment/-gifv/text-url.html
-$dokka.location:fr.outadoc.mastodonk.api.entity/Attachment.Gifv/type/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-attachment/-gifv/type.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Attachment.Gifv/url/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-attachment/-gifv/url.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Attachment.Image.Meta///PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-attachment/-image/-meta/index.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Attachment.Image.Meta/Meta/#kotlin.Long?#kotlin.Long?#kotlin.Double?#fr.outadoc.mastodonk.api.entity.FocalPoint?#fr.outadoc.mastodonk.api.entity.Attachment.Image.Meta?#fr.outadoc.mastodonk.api.entity.Attachment.Image.Meta?/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-attachment/-image/-meta/-meta.html
@@ -491,7 +489,7 @@ $dokka.location:fr.outadoc.mastodonk.api.entity/Attachment.Image.Meta/original/#
 $dokka.location:fr.outadoc.mastodonk.api.entity/Attachment.Image.Meta/small/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-attachment/-image/-meta/small.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Attachment.Image.Meta/width/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-attachment/-image/-meta/width.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Attachment.Image///PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-attachment/-image/index.html
-$dokka.location:fr.outadoc.mastodonk.api.entity/Attachment.Image/Image/#kotlin.String#kotlin.String#kotlin.String#kotlin.String?#kotlin.String?#kotlin.String?#kotlin.String?#kotlin.String?#kotlin.String?#fr.outadoc.mastodonk.api.entity.Attachment.Image.Meta/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-attachment/-image/-image.html
+$dokka.location:fr.outadoc.mastodonk.api.entity/Attachment.Image/Image/#kotlin.String#kotlin.String#kotlin.String?#kotlin.String?#kotlin.String?#kotlin.String?#kotlin.String?#kotlin.String?#fr.outadoc.mastodonk.api.entity.Attachment.Image.Meta/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-attachment/-image/-image.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Attachment.Image/attachmentId/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-attachment/-image/attachment-id.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Attachment.Image/blurHash/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-attachment/-image/blur-hash.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Attachment.Image/description/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-attachment/-image/description.html
@@ -500,10 +498,9 @@ $dokka.location:fr.outadoc.mastodonk.api.entity/Attachment.Image/previewRemoteUr
 $dokka.location:fr.outadoc.mastodonk.api.entity/Attachment.Image/previewUrl/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-attachment/-image/preview-url.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Attachment.Image/remoteUrl/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-attachment/-image/remote-url.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Attachment.Image/textUrl/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-attachment/-image/text-url.html
-$dokka.location:fr.outadoc.mastodonk.api.entity/Attachment.Image/type/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-attachment/-image/type.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Attachment.Image/url/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-attachment/-image/url.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Attachment.Unknown///PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-attachment/-unknown/index.html
-$dokka.location:fr.outadoc.mastodonk.api.entity/Attachment.Unknown/Unknown/#kotlin.String#kotlin.String#kotlin.String#kotlin.String?#kotlin.String?#kotlin.String?#kotlin.String?#kotlin.String?#kotlin.String?/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-attachment/-unknown/-unknown.html
+$dokka.location:fr.outadoc.mastodonk.api.entity/Attachment.Unknown/Unknown/#kotlin.String#kotlin.String#kotlin.String?#kotlin.String?#kotlin.String?#kotlin.String?#kotlin.String?#kotlin.String?/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-attachment/-unknown/-unknown.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Attachment.Unknown/attachmentId/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-attachment/-unknown/attachment-id.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Attachment.Unknown/blurHash/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-attachment/-unknown/blur-hash.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Attachment.Unknown/description/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-attachment/-unknown/description.html
@@ -511,7 +508,6 @@ $dokka.location:fr.outadoc.mastodonk.api.entity/Attachment.Unknown/previewRemote
 $dokka.location:fr.outadoc.mastodonk.api.entity/Attachment.Unknown/previewUrl/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-attachment/-unknown/preview-url.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Attachment.Unknown/remoteUrl/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-attachment/-unknown/remote-url.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Attachment.Unknown/textUrl/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-attachment/-unknown/text-url.html
-$dokka.location:fr.outadoc.mastodonk.api.entity/Attachment.Unknown/type/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-attachment/-unknown/type.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Attachment.Unknown/url/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-attachment/-unknown/url.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Attachment.Video.Meta///PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-attachment/-video/-meta/index.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Attachment.Video.Meta/Meta/#kotlin.Long?#kotlin.Long?#kotlin.Double?#kotlin.Double?#kotlin.Long?#kotlin.String?#kotlin.String?#kotlin.String?#kotlin.Long?#fr.outadoc.mastodonk.api.entity.Attachment.Video.Meta?#fr.outadoc.mastodonk.api.entity.Attachment.Video.Meta?/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-attachment/-video/-meta/-meta.html
@@ -527,7 +523,7 @@ $dokka.location:fr.outadoc.mastodonk.api.entity/Attachment.Video.Meta/original/#
 $dokka.location:fr.outadoc.mastodonk.api.entity/Attachment.Video.Meta/small/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-attachment/-video/-meta/small.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Attachment.Video.Meta/width/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-attachment/-video/-meta/width.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Attachment.Video///PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-attachment/-video/index.html
-$dokka.location:fr.outadoc.mastodonk.api.entity/Attachment.Video/Video/#kotlin.String#kotlin.String#kotlin.String#kotlin.String?#kotlin.String?#kotlin.String?#kotlin.String?#kotlin.String?#kotlin.String?#fr.outadoc.mastodonk.api.entity.Attachment.Video.Meta/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-attachment/-video/-video.html
+$dokka.location:fr.outadoc.mastodonk.api.entity/Attachment.Video/Video/#kotlin.String#kotlin.String#kotlin.String?#kotlin.String?#kotlin.String?#kotlin.String?#kotlin.String?#kotlin.String?#fr.outadoc.mastodonk.api.entity.Attachment.Video.Meta/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-attachment/-video/-video.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Attachment.Video/attachmentId/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-attachment/-video/attachment-id.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Attachment.Video/blurHash/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-attachment/-video/blur-hash.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Attachment.Video/description/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-attachment/-video/description.html
@@ -536,7 +532,6 @@ $dokka.location:fr.outadoc.mastodonk.api.entity/Attachment.Video/previewRemoteUr
 $dokka.location:fr.outadoc.mastodonk.api.entity/Attachment.Video/previewUrl/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-attachment/-video/preview-url.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Attachment.Video/remoteUrl/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-attachment/-video/remote-url.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Attachment.Video/textUrl/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-attachment/-video/text-url.html
-$dokka.location:fr.outadoc.mastodonk.api.entity/Attachment.Video/type/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-attachment/-video/type.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Attachment.Video/url/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-attachment/-video/url.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Attachment///PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-attachment/index.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Attachment/attachmentId/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-attachment/attachment-id.html
@@ -546,7 +541,6 @@ $dokka.location:fr.outadoc.mastodonk.api.entity/Attachment/previewRemoteUrl/#/Po
 $dokka.location:fr.outadoc.mastodonk.api.entity/Attachment/previewUrl/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-attachment/preview-url.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Attachment/remoteUrl/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-attachment/remote-url.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Attachment/textUrl/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-attachment/text-url.html
-$dokka.location:fr.outadoc.mastodonk.api.entity/Attachment/type/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-attachment/type.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Attachment/url/#/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-attachment/url.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Card///PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-card/index.html
 $dokka.location:fr.outadoc.mastodonk.api.entity/Card/Card/#kotlin.String#kotlin.String#kotlin.String#fr.outadoc.mastodonk.api.entity.CardType#kotlin.String?#kotlin.String?#kotlin.String?#kotlin.String?#kotlin.String?#kotlin.Long?#kotlin.Long?#kotlin.String?#kotlin.String?#kotlin.String?/PointingToDeclaration/mastodonk-core/fr.outadoc.mastodonk.api.entity/-card/-card.html
