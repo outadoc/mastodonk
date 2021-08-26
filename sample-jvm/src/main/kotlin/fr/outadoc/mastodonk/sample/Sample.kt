@@ -2,6 +2,7 @@ package fr.outadoc.mastodonk.sample
 
 import fr.outadoc.mastodonk.api.entity.streaming.DeleteEvent
 import fr.outadoc.mastodonk.api.entity.streaming.UpdateEvent
+import fr.outadoc.mastodonk.auth.AuthToken
 import fr.outadoc.mastodonk.auth.AuthTokenProvider
 import fr.outadoc.mastodonk.client.MastodonClient
 import kotlinx.coroutines.GlobalScope
@@ -15,8 +16,7 @@ fun main() = runBlocking {
         domain = "mastodon.social"
         enableLogging = true
         authTokenProvider = AuthTokenProvider {
-            //AuthToken(accessToken = "your-access-token-here")
-            null
+            AuthToken(accessToken = "esFZExSoQHlhjxMYZmxQIEIlthWWkwo2gtNrnux4Jow")
         }
     }
 
