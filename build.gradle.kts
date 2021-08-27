@@ -5,9 +5,8 @@ plugins {
     val kotlinVersion = "1.5.20"
     kotlin("multiplatform") version kotlinVersion apply false
     kotlin("plugin.serialization") version kotlinVersion apply false
-
+    id("org.jetbrains.dokka") version "1.5.0"
     id("com.diffplug.spotless") version "5.12.4"
-    id("org.jetbrains.dokka") version "1.4.32"
 }
 
 buildscript {
