@@ -185,7 +185,7 @@ public interface AccountsApi {
      *
      * Find out whether given accounts are followed, blocked, muted, etc.
      */
-    public suspend fun getRelationships(accountIds: List<String>): List<Relationship>
+    public suspend fun getRelationships(accountIds: List<String>): List<Relationship>?
 
     /**
      * Searches for matching accounts by username or display name.
