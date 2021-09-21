@@ -31,6 +31,7 @@ internal class MastodonHttpClient(
 ) {
     private val json = Json {
         ignoreUnknownKeys = true
+        coerceInputValues = true
         isLenient = true
     }
 

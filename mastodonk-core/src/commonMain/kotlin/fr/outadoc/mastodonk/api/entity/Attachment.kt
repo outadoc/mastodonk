@@ -78,7 +78,7 @@ public sealed class Attachment {
         public override val blurHash: String? = null,
 
         @SerialName("meta")
-        public val meta: Meta
+        public val meta: Meta = Meta()
     ) : Attachment() {
 
         @Serializable
@@ -133,7 +133,7 @@ public sealed class Attachment {
         public override val blurHash: String? = null,
 
         @SerialName("meta")
-        public val meta: Meta
+        public val meta: Meta = Meta()
     ) : Attachment() {
 
         @Serializable
@@ -203,7 +203,7 @@ public sealed class Attachment {
         public override val blurHash: String? = null,
 
         @SerialName("meta")
-        public val meta: Meta
+        public val meta: Meta = Meta()
     ) : Attachment() {
 
         @Serializable
@@ -264,7 +264,7 @@ public sealed class Attachment {
         public override val blurHash: String? = null,
 
         @SerialName("meta")
-        public val meta: Meta
+        public val meta: Meta = Meta()
     ) : Attachment() {
 
         @Serializable
