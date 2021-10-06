@@ -25,6 +25,59 @@ public sealed class Card {
      */
     public abstract val description: String
 
+    /**
+     * The author of the original resource.
+     */
+    public abstract val authorName: String?
+
+    /**
+     * URL to the author of the original resource.
+     */
+    public abstract val authorUrl: String?
+
+    /**
+     * The provider of the original resource.
+     */
+    public abstract val providerName: String?
+
+    /**
+     * URL to the provider of the original resource.
+     */
+    public abstract val providerUrl: String?
+
+    /**
+     * Width of preview, in pixels.
+     */
+    public abstract val width: Long?
+
+    /**
+     * Height of preview, in pixels.
+     */
+    public abstract val height: Long?
+
+    /**
+     * URL of a preview thumbnail.
+     */
+    public abstract val image: String?
+
+    /**
+     * URL used for photo embeds, instead of custom HTML.
+     */
+    public abstract val embedUrl: String?
+
+    /**
+     * A hash computed by the BlurHash algorithm.
+     *
+     * For generating colorful preview thumbnails when media
+     * has not been downloaded yet.
+     */
+    public abstract val blurHash: String?
+
+    /**
+     * HTML to be used for generating the preview card.
+     */
+    public abstract val html: String?
+
     @Serializable
     @SerialName("video")
     public data class Video(
@@ -38,62 +91,35 @@ public sealed class Card {
         @SerialName("description")
         override val description: String,
 
-        /**
-         * The author of the original resource.
-         */
         @SerialName("author_name")
-        val authorName: String? = null,
+        override val authorName: String? = null,
 
-        /**
-         * URL to the author of the original resource.
-         */
         @SerialName("author_url")
-        val authorUrl: String? = null,
+        override val authorUrl: String? = null,
 
-        /**
-         * The provider of the original resource.
-         */
         @SerialName("provider_name")
-        val providerName: String? = null,
+        override val providerName: String? = null,
 
-        /**
-         * URL to the provider of the original resource.
-         */
         @SerialName("provider_url")
-        val providerUrl: String? = null,
+        override val providerUrl: String? = null,
 
-        /**
-         * HTML to be used for generating the preview card.
-         */
         @SerialName("html")
-        val html: String? = null,
+        override val html: String? = null,
 
-        /**
-         * Width of preview, in pixels.
-         */
         @SerialName("width")
-        val width: Long? = null,
+        override val width: Long? = null,
 
-        /**
-         * Height of preview, in pixels.
-         */
         @SerialName("height")
-        val height: Long? = null,
+        override val height: Long? = null,
 
-        /**
-         * URL of a preview thumbnail.
-         */
         @SerialName("image")
-        val image: String? = null,
+        override val image: String? = null,
 
-        /**
-         * A hash computed by the BlurHash algorithm.
-         *
-         * For generating colorful preview thumbnails when media
-         * has not been downloaded yet.
-         */
+        @SerialName("embed_url")
+        override val embedUrl: String? = null,
+
         @SerialName("blurhash")
-        val blurHash: String? = null
+        override val blurHash: String? = null
 
     ) : Card()
 
@@ -111,62 +137,35 @@ public sealed class Card {
         @SerialName("description")
         override val description: String,
 
-        /**
-         * The author of the original resource.
-         */
         @SerialName("author_name")
-        val authorName: String? = null,
+        override val authorName: String? = null,
 
-        /**
-         * URL to the author of the original resource.
-         */
         @SerialName("author_url")
-        val authorUrl: String? = null,
+        override val authorUrl: String? = null,
 
-        /**
-         * The provider of the original resource.
-         */
         @SerialName("provider_name")
-        val providerName: String? = null,
+        override val providerName: String? = null,
 
-        /**
-         * URL to the provider of the original resource.
-         */
         @SerialName("provider_url")
-        val providerUrl: String? = null,
+        override val providerUrl: String? = null,
 
-        /**
-         * Width of preview, in pixels.
-         */
+        @SerialName("html")
+        override val html: String? = null,
+
         @SerialName("width")
-        val width: Long? = null,
+        override val width: Long? = null,
 
-        /**
-         * Height of preview, in pixels.
-         */
         @SerialName("height")
-        val height: Long? = null,
+        override val height: Long? = null,
 
-        /**
-         * URL of a preview thumbnail.
-         */
         @SerialName("image")
-        val image: String? = null,
+        override val image: String? = null,
 
-        /**
-         * URL used for photo embeds, instead of custom HTML.
-         */
         @SerialName("embed_url")
-        val embedUrl: String? = null,
+        override val embedUrl: String? = null,
 
-        /**
-         * A hash computed by the BlurHash algorithm.
-         *
-         * For generating colorful preview thumbnails when media
-         * has not been downloaded yet.
-         */
         @SerialName("blurhash")
-        val blurHash: String? = null
+        override val blurHash: String? = null
 
     ) : Card()
 
@@ -181,7 +180,37 @@ public sealed class Card {
         override val title: String,
 
         @SerialName("description")
-        override val description: String
+        override val description: String,
+
+        @SerialName("author_name")
+        override val authorName: String? = null,
+
+        @SerialName("author_url")
+        override val authorUrl: String? = null,
+
+        @SerialName("provider_name")
+        override val providerName: String? = null,
+
+        @SerialName("provider_url")
+        override val providerUrl: String? = null,
+
+        @SerialName("html")
+        override val html: String? = null,
+
+        @SerialName("width")
+        override val width: Long? = null,
+
+        @SerialName("height")
+        override val height: Long? = null,
+
+        @SerialName("image")
+        override val image: String? = null,
+
+        @SerialName("embed_url")
+        override val embedUrl: String? = null,
+
+        @SerialName("blurhash")
+        override val blurHash: String? = null
 
     ) : Card()
 
@@ -196,7 +225,37 @@ public sealed class Card {
         override val title: String,
 
         @SerialName("description")
-        override val description: String
+        override val description: String,
+
+        @SerialName("author_name")
+        override val authorName: String? = null,
+
+        @SerialName("author_url")
+        override val authorUrl: String? = null,
+
+        @SerialName("provider_name")
+        override val providerName: String? = null,
+
+        @SerialName("provider_url")
+        override val providerUrl: String? = null,
+
+        @SerialName("html")
+        override val html: String? = null,
+
+        @SerialName("width")
+        override val width: Long? = null,
+
+        @SerialName("height")
+        override val height: Long? = null,
+
+        @SerialName("image")
+        override val image: String? = null,
+
+        @SerialName("embed_url")
+        override val embedUrl: String? = null,
+
+        @SerialName("blurhash")
+        override val blurHash: String? = null
 
     ) : Card()
 }
