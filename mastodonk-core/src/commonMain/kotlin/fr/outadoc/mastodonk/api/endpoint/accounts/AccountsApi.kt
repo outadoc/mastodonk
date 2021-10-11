@@ -78,7 +78,11 @@ public interface AccountsApi {
     /**
      * Gets statuses posted by the given account.
      */
-    public suspend fun getStatuses(accountId: String): List<Status>?
+    public suspend fun getStatuses(
+        accountId: String,
+        limit: Int? = null,
+        pageInfo: PageInfo? = null
+    ): Page<List<Status>>?
 
     /**
      * Gets the list of accounts which follow the given account,

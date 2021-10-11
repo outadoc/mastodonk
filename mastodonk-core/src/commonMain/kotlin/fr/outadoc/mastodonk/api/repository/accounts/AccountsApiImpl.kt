@@ -101,9 +101,15 @@ internal class AccountsApiImpl(private val client: MastodonHttpClient) : Account
         }
     }
 
-    override suspend fun getStatuses(accountId: String): List<Status>? {
-        return client.requestOrNull("/api/v1/accounts/${accountId.trim()}/statuses") {
+    override suspend fun getStatuses(
+        accountId: String,
+        limit: Int?,
+        pageInfo: PageInfo?
+    ): Page<List<Status>>? {
+        return client.requestPageOrNull("/api/v1/accounts/${accountId.trim()}/statuses") {
             method = HttpMethod.Get
+            parameter("limit", limit)
+            parameter(pageInfo)
         }
     }
 
