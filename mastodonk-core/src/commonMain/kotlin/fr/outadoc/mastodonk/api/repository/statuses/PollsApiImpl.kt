@@ -19,7 +19,7 @@ internal class PollsApiImpl(private val client: MastodonHttpClient) : PollsApi {
             method = HttpMethod.Post
             contentType(ContentType.Application.Json)
             formData {
-                choices.forEach { append("choices", it) }
+                choices.forEach { append("choices[]", it) }
             }
         }
     }

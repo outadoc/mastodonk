@@ -223,7 +223,7 @@ internal class AccountsApiImpl(private val client: MastodonHttpClient) : Account
     override suspend fun getRelationships(accountIds: List<String>): List<Relationship>? {
         return client.requestOrNull("/api/v1/accounts/relationships") {
             method = HttpMethod.Get
-            accountIds.forEach { parameter("id", it) }
+            accountIds.forEach { parameter("id[]", it) }
         }
     }
 

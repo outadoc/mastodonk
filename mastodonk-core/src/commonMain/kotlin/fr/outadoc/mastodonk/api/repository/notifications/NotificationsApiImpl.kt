@@ -27,7 +27,7 @@ internal class NotificationsApiImpl(private val client: MastodonHttpClient) : No
             excludeTypes
                 ?.map { type -> type.value }
                 ?.forEach { type ->
-                    parameter("exclude_types", type)
+                    parameter("exclude_types[]", type)
                 }
         }
     }
