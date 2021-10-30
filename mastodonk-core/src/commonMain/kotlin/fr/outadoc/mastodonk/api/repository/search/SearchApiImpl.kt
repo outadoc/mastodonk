@@ -3,9 +3,7 @@ package fr.outadoc.mastodonk.api.repository.search
 import fr.outadoc.mastodonk.api.endpoint.search.SearchApi
 import fr.outadoc.mastodonk.api.entity.Results
 import fr.outadoc.mastodonk.api.entity.SearchType
-import fr.outadoc.mastodonk.api.entity.paging.Page
-import fr.outadoc.mastodonk.api.entity.paging.PageInfo
-import fr.outadoc.mastodonk.api.entity.paging.parameter
+import fr.outadoc.mastodonk.api.entity.paging.OffsetPageInfo
 import fr.outadoc.mastodonk.client.MastodonHttpClient
 import io.ktor.client.request.*
 import io.ktor.http.*
@@ -20,9 +18,9 @@ internal class SearchApiImpl(private val client: MastodonHttpClient) : SearchApi
         attemptResolve: Boolean?,
         onlyFollowing: Boolean?,
         limit: Int?,
-        pageInfo: PageInfo?
-    ): Page<Results> {
-        return client.requestPage("/api/v2/search") {
+        pageInfo: OffsetPageInfo?
+    ): Results {
+        return client.request("/api/v2/search") {
             method = HttpMethod.Get
             parameter("q", q)
 
@@ -32,7 +30,7 @@ internal class SearchApiImpl(private val client: MastodonHttpClient) : SearchApi
             parameter("resolve", attemptResolve)
             parameter("following", onlyFollowing)
             parameter("limit", limit)
-            parameter(pageInfo)
+            parameter("offset", pageInfo?.offset)
         }
     }
 }

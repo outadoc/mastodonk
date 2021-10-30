@@ -4,10 +4,10 @@ import fr.outadoc.mastodonk.api.endpoint.accounts.AccountsApi
 import fr.outadoc.mastodonk.api.entity.Account
 import fr.outadoc.mastodonk.api.entity.Status
 import fr.outadoc.mastodonk.api.entity.paging.PageInfo
-import fr.outadoc.mastodonk.paging.PagingSource
+import androidx.paging.PagingSource
 import fr.outadoc.mastodonk.paging.pagingSource
 
-public actual fun AccountsApi.getFollowersSource(accountId: String): PagingSource<PageInfo, Account> {
+public fun AccountsApi.getFollowersSource(accountId: String): PagingSource<PageInfo, Account> {
     return pagingSource { params ->
         getFollowers(
             accountId = accountId,
@@ -17,7 +17,7 @@ public actual fun AccountsApi.getFollowersSource(accountId: String): PagingSourc
     }
 }
 
-public actual fun AccountsApi.getFollowingSource(accountId: String): PagingSource<PageInfo, Account> {
+public fun AccountsApi.getFollowingSource(accountId: String): PagingSource<PageInfo, Account> {
     return pagingSource { params ->
         getFollowing(
             accountId = accountId,
@@ -27,7 +27,7 @@ public actual fun AccountsApi.getFollowingSource(accountId: String): PagingSourc
     }
 }
 
-public actual fun AccountsApi.getStatusesSource(accountId: String): PagingSource<PageInfo, Status> {
+public fun AccountsApi.getStatusesSource(accountId: String): PagingSource<PageInfo, Status> {
     return pagingSource { params ->
         getStatuses(
             accountId = accountId,

@@ -32,7 +32,7 @@ kotlin {
 
         val jvmMain by getting {
             dependencies {
-                implementation(libs.androidx.paging.common)
+                api(libs.androidx.paging.common)
             }
         }
 

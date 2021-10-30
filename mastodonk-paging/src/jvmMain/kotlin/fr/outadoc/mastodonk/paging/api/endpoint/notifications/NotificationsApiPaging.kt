@@ -4,12 +4,12 @@ import fr.outadoc.mastodonk.api.endpoint.notifications.NotificationsApi
 import fr.outadoc.mastodonk.api.entity.Notification
 import fr.outadoc.mastodonk.api.entity.NotificationType
 import fr.outadoc.mastodonk.api.entity.paging.PageInfo
-import fr.outadoc.mastodonk.paging.PagingSource
+import androidx.paging.PagingSource
 import fr.outadoc.mastodonk.paging.pagingSource
 
-public actual fun NotificationsApi.getNotificationsSource(
-    excludeTypes: List<NotificationType>?,
-    accountId: String?
+public fun NotificationsApi.getNotificationsSource(
+    excludeTypes: List<NotificationType>? = null,
+    accountId: String? = null
 ): PagingSource<PageInfo, Notification> {
     return pagingSource { params ->
         getNotifications(
