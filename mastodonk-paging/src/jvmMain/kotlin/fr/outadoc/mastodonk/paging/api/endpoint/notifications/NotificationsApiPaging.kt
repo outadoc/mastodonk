@@ -8,8 +8,8 @@ import androidx.paging.PagingSource
 import fr.outadoc.mastodonk.paging.pagingSource
 
 public fun NotificationsApi.getNotificationsSource(
-    excludeTypes: List<NotificationType>?,
-    accountId: String?
+    excludeTypes: List<NotificationType>? = null,
+    accountId: String? = null
 ): PagingSource<PageInfo, Notification> {
     return pagingSource { params ->
         getNotifications(

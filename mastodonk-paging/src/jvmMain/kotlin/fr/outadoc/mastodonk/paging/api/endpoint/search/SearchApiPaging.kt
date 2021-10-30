@@ -12,10 +12,10 @@ import fr.outadoc.mastodonk.paging.pagingSource
 
 public fun SearchApi.searchAccountsSource(
     q: String,
-    accountId: String?,
-    excludeUnreviewed: Boolean?,
-    attemptResolve: Boolean?,
-    onlyFollowing: Boolean?,
+    accountId: String? = null,
+    excludeUnreviewed: Boolean? = null,
+    attemptResolve: Boolean? = null,
+    onlyFollowing: Boolean? = null
 ): PagingSource<PageInfo, Account> {
     return pagingSource { params ->
         val page = search(
@@ -39,10 +39,10 @@ public fun SearchApi.searchAccountsSource(
 
 public fun SearchApi.searchStatusesSource(
     q: String,
-    accountId: String?,
-    excludeUnreviewed: Boolean?,
-    attemptResolve: Boolean?,
-    onlyFollowing: Boolean?,
+    accountId: String? = null,
+    excludeUnreviewed: Boolean? = null,
+    attemptResolve: Boolean? = null,
+    onlyFollowing: Boolean? = null
 ): PagingSource<PageInfo, Status> {
     return pagingSource { params ->
         val page = search(
@@ -66,10 +66,10 @@ public fun SearchApi.searchStatusesSource(
 
 public fun SearchApi.searchHashtagsSource(
     q: String,
-    accountId: String?,
-    excludeUnreviewed: Boolean?,
-    attemptResolve: Boolean?,
-    onlyFollowing: Boolean?,
+    accountId: String? = null,
+    excludeUnreviewed: Boolean? = null,
+    attemptResolve: Boolean? = null,
+    onlyFollowing: Boolean? = null
 ): PagingSource<PageInfo, Tag> {
     return pagingSource { params ->
         val page = search(

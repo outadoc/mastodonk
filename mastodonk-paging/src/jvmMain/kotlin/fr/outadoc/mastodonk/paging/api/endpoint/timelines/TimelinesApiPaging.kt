@@ -7,9 +7,9 @@ import androidx.paging.PagingSource
 import fr.outadoc.mastodonk.paging.pagingSource
 
 public fun TimelinesApi.getPublicTimelineSource(
-    onlyLocal: Boolean?,
-    onlyRemote: Boolean?,
-    onlyMedia: Boolean?
+    onlyLocal: Boolean? = null,
+    onlyRemote: Boolean? = null,
+    onlyMedia: Boolean? = null
 ): PagingSource<PageInfo, Status> {
     return pagingSource { params ->
         getPublicTimeline(
@@ -24,8 +24,8 @@ public fun TimelinesApi.getPublicTimelineSource(
 
 public fun TimelinesApi.getHashtagTimelineSource(
     hashtag: String,
-    onlyLocal: Boolean?,
-    onlyMedia: Boolean?
+    onlyLocal: Boolean? = null,
+    onlyMedia: Boolean? = null
 ): PagingSource<PageInfo, Status> {
     return pagingSource { params ->
         getHashtagTimeline(
