@@ -5,6 +5,7 @@ plugins {
 
 dependencies {
     implementation(projects.mastodonkCore)
+    implementation(projects.mastodonkPaging)
     implementation(libs.coroutines.core)
 }
 
