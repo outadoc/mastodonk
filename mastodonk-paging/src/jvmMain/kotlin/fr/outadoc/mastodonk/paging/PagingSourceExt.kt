@@ -12,7 +12,7 @@ internal fun <T : Pageable> pagingSource(
     return LinkHeaderPagingSource { params -> block(params) ?: throw NotFoundException() }
 }
 
-internal fun <T : Pageable> legacyPagingSource(
+internal fun <T : Pageable> offsetPagingSource(
     block: suspend (PagingSource.LoadParams<OffsetPageInfo>) -> List<T>
 ): PagingSource<OffsetPageInfo, T> {
     return OffsetPagingSource { params -> block(params) }

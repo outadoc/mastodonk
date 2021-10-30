@@ -21,7 +21,7 @@ internal class OffsetPagingSource<T : Any>(
                 else OffsetPageInfo(
                     offset = maxOf(0, offset - params.loadSize)
                 ),
-                nextKey = if (contents.size < params.loadSize) null
+                nextKey = if (contents.size < params.loadSize - 1) null
                 else OffsetPageInfo(
                     offset = offset + contents.size
                 )

@@ -1,9 +1,9 @@
 package fr.outadoc.mastodonk.paging.api.endpoint.timelines
 
+import androidx.paging.PagingSource
 import fr.outadoc.mastodonk.api.endpoint.timelines.TimelinesApi
 import fr.outadoc.mastodonk.api.entity.Status
 import fr.outadoc.mastodonk.api.entity.paging.PageInfo
-import androidx.paging.PagingSource
 import fr.outadoc.mastodonk.paging.pagingSource
 
 public fun TimelinesApi.getPublicTimelineSource(
@@ -38,7 +38,7 @@ public fun TimelinesApi.getHashtagTimelineSource(
     }
 }
 
-public fun TimelinesApi.getHomeTimelineSource(onlyLocal: Boolean?): PagingSource<PageInfo, Status> {
+public fun TimelinesApi.getHomeTimelineSource(onlyLocal: Boolean? = null): PagingSource<PageInfo, Status> {
     return pagingSource { params ->
         getHomeTimeline(
             onlyLocal = onlyLocal,
