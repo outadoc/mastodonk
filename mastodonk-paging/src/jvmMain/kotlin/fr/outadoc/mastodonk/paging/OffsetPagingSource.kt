@@ -21,7 +21,7 @@ internal class OffsetPagingSource<T : Any>(
                 else OffsetPageInfo(
                     offset = maxOf(0, offset - params.loadSize)
                 ),
-                nextKey = if (contents.size + 1 < params.loadSize) null
+                nextKey = if (contents.isEmpty()) null
                 else OffsetPageInfo(
                     offset = offset + contents.size + 1
                 )
@@ -31,7 +31,7 @@ internal class OffsetPagingSource<T : Any>(
         }
     }
 
-    override fun getRefreshKey(state: PagingState<OffsetPageInfo, T>): OffsetPageInfo? {
+    override fun getRefreshKey(state: PagingState<OffsetPageInfo, T>): OffsetPageInfo {
         return OffsetPageInfo(offset = state.anchorPosition)
     }
 }
