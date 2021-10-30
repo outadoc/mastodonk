@@ -1,14 +1,13 @@
 package fr.outadoc.mastodonk.paging.api.endpoint.search
 
+import androidx.paging.PagingSource
 import fr.outadoc.mastodonk.api.endpoint.search.SearchApi
 import fr.outadoc.mastodonk.api.entity.Account
 import fr.outadoc.mastodonk.api.entity.SearchType
 import fr.outadoc.mastodonk.api.entity.Status
 import fr.outadoc.mastodonk.api.entity.Tag
-import fr.outadoc.mastodonk.api.entity.paging.Page
-import fr.outadoc.mastodonk.api.entity.paging.PageInfo
-import androidx.paging.PagingSource
-import fr.outadoc.mastodonk.paging.pagingSource
+import fr.outadoc.mastodonk.api.entity.paging.LegacyPageInfo
+import fr.outadoc.mastodonk.paging.legacyPagingSource
 
 public fun SearchApi.searchAccountsSource(
     q: String,
@@ -16,9 +15,9 @@ public fun SearchApi.searchAccountsSource(
     excludeUnreviewed: Boolean? = null,
     attemptResolve: Boolean? = null,
     onlyFollowing: Boolean? = null
-): PagingSource<PageInfo, Account> {
-    return pagingSource { params ->
-        val page = search(
+): PagingSource<LegacyPageInfo, Account> {
+    return legacyPagingSource { params ->
+        search(
             q = q,
             accountId = accountId,
             type = SearchType.Accounts,
@@ -27,13 +26,7 @@ public fun SearchApi.searchAccountsSource(
             onlyFollowing = onlyFollowing,
             limit = params.loadSize,
             pageInfo = params.key
-        )
-
-        Page(
-            contents = page.contents.accounts,
-            nextPage = page.nextPage,
-            previousPage = page.previousPage
-        )
+        ).accounts
     }
 }
 
@@ -43,9 +36,9 @@ public fun SearchApi.searchStatusesSource(
     excludeUnreviewed: Boolean? = null,
     attemptResolve: Boolean? = null,
     onlyFollowing: Boolean? = null
-): PagingSource<PageInfo, Status> {
-    return pagingSource { params ->
-        val page = search(
+): PagingSource<LegacyPageInfo, Status> {
+    return legacyPagingSource { params ->
+        search(
             q = q,
             accountId = accountId,
             type = SearchType.Statuses,
@@ -54,13 +47,7 @@ public fun SearchApi.searchStatusesSource(
             onlyFollowing = onlyFollowing,
             limit = params.loadSize,
             pageInfo = params.key
-        )
-
-        Page(
-            contents = page.contents.statuses,
-            nextPage = page.nextPage,
-            previousPage = page.previousPage
-        )
+        ).statuses
     }
 }
 
@@ -70,9 +57,9 @@ public fun SearchApi.searchHashtagsSource(
     excludeUnreviewed: Boolean? = null,
     attemptResolve: Boolean? = null,
     onlyFollowing: Boolean? = null
-): PagingSource<PageInfo, Tag> {
-    return pagingSource { params ->
-        val page = search(
+): PagingSource<LegacyPageInfo, Tag> {
+    return legacyPagingSource { params ->
+        search(
             q = q,
             accountId = accountId,
             type = SearchType.Hashtags,
@@ -81,12 +68,6 @@ public fun SearchApi.searchHashtagsSource(
             onlyFollowing = onlyFollowing,
             limit = params.loadSize,
             pageInfo = params.key
-        )
-
-        Page(
-            contents = page.contents.hashtags,
-            nextPage = page.nextPage,
-            previousPage = page.previousPage
-        )
+        ).hashtags
     }
 }

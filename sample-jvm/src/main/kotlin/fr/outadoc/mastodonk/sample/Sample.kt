@@ -98,4 +98,4 @@ fun main() = runBlocking {
     }.join()
 }
 
-private fun Account.toShortString() = "Account(id=$accountId,username=$username)"
+private fun Account.toShortString() = "Account(id=$accountId,username=$acct)"

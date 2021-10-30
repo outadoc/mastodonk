@@ -2,8 +2,7 @@ package fr.outadoc.mastodonk.api.endpoint.search
 
 import fr.outadoc.mastodonk.api.entity.Results
 import fr.outadoc.mastodonk.api.entity.SearchType
-import fr.outadoc.mastodonk.api.entity.paging.Page
-import fr.outadoc.mastodonk.api.entity.paging.PageInfo
+import fr.outadoc.mastodonk.api.entity.paging.LegacyPageInfo
 
 /**
  * Search for content in accounts, statuses and hashtags.
@@ -30,6 +29,6 @@ public interface SearchApi {
         attemptResolve: Boolean? = null,
         onlyFollowing: Boolean? = null,
         limit: Int? = null,
-        pageInfo: PageInfo? = null
-    ): Page<Results>
+        pageInfo: LegacyPageInfo? = null
+    ): Results
 }
