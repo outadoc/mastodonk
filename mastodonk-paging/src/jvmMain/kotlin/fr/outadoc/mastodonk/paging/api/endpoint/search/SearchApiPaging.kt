@@ -7,10 +7,10 @@ import fr.outadoc.mastodonk.api.entity.Status
 import fr.outadoc.mastodonk.api.entity.Tag
 import fr.outadoc.mastodonk.api.entity.paging.Page
 import fr.outadoc.mastodonk.api.entity.paging.PageInfo
-import fr.outadoc.mastodonk.paging.PagingSource
+import androidx.paging.PagingSource
 import fr.outadoc.mastodonk.paging.pagingSource
 
-public actual fun SearchApi.searchAccountsSource(
+public fun SearchApi.searchAccountsSource(
     q: String,
     accountId: String?,
     excludeUnreviewed: Boolean?,
@@ -37,7 +37,7 @@ public actual fun SearchApi.searchAccountsSource(
     }
 }
 
-public actual fun SearchApi.searchStatusesSource(
+public fun SearchApi.searchStatusesSource(
     q: String,
     accountId: String?,
     excludeUnreviewed: Boolean?,
@@ -64,7 +64,7 @@ public actual fun SearchApi.searchStatusesSource(
     }
 }
 
-public actual fun SearchApi.searchHashtagsSource(
+public fun SearchApi.searchHashtagsSource(
     q: String,
     accountId: String?,
     excludeUnreviewed: Boolean?,

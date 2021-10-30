@@ -1,5 +1,6 @@
 package fr.outadoc.mastodonk.paging
 
+import androidx.paging.PagingSource
 import androidx.paging.PagingState
 import fr.outadoc.mastodonk.api.entity.paging.Page
 import fr.outadoc.mastodonk.api.entity.paging.PageInfo
@@ -18,7 +19,7 @@ internal abstract class AbstractMastodonPagingSource<T : Pageable> : PagingSourc
                     nextKey = nextPage
                 )
             }
-        } catch (e: Exception) {
+        } catch (e: Throwable) {
             LoadResult.Error(e)
         }
     }
