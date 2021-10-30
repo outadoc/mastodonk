@@ -6,13 +6,13 @@ import fr.outadoc.mastodonk.api.entity.paging.Page
 import fr.outadoc.mastodonk.api.entity.paging.PageInfo
 import fr.outadoc.mastodonk.api.entity.paging.Pageable
 
-internal abstract class AbstractMastodonPagingSource<T : Pageable> : PagingSource<PageInfo, T>() {
-
-    abstract suspend fun loadData(params: LoadParams<PageInfo>): Page<List<T>>
+internal class LinkHeaderPagingSource<T : Pageable>(
+    private val source: suspend (params: LoadParams<PageInfo>) -> Page<List<T>>
+) : PagingSource<PageInfo, T>() {
 
     override suspend fun load(params: LoadParams<PageInfo>): LoadResult<PageInfo, T> {
         return try {
-            with(loadData(params)) {
+            with(source(params)) {
                 LoadResult.Page(
                     data = contents,
                     prevKey = previousPage,

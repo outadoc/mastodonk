@@ -6,7 +6,7 @@ import fr.outadoc.mastodonk.api.entity.Account
 import fr.outadoc.mastodonk.api.entity.SearchType
 import fr.outadoc.mastodonk.api.entity.Status
 import fr.outadoc.mastodonk.api.entity.Tag
-import fr.outadoc.mastodonk.api.entity.paging.LegacyPageInfo
+import fr.outadoc.mastodonk.api.entity.paging.OffsetPageInfo
 import fr.outadoc.mastodonk.paging.legacyPagingSource
 
 public fun SearchApi.searchAccountsSource(
@@ -15,7 +15,7 @@ public fun SearchApi.searchAccountsSource(
     excludeUnreviewed: Boolean? = null,
     attemptResolve: Boolean? = null,
     onlyFollowing: Boolean? = null
-): PagingSource<LegacyPageInfo, Account> {
+): PagingSource<OffsetPageInfo, Account> {
     return legacyPagingSource { params ->
         search(
             q = q,
@@ -36,7 +36,7 @@ public fun SearchApi.searchStatusesSource(
     excludeUnreviewed: Boolean? = null,
     attemptResolve: Boolean? = null,
     onlyFollowing: Boolean? = null
-): PagingSource<LegacyPageInfo, Status> {
+): PagingSource<OffsetPageInfo, Status> {
     return legacyPagingSource { params ->
         search(
             q = q,
@@ -57,7 +57,7 @@ public fun SearchApi.searchHashtagsSource(
     excludeUnreviewed: Boolean? = null,
     attemptResolve: Boolean? = null,
     onlyFollowing: Boolean? = null
-): PagingSource<LegacyPageInfo, Tag> {
+): PagingSource<OffsetPageInfo, Tag> {
     return legacyPagingSource { params ->
         search(
             q = q,

@@ -2,27 +2,27 @@ package fr.outadoc.mastodonk.paging
 
 import androidx.paging.PagingSource
 import androidx.paging.PagingState
-import fr.outadoc.mastodonk.api.entity.paging.LegacyPageInfo
+import fr.outadoc.mastodonk.api.entity.paging.OffsetPageInfo
 
-internal abstract class AbstractLegacyPagingSource<T : Any> : PagingSource<LegacyPageInfo, T>() {
+internal class OffsetPagingSource<T : Any>(
+    private val source: suspend (params: LoadParams<OffsetPageInfo>) -> List<T>
+) : PagingSource<OffsetPageInfo, T>() {
 
     override val jumpingSupported: Boolean = true
 
-    abstract suspend fun loadData(params: LoadParams<LegacyPageInfo>): List<T>
-
-    override suspend fun load(params: LoadParams<LegacyPageInfo>): LoadResult<LegacyPageInfo, T> {
+    override suspend fun load(params: LoadParams<OffsetPageInfo>): LoadResult<OffsetPageInfo, T> {
         return try {
-            val contents = loadData(params)
+            val contents = source(params)
             val offset = params.key?.offset ?: 0
 
             LoadResult.Page(
                 data = contents,
                 prevKey = if (offset == 0) null
-                else LegacyPageInfo(
+                else OffsetPageInfo(
                     offset = maxOf(0, offset - params.loadSize)
                 ),
                 nextKey = if (contents.size < params.loadSize) null
-                else LegacyPageInfo(
+                else OffsetPageInfo(
                     offset = offset + contents.size
                 )
             )
@@ -31,7 +31,7 @@ internal abstract class AbstractLegacyPagingSource<T : Any> : PagingSource<Legac
         }
     }
 
-    override fun getRefreshKey(state: PagingState<LegacyPageInfo, T>): LegacyPageInfo? {
-        return LegacyPageInfo(offset = state.anchorPosition)
+    override fun getRefreshKey(state: PagingState<OffsetPageInfo, T>): OffsetPageInfo? {
+        return OffsetPageInfo(offset = state.anchorPosition)
     }
 }
