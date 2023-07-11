@@ -1,395 +1,484 @@
+<!doctype html>
 <html>
-  <head>
+<head>
     <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
     <title>Account</title>
-</head><body><link href="../../../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../";</script><script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script><link href="../../../styles/style.css" rel="Stylesheet"><link href="../../../styles/logo-styles.css" rel="Stylesheet"><link href="../../../styles/jetbrains-mono.css" rel="Stylesheet"><link href="../../../styles/main.css" rel="Stylesheet"><script type="text/javascript" src="../../../scripts/clipboard.js" async></script><script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script><script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script><script type="text/javascript" src="../../../scripts/main.js" async></script>
-  
-    <div id="container">
-      <div id="leftColumn"><a href="../../../index.html">
-            <div id="logo"></div>
-          </a>
-        <div id="paneSearch"></div>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../";</script>    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/jetbrains-mono.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<body>
+<div class="navigation-wrapper" id="navigation-wrapper">
+    <div id="leftToggler"><span class="icon-toggler"></span></div>
+    <div class="library-name">
+<a href="../../../index.html">
+<span>mastodonk</span>            </a>    </div>
+    <div>0.2-alpha01
+    </div>
+    <div class="pull-right d-flex">
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":mastodonk-core:dokkaHtmlPartial/commonMain">common</button>
+        </div>
+        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+    </div>
+</div>
+<div id="container">
+    <div id="leftColumn">
         <div id="sideMenu"></div>
-      </div>
-      <div id="main">
-        <script type="text/javascript" src="../../../scripts/main.js"></script><div id="leftToggler"><span class="icon-toggler"></span></div>
-
-        <div class="main-content" id="content" pageids="mastodonk-core::fr.outadoc.mastodonk.api.entity/Account///PointingToDeclaration//-1079880343">
-          <div class="navigation-wrapper" id="navigation-wrapper">
-            <div class="breadcrumbs"><a href="../../index.html">mastodonk-core</a>/<a href="../index.html">fr.outadoc.mastodonk.api.entity</a>/<a href="index.html">Account</a></div>
-            <div class="pull-right d-flex">
-              <div id="searchBar"></div>
-            </div>
-          </div>
-          <div class="cover ">
-            <h1 class="cover"><span>Account</span></h1>
-            <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace">data class <a href="index.html">Account</a>(accountId: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>, username: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>, acct: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>, url: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>, displayName: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>, bio: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>, avatarUrl: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>, avatarStaticUrl: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>, headerUrl: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>, headerStaticUrl: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>, isLocked: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a>, emojis: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a>&lt;<a href="../-emoji/index.html">Emoji</a>&gt;, createdAt: <span data-unresolved-link="kotlinx.datetime/Instant///PointingToDeclaration/">Instant</span>, lastStatusAt: <span data-unresolved-link="kotlinx.datetime/LocalDate///PointingToDeclaration/">LocalDate</span>?, statusesCount: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a>, followersCount: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a>, followingCount: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a>, isDiscoverable: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a>?, movedTo: <a href="index.html">Account</a>?, isGroup: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a>, fields: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a>&lt;<a href="../-field/index.html">Field</a>&gt;?, isBot: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a>?, source: <a href="../-source/index.html">Source</a>?, isSuspended: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a>?, muteExpiresAt: <span data-unresolved-link="kotlinx.datetime/Instant///PointingToDeclaration/">Instant</span>?) : <a href="../../fr.outadoc.mastodonk.api.entity.paging/-pageable/index.html">Pageable</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">Represents a user of Mastodon and their associated profile.</p></div></div>
-          </div>
-          <div class="tabbedcontent">
-            <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Constructors">Constructors</button><button class="section-tab" data-togglable="Properties">Properties</button></div>
-            <div class="tabs-section-body">
-              <h2 class="tabbedcontent">Constructors</h2>
-              <div class="table" data-togglable="Constructors"><a data-name="788223064%2FConstructors%2F-1079880343" anchor-label="Account" id="788223064%2FConstructors%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>
-                <div class="table-row" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain">
-                  <div class="main-subrow keyValue TabbedContent">
-                    <div class=""><span class="inline-flex"><a href="-account.html">Account</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="788223064%2FConstructors%2F-1079880343"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title">
-                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace">fun <a href="-account.html">Account</a>(accountId: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>, username: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>, acct: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>, url: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>, displayName: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>, bio: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>, avatarUrl: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>, avatarStaticUrl: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>, headerUrl: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>, headerStaticUrl: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>, isLocked: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a>, emojis: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a>&lt;<a href="../-emoji/index.html">Emoji</a>&gt;, createdAt: <span data-unresolved-link="kotlinx.datetime/Instant///PointingToDeclaration/">Instant</span>, lastStatusAt: <span data-unresolved-link="kotlinx.datetime/LocalDate///PointingToDeclaration/">LocalDate</span>? = null, statusesCount: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a>, followersCount: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a>, followingCount: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a>, isDiscoverable: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a>? = null, movedTo: <a href="index.html">Account</a>? = null, isGroup: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a>, fields: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a>&lt;<a href="../-field/index.html">Field</a>&gt;? = null, isBot: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a>? = null, source: <a href="../-source/index.html">Source</a>? = null, isSuspended: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a>? = null, muteExpiresAt: <span data-unresolved-link="kotlinx.datetime/Instant///PointingToDeclaration/">Instant</span>? = null)<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <h2 class="">Properties</h2>
-              <div class="table" data-togglable="Properties"><a data-name="-2135547688%2FProperties%2F-1079880343" anchor-label="accountId" id="-2135547688%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>
-                <div class="table-row" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="account-id.html">accountId</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2135547688%2FProperties%2F-1079880343"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title">
-                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><a data-name="-2135547688%2FProperties%2F-1079880343" anchor-label="accountId" id="-2135547688%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace">val <a href="account-id.html">accountId</a>: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="1262787815%2FProperties%2F-1079880343" anchor-label="acct" id="1262787815%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>
-                <div class="table-row" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="acct.html">acct</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1262787815%2FProperties%2F-1079880343"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title">
-                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><a data-name="1262787815%2FProperties%2F-1079880343" anchor-label="acct" id="1262787815%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace">val <a href="acct.html">acct</a>: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="1262787815%2FProperties%2F-1079880343" anchor-label="acct" id="1262787815%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>The WebFinger account URI.</div></div></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="428441592%2FProperties%2F-1079880343" anchor-label="avatarStaticUrl" id="428441592%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>
-                <div class="table-row" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="avatar-static-url.html">avatarStaticUrl</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="428441592%2FProperties%2F-1079880343"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title">
-                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><a data-name="428441592%2FProperties%2F-1079880343" anchor-label="avatarStaticUrl" id="428441592%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace">val <a href="avatar-static-url.html">avatarStaticUrl</a>: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="428441592%2FProperties%2F-1079880343" anchor-label="avatarStaticUrl" id="428441592%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>URL to a static version of the avatar.</div></div></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="-618853526%2FProperties%2F-1079880343" anchor-label="avatarUrl" id="-618853526%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>
-                <div class="table-row" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="avatar-url.html">avatarUrl</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-618853526%2FProperties%2F-1079880343"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title">
-                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><a data-name="-618853526%2FProperties%2F-1079880343" anchor-label="avatarUrl" id="-618853526%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace">val <a href="avatar-url.html">avatarUrl</a>: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="-618853526%2FProperties%2F-1079880343" anchor-label="avatarUrl" id="-618853526%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>URL to an image that is shown next to the account's statuses and on its profile.</div></div></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="750144056%2FProperties%2F-1079880343" anchor-label="bio" id="750144056%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>
-                <div class="table-row" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="bio.html">bio</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="750144056%2FProperties%2F-1079880343"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title">
-                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><a data-name="750144056%2FProperties%2F-1079880343" anchor-label="bio" id="750144056%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace">val <a href="bio.html">bio</a>: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="750144056%2FProperties%2F-1079880343" anchor-label="bio" id="750144056%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>The profile's bio / description.</div></div></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="398441253%2FProperties%2F-1079880343" anchor-label="createdAt" id="398441253%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>
-                <div class="table-row" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="created-at.html">createdAt</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="398441253%2FProperties%2F-1079880343"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title">
-                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><a data-name="398441253%2FProperties%2F-1079880343" anchor-label="createdAt" id="398441253%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace">val <a href="created-at.html">createdAt</a>: <span data-unresolved-link="kotlinx.datetime/Instant///PointingToDeclaration/">Instant</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="398441253%2FProperties%2F-1079880343" anchor-label="createdAt" id="398441253%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>Date at which the account was created.</div></div></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="-1595233933%2FProperties%2F-1079880343" anchor-label="displayName" id="-1595233933%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>
-                <div class="table-row" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="display-name.html">displayName</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1595233933%2FProperties%2F-1079880343"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title">
-                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><a data-name="-1595233933%2FProperties%2F-1079880343" anchor-label="displayName" id="-1595233933%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace">val <a href="display-name.html">displayName</a>: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="-591302131%2FProperties%2F-1079880343" anchor-label="emojis" id="-591302131%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>
-                <div class="table-row" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="emojis.html">emojis</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-591302131%2FProperties%2F-1079880343"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title">
-                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><a data-name="-591302131%2FProperties%2F-1079880343" anchor-label="emojis" id="-591302131%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace">val <a href="emojis.html">emojis</a>: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a>&lt;<a href="../-emoji/index.html">Emoji</a>&gt;<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="-591302131%2FProperties%2F-1079880343" anchor-label="emojis" id="-591302131%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>Custom emoji entities to be used when rendering the profile.</div></div></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="350575041%2FProperties%2F-1079880343" anchor-label="fields" id="350575041%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>
-                <div class="table-row" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="fields.html">fields</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="350575041%2FProperties%2F-1079880343"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title">
-                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><a data-name="350575041%2FProperties%2F-1079880343" anchor-label="fields" id="350575041%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace">val <a href="fields.html">fields</a>: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a>&lt;<a href="../-field/index.html">Field</a>&gt;? = null<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="350575041%2FProperties%2F-1079880343" anchor-label="fields" id="350575041%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>Additional metadata attached to a profile as name-value pairs.</div></div></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="789488800%2FProperties%2F-1079880343" anchor-label="followersCount" id="789488800%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>
-                <div class="table-row" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="followers-count.html">followersCount</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="789488800%2FProperties%2F-1079880343"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title">
-                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><a data-name="789488800%2FProperties%2F-1079880343" anchor-label="followersCount" id="789488800%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace">val <a href="followers-count.html">followersCount</a>: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="789488800%2FProperties%2F-1079880343" anchor-label="followersCount" id="789488800%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>Total number of accounts following this account.</div></div></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="180564508%2FProperties%2F-1079880343" anchor-label="followingCount" id="180564508%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>
-                <div class="table-row" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="following-count.html">followingCount</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="180564508%2FProperties%2F-1079880343"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title">
-                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><a data-name="180564508%2FProperties%2F-1079880343" anchor-label="followingCount" id="180564508%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace">val <a href="following-count.html">followingCount</a>: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="180564508%2FProperties%2F-1079880343" anchor-label="followingCount" id="180564508%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>Total number of accounts followed by this account.</div></div></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="-1194699732%2FProperties%2F-1079880343" anchor-label="headerStaticUrl" id="-1194699732%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>
-                <div class="table-row" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="header-static-url.html">headerStaticUrl</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1194699732%2FProperties%2F-1079880343"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title">
-                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><a data-name="-1194699732%2FProperties%2F-1079880343" anchor-label="headerStaticUrl" id="-1194699732%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace">val <a href="header-static-url.html">headerStaticUrl</a>: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="-1194699732%2FProperties%2F-1079880343" anchor-label="headerStaticUrl" id="-1194699732%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>URL to a static version of the header.</div></div></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="-540141922%2FProperties%2F-1079880343" anchor-label="headerUrl" id="-540141922%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>
-                <div class="table-row" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="header-url.html">headerUrl</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-540141922%2FProperties%2F-1079880343"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title">
-                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><a data-name="-540141922%2FProperties%2F-1079880343" anchor-label="headerUrl" id="-540141922%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace">val <a href="header-url.html">headerUrl</a>: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="-540141922%2FProperties%2F-1079880343" anchor-label="headerUrl" id="-540141922%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>URL to an image banner that is shown above the profile and in profile cards.</div></div></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="-2036059105%2FProperties%2F-1079880343" anchor-label="id" id="-2036059105%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>
-                <div class="table-row" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="id.html">id</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2036059105%2FProperties%2F-1079880343"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title">
-                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><a data-name="-2036059105%2FProperties%2F-1079880343" anchor-label="id" id="-2036059105%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace">open override val <a href="id.html">id</a>: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="-312485917%2FProperties%2F-1079880343" anchor-label="isBot" id="-312485917%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>
-                <div class="table-row" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="is-bot.html">isBot</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-312485917%2FProperties%2F-1079880343"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title">
-                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><a data-name="-312485917%2FProperties%2F-1079880343" anchor-label="isBot" id="-312485917%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace">val <a href="is-bot.html">isBot</a>: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a>? = null<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="-312485917%2FProperties%2F-1079880343" anchor-label="isBot" id="-312485917%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>Whether this account is a robot.</div></div></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="-885797139%2FProperties%2F-1079880343" anchor-label="isDiscoverable" id="-885797139%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>
-                <div class="table-row" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="is-discoverable.html">isDiscoverable</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-885797139%2FProperties%2F-1079880343"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title">
-                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><a data-name="-885797139%2FProperties%2F-1079880343" anchor-label="isDiscoverable" id="-885797139%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace">val <a href="is-discoverable.html">isDiscoverable</a>: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a>? = null<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="-885797139%2FProperties%2F-1079880343" anchor-label="isDiscoverable" id="-885797139%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>Whether the account has opted into discovery features such as the profile directory.</div></div></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="-125939989%2FProperties%2F-1079880343" anchor-label="isGroup" id="-125939989%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>
-                <div class="table-row" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="is-group.html">isGroup</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-125939989%2FProperties%2F-1079880343"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title">
-                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><a data-name="-125939989%2FProperties%2F-1079880343" anchor-label="isGroup" id="-125939989%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace">val <a href="is-group.html">isGroup</a>: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="-125939989%2FProperties%2F-1079880343" anchor-label="isGroup" id="-125939989%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>Whether this account represents a group.</div></div></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="-250870586%2FProperties%2F-1079880343" anchor-label="isLocked" id="-250870586%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>
-                <div class="table-row" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="is-locked.html">isLocked</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-250870586%2FProperties%2F-1079880343"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title">
-                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><a data-name="-250870586%2FProperties%2F-1079880343" anchor-label="isLocked" id="-250870586%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace">val <a href="is-locked.html">isLocked</a>: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="-250870586%2FProperties%2F-1079880343" anchor-label="isLocked" id="-250870586%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>Whether the account manually approves follow requests.</div></div></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="-782088049%2FProperties%2F-1079880343" anchor-label="isSuspended" id="-782088049%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>
-                <div class="table-row" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="is-suspended.html">isSuspended</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-782088049%2FProperties%2F-1079880343"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title">
-                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><a data-name="-782088049%2FProperties%2F-1079880343" anchor-label="isSuspended" id="-782088049%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace">val <a href="is-suspended.html">isSuspended</a>: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a>? = null<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="-782088049%2FProperties%2F-1079880343" anchor-label="isSuspended" id="-782088049%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>Whether the account is suspended.</div></div></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="-1871533953%2FProperties%2F-1079880343" anchor-label="lastStatusAt" id="-1871533953%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>
-                <div class="table-row" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="last-status-at.html">lastStatusAt</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1871533953%2FProperties%2F-1079880343"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title">
-                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><a data-name="-1871533953%2FProperties%2F-1079880343" anchor-label="lastStatusAt" id="-1871533953%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace">val <a href="last-status-at.html">lastStatusAt</a>: <span data-unresolved-link="kotlinx.datetime/LocalDate///PointingToDeclaration/">LocalDate</span>? = null<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="-1871533953%2FProperties%2F-1079880343" anchor-label="lastStatusAt" id="-1871533953%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>Date at which the last status was posted.</div></div></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="234440690%2FProperties%2F-1079880343" anchor-label="movedTo" id="234440690%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>
-                <div class="table-row" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="moved-to.html">movedTo</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="234440690%2FProperties%2F-1079880343"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title">
-                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><a data-name="234440690%2FProperties%2F-1079880343" anchor-label="movedTo" id="234440690%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace">val <a href="moved-to.html">movedTo</a>: <a href="index.html">Account</a>? = null<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="234440690%2FProperties%2F-1079880343" anchor-label="movedTo" id="234440690%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>Indicates that the profile is currently inactive and that its user has moved to a new account.</div></div></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="1120924114%2FProperties%2F-1079880343" anchor-label="muteExpiresAt" id="1120924114%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>
-                <div class="table-row" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="mute-expires-at.html">muteExpiresAt</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1120924114%2FProperties%2F-1079880343"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title">
-                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><a data-name="1120924114%2FProperties%2F-1079880343" anchor-label="muteExpiresAt" id="1120924114%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace">val <a href="mute-expires-at.html">muteExpiresAt</a>: <span data-unresolved-link="kotlinx.datetime/Instant///PointingToDeclaration/">Instant</span>? = null<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="1120924114%2FProperties%2F-1079880343" anchor-label="muteExpiresAt" id="1120924114%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>Instant when a timed mute will expire, if applicable.</div></div></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="259285663%2FProperties%2F-1079880343" anchor-label="source" id="259285663%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>
-                <div class="table-row" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="source.html">source</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="259285663%2FProperties%2F-1079880343"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title">
-                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><a data-name="259285663%2FProperties%2F-1079880343" anchor-label="source" id="259285663%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace">val <a href="source.html">source</a>: <a href="../-source/index.html">Source</a>? = null<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="259285663%2FProperties%2F-1079880343" anchor-label="source" id="259285663%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>An entity to be used with API methods to verify and update credentials.</div></div></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="1193963665%2FProperties%2F-1079880343" anchor-label="statusesCount" id="1193963665%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>
-                <div class="table-row" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="statuses-count.html">statusesCount</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1193963665%2FProperties%2F-1079880343"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title">
-                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><a data-name="1193963665%2FProperties%2F-1079880343" anchor-label="statusesCount" id="1193963665%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace">val <a href="statuses-count.html">statusesCount</a>: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="1193963665%2FProperties%2F-1079880343" anchor-label="statusesCount" id="1193963665%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>Total number of statuses posted.</div></div></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="176649137%2FProperties%2F-1079880343" anchor-label="url" id="176649137%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>
-                <div class="table-row" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="url.html">url</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="176649137%2FProperties%2F-1079880343"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title">
-                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><a data-name="176649137%2FProperties%2F-1079880343" anchor-label="url" id="176649137%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace">val <a href="url.html">url</a>: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="176649137%2FProperties%2F-1079880343" anchor-label="url" id="176649137%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>The location of the user's profile page.</div></div></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="244369156%2FProperties%2F-1079880343" anchor-label="username" id="244369156%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>
-                <div class="table-row" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="username.html">username</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="244369156%2FProperties%2F-1079880343"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title">
-                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><a data-name="244369156%2FProperties%2F-1079880343" anchor-label="username" id="244369156%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace">val <a href="username.html">username</a>: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="244369156%2FProperties%2F-1079880343" anchor-label="username" id="244369156%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>The username of the account, not including the domain.</div></div></div>
-                      </div>
-                    </div>
-                  </div>
+    </div>
+    <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="mastodonk-core::fr.outadoc.mastodonk.api.entity/Account///PointingToDeclaration//-1079880343">
+  <div class="breadcrumbs"><a href="../../index.html">mastodonk-core</a><span class="delimiter">/</span><a href="../index.html">fr.outadoc.mastodonk.api.entity</a><span class="delimiter">/</span><span class="current">Account</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Account</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/Serializable///PointingToDeclaration/"><span class="token annotation builtin">Serializable</span></span></div></div><span class="token keyword">data </span><span class="token keyword">class </span><a href="index.html">Account</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>accountId<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>username<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>acct<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>url<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>displayName<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>bio<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>avatarUrl<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>avatarStaticUrl<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>headerUrl<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>headerStaticUrl<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>isLocked<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>emojis<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../-emoji/index.html">Emoji</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>createdAt<span class="token operator">: </span><span data-unresolved-link="kotlinx.datetime/Instant///PointingToDeclaration/">Instant</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>lastStatusAt<span class="token operator">: </span><span data-unresolved-link="kotlinx.datetime/LocalDate///PointingToDeclaration/">LocalDate</span><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>statusesCount<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>followersCount<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>followingCount<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>isDiscoverable<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>movedTo<span class="token operator">: </span><a href="index.html">Account</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>isGroup<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>fields<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../-field/index.html">Field</a><span class="token operator">&gt;</span><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>isBot<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>source<span class="token operator">: </span><a href="../-source/index.html">Source</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>isSuspended<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>muteExpiresAt<span class="token operator">: </span><span data-unresolved-link="kotlinx.datetime/Instant///PointingToDeclaration/">Instant</span><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span> : <a href="../../fr.outadoc.mastodonk.api.entity.paging/-pageable/index.html">Pageable</a></div><p class="paragraph">Represents a user of Mastodon and their associated profile.</p></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="">Constructors</h2>
+        <div class="table"><a data-name="788223064%2FConstructors%2F-1079880343" anchor-label="Account" id="788223064%2FConstructors%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="CONSTRUCTOR" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-account.html"><span><span>Account</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="788223064%2FConstructors%2F-1079880343"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">accountId<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">username<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">acct<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">url<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">displayName<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">bio<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">avatarUrl<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">avatarStaticUrl<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">headerUrl<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">headerStaticUrl<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">isLocked<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token punctuation">, </span></span><span class="parameter ">emojis<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../-emoji/index.html">Emoji</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">createdAt<span class="token operator">: </span><span data-unresolved-link="kotlinx.datetime/Instant///PointingToDeclaration/">Instant</span><span class="token punctuation">, </span></span><span class="parameter ">lastStatusAt<span class="token operator">: </span><span data-unresolved-link="kotlinx.datetime/LocalDate///PointingToDeclaration/">LocalDate</span><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">statusesCount<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a><span class="token punctuation">, </span></span><span class="parameter ">followersCount<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a><span class="token punctuation">, </span></span><span class="parameter ">followingCount<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a><span class="token punctuation">, </span></span><span class="parameter ">isDiscoverable<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">movedTo<span class="token operator">: </span><a href="index.html">Account</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">isGroup<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token punctuation">, </span></span><span class="parameter ">fields<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../-field/index.html">Field</a><span class="token operator">&gt;</span><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">isBot<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">source<span class="token operator">: </span><a href="../-source/index.html">Source</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">isSuspended<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">muteExpiresAt<span class="token operator">: </span><span data-unresolved-link="kotlinx.datetime/Instant///PointingToDeclaration/">Instant</span><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span></div></div></div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="footer"><span class="go-to-top-icon"><a href="#content"></a></span><span>© 2021 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span></div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="-2135547688%2FProperties%2F-1079880343" anchor-label="accountId" id="-2135547688%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="account-id.html"><span>account</span><wbr><span><span>Id</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2135547688%2FProperties%2F-1079880343"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="account-id.html">accountId</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1262787815%2FProperties%2F-1079880343" anchor-label="acct" id="1262787815%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="acct.html"><span><span>acct</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1262787815%2FProperties%2F-1079880343"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="acct.html">acct</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">The WebFinger account URI.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="428441592%2FProperties%2F-1079880343" anchor-label="avatarStaticUrl" id="428441592%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="avatar-static-url.html"><span>avatar</span><wbr><span>Static</span><wbr><span><span>Url</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="428441592%2FProperties%2F-1079880343"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="avatar-static-url.html">avatarStaticUrl</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">URL to a static version of the avatar.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-618853526%2FProperties%2F-1079880343" anchor-label="avatarUrl" id="-618853526%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="avatar-url.html"><span>avatar</span><wbr><span><span>Url</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-618853526%2FProperties%2F-1079880343"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="avatar-url.html">avatarUrl</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">URL to an image that is shown next to the account's statuses and on its profile.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="750144056%2FProperties%2F-1079880343" anchor-label="bio" id="750144056%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="bio.html"><span><span>bio</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="750144056%2FProperties%2F-1079880343"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="bio.html">bio</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">The profile's bio / description.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="398441253%2FProperties%2F-1079880343" anchor-label="createdAt" id="398441253%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="created-at.html"><span>created</span><wbr><span><span>At</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="398441253%2FProperties%2F-1079880343"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="created-at.html">createdAt</a><span class="token operator">: </span><span data-unresolved-link="kotlinx.datetime/Instant///PointingToDeclaration/">Instant</span></div><div class="brief "><p class="paragraph">Date at which the account was created.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1595233933%2FProperties%2F-1079880343" anchor-label="displayName" id="-1595233933%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="display-name.html"><span>display</span><wbr><span><span>Name</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1595233933%2FProperties%2F-1079880343"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="display-name.html">displayName</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-591302131%2FProperties%2F-1079880343" anchor-label="emojis" id="-591302131%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="emojis.html"><span><span>emojis</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-591302131%2FProperties%2F-1079880343"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="emojis.html">emojis</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../-emoji/index.html">Emoji</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Custom emoji entities to be used when rendering the profile.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="350575041%2FProperties%2F-1079880343" anchor-label="fields" id="350575041%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="fields.html"><span><span>fields</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="350575041%2FProperties%2F-1079880343"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="fields.html">fields</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../-field/index.html">Field</a><span class="token operator">&gt;</span><span class="token operator">?</span><span class="token operator"> = </span>null</div><div class="brief "><p class="paragraph">Additional metadata attached to a profile as name-value pairs.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="789488800%2FProperties%2F-1079880343" anchor-label="followersCount" id="789488800%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="followers-count.html"><span>followers</span><wbr><span><span>Count</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="789488800%2FProperties%2F-1079880343"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="followers-count.html">followersCount</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a></div><div class="brief "><p class="paragraph">Total number of accounts following this account.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="180564508%2FProperties%2F-1079880343" anchor-label="followingCount" id="180564508%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="following-count.html"><span>following</span><wbr><span><span>Count</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="180564508%2FProperties%2F-1079880343"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="following-count.html">followingCount</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a></div><div class="brief "><p class="paragraph">Total number of accounts followed by this account.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1194699732%2FProperties%2F-1079880343" anchor-label="headerStaticUrl" id="-1194699732%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="header-static-url.html"><span>header</span><wbr><span>Static</span><wbr><span><span>Url</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1194699732%2FProperties%2F-1079880343"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="header-static-url.html">headerStaticUrl</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">URL to a static version of the header.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-540141922%2FProperties%2F-1079880343" anchor-label="headerUrl" id="-540141922%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="header-url.html"><span>header</span><wbr><span><span>Url</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-540141922%2FProperties%2F-1079880343"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="header-url.html">headerUrl</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">URL to an image banner that is shown above the profile and in profile cards.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2036059105%2FProperties%2F-1079880343" anchor-label="id" id="-2036059105%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="id.html"><span><span>id</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2036059105%2FProperties%2F-1079880343"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="id.html">id</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-312485917%2FProperties%2F-1079880343" anchor-label="isBot" id="-312485917%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-bot.html"><span>is</span><wbr><span><span>Bot</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-312485917%2FProperties%2F-1079880343"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="is-bot.html">isBot</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator">?</span><span class="token operator"> = </span>null</div><div class="brief "><p class="paragraph">Whether this account is a robot.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-885797139%2FProperties%2F-1079880343" anchor-label="isDiscoverable" id="-885797139%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-discoverable.html"><span>is</span><wbr><span><span>Discoverable</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-885797139%2FProperties%2F-1079880343"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="is-discoverable.html">isDiscoverable</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator">?</span><span class="token operator"> = </span>null</div><div class="brief "><p class="paragraph">Whether the account has opted into discovery features such as the profile directory.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-125939989%2FProperties%2F-1079880343" anchor-label="isGroup" id="-125939989%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-group.html"><span>is</span><wbr><span><span>Group</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-125939989%2FProperties%2F-1079880343"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="is-group.html">isGroup</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">Whether this account represents a group.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-250870586%2FProperties%2F-1079880343" anchor-label="isLocked" id="-250870586%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-locked.html"><span>is</span><wbr><span><span>Locked</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-250870586%2FProperties%2F-1079880343"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="is-locked.html">isLocked</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">Whether the account manually approves follow requests.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-782088049%2FProperties%2F-1079880343" anchor-label="isSuspended" id="-782088049%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-suspended.html"><span>is</span><wbr><span><span>Suspended</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-782088049%2FProperties%2F-1079880343"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="is-suspended.html">isSuspended</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator">?</span><span class="token operator"> = </span>null</div><div class="brief "><p class="paragraph">Whether the account is suspended.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1871533953%2FProperties%2F-1079880343" anchor-label="lastStatusAt" id="-1871533953%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="last-status-at.html"><span>last</span><wbr><span>Status</span><wbr><span><span>At</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1871533953%2FProperties%2F-1079880343"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="last-status-at.html">lastStatusAt</a><span class="token operator">: </span><span data-unresolved-link="kotlinx.datetime/LocalDate///PointingToDeclaration/">LocalDate</span><span class="token operator">?</span><span class="token operator"> = </span>null</div><div class="brief "><p class="paragraph">Date at which the last status was posted.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="234440690%2FProperties%2F-1079880343" anchor-label="movedTo" id="234440690%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="moved-to.html"><span>moved</span><wbr><span><span>To</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="234440690%2FProperties%2F-1079880343"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="moved-to.html">movedTo</a><span class="token operator">: </span><a href="index.html">Account</a><span class="token operator">?</span><span class="token operator"> = </span>null</div><div class="brief "><p class="paragraph">Indicates that the profile is currently inactive and that its user has moved to a new account.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1120924114%2FProperties%2F-1079880343" anchor-label="muteExpiresAt" id="1120924114%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="mute-expires-at.html"><span>mute</span><wbr><span>Expires</span><wbr><span><span>At</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1120924114%2FProperties%2F-1079880343"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="mute-expires-at.html">muteExpiresAt</a><span class="token operator">: </span><span data-unresolved-link="kotlinx.datetime/Instant///PointingToDeclaration/">Instant</span><span class="token operator">?</span><span class="token operator"> = </span>null</div><div class="brief "><p class="paragraph">Instant when a timed mute will expire, if applicable.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="259285663%2FProperties%2F-1079880343" anchor-label="source" id="259285663%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="source.html"><span><span>source</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="259285663%2FProperties%2F-1079880343"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="source.html">source</a><span class="token operator">: </span><a href="../-source/index.html">Source</a><span class="token operator">?</span><span class="token operator"> = </span>null</div><div class="brief "><p class="paragraph">An entity to be used with API methods to verify and update credentials.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1193963665%2FProperties%2F-1079880343" anchor-label="statusesCount" id="1193963665%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="statuses-count.html"><span>statuses</span><wbr><span><span>Count</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1193963665%2FProperties%2F-1079880343"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="statuses-count.html">statusesCount</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a></div><div class="brief "><p class="paragraph">Total number of statuses posted.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="176649137%2FProperties%2F-1079880343" anchor-label="url" id="176649137%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="url.html"><span><span>url</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="176649137%2FProperties%2F-1079880343"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="url.html">url</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">The location of the user's profile page.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="244369156%2FProperties%2F-1079880343" anchor-label="username" id="244369156%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="username.html"><span><span>username</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="244369156%2FProperties%2F-1079880343"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="username.html">username</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">The username of the account, not including the domain.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  
-</body></html>
-
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2023 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+    </div>
+</div>
+</body>
+</html>
 

@@ -1,263 +1,270 @@
+<!doctype html>
 <html>
-  <head>
+<head>
     <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
     <title>fr.outadoc.mastodonk.api.endpoint.accounts</title>
-</head><body><link href="../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../";</script><script type="text/javascript" src="../../scripts/sourceset_dependencies.js" async></script><link href="../../styles/style.css" rel="Stylesheet"><link href="../../styles/logo-styles.css" rel="Stylesheet"><link href="../../styles/jetbrains-mono.css" rel="Stylesheet"><link href="../../styles/main.css" rel="Stylesheet"><script type="text/javascript" src="../../scripts/clipboard.js" async></script><script type="text/javascript" src="../../scripts/navigation-loader.js" async></script><script type="text/javascript" src="../../scripts/platform-content-handler.js" async></script><script type="text/javascript" src="../../scripts/main.js" async></script>
-  
-    <div id="container">
-      <div id="leftColumn"><a href="../../index.html">
-            <div id="logo"></div>
-          </a>
-        <div id="paneSearch"></div>
+<link href="../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../";</script>    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../styles/style.css" rel="Stylesheet">
+<link href="../../styles/jetbrains-mono.css" rel="Stylesheet">
+<link href="../../styles/main.css" rel="Stylesheet">
+<link href="../../styles/prism.css" rel="Stylesheet">
+<link href="../../styles/logo-styles.css" rel="Stylesheet">
+<script type="text/javascript" src="../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<body>
+<div class="navigation-wrapper" id="navigation-wrapper">
+    <div id="leftToggler"><span class="icon-toggler"></span></div>
+    <div class="library-name">
+<a href="../../index.html">
+<span>mastodonk</span>            </a>    </div>
+    <div>0.2-alpha01
+    </div>
+    <div class="pull-right d-flex">
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":mastodonk-core:dokkaHtmlPartial/commonMain">common</button>
+        </div>
+        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+    </div>
+</div>
+<div id="container">
+    <div id="leftColumn">
         <div id="sideMenu"></div>
-      </div>
-      <div id="main">
-        <script type="text/javascript" src="../../scripts/main.js"></script><div id="leftToggler"><span class="icon-toggler"></span></div>
-
-        <div class="main-content" id="content" pageids="mastodonk-core::fr.outadoc.mastodonk.api.endpoint.accounts////PointingToDeclaration//-1079880343">
-          <div class="navigation-wrapper" id="navigation-wrapper">
-            <div class="breadcrumbs"><a href="../index.html">mastodonk-core</a>/<a href="index.html">fr.outadoc.mastodonk.api.endpoint.accounts</a></div>
-            <div class="pull-right d-flex">
-              <div id="searchBar"></div>
+    </div>
+    <div id="main">
+<div class="main-content" data-page-type="package" id="content" pageids="mastodonk-core::fr.outadoc.mastodonk.api.endpoint.accounts////PointingToDeclaration//-1079880343">
+  <div class="breadcrumbs"><a href="../index.html">mastodonk-core</a><span class="delimiter">/</span><span class="current">fr.outadoc.mastodonk.api.endpoint.accounts</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Package-level</span></span> <span><span>declarations</span></span></h1>
+    <div class="platform-hinted UnderCoverText" data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><p class="paragraph">Endpoints concerning user account management.</p></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="TYPE">Types</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="TYPE">
+        <h2 class="">Types</h2>
+        <div class="table"><a data-name="453943864%2FClasslikes%2F-1079880343" anchor-label="AccountsApi" id="453943864%2FClasslikes%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-accounts-api/index.html"><span>Accounts</span><wbr><span><span>Api</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="453943864%2FClasslikes%2F-1079880343"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-accounts-api/index.html">AccountsApi</a></div><div class="brief "><p class="paragraph">Methods concerning user accounts and related information.</p></div></div></div>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="cover ">
-            <h1 class="cover"><span>Package fr.</span><wbr><span>outadoc.</span><wbr><span>mastodonk.</span><wbr><span>api.</span><wbr><span>endpoint.</span><wbr><span>accounts</span></h1>
-            <div class="platform-hinted UnderCoverText" data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><p class="paragraph">Endpoints concerning user account management.</p></div></div>
-          </div>
-          <div class="tabbedcontent">
-            <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Types">Types</button></div>
-            <div class="tabs-section-body">
-              <h2 class="">Types</h2>
-              <div class="table" data-togglable="Types"><a data-name="453943864%2FClasslikes%2F-1079880343" anchor-label="AccountsApi" id="453943864%2FClasslikes%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>
-                <div class="table-row" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="-accounts-api/index.html">AccountsApi</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="453943864%2FClasslikes%2F-1079880343"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title"><div class="divergent-group" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace">interface <a href="-accounts-api/index.html">AccountsApi</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-<a data-name="453943864%2FClasslikes%2F-1079880343" anchor-label="AccountsApi" id="453943864%2FClasslikes%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a><div class="brief "><a data-name="453943864%2FClasslikes%2F-1079880343" anchor-label="AccountsApi" id="453943864%2FClasslikes%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>Methods concerning user accounts and related information.</div></div>
-</div>
-                    </div>
-                  </div>
-                </div>
 <a data-name="1365753496%2FClasslikes%2F-1079880343" anchor-label="BlocksApi" id="1365753496%2FClasslikes%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>
-                <div class="table-row" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="-blocks-api/index.html">BlocksApi</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1365753496%2FClasslikes%2F-1079880343"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title"><div class="divergent-group" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace">interface <a href="-blocks-api/index.html">BlocksApi</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-<a data-name="1365753496%2FClasslikes%2F-1079880343" anchor-label="BlocksApi" id="1365753496%2FClasslikes%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a><div class="brief "><a data-name="1365753496%2FClasslikes%2F-1079880343" anchor-label="BlocksApi" id="1365753496%2FClasslikes%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>View blocked accounts.</div></div>
-</div>
-                    </div>
-                  </div>
+          <div class="table-row" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-blocks-api/index.html"><span>Blocks</span><wbr><span><span>Api</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1365753496%2FClasslikes%2F-1079880343"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-blocks-api/index.html">BlocksApi</a></div><div class="brief "><p class="paragraph">View blocked accounts.</p></div></div></div>
                 </div>
+              </div>
+            </div>
+          </div>
 <a data-name="-138102919%2FClasslikes%2F-1079880343" anchor-label="BookmarksApi" id="-138102919%2FClasslikes%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>
-                <div class="table-row" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="-bookmarks-api/index.html">BookmarksApi</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-138102919%2FClasslikes%2F-1079880343"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title"><div class="divergent-group" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace">interface <a href="-bookmarks-api/index.html">BookmarksApi</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-<a data-name="-138102919%2FClasslikes%2F-1079880343" anchor-label="BookmarksApi" id="-138102919%2FClasslikes%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a><div class="brief "><a data-name="-138102919%2FClasslikes%2F-1079880343" anchor-label="BookmarksApi" id="-138102919%2FClasslikes%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>View bookmarked statuses.</div></div>
-</div>
-                    </div>
-                  </div>
+          <div class="table-row" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-bookmarks-api/index.html"><span>Bookmarks</span><wbr><span><span>Api</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-138102919%2FClasslikes%2F-1079880343"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-bookmarks-api/index.html">BookmarksApi</a></div><div class="brief "><p class="paragraph">View bookmarked statuses.</p></div></div></div>
                 </div>
+              </div>
+            </div>
+          </div>
 <a data-name="1670364732%2FClasslikes%2F-1079880343" anchor-label="DomainBlocksApi" id="1670364732%2FClasslikes%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>
-                <div class="table-row" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="-domain-blocks-api/index.html">DomainBlocksApi</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1670364732%2FClasslikes%2F-1079880343"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title"><div class="divergent-group" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace">interface <a href="-domain-blocks-api/index.html">DomainBlocksApi</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-<a data-name="1670364732%2FClasslikes%2F-1079880343" anchor-label="DomainBlocksApi" id="1670364732%2FClasslikes%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a><div class="brief "><a data-name="1670364732%2FClasslikes%2F-1079880343" anchor-label="DomainBlocksApi" id="1670364732%2FClasslikes%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>View and manage blocked domains.</div></div>
-</div>
-                    </div>
-                  </div>
+          <div class="table-row" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-domain-blocks-api/index.html"><span>Domain</span><wbr><span>Blocks</span><wbr><span><span>Api</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1670364732%2FClasslikes%2F-1079880343"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-domain-blocks-api/index.html">DomainBlocksApi</a></div><div class="brief "><p class="paragraph">View and manage blocked domains.</p></div></div></div>
                 </div>
+              </div>
+            </div>
+          </div>
 <a data-name="617034327%2FClasslikes%2F-1079880343" anchor-label="EndorsementsApi" id="617034327%2FClasslikes%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>
-                <div class="table-row" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="-endorsements-api/index.html">EndorsementsApi</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="617034327%2FClasslikes%2F-1079880343"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title"><div class="divergent-group" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace">interface <a href="-endorsements-api/index.html">EndorsementsApi</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-<a data-name="617034327%2FClasslikes%2F-1079880343" anchor-label="EndorsementsApi" id="617034327%2FClasslikes%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a><div class="brief "><a data-name="617034327%2FClasslikes%2F-1079880343" anchor-label="EndorsementsApi" id="617034327%2FClasslikes%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>View featured profiles.</div></div>
-</div>
-                    </div>
-                  </div>
+          <div class="table-row" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-endorsements-api/index.html"><span>Endorsements</span><wbr><span><span>Api</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="617034327%2FClasslikes%2F-1079880343"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-endorsements-api/index.html">EndorsementsApi</a></div><div class="brief "><p class="paragraph">View featured profiles.</p></div></div></div>
                 </div>
+              </div>
+            </div>
+          </div>
 <a data-name="-1098358148%2FClasslikes%2F-1079880343" anchor-label="FavouritesApi" id="-1098358148%2FClasslikes%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>
-                <div class="table-row" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="-favourites-api/index.html">FavouritesApi</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1098358148%2FClasslikes%2F-1079880343"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title"><div class="divergent-group" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace">interface <a href="-favourites-api/index.html">FavouritesApi</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-<a data-name="-1098358148%2FClasslikes%2F-1079880343" anchor-label="FavouritesApi" id="-1098358148%2FClasslikes%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a><div class="brief "><a data-name="-1098358148%2FClasslikes%2F-1079880343" anchor-label="FavouritesApi" id="-1098358148%2FClasslikes%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>View favourites.</div></div>
-</div>
-                    </div>
-                  </div>
+          <div class="table-row" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-favourites-api/index.html"><span>Favourites</span><wbr><span><span>Api</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1098358148%2FClasslikes%2F-1079880343"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-favourites-api/index.html">FavouritesApi</a></div><div class="brief "><p class="paragraph">View favourites.</p></div></div></div>
                 </div>
+              </div>
+            </div>
+          </div>
 <a data-name="246409913%2FClasslikes%2F-1079880343" anchor-label="FeaturedTagsApi" id="246409913%2FClasslikes%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>
-                <div class="table-row" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="-featured-tags-api/index.html">FeaturedTagsApi</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="246409913%2FClasslikes%2F-1079880343"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title"><div class="divergent-group" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace">interface <a href="-featured-tags-api/index.html">FeaturedTagsApi</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-<a data-name="246409913%2FClasslikes%2F-1079880343" anchor-label="FeaturedTagsApi" id="246409913%2FClasslikes%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a><div class="brief "><a data-name="246409913%2FClasslikes%2F-1079880343" anchor-label="FeaturedTagsApi" id="246409913%2FClasslikes%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>View and managed featured hashtags.</div></div>
-</div>
-                    </div>
-                  </div>
+          <div class="table-row" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-featured-tags-api/index.html"><span>Featured</span><wbr><span>Tags</span><wbr><span><span>Api</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="246409913%2FClasslikes%2F-1079880343"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-featured-tags-api/index.html">FeaturedTagsApi</a></div><div class="brief "><p class="paragraph">View and managed featured hashtags.</p></div></div></div>
                 </div>
+              </div>
+            </div>
+          </div>
 <a data-name="675163575%2FClasslikes%2F-1079880343" anchor-label="FiltersApi" id="675163575%2FClasslikes%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>
-                <div class="table-row" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="-filters-api/index.html">FiltersApi</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="675163575%2FClasslikes%2F-1079880343"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title"><div class="divergent-group" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace">interface <a href="-filters-api/index.html">FiltersApi</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-<a data-name="675163575%2FClasslikes%2F-1079880343" anchor-label="FiltersApi" id="675163575%2FClasslikes%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a><div class="brief "><a data-name="675163575%2FClasslikes%2F-1079880343" anchor-label="FiltersApi" id="675163575%2FClasslikes%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>View and manage filters.</div></div>
-</div>
-                    </div>
-                  </div>
+          <div class="table-row" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-filters-api/index.html"><span>Filters</span><wbr><span><span>Api</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="675163575%2FClasslikes%2F-1079880343"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-filters-api/index.html">FiltersApi</a></div><div class="brief "><p class="paragraph">View and manage filters.</p></div></div></div>
                 </div>
+              </div>
+            </div>
+          </div>
 <a data-name="1291438119%2FClasslikes%2F-1079880343" anchor-label="FollowRequestsApi" id="1291438119%2FClasslikes%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>
-                <div class="table-row" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="-follow-requests-api/index.html">FollowRequestsApi</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1291438119%2FClasslikes%2F-1079880343"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title"><div class="divergent-group" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace">interface <a href="-follow-requests-api/index.html">FollowRequestsApi</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-<a data-name="1291438119%2FClasslikes%2F-1079880343" anchor-label="FollowRequestsApi" id="1291438119%2FClasslikes%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a><div class="brief "><a data-name="1291438119%2FClasslikes%2F-1079880343" anchor-label="FollowRequestsApi" id="1291438119%2FClasslikes%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>View and manage follow requests.</div></div>
-</div>
-                    </div>
-                  </div>
+          <div class="table-row" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-follow-requests-api/index.html"><span>Follow</span><wbr><span>Requests</span><wbr><span><span>Api</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1291438119%2FClasslikes%2F-1079880343"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-follow-requests-api/index.html">FollowRequestsApi</a></div><div class="brief "><p class="paragraph">View and manage follow requests.</p></div></div></div>
                 </div>
+              </div>
+            </div>
+          </div>
 <a data-name="-2094775306%2FClasslikes%2F-1079880343" anchor-label="MutesApi" id="-2094775306%2FClasslikes%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>
-                <div class="table-row" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="-mutes-api/index.html">MutesApi</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2094775306%2FClasslikes%2F-1079880343"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title"><div class="divergent-group" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace">interface <a href="-mutes-api/index.html">MutesApi</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-<a data-name="-2094775306%2FClasslikes%2F-1079880343" anchor-label="MutesApi" id="-2094775306%2FClasslikes%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a><div class="brief "><a data-name="-2094775306%2FClasslikes%2F-1079880343" anchor-label="MutesApi" id="-2094775306%2FClasslikes%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>View muted accounts.</div></div>
-</div>
-                    </div>
-                  </div>
+          <div class="table-row" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-mutes-api/index.html"><span>Mutes</span><wbr><span><span>Api</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2094775306%2FClasslikes%2F-1079880343"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-mutes-api/index.html">MutesApi</a></div><div class="brief "><p class="paragraph">View muted accounts.</p></div></div></div>
                 </div>
+              </div>
+            </div>
+          </div>
 <a data-name="-1971629900%2FClasslikes%2F-1079880343" anchor-label="PreferencesApi" id="-1971629900%2FClasslikes%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>
-                <div class="table-row" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="-preferences-api/index.html">PreferencesApi</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1971629900%2FClasslikes%2F-1079880343"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title"><div class="divergent-group" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace">interface <a href="-preferences-api/index.html">PreferencesApi</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-<a data-name="-1971629900%2FClasslikes%2F-1079880343" anchor-label="PreferencesApi" id="-1971629900%2FClasslikes%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a><div class="brief "><a data-name="-1971629900%2FClasslikes%2F-1079880343" anchor-label="PreferencesApi" id="-1971629900%2FClasslikes%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>View account preferences.</div></div>
-</div>
-                    </div>
-                  </div>
+          <div class="table-row" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-preferences-api/index.html"><span>Preferences</span><wbr><span><span>Api</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1971629900%2FClasslikes%2F-1079880343"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-preferences-api/index.html">PreferencesApi</a></div><div class="brief "><p class="paragraph">View account preferences.</p></div></div></div>
                 </div>
+              </div>
+            </div>
+          </div>
 <a data-name="1702972795%2FClasslikes%2F-1079880343" anchor-label="ReportsApi" id="1702972795%2FClasslikes%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>
-                <div class="table-row" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="-reports-api/index.html">ReportsApi</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1702972795%2FClasslikes%2F-1079880343"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title"><div class="divergent-group" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace">interface <a href="-reports-api/index.html">ReportsApi</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-<a data-name="1702972795%2FClasslikes%2F-1079880343" anchor-label="ReportsApi" id="1702972795%2FClasslikes%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a><div class="brief "><a data-name="1702972795%2FClasslikes%2F-1079880343" anchor-label="ReportsApi" id="1702972795%2FClasslikes%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>Create user reports.</div></div>
-</div>
-                    </div>
-                  </div>
+          <div class="table-row" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-reports-api/index.html"><span>Reports</span><wbr><span><span>Api</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1702972795%2FClasslikes%2F-1079880343"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-reports-api/index.html">ReportsApi</a></div><div class="brief "><p class="paragraph">Create user reports.</p></div></div></div>
                 </div>
+              </div>
+            </div>
+          </div>
 <a data-name="-1714233301%2FClasslikes%2F-1079880343" anchor-label="SuggestionsApi" id="-1714233301%2FClasslikes%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>
-                <div class="table-row" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="-suggestions-api/index.html">SuggestionsApi</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1714233301%2FClasslikes%2F-1079880343"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title"><div class="divergent-group" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace">interface <a href="-suggestions-api/index.html">SuggestionsApi</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-<a data-name="-1714233301%2FClasslikes%2F-1079880343" anchor-label="SuggestionsApi" id="-1714233301%2FClasslikes%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a><div class="brief "><a data-name="-1714233301%2FClasslikes%2F-1079880343" anchor-label="SuggestionsApi" id="-1714233301%2FClasslikes%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>View and manage follow suggestions.</div></div>
-</div>
-                    </div>
-                  </div>
+          <div class="table-row" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-suggestions-api/index.html"><span>Suggestions</span><wbr><span><span>Api</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1714233301%2FClasslikes%2F-1079880343"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-suggestions-api/index.html">SuggestionsApi</a></div><div class="brief "><p class="paragraph">View and manage follow suggestions.</p></div></div></div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="footer"><span class="go-to-top-icon"><a href="#content"></a></span><span>© 2021 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span></div>
       </div>
     </div>
-  
-</body></html>
-
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2023 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+    </div>
+</div>
+</body>
+</html>
 

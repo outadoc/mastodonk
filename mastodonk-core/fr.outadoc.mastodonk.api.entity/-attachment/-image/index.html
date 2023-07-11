@@ -1,178 +1,248 @@
+<!doctype html>
 <html>
-  <head>
+<head>
     <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
     <title>Image</title>
-</head><body><link href="../../../../../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../../";</script><script type="text/javascript" src="../../../../scripts/sourceset_dependencies.js" async></script><link href="../../../../styles/style.css" rel="Stylesheet"><link href="../../../../styles/logo-styles.css" rel="Stylesheet"><link href="../../../../styles/jetbrains-mono.css" rel="Stylesheet"><link href="../../../../styles/main.css" rel="Stylesheet"><script type="text/javascript" src="../../../../scripts/clipboard.js" async></script><script type="text/javascript" src="../../../../scripts/navigation-loader.js" async></script><script type="text/javascript" src="../../../../scripts/platform-content-handler.js" async></script><script type="text/javascript" src="../../../../scripts/main.js" async></script>
-  
-    <div id="container">
-      <div id="leftColumn"><a href="../../../../index.html">
-            <div id="logo"></div>
-          </a>
-        <div id="paneSearch"></div>
+<link href="../../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../../";</script>    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="../../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../../styles/style.css" rel="Stylesheet">
+<link href="../../../../styles/jetbrains-mono.css" rel="Stylesheet">
+<link href="../../../../styles/main.css" rel="Stylesheet">
+<link href="../../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../../styles/logo-styles.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<body>
+<div class="navigation-wrapper" id="navigation-wrapper">
+    <div id="leftToggler"><span class="icon-toggler"></span></div>
+    <div class="library-name">
+<a href="../../../../index.html">
+<span>mastodonk</span>            </a>    </div>
+    <div>0.2-alpha01
+    </div>
+    <div class="pull-right d-flex">
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":mastodonk-core:dokkaHtmlPartial/commonMain">common</button>
+        </div>
+        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+    </div>
+</div>
+<div id="container">
+    <div id="leftColumn">
         <div id="sideMenu"></div>
-      </div>
-      <div id="main">
-        <script type="text/javascript" src="../../../../scripts/main.js"></script><div id="leftToggler"><span class="icon-toggler"></span></div>
-
-        <div class="main-content" id="content" pageids="mastodonk-core::fr.outadoc.mastodonk.api.entity/Attachment.Image///PointingToDeclaration//-1079880343">
-          <div class="navigation-wrapper" id="navigation-wrapper">
-            <div class="breadcrumbs"><a href="../../../index.html">mastodonk-core</a>/<a href="../../index.html">fr.outadoc.mastodonk.api.entity</a>/<a href="../index.html">Attachment</a>/<a href="index.html">Image</a></div>
-            <div class="pull-right d-flex">
-              <div id="searchBar"></div>
-            </div>
-          </div>
-          <div class="cover ">
-            <h1 class="cover"><span>Image</span></h1>
-            <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace">data class <a href="index.html">Image</a>(attachmentId: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>, url: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>, previewUrl: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>?, remoteUrl: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>?, previewRemoteUrl: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>?, textUrl: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>?, description: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>?, blurHash: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>?, meta: <a href="-meta/index.html">Attachment.Image.Meta</a>) : <a href="../index.html">Attachment</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-          </div>
-          <div class="tabbedcontent">
-            <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Types">Types</button><button class="section-tab" data-togglable="Properties">Properties</button></div>
-            <div class="tabs-section-body">
-              <h2 class="">Types</h2>
-              <div class="table" data-togglable="Types"><a data-name="1750719375%2FClasslikes%2F-1079880343" anchor-label="Meta" id="1750719375%2FClasslikes%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>
-                <div class="table-row" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="-meta/index.html">Meta</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1750719375%2FClasslikes%2F-1079880343"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title"><div class="divergent-group" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace">data class <a href="-meta/index.html">Meta</a>(width: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a>?, height: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a>?, aspect: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html">Double</a>?, focalPoint: <a href="../../-focal-point/index.html">FocalPoint</a>?, original: <a href="-meta/index.html">Attachment.Image.Meta</a>?, small: <a href="-meta/index.html">Attachment.Image.Meta</a>?)<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+    </div>
+    <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="mastodonk-core::fr.outadoc.mastodonk.api.entity/Attachment.Image///PointingToDeclaration//-1079880343">
+  <div class="breadcrumbs"><a href="../../../index.html">mastodonk-core</a><span class="delimiter">/</span><a href="../../index.html">fr.outadoc.mastodonk.api.entity</a><span class="delimiter">/</span><a href="../index.html">Attachment</a><span class="delimiter">/</span><span class="current">Image</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Image</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/Serializable///PointingToDeclaration/"><span class="token annotation builtin">Serializable</span></span></div></div><span class="token keyword">data </span><span class="token keyword">class </span><a href="index.html">Image</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>attachmentId<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>url<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>previewUrl<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>remoteUrl<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>previewRemoteUrl<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>textUrl<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>description<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>blurHash<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>meta<span class="token operator">: </span><a href="-meta/index.html">Attachment.Image.Meta</a><span class="token operator"> = </span>Meta()</span></span><span class="token punctuation">)</span> : <a href="../index.html">Attachment</a></div></div></div>
   </div>
-</div>
-</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <h2 class="">Properties</h2>
-              <div class="table" data-togglable="Properties"><a data-name="-1953971871%2FProperties%2F-1079880343" anchor-label="attachmentId" id="-1953971871%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>
-                <div class="table-row" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="attachment-id.html">attachmentId</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1953971871%2FProperties%2F-1079880343"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title">
-                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><a data-name="-1953971871%2FProperties%2F-1079880343" anchor-label="attachmentId" id="-1953971871%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace">open override val <a href="attachment-id.html">attachmentId</a>: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="-418528822%2FProperties%2F-1079880343" anchor-label="blurHash" id="-418528822%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>
-                <div class="table-row" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="blur-hash.html">blurHash</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-418528822%2FProperties%2F-1079880343"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title">
-                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><a data-name="-418528822%2FProperties%2F-1079880343" anchor-label="blurHash" id="-418528822%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace">open override val <a href="blur-hash.html">blurHash</a>: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>? = null<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="-418528822%2FProperties%2F-1079880343" anchor-label="blurHash" id="-418528822%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>A hash computed by the BlurHash algorithm, for generating colorful preview thumbnails when media has not been downloaded yet.</div></div></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="-312097409%2FProperties%2F-1079880343" anchor-label="description" id="-312097409%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>
-                <div class="table-row" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="description.html">description</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-312097409%2FProperties%2F-1079880343"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title">
-                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><a data-name="-312097409%2FProperties%2F-1079880343" anchor-label="description" id="-312097409%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace">open override val <a href="description.html">description</a>: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>? = null<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="-312097409%2FProperties%2F-1079880343" anchor-label="description" id="-312097409%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>Alternate text that describes what is in the media attachment.</div></div></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="-1024432934%2FProperties%2F-1079880343" anchor-label="meta" id="-1024432934%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>
-                <div class="table-row" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="meta.html">meta</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1024432934%2FProperties%2F-1079880343"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title">
-                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><a data-name="-1024432934%2FProperties%2F-1079880343" anchor-label="meta" id="-1024432934%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace">val <a href="meta.html">meta</a>: <a href="-meta/index.html">Attachment.Image.Meta</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="-737426690%2FProperties%2F-1079880343" anchor-label="previewRemoteUrl" id="-737426690%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>
-                <div class="table-row" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="preview-remote-url.html">previewRemoteUrl</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-737426690%2FProperties%2F-1079880343"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title">
-                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><a data-name="-737426690%2FProperties%2F-1079880343" anchor-label="previewRemoteUrl" id="-737426690%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace">open override val <a href="preview-remote-url.html">previewRemoteUrl</a>: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>? = null<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="-737426690%2FProperties%2F-1079880343" anchor-label="previewRemoteUrl" id="-737426690%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>URL of a scaled-down preview of the attachment on the remote website.</div></div></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="-1944726760%2FProperties%2F-1079880343" anchor-label="previewUrl" id="-1944726760%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>
-                <div class="table-row" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="preview-url.html">previewUrl</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1944726760%2FProperties%2F-1079880343"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title">
-                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><a data-name="-1944726760%2FProperties%2F-1079880343" anchor-label="previewUrl" id="-1944726760%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace">open override val <a href="preview-url.html">previewUrl</a>: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>? = null<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="-1944726760%2FProperties%2F-1079880343" anchor-label="previewUrl" id="-1944726760%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>URL of a scaled-down preview of the attachment.</div></div></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="-209257902%2FProperties%2F-1079880343" anchor-label="remoteUrl" id="-209257902%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>
-                <div class="table-row" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="remote-url.html">remoteUrl</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-209257902%2FProperties%2F-1079880343"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title">
-                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><a data-name="-209257902%2FProperties%2F-1079880343" anchor-label="remoteUrl" id="-209257902%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace">open override val <a href="remote-url.html">remoteUrl</a>: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>? = null<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="-209257902%2FProperties%2F-1079880343" anchor-label="remoteUrl" id="-209257902%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>URL of the full-size original attachment on the remote website.</div></div></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="-1314206151%2FProperties%2F-1079880343" anchor-label="textUrl" id="-1314206151%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>
-                <div class="table-row" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="text-url.html">textUrl</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1314206151%2FProperties%2F-1079880343"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title">
-                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><a data-name="-1314206151%2FProperties%2F-1079880343" anchor-label="textUrl" id="-1314206151%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace">open override val <a href="text-url.html">textUrl</a>: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>? = null<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="-1314206151%2FProperties%2F-1079880343" anchor-label="textUrl" id="-1314206151%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>A shorter URL for the attachment.</div></div></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="-657319572%2FProperties%2F-1079880343" anchor-label="url" id="-657319572%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>
-                <div class="table-row" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="url.html">url</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-657319572%2FProperties%2F-1079880343"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title">
-                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><a data-name="-657319572%2FProperties%2F-1079880343" anchor-label="url" id="-657319572%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace">open override val <a href="url.html">url</a>: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="-657319572%2FProperties%2F-1079880343" anchor-label="url" id="-657319572%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>URL of the original full-size attachment.</div></div></div>
-                      </div>
-                    </div>
-                  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="">Constructors</h2>
+        <div class="table"><a data-name="-814907703%2FConstructors%2F-1079880343" anchor-label="Image" id="-814907703%2FConstructors%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="CONSTRUCTOR" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-image.html"><span><span>Image</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-814907703%2FConstructors%2F-1079880343"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">attachmentId<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">url<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">previewUrl<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">remoteUrl<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">previewRemoteUrl<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">textUrl<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">description<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">blurHash<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">meta<span class="token operator">: </span><a href="-meta/index.html">Attachment.Image.Meta</a><span class="token operator"> = </span>Meta()</span></span><span class="token punctuation">)</span></div></div></div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="footer"><span class="go-to-top-icon"><a href="#content"></a></span><span>© 2021 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span></div>
+      </div>
+      <div data-togglable="TYPE">
+        <h2 class="">Types</h2>
+        <div class="table"><a data-name="1750719375%2FClasslikes%2F-1079880343" anchor-label="Meta" id="1750719375%2FClasslikes%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-meta/index.html"><span><span>Meta</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1750719375%2FClasslikes%2F-1079880343"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/Serializable///PointingToDeclaration/"><span class="token annotation builtin">Serializable</span></span></div></div><span class="token keyword">data </span><span class="token keyword">class </span><a href="-meta/index.html">Meta</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>width<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>height<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>aspect<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html">Double</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>focalPoint<span class="token operator">: </span><a href="../../-focal-point/index.html">FocalPoint</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>original<span class="token operator">: </span><a href="-meta/index.html">Attachment.Image.Meta</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>small<span class="token operator">: </span><a href="-meta/index.html">Attachment.Image.Meta</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="-1953971871%2FProperties%2F-1079880343" anchor-label="attachmentId" id="-1953971871%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="attachment-id.html"><span>attachment</span><wbr><span><span>Id</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1953971871%2FProperties%2F-1079880343"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="attachment-id.html">attachmentId</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-418528822%2FProperties%2F-1079880343" anchor-label="blurHash" id="-418528822%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="blur-hash.html"><span>blur</span><wbr><span><span>Hash</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-418528822%2FProperties%2F-1079880343"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="blur-hash.html">blurHash</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null</div><div class="brief "><p class="paragraph">A hash computed by the BlurHash algorithm, for generating colorful preview thumbnails when media has not been downloaded yet.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-312097409%2FProperties%2F-1079880343" anchor-label="description" id="-312097409%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="description.html"><span><span>description</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-312097409%2FProperties%2F-1079880343"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="description.html">description</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null</div><div class="brief "><p class="paragraph">Alternate text that describes what is in the media attachment.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1024432934%2FProperties%2F-1079880343" anchor-label="meta" id="-1024432934%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="meta.html"><span><span>meta</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1024432934%2FProperties%2F-1079880343"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="meta.html">meta</a><span class="token operator">: </span><a href="-meta/index.html">Attachment.Image.Meta</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-737426690%2FProperties%2F-1079880343" anchor-label="previewRemoteUrl" id="-737426690%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="preview-remote-url.html"><span>preview</span><wbr><span>Remote</span><wbr><span><span>Url</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-737426690%2FProperties%2F-1079880343"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="preview-remote-url.html">previewRemoteUrl</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null</div><div class="brief "><p class="paragraph">URL of a scaled-down preview of the attachment on the remote website.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1944726760%2FProperties%2F-1079880343" anchor-label="previewUrl" id="-1944726760%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="preview-url.html"><span>preview</span><wbr><span><span>Url</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1944726760%2FProperties%2F-1079880343"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="preview-url.html">previewUrl</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null</div><div class="brief "><p class="paragraph">URL of a scaled-down preview of the attachment.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-209257902%2FProperties%2F-1079880343" anchor-label="remoteUrl" id="-209257902%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="remote-url.html"><span>remote</span><wbr><span><span>Url</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-209257902%2FProperties%2F-1079880343"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="remote-url.html">remoteUrl</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null</div><div class="brief "><p class="paragraph">URL of the full-size original attachment on the remote website.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1314206151%2FProperties%2F-1079880343" anchor-label="textUrl" id="-1314206151%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="text-url.html"><span>text</span><wbr><span><span>Url</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1314206151%2FProperties%2F-1079880343"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="text-url.html">textUrl</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null</div><div class="brief "><p class="paragraph">A shorter URL for the attachment.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-657319572%2FProperties%2F-1079880343" anchor-label="url" id="-657319572%2FProperties%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="url.html"><span><span>url</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-657319572%2FProperties%2F-1079880343"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="url.html">url</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">URL of the original full-size attachment.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  
-</body></html>
-
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2023 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+    </div>
+</div>
+</body>
+</html>
 

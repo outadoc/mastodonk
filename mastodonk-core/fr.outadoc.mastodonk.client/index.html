@@ -1,112 +1,139 @@
+<!doctype html>
 <html>
-  <head>
+<head>
     <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
     <title>fr.outadoc.mastodonk.client</title>
-</head><body><link href="../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../";</script><script type="text/javascript" src="../../scripts/sourceset_dependencies.js" async></script><link href="../../styles/style.css" rel="Stylesheet"><link href="../../styles/logo-styles.css" rel="Stylesheet"><link href="../../styles/jetbrains-mono.css" rel="Stylesheet"><link href="../../styles/main.css" rel="Stylesheet"><script type="text/javascript" src="../../scripts/clipboard.js" async></script><script type="text/javascript" src="../../scripts/navigation-loader.js" async></script><script type="text/javascript" src="../../scripts/platform-content-handler.js" async></script><script type="text/javascript" src="../../scripts/main.js" async></script>
-  
-    <div id="container">
-      <div id="leftColumn"><a href="../../index.html">
-            <div id="logo"></div>
-          </a>
-        <div id="paneSearch"></div>
+<link href="../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../";</script>    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../styles/style.css" rel="Stylesheet">
+<link href="../../styles/jetbrains-mono.css" rel="Stylesheet">
+<link href="../../styles/main.css" rel="Stylesheet">
+<link href="../../styles/prism.css" rel="Stylesheet">
+<link href="../../styles/logo-styles.css" rel="Stylesheet">
+<script type="text/javascript" src="../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<body>
+<div class="navigation-wrapper" id="navigation-wrapper">
+    <div id="leftToggler"><span class="icon-toggler"></span></div>
+    <div class="library-name">
+<a href="../../index.html">
+<span>mastodonk</span>            </a>    </div>
+    <div>0.2-alpha01
+    </div>
+    <div class="pull-right d-flex">
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":mastodonk-core:dokkaHtmlPartial/commonMain">common</button>
+        </div>
+        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+    </div>
+</div>
+<div id="container">
+    <div id="leftColumn">
         <div id="sideMenu"></div>
-      </div>
-      <div id="main">
-        <script type="text/javascript" src="../../scripts/main.js"></script><div id="leftToggler"><span class="icon-toggler"></span></div>
-
-        <div class="main-content" id="content" pageids="mastodonk-core::fr.outadoc.mastodonk.client////PointingToDeclaration//-1079880343">
-          <div class="navigation-wrapper" id="navigation-wrapper">
-            <div class="breadcrumbs"><a href="../index.html">mastodonk-core</a>/<a href="index.html">fr.outadoc.mastodonk.client</a></div>
-            <div class="pull-right d-flex">
-              <div id="searchBar"></div>
-            </div>
-          </div>
-          <div class="cover ">
-            <h1 class="cover"><span>Package fr.</span><wbr><span>outadoc.</span><wbr><span>mastodonk.</span><wbr><span>client</span></h1>
-            <div class="platform-hinted UnderCoverText" data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><p class="paragraph">Mastodon client, used to configure and access Mastodon APIs.</p></div></div>
-          </div>
-          <div class="tabbedcontent">
-            <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Types">Types</button><button class="section-tab" data-togglable="Functions">Functions</button></div>
-            <div class="tabs-section-body">
-              <h2 class="">Types</h2>
-              <div class="table" data-togglable="Types"><a data-name="2036439142%2FClasslikes%2F-1079880343" anchor-label="MastodonApiException" id="2036439142%2FClasslikes%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>
-                <div class="table-row" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="-mastodon-api-exception/index.html">MastodonApiException</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2036439142%2FClasslikes%2F-1079880343"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title"><div class="divergent-group" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace">data class <a href="-mastodon-api-exception/index.html">MastodonApiException</a>(errorCode: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a>, apiError: <a href="../fr.outadoc.mastodonk.api.entity/-error/index.html">Error</a>?) : <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-exception/index.html">Exception</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+    </div>
+    <div id="main">
+<div class="main-content" data-page-type="package" id="content" pageids="mastodonk-core::fr.outadoc.mastodonk.client////PointingToDeclaration//-1079880343">
+  <div class="breadcrumbs"><a href="../index.html">mastodonk-core</a><span class="delimiter">/</span><span class="current">fr.outadoc.mastodonk.client</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Package-level</span></span> <span><span>declarations</span></span></h1>
+    <div class="platform-hinted UnderCoverText" data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><p class="paragraph">Mastodon client, used to configure and access Mastodon APIs.</p></div></div>
   </div>
-</div>
-</div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="-1638932432%2FClasslikes%2F-1079880343" anchor-label="MastodonClient" id="-1638932432%2FClasslikes%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>
-                <div class="table-row" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="-mastodon-client/index.html">MastodonClient</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1638932432%2FClasslikes%2F-1079880343"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title"><div class="divergent-group" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace">interface <a href="-mastodon-client/index.html">MastodonClient</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-<a data-name="-1638932432%2FClasslikes%2F-1079880343" anchor-label="MastodonClient" id="-1638932432%2FClasslikes%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a><div class="brief "><a data-name="-1638932432%2FClasslikes%2F-1079880343" anchor-label="MastodonClient" id="-1638932432%2FClasslikes%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>Entry point for all Mastodon APIs.</div></div>
-</div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="-721901513%2FClasslikes%2F-1079880343" anchor-label="MastodonClientBuilder" id="-721901513%2FClasslikes%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>
-                <div class="table-row" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="-mastodon-client-builder/index.html">MastodonClientBuilder</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-721901513%2FClasslikes%2F-1079880343"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title"><div class="divergent-group" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace">class <a href="-mastodon-client-builder/index.html">MastodonClientBuilder</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-</div>
-</div>
-                    </div>
-                  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="TYPE">Types</button><button class="section-tab" data-togglable="FUNCTION,EXTENSION_FUNCTION">Functions</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="TYPE">
+        <h2 class="">Types</h2>
+        <div class="table"><a data-name="2036439142%2FClasslikes%2F-1079880343" anchor-label="MastodonApiException" id="2036439142%2FClasslikes%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-mastodon-api-exception/index.html"><span>Mastodon</span><wbr><span>Api</span><wbr><span><span>Exception</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2036439142%2FClasslikes%2F-1079880343"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="-mastodon-api-exception/index.html">MastodonApiException</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>errorCode<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>apiError<span class="token operator">: </span><a href="../fr.outadoc.mastodonk.api.entity/-error/index.html">Error</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span> : <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-exception/index.html">Exception</a></div></div></div>
                 </div>
               </div>
-              <h2 class="">Functions</h2>
-              <div class="table" data-togglable="Functions"><a data-name="307001775%2FFunctions%2F-1079880343" anchor-label="MastodonClient" id="307001775%2FFunctions%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>
-                <div class="table-row" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="-mastodon-client.html">MastodonClient</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="307001775%2FFunctions%2F-1079880343"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title"><div class="divergent-group" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace">fun <a href="-mastodon-client.html">MastodonClient</a>(builderAction: <a href="-mastodon-client-builder/index.html">MastodonClientBuilder</a>.() -&gt; <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a>): <a href="-mastodon-client/index.html">MastodonClient</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-<a data-name="307001775%2FFunctions%2F-1079880343" anchor-label="MastodonClient" id="307001775%2FFunctions%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a><div class="brief "><a data-name="307001775%2FFunctions%2F-1079880343" anchor-label="MastodonClient" id="307001775%2FFunctions%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>Build a Mastodon API client.</div></div>
-</div>
-                    </div>
-                  </div>
+            </div>
+          </div>
+<a data-name="-1638932432%2FClasslikes%2F-1079880343" anchor-label="MastodonClient" id="-1638932432%2FClasslikes%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-mastodon-client/index.html"><span>Mastodon</span><wbr><span><span>Client</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1638932432%2FClasslikes%2F-1079880343"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-mastodon-client/index.html">MastodonClient</a></div><div class="brief "><p class="paragraph">Entry point for all Mastodon APIs.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-721901513%2FClasslikes%2F-1079880343" anchor-label="MastodonClientBuilder" id="-721901513%2FClasslikes%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-mastodon-client-builder/index.html"><span>Mastodon</span><wbr><span>Client</span><wbr><span><span>Builder</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-721901513%2FClasslikes%2F-1079880343"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-mastodon-client-builder/index.html">MastodonClientBuilder</a></div></div></div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="footer"><span class="go-to-top-icon"><a href="#content"></a></span><span>© 2021 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span></div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="307001775%2FFunctions%2F-1079880343" anchor-label="MastodonClient" id="307001775%2FFunctions%2F-1079880343" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":mastodonk-core:dokkaHtmlPartial/commonMain" data-filterable-set=":mastodonk-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-mastodon-client.html"><span>Mastodon</span><wbr><span><span>Client</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="307001775%2FFunctions%2F-1079880343"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mastodonk-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="-mastodon-client.html"><span class="token function">MastodonClient</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">builderAction<span class="token operator">: </span><span class="token keyword"></span><a href="-mastodon-client-builder/index.html">MastodonClientBuilder</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-mastodon-client/index.html">MastodonClient</a></div><div class="brief "><p class="paragraph">Build a Mastodon API client.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  
-</body></html>
-
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2023 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+    </div>
+</div>
+</body>
+</html>
 

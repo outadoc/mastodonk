@@ -1,143 +1,164 @@
+<!doctype html>
 <html>
-  <head>
+<head>
     <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
     <title>fr.outadoc.mastodonk.paging.api.endpoint.timelines</title>
-</head><body><link href="../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../";</script><script type="text/javascript" src="../../scripts/sourceset_dependencies.js" async></script><link href="../../styles/style.css" rel="Stylesheet"><link href="../../styles/logo-styles.css" rel="Stylesheet"><link href="../../styles/jetbrains-mono.css" rel="Stylesheet"><link href="../../styles/main.css" rel="Stylesheet"><script type="text/javascript" src="../../scripts/clipboard.js" async></script><script type="text/javascript" src="../../scripts/navigation-loader.js" async></script><script type="text/javascript" src="../../scripts/platform-content-handler.js" async></script><script type="text/javascript" src="../../scripts/main.js" async></script>
-  
-    <div id="container">
-      <div id="leftColumn"><a href="../../index.html">
-            <div id="logo"></div>
-          </a>
-        <div id="paneSearch"></div>
+<link href="../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../";</script>    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../styles/style.css" rel="Stylesheet">
+<link href="../../styles/jetbrains-mono.css" rel="Stylesheet">
+<link href="../../styles/main.css" rel="Stylesheet">
+<link href="../../styles/prism.css" rel="Stylesheet">
+<link href="../../styles/logo-styles.css" rel="Stylesheet">
+<script type="text/javascript" src="../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<body>
+<div class="navigation-wrapper" id="navigation-wrapper">
+    <div id="leftToggler"><span class="icon-toggler"></span></div>
+    <div class="library-name">
+<a href="../../index.html">
+<span>mastodonk</span>            </a>    </div>
+    <div>0.2-alpha01
+    </div>
+    <div class="pull-right d-flex">
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":mastodonk-paging:dokkaHtmlPartial/jvmMain">jvm</button>
+        </div>
+        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+    </div>
+</div>
+<div id="container">
+    <div id="leftColumn">
         <div id="sideMenu"></div>
-      </div>
-      <div id="main">
-        <script type="text/javascript" src="../../scripts/main.js"></script><div id="leftToggler"><span class="icon-toggler"></span></div>
-
-        <div class="main-content" id="content" pageids="mastodonk-paging::fr.outadoc.mastodonk.paging.api.endpoint.timelines////PointingToDeclaration//520076762">
-          <div class="navigation-wrapper" id="navigation-wrapper">
-            <div class="breadcrumbs"><a href="../index.html">mastodonk-paging</a>/<a href="index.html">fr.outadoc.mastodonk.paging.api.endpoint.timelines</a></div>
-            <div class="pull-right d-flex">
-              <div id="searchBar"></div>
+    </div>
+    <div id="main">
+<div class="main-content" data-page-type="package" id="content" pageids="mastodonk-paging::fr.outadoc.mastodonk.paging.api.endpoint.timelines////PointingToDeclaration//520076762">
+  <div class="breadcrumbs"><a href="../index.html">mastodonk-paging</a><span class="delimiter">/</span><span class="current">fr.outadoc.mastodonk.paging.api.endpoint.timelines</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Package-level</span></span> <span><span>declarations</span></span></h1>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="FUNCTION,EXTENSION_FUNCTION">Functions</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="EXTENSION_FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="-1637955900%2FFunctions%2F520076762" anchor-label="getConversationsSource" id="-1637955900%2FFunctions%2F520076762" data-filterable-set=":mastodonk-paging:dokkaHtmlPartial/jvmMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":mastodonk-paging:dokkaHtmlPartial/jvmMain" data-filterable-set=":mastodonk-paging:dokkaHtmlPartial/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-conversations-source.html"><span>get</span><wbr><span>Conversations</span><wbr><span><span>Source</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1637955900%2FFunctions%2F520076762"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mastodonk-paging:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="../../mastodonk-core/fr.outadoc.mastodonk.api.endpoint.timelines/-conversations-api/index.html">ConversationsApi</a><span class="token punctuation">.</span><a href="get-conversations-source.html"><span class="token function">getConversationsSource</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="androidx.paging/PagingSource///PointingToDeclaration/">PagingSource</span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../mastodonk-core/fr.outadoc.mastodonk.api.entity.paging/-page-info/index.html">PageInfo</a><span class="token punctuation">, </span><span class="token keyword"></span><a href="../../mastodonk-core/fr.outadoc.mastodonk.api.entity/-conversation/index.html">Conversation</a><span class="token operator">&gt;</span></div></div></div>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="cover ">
-            <h1 class="cover"><span>Package fr.</span><wbr><span>outadoc.</span><wbr><span>mastodonk.</span><wbr><span>paging.</span><wbr><span>api.</span><wbr><span>endpoint.</span><wbr><span>timelines</span></h1>
-          </div>
-          <div class="tabbedcontent">
-            <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Functions">Functions</button></div>
-            <div class="tabs-section-body">
-              <h2 class="">Functions</h2>
-              <div class="table" data-togglable="Functions"><a data-name="-1637955900%2FFunctions%2F520076762" anchor-label="getConversationsSource" id="-1637955900%2FFunctions%2F520076762" data-filterable-set=":mastodonk-paging:dokkaHtmlPartial/jvmMain"></a>
-                <div class="table-row" data-filterable-current=":mastodonk-paging:dokkaHtmlPartial/jvmMain" data-filterable-set=":mastodonk-paging:dokkaHtmlPartial/jvmMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="get-conversations-source.html">getConversationsSource</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1637955900%2FFunctions%2F520076762"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title"><div class="divergent-group" data-filterable-current=":mastodonk-paging:dokkaHtmlPartial/jvmMain" data-filterable-set=":mastodonk-paging:dokkaHtmlPartial/jvmMain"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":mastodonk-paging:dokkaHtmlPartial/jvmMain"><div class="symbol monospace">fun <a href="../../mastodonk-core/fr.outadoc.mastodonk.api.endpoint.timelines/-conversations-api/index.html">ConversationsApi</a>.<a href="get-conversations-source.html">getConversationsSource</a>(): <span data-unresolved-link="androidx.paging/PagingSource///PointingToDeclaration/">PagingSource</span>&lt;<a href="../../mastodonk-core/fr.outadoc.mastodonk.api.entity.paging/-page-info/index.html">PageInfo</a>, <a href="../../mastodonk-core/fr.outadoc.mastodonk.api.entity/-conversation/index.html">Conversation</a>&gt;<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-</div>
-</div>
-                    </div>
-                  </div>
-                </div>
 <a data-name="-156324003%2FFunctions%2F520076762" anchor-label="getHashtagTimelineSource" id="-156324003%2FFunctions%2F520076762" data-filterable-set=":mastodonk-paging:dokkaHtmlPartial/jvmMain"></a>
-                <div class="table-row" data-filterable-current=":mastodonk-paging:dokkaHtmlPartial/jvmMain" data-filterable-set=":mastodonk-paging:dokkaHtmlPartial/jvmMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="get-hashtag-timeline-source.html">getHashtagTimelineSource</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-156324003%2FFunctions%2F520076762"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title"><div class="divergent-group" data-filterable-current=":mastodonk-paging:dokkaHtmlPartial/jvmMain" data-filterable-set=":mastodonk-paging:dokkaHtmlPartial/jvmMain"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":mastodonk-paging:dokkaHtmlPartial/jvmMain"><div class="symbol monospace">fun <a href="../../mastodonk-core/fr.outadoc.mastodonk.api.endpoint.timelines/-timelines-api/index.html">TimelinesApi</a>.<a href="get-hashtag-timeline-source.html">getHashtagTimelineSource</a>(hashtag: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>, onlyLocal: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a>? = null, onlyMedia: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a>? = null): <span data-unresolved-link="androidx.paging/PagingSource///PointingToDeclaration/">PagingSource</span>&lt;<a href="../../mastodonk-core/fr.outadoc.mastodonk.api.entity.paging/-page-info/index.html">PageInfo</a>, <a href="../../mastodonk-core/fr.outadoc.mastodonk.api.entity/-status/index.html">Status</a>&gt;<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-</div>
-</div>
-                    </div>
-                  </div>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":mastodonk-paging:dokkaHtmlPartial/jvmMain" data-filterable-set=":mastodonk-paging:dokkaHtmlPartial/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-hashtag-timeline-source.html"><span>get</span><wbr><span>Hashtag</span><wbr><span>Timeline</span><wbr><span><span>Source</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-156324003%2FFunctions%2F520076762"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mastodonk-paging:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="../../mastodonk-core/fr.outadoc.mastodonk.api.endpoint.timelines/-timelines-api/index.html">TimelinesApi</a><span class="token punctuation">.</span><a href="get-hashtag-timeline-source.html"><span class="token function">getHashtagTimelineSource</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">hashtag<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">onlyLocal<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">onlyMedia<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="androidx.paging/PagingSource///PointingToDeclaration/">PagingSource</span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../mastodonk-core/fr.outadoc.mastodonk.api.entity.paging/-page-info/index.html">PageInfo</a><span class="token punctuation">, </span><span class="token keyword"></span><a href="../../mastodonk-core/fr.outadoc.mastodonk.api.entity/-status/index.html">Status</a><span class="token operator">&gt;</span></div></div></div>
                 </div>
+              </div>
+            </div>
+          </div>
 <a data-name="-32987608%2FFunctions%2F520076762" anchor-label="getHomeTimelineSource" id="-32987608%2FFunctions%2F520076762" data-filterable-set=":mastodonk-paging:dokkaHtmlPartial/jvmMain"></a>
-                <div class="table-row" data-filterable-current=":mastodonk-paging:dokkaHtmlPartial/jvmMain" data-filterable-set=":mastodonk-paging:dokkaHtmlPartial/jvmMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="get-home-timeline-source.html">getHomeTimelineSource</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-32987608%2FFunctions%2F520076762"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title"><div class="divergent-group" data-filterable-current=":mastodonk-paging:dokkaHtmlPartial/jvmMain" data-filterable-set=":mastodonk-paging:dokkaHtmlPartial/jvmMain"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":mastodonk-paging:dokkaHtmlPartial/jvmMain"><div class="symbol monospace">fun <a href="../../mastodonk-core/fr.outadoc.mastodonk.api.endpoint.timelines/-timelines-api/index.html">TimelinesApi</a>.<a href="get-home-timeline-source.html">getHomeTimelineSource</a>(onlyLocal: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a>? = null): <span data-unresolved-link="androidx.paging/PagingSource///PointingToDeclaration/">PagingSource</span>&lt;<a href="../../mastodonk-core/fr.outadoc.mastodonk.api.entity.paging/-page-info/index.html">PageInfo</a>, <a href="../../mastodonk-core/fr.outadoc.mastodonk.api.entity/-status/index.html">Status</a>&gt;<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-</div>
-</div>
-                    </div>
-                  </div>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":mastodonk-paging:dokkaHtmlPartial/jvmMain" data-filterable-set=":mastodonk-paging:dokkaHtmlPartial/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-home-timeline-source.html"><span>get</span><wbr><span>Home</span><wbr><span>Timeline</span><wbr><span><span>Source</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-32987608%2FFunctions%2F520076762"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mastodonk-paging:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="../../mastodonk-core/fr.outadoc.mastodonk.api.endpoint.timelines/-timelines-api/index.html">TimelinesApi</a><span class="token punctuation">.</span><a href="get-home-timeline-source.html"><span class="token function">getHomeTimelineSource</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">onlyLocal<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="androidx.paging/PagingSource///PointingToDeclaration/">PagingSource</span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../mastodonk-core/fr.outadoc.mastodonk.api.entity.paging/-page-info/index.html">PageInfo</a><span class="token punctuation">, </span><span class="token keyword"></span><a href="../../mastodonk-core/fr.outadoc.mastodonk.api.entity/-status/index.html">Status</a><span class="token operator">&gt;</span></div></div></div>
                 </div>
+              </div>
+            </div>
+          </div>
 <a data-name="1656067605%2FFunctions%2F520076762" anchor-label="getListAccountsSource" id="1656067605%2FFunctions%2F520076762" data-filterable-set=":mastodonk-paging:dokkaHtmlPartial/jvmMain"></a>
-                <div class="table-row" data-filterable-current=":mastodonk-paging:dokkaHtmlPartial/jvmMain" data-filterable-set=":mastodonk-paging:dokkaHtmlPartial/jvmMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="get-list-accounts-source.html">getListAccountsSource</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1656067605%2FFunctions%2F520076762"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title"><div class="divergent-group" data-filterable-current=":mastodonk-paging:dokkaHtmlPartial/jvmMain" data-filterable-set=":mastodonk-paging:dokkaHtmlPartial/jvmMain"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":mastodonk-paging:dokkaHtmlPartial/jvmMain"><div class="symbol monospace">fun <a href="../../mastodonk-core/fr.outadoc.mastodonk.api.endpoint.timelines/-lists-api/index.html">ListsApi</a>.<a href="get-list-accounts-source.html">getListAccountsSource</a>(listId: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>): <span data-unresolved-link="androidx.paging/PagingSource///PointingToDeclaration/">PagingSource</span>&lt;<a href="../../mastodonk-core/fr.outadoc.mastodonk.api.entity.paging/-page-info/index.html">PageInfo</a>, <a href="../../mastodonk-core/fr.outadoc.mastodonk.api.entity/-account/index.html">Account</a>&gt;<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-</div>
-</div>
-                    </div>
-                  </div>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":mastodonk-paging:dokkaHtmlPartial/jvmMain" data-filterable-set=":mastodonk-paging:dokkaHtmlPartial/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-list-accounts-source.html"><span>get</span><wbr><span>List</span><wbr><span>Accounts</span><wbr><span><span>Source</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1656067605%2FFunctions%2F520076762"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mastodonk-paging:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="../../mastodonk-core/fr.outadoc.mastodonk.api.endpoint.timelines/-lists-api/index.html">ListsApi</a><span class="token punctuation">.</span><a href="get-list-accounts-source.html"><span class="token function">getListAccountsSource</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">listId<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="androidx.paging/PagingSource///PointingToDeclaration/">PagingSource</span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../mastodonk-core/fr.outadoc.mastodonk.api.entity.paging/-page-info/index.html">PageInfo</a><span class="token punctuation">, </span><span class="token keyword"></span><a href="../../mastodonk-core/fr.outadoc.mastodonk.api.entity/-account/index.html">Account</a><span class="token operator">&gt;</span></div></div></div>
                 </div>
+              </div>
+            </div>
+          </div>
 <a data-name="-296371508%2FFunctions%2F520076762" anchor-label="getListSource" id="-296371508%2FFunctions%2F520076762" data-filterable-set=":mastodonk-paging:dokkaHtmlPartial/jvmMain"></a>
-                <div class="table-row" data-filterable-current=":mastodonk-paging:dokkaHtmlPartial/jvmMain" data-filterable-set=":mastodonk-paging:dokkaHtmlPartial/jvmMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="get-list-source.html">getListSource</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-296371508%2FFunctions%2F520076762"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title"><div class="divergent-group" data-filterable-current=":mastodonk-paging:dokkaHtmlPartial/jvmMain" data-filterable-set=":mastodonk-paging:dokkaHtmlPartial/jvmMain"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":mastodonk-paging:dokkaHtmlPartial/jvmMain"><div class="symbol monospace">fun <a href="../../mastodonk-core/fr.outadoc.mastodonk.api.endpoint.timelines/-timelines-api/index.html">TimelinesApi</a>.<a href="get-list-source.html">getListSource</a>(listId: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>): <span data-unresolved-link="androidx.paging/PagingSource///PointingToDeclaration/">PagingSource</span>&lt;<a href="../../mastodonk-core/fr.outadoc.mastodonk.api.entity.paging/-page-info/index.html">PageInfo</a>, <a href="../../mastodonk-core/fr.outadoc.mastodonk.api.entity/-status/index.html">Status</a>&gt;<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-</div>
-</div>
-                    </div>
-                  </div>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":mastodonk-paging:dokkaHtmlPartial/jvmMain" data-filterable-set=":mastodonk-paging:dokkaHtmlPartial/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-list-source.html"><span>get</span><wbr><span>List</span><wbr><span><span>Source</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-296371508%2FFunctions%2F520076762"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mastodonk-paging:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="../../mastodonk-core/fr.outadoc.mastodonk.api.endpoint.timelines/-timelines-api/index.html">TimelinesApi</a><span class="token punctuation">.</span><a href="get-list-source.html"><span class="token function">getListSource</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">listId<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="androidx.paging/PagingSource///PointingToDeclaration/">PagingSource</span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../mastodonk-core/fr.outadoc.mastodonk.api.entity.paging/-page-info/index.html">PageInfo</a><span class="token punctuation">, </span><span class="token keyword"></span><a href="../../mastodonk-core/fr.outadoc.mastodonk.api.entity/-status/index.html">Status</a><span class="token operator">&gt;</span></div></div></div>
                 </div>
+              </div>
+            </div>
+          </div>
 <a data-name="605944944%2FFunctions%2F520076762" anchor-label="getPublicTimelineSource" id="605944944%2FFunctions%2F520076762" data-filterable-set=":mastodonk-paging:dokkaHtmlPartial/jvmMain"></a>
-                <div class="table-row" data-filterable-current=":mastodonk-paging:dokkaHtmlPartial/jvmMain" data-filterable-set=":mastodonk-paging:dokkaHtmlPartial/jvmMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="get-public-timeline-source.html">getPublicTimelineSource</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="605944944%2FFunctions%2F520076762"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title"><div class="divergent-group" data-filterable-current=":mastodonk-paging:dokkaHtmlPartial/jvmMain" data-filterable-set=":mastodonk-paging:dokkaHtmlPartial/jvmMain"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":mastodonk-paging:dokkaHtmlPartial/jvmMain"><div class="symbol monospace">fun <a href="../../mastodonk-core/fr.outadoc.mastodonk.api.endpoint.timelines/-timelines-api/index.html">TimelinesApi</a>.<a href="get-public-timeline-source.html">getPublicTimelineSource</a>(onlyLocal: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a>? = null, onlyRemote: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a>? = null, onlyMedia: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a>? = null): <span data-unresolved-link="androidx.paging/PagingSource///PointingToDeclaration/">PagingSource</span>&lt;<a href="../../mastodonk-core/fr.outadoc.mastodonk.api.entity.paging/-page-info/index.html">PageInfo</a>, <a href="../../mastodonk-core/fr.outadoc.mastodonk.api.entity/-status/index.html">Status</a>&gt;<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-</div>
-</div>
-                    </div>
-                  </div>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":mastodonk-paging:dokkaHtmlPartial/jvmMain" data-filterable-set=":mastodonk-paging:dokkaHtmlPartial/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-public-timeline-source.html"><span>get</span><wbr><span>Public</span><wbr><span>Timeline</span><wbr><span><span>Source</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="605944944%2FFunctions%2F520076762"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mastodonk-paging:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="../../mastodonk-core/fr.outadoc.mastodonk.api.endpoint.timelines/-timelines-api/index.html">TimelinesApi</a><span class="token punctuation">.</span><a href="get-public-timeline-source.html"><span class="token function">getPublicTimelineSource</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">onlyLocal<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">onlyRemote<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">onlyMedia<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="androidx.paging/PagingSource///PointingToDeclaration/">PagingSource</span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../mastodonk-core/fr.outadoc.mastodonk.api.entity.paging/-page-info/index.html">PageInfo</a><span class="token punctuation">, </span><span class="token keyword"></span><a href="../../mastodonk-core/fr.outadoc.mastodonk.api.entity/-status/index.html">Status</a><span class="token operator">&gt;</span></div></div></div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="footer"><span class="go-to-top-icon"><a href="#content"></a></span><span>© 2021 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span></div>
       </div>
     </div>
-  
-</body></html>
-
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2023 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+    </div>
+</div>
+</body>
+</html>
 
