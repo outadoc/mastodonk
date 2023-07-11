@@ -30,6 +30,8 @@ kotlin {
     linuxX64()
     macosX64()
 
+    ios()
+
     sourceSets {
 
         // Common source-sets
@@ -100,6 +102,14 @@ kotlin {
 
         val linuxX64Test by getting { dependsOn(desktopTest) }
         val macosX64Test by getting { dependsOn(desktopTest) }
+
+        // iOS source-sets
+
+        val iosMain by getting {
+            dependencies {
+                implementation(libs.ktor.engine.ios)
+            }
+        }
     }
 }
 
