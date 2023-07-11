@@ -78,11 +78,11 @@ internal class MastodonHttpClient(
             }
 
             HttpResponseValidator {
-                handleResponseException { e ->
-                    if (e is ClientRequestException) {
-                        val statusCode = e.response.status.value
+                handleResponseExceptionWithRequest { cause, _ ->
+                    if (cause is ClientRequestException) {
+                        val statusCode = cause.response.status.value
                         if (statusCode in 400..599) {
-                            val apiError = e.response.decodeErrorBodyOrNull()
+                            val apiError = cause.response.decodeErrorBodyOrNull()
                             throw MastodonApiException(statusCode, apiError)
                         }
                     }
