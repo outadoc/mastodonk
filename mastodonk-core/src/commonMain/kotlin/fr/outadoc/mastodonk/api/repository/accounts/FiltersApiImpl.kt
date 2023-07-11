@@ -5,7 +5,10 @@ import fr.outadoc.mastodonk.api.entity.Filter
 import fr.outadoc.mastodonk.api.entity.request.FilterCreate
 import fr.outadoc.mastodonk.api.entity.request.FilterUpdate
 import fr.outadoc.mastodonk.client.MastodonHttpClient
-import io.ktor.http.*
+import io.ktor.client.request.setBody
+import io.ktor.http.ContentType
+import io.ktor.http.HttpMethod
+import io.ktor.http.contentType
 
 internal class FiltersApiImpl(private val client: MastodonHttpClient) : FiltersApi {
 
@@ -25,7 +28,7 @@ internal class FiltersApiImpl(private val client: MastodonHttpClient) : FiltersA
         return client.request("/api/v1/filters") {
             method = HttpMethod.Post
             contentType(ContentType.Application.Json)
-            body = filter
+            setBody(filter)
         }
     }
 
@@ -33,7 +36,7 @@ internal class FiltersApiImpl(private val client: MastodonHttpClient) : FiltersA
         return client.requestOrNull("/api/v1/filters") {
             method = HttpMethod.Put
             contentType(ContentType.Application.Json)
-            body = filter
+            setBody(filter)
         }
     }
 

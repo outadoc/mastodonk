@@ -20,7 +20,7 @@ internal class MarkersApiImpl(private val client: MastodonHttpClient) : MarkersA
         return client.request("/api/v1/markers") {
             method = HttpMethod.Post
             contentType(ContentType.Application.Json)
-            body = marker
+            setBody(marker)
         }
     }
 }

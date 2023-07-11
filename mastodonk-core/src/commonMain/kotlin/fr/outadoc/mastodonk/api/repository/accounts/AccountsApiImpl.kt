@@ -17,9 +17,12 @@ import fr.outadoc.mastodonk.api.entity.request.AccountCreate
 import fr.outadoc.mastodonk.api.entity.request.File
 import fr.outadoc.mastodonk.api.entity.request.toFormPart
 import fr.outadoc.mastodonk.client.MastodonHttpClient
-import io.ktor.client.request.*
-import io.ktor.client.request.forms.*
-import io.ktor.http.*
+import io.ktor.client.request.forms.formData
+import io.ktor.client.request.parameter
+import io.ktor.client.request.setBody
+import io.ktor.http.ContentType
+import io.ktor.http.HttpMethod
+import io.ktor.http.contentType
 
 internal class AccountsApiImpl(private val client: MastodonHttpClient) : AccountsApi {
 
@@ -27,7 +30,7 @@ internal class AccountsApiImpl(private val client: MastodonHttpClient) : Account
         return client.request("/api/v1/accounts") {
             method = HttpMethod.Post
             contentType(ContentType.Application.Json)
-            body = account
+            setBody(account)
         }
     }
 

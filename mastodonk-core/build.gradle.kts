@@ -39,6 +39,7 @@ kotlin {
                 implementation(libs.datetime)
                 implementation(libs.serialization)
                 implementation(libs.ktor.core)
+                implementation(libs.ktor.contentNegociation)
                 implementation(libs.ktor.logging)
                 implementation(libs.ktor.serialization)
                 implementation(libs.ktor.websockets)

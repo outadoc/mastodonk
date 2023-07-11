@@ -4,6 +4,7 @@ import fr.outadoc.mastodonk.api.endpoint.apps.AppsApi
 import fr.outadoc.mastodonk.api.entity.Application
 import fr.outadoc.mastodonk.api.entity.request.ApplicationCreate
 import fr.outadoc.mastodonk.client.MastodonHttpClient
+import io.ktor.client.request.setBody
 import io.ktor.http.*
 
 internal class AppsApiImpl(private val client: MastodonHttpClient) : AppsApi {
@@ -12,7 +13,7 @@ internal class AppsApiImpl(private val client: MastodonHttpClient) : AppsApi {
         return client.request("/api/v1/apps") {
             method = HttpMethod.Post
             contentType(ContentType.Application.Json)
-            body = application
+            setBody(application)
         }
     }
 

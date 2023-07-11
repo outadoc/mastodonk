@@ -53,7 +53,7 @@ internal class AdminApiImpl(private val client: MastodonHttpClient) : AdminApi {
         return client.request("/api/v1/admin/accounts/${accountId.trim()}/action") {
             method = HttpMethod.Post
             contentType(ContentType.Application.Json)
-            body = action
+            setBody(action)
         }
     }
 

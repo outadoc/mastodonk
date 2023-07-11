@@ -4,6 +4,7 @@ import fr.outadoc.mastodonk.api.endpoint.accounts.ReportsApi
 import fr.outadoc.mastodonk.api.entity.Report
 import fr.outadoc.mastodonk.api.entity.request.ReportCreate
 import fr.outadoc.mastodonk.client.MastodonHttpClient
+import io.ktor.client.request.setBody
 import io.ktor.http.*
 
 internal class ReportsApiImpl(private val client: MastodonHttpClient) : ReportsApi {
@@ -12,7 +13,7 @@ internal class ReportsApiImpl(private val client: MastodonHttpClient) : ReportsA
         return client.request("/api/v1/reports") {
             method = HttpMethod.Post
             contentType(ContentType.Application.Json)
-            body = report
+            setBody(report)
         }
     }
 }

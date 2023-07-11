@@ -10,6 +10,7 @@ import fr.outadoc.mastodonk.api.entity.request.ScheduledStatusCreate
 import fr.outadoc.mastodonk.api.entity.request.StatusCreate
 import fr.outadoc.mastodonk.client.MastodonHttpClient
 import io.ktor.client.request.forms.*
+import io.ktor.client.request.setBody
 import io.ktor.http.*
 
 internal class StatusesApiImpl(private val client: MastodonHttpClient) : StatusesApi {
@@ -18,7 +19,7 @@ internal class StatusesApiImpl(private val client: MastodonHttpClient) : Statuse
         return client.request("/api/v1/statuses") {
             method = HttpMethod.Post
             contentType(ContentType.Application.Json)
-            body = status
+            setBody(status)
         }
     }
 
@@ -26,7 +27,7 @@ internal class StatusesApiImpl(private val client: MastodonHttpClient) : Statuse
         return client.request("/api/v1/statuses") {
             method = HttpMethod.Post
             contentType(ContentType.Application.Json)
-            body = status
+            setBody(status)
         }
     }
 

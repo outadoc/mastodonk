@@ -5,6 +5,7 @@ import fr.outadoc.mastodonk.api.entity.PushSubscription
 import fr.outadoc.mastodonk.api.entity.request.PushSubscribe
 import fr.outadoc.mastodonk.api.entity.request.PushUpdate
 import fr.outadoc.mastodonk.client.MastodonHttpClient
+import io.ktor.client.request.setBody
 import io.ktor.http.*
 
 internal class PushApiImpl(private val client: MastodonHttpClient) : PushApi {
@@ -13,7 +14,7 @@ internal class PushApiImpl(private val client: MastodonHttpClient) : PushApi {
         return client.request("/api/v1/push/subscription") {
             method = HttpMethod.Post
             contentType(ContentType.Application.Json)
-            body = params
+            setBody(params)
         }
     }
 
@@ -27,7 +28,7 @@ internal class PushApiImpl(private val client: MastodonHttpClient) : PushApi {
         return client.request("/api/v1/push/subscription") {
             method = HttpMethod.Put
             contentType(ContentType.Application.Json)
-            body = params
+            setBody(params)
         }
     }
 

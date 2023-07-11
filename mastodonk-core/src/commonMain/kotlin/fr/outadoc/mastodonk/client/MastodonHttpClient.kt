@@ -8,19 +8,38 @@ import fr.outadoc.mastodonk.api.entity.streaming.StreamingEvent
 import fr.outadoc.mastodonk.api.entity.streaming.StreamingEventFactory
 import fr.outadoc.mastodonk.api.repository.instance.InstanceApiImpl
 import fr.outadoc.mastodonk.auth.AuthTokenProvider
-import io.ktor.client.*
-import io.ktor.client.features.*
-import io.ktor.client.features.json.*
-import io.ktor.client.features.json.serializer.*
-import io.ktor.client.features.logging.*
-import io.ktor.client.features.websocket.*
-import io.ktor.client.request.*
-import io.ktor.client.statement.*
-import io.ktor.http.*
-import io.ktor.http.cio.websocket.*
-import io.ktor.utils.io.charsets.*
-import kotlinx.coroutines.flow.*
-import kotlinx.serialization.decodeFromString
+import io.ktor.client.HttpClient
+import io.ktor.client.call.body
+import io.ktor.client.plugins.ClientRequestException
+import io.ktor.client.plugins.HttpResponseValidator
+import io.ktor.client.plugins.contentnegotiation.ContentNegotiation
+import io.ktor.client.plugins.logging.LogLevel
+import io.ktor.client.plugins.logging.Logging
+import io.ktor.client.plugins.websocket.WebSockets
+import io.ktor.client.plugins.websocket.ws
+import io.ktor.client.request.HttpRequestBuilder
+import io.ktor.client.request.header
+import io.ktor.client.request.parameter
+import io.ktor.client.request.request
+import io.ktor.client.request.url
+import io.ktor.client.statement.HttpResponse
+import io.ktor.client.statement.bodyAsText
+import io.ktor.http.HttpHeaders
+import io.ktor.http.HttpStatusCode
+import io.ktor.http.URLBuilder
+import io.ktor.http.URLProtocol
+import io.ktor.http.Url
+import io.ktor.http.encodedPath
+import io.ktor.serialization.kotlinx.json.json
+import io.ktor.websocket.Frame
+import io.ktor.websocket.readText
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.emitAll
+import kotlinx.coroutines.flow.filterIsInstance
+import kotlinx.coroutines.flow.flow
+import kotlinx.coroutines.flow.map
+import kotlinx.coroutines.flow.mapNotNull
+import kotlinx.coroutines.flow.receiveAsFlow
 import kotlinx.serialization.json.Json
 
 internal class MastodonHttpClient(
@@ -50,8 +69,8 @@ internal class MastodonHttpClient(
     private val httpClient: HttpClient = httpClientFactory.create()
         .config {
             install(WebSockets)
-            install(JsonFeature) {
-                serializer = KotlinxSerializer(json = json)
+            install(ContentNegotiation) {
+                json(json)
             }
 
             install(Logging) {
@@ -73,7 +92,7 @@ internal class MastodonHttpClient(
 
     private suspend fun HttpResponse.decodeErrorBodyOrNull(): Error? {
         return try {
-            readText(Charsets.UTF_8).let { errorJson ->
+            bodyAsText().let { errorJson ->
                 json.decodeFromString(
                     Error.serializer(),
                     errorJson
@@ -95,15 +114,19 @@ internal class MastodonHttpClient(
         route: String,
         builder: HttpRequestBuilder.() -> Unit = {}
     ): Page<T> {
-        val res = httpClient.request<HttpResponse> {
-            url(baseUrl.copy(encodedPath = route))
+        val res = httpClient.request {
+            url(
+                URLBuilder(baseUrl)
+                    .apply { encodedPath = route }
+                    .build()
+            )
             addAuthToken()
             builder()
         }
 
         val linkHeaders = res.headers["Link"]?.parseLinkHeaderToPageRefs()
         return Page(
-            contents = json.decodeFromString(res.readText()),
+            contents = json.decodeFromString(res.bodyAsText()),
             nextPage = linkHeaders?.get("next"),
             previousPage = linkHeaders?.get("prev")
         )
@@ -127,10 +150,14 @@ internal class MastodonHttpClient(
         route: String,
         builder: HttpRequestBuilder.() -> Unit = {}
     ): T {
-        return httpClient.request(baseUrl.copy(encodedPath = route)) {
+        return httpClient.request(
+            URLBuilder(baseUrl)
+                .apply { encodedPath = route }
+                .build()
+        ) {
             addAuthToken()
             builder()
-        }
+        }.body()
     }
 
     suspend inline fun <reified T> requestOrNull(
@@ -154,7 +181,11 @@ internal class MastodonHttpClient(
         val streamingBaseUrl = getStreamingBaseUrl()
         httpClient.ws(
             request = {
-                url(streamingBaseUrl.copy(encodedPath = route))
+                url(
+                    URLBuilder(streamingBaseUrl)
+                        .apply { encodedPath = route }
+                        .build()
+                )
                 authTokenProvider?.provideAuthToken()?.let { token ->
                     parameter("access_token", token.toString())
                 }
